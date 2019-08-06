@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "insancraftmod:blocks/eye_of_ender_block"
+   }
+}

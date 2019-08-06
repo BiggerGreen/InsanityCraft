@@ -1,0 +1,43 @@
+//Items
+item.ruby.name=Ruby
+item.uranium_nugget.name=Uranium Nugget
+item.uranium_ingot.name=Uranium Ingot
+item.titanium_nugget.name=Titanium Nugget
+item.titanium_ingot.name=Titanium Ingot
+item.amethyst.name=Amethyst
+item.pink_tourmaline_ingot.name=Pink Tourmaline Ingot
+item.tiger_eye_ingot.name=Tiger Eye Ingot
+item.basilisc_scale.name=Basilisc Scale
+item.emperor_scorpion_scale.name=Emperor Scorpion Scale
+item.jumpy_bug_scale.name=Jumpy Bug Scale
+item.mobzilla_scale.name=Mobzilla Scale
+item.moth_scale.name=Moth Scale
+item.nightmare_scale.name=Nightmare Scale
+item.queen_scale.name=Queen Scale
+item.sea_monster_scale.name=Sea Monster Scale
+item.water_dragon_scale.name=Water Dragon Scale
+item.big_bertha_blade.name=Big Bertha Blade
+item.big_bertha_guard.name=Big Bertha Guard
+item.big_bertha_handle.name=Big Bertha Handle
+item.caterkiller_jaw.name=Caterkiller Jaw
+item.dead_irukandji.name=Dead Irukandji
+item.dead_stink_bug.name=Dead Stink Bug
+item.green_goo.name=Green Goo
+item.kraken_tooth.name=Kraken Tooth
+item.mantis_claw.name=Mantis Claw
+item.molenoid_nose.name=Molenoid Nose
+item.sea_viper_tongue.name=Sea Viper Tongue
+item.trex_tooth.name=TRex Tooth
+item.vortex_eye.name=Vortex Eye
+item.worm_tooth.name=Worm Tooth
+
+//Blocks
+tile.ruby_block.name=Block of Ruby
+tile.amethyst_block.name=Block of Amethyst
+tile.uranium_block.name=Block of Uranium
+tile.titanium_block.name=Block of Titanium
+tile.pink_tourmaline_block.name=Block of Tourmaline
+tile.tiger_eye_block.name=Tiger Eye Block
+tile.mobzilla_scale_block.name=Mobzilla Scale Block
+tile.ender_pearl_block.name=Ender Pearl Block
+tile.eye_of_ender_block.name=Eye of Ender Block
