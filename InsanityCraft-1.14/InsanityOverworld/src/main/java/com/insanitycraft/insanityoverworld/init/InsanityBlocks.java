@@ -11,6 +11,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroupInsanityOverworld;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityBlocks {
 
@@ -38,8 +40,8 @@ public class InsanityBlocks {
 	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
 
-				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(amethystBlock.getRegistryName()),
-				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(amethystOre.getRegistryName())
+				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystBlock.getRegistryName()),
+				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystOre.getRegistryName())
 
 
 		);
