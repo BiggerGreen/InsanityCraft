@@ -1,4 +1,4 @@
-package com.insanitycraft.insanitygear.init;
+package com.insanitycraft.insanityoverworld.init;
 
 import com.insanitycraft.insanitygear.util.Reference;
 import net.minecraft.block.Block;

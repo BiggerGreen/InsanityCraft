@@ -1,4 +1,6 @@
-package com.insanitycraft.insanitygear;
+package com.insanitycraft.insanityoverworld;
+
+import static com.insanitycraft.insanityoverworld.util.Reference.*;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -6,12 +8,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import static com.insanitycraft.insanitygear.util.Reference.*;
-
 @Mod(value = MODID)
-public class InsanityGear {
+public class InsanityOverworld {
 
-	public InsanityGear() {
+	public InsanityOverworld() {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 		MinecraftForge.EVENT_BUS.register(this);
