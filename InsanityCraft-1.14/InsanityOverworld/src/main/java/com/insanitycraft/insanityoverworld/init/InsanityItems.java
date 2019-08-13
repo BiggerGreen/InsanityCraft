@@ -35,7 +35,7 @@ public class InsanityItems {
 	public static Item rubyPickAxe;
 	public static Item rubyAxe;
 	public static Item rubyShovel;
-	//public static Item rubyHoe; I don't know if we will add a hoe. Link
+	//public static Item rubyHoe;
 	public static Item rubySword;
 
 	public static Item rubyHelmet;
@@ -45,7 +45,7 @@ public class InsanityItems {
 
 
 	@SubscribeEvent
-	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
+	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
 
 				amethyst = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(getLocation("amethyst")),

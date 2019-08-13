@@ -1,6 +1,5 @@
 package com.insanitycraft.insanityoverworld.world.gen;
 
-import com.insanitycraft.insanityoverworld.init.InsanityBlocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
