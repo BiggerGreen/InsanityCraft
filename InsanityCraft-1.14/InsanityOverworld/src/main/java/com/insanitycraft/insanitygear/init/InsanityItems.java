@@ -1,6 +1,6 @@
-package com.insanitycraft.insanityoverworld.init;
+package com.insanitycraft.insanitygear.init;
 
-import com.insanitycraft.insanityoverworld.util.Reference;
+import com.insanitycraft.insanitygear.util.Reference;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
