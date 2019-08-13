@@ -15,7 +15,8 @@ public class InsanityMaterialStats {
 
 
 	public enum InsanityToolTier implements IItemTier {
-		AMETHYST(11f, 11f, 2000, 4, 70, amethyst);
+		AMETHYST_TIER(11f, 11f, 2000, 4, 70, amethyst),
+		RUBY_TIER(16f, 11f, 1500, 5, 85, ruby);
 
 		private float attackDamage, efficiency;
 		private int durability, harvestLevel, enchantability;
@@ -64,14 +65,15 @@ public class InsanityMaterialStats {
 
 	public enum InsanityArmorMaterials implements IArmorMaterial {
 
-		AMETHYST_ARMOR("amethyst", 100, new int[]{3, 7, 8, 4}, 40, amethyst, "item.armor.equip_diamond", 0.0f);
+		AMETHYST_ARMOR("amethyst", 100, new int[]{3, 7, 8, 4}, 40, amethyst, "item.armor.equip_diamond", 0.0f),
+		RUBY_ARMOR("ruby", 90, new int[]{4, 8, 9, 4}, 40, ruby, "item.armor.equip_diamond", 0.0f);
 
 
 		private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 		private String name, equipSound;
 		private int durability, enchantability;
 		private Item repairItem;
-		private int[] damageRedutionAmount;
+		private int[] damageRedutionAmount; //{boots, leggings, chestplate, helmet}
 		private float toughness;
 
 		InsanityArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, Item repairItem, String equipSound, float toughness) {
