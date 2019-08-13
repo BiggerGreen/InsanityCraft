@@ -20,7 +20,7 @@ public class InsanityItems {
 	public static Item amethystPickAxe;
 	public static Item amethystAxe;
 	public static Item amethystShovel;
-	public static Item amethystHoe;
+	//public static Item amethystHoe; I don't know if we will add a hoe. Link
 	public static Item amethystSword;
 
 	public static Item amethystHelmet;
@@ -38,7 +38,7 @@ public class InsanityItems {
 				amethystPickAxe = new PickaxeItem(AMETHYST, 1, -3F, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_pickaxe"),
 				amethystAxe = new AxeItem(AMETHYST, 6, -3.4F, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_axe"),
 				amethystShovel = new ShovelItem(AMETHYST, 0, -3F, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_shovel"),
-				amethystHoe = new HoeItem(AMETHYST, 0, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_hoe"),
+				//amethystHoe = new HoeItem(AMETHYST, 0, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_hoe"),
 				amethystSword = new SwordItem(AMETHYST, 3, -2.6F, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_sword"),
 
 				amethystHelmet = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst_helmet"),
