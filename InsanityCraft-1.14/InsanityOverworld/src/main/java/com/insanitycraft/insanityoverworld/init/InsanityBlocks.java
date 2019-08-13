@@ -21,15 +21,23 @@ public class InsanityBlocks {
 	public static Block amethystBlock;
 	public static Block amethystOre;
 
+	public static Block rubyBlock;
+	public static Block rubyOre;
+
 	public static BlockItem amethystBlockItem;
 	public static BlockItem amethystOreItem;
+
+	public static BlockItem rubyBlockItem;
+	public static BlockItem rubyOreItem;
 
 
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
 				amethystBlock = new Block(Block.Properties.create(Material.IRON)).setRegistryName(getLocation("amethyst_block")),
-				amethystOre = new Block(Block.Properties.create(Material.ROCK)).setRegistryName(getLocation("amethyst_ore"))
+				amethystOre = new Block(Block.Properties.create(Material.ROCK)).setRegistryName(getLocation("amethyst_ore")),
+				rubyBlock = new Block(Block.Properties.create(Material.IRON)).setRegistryName(getLocation("ruby_block")),
+				rubyOre = new Block(Block.Properties.create(Material.ROCK)).setRegistryName(getLocation("ruby_ore"))
 
 
 
@@ -41,7 +49,9 @@ public class InsanityBlocks {
 		event.getRegistry().registerAll(
 
 				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystBlock.getRegistryName()),
-				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystOre.getRegistryName())
+				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystOre.getRegistryName()),
+				rubyBlockItem = (BlockItem)new BlockItem(rubyBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(rubyBlock.getRegistryName()),
+				rubyOreItem = (BlockItem)new BlockItem(rubyOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(rubyOre.getRegistryName())
 
 
 		);
