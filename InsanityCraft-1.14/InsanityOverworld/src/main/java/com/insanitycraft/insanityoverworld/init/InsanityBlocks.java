@@ -1,6 +1,6 @@
-package com.insanitycraft.insanitygear.init;
+package com.insanitycraft.insanityoverworld.init;
 
-import com.insanitycraft.insanitygear.util.Reference;
+import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -14,15 +14,20 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityBlocks {
 
+	//Amethyst
 
-	public static Block testblock;
+	public static Block amethystBlock;
+	public static Block amethystOre;
 
-	public static BlockItem testblockitem;
+	public static BlockItem amethystBlockItem;
+	public static BlockItem amethystOreItem;
+
 
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
-				testblock = new Block(Block.Properties.create(Material.ANVIL)).setRegistryName(getLocation("test_block"))
+				amethystBlock = new Block(Block.Properties.create(Material.IRON)).setRegistryName(getLocation("amethyst_block")),
+				amethystOre = new Block(Block.Properties.create(Material.ROCK)).setRegistryName(getLocation("amethyst_ore"))
 
 
 
@@ -33,7 +38,8 @@ public class InsanityBlocks {
 	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
 
-				testblockitem = (BlockItem)new BlockItem(testblock, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(testblock.getRegistryName())
+				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(amethystBlock.getRegistryName()),
+				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(amethystOre.getRegistryName())
 
 
 		);
