@@ -1,7 +1,7 @@
-package com.insanitycraft.insanitymobs.util;
+package com.insanitycraft.insanitydimensions.util;
 
 public class Reference {
 
-	public static final String MODID = "insanitymobs";
+	public static final String MODID = "insanitydimensions";
 
 }

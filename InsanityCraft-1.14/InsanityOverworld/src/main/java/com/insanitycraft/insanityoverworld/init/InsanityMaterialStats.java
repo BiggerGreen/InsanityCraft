@@ -16,19 +16,20 @@ public class InsanityMaterialStats {
 
 	public enum InsanityToolTier implements IItemTier {
 		AMETHYST_TIER(11f, 11f, 2000, 4, 70, amethyst),
-		RUBY_TIER(16f, 11f, 1500, 5, 85, ruby);
+		RUBY_TIER(16f, 11f, 1500, 5, 85, ruby),
+		ULTIMATE_TIER(26, 15f, 3000, 10, 100, titanium_ingot);
 
 		private float attackDamage, efficiency;
 		private int durability, harvestLevel, enchantability;
-		private Item repairMaterial;
+		private Ingredient repairMaterials;
 
-		InsanityToolTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item repairMaterial) {
+		InsanityToolTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item... repairMaterials) {
 			this.attackDamage = attackDamage;
 			this.efficiency = efficiency;
 			this.durability = durability;
 			this.harvestLevel = harvestLevel;
 			this.enchantability = enchantability;
-			this.repairMaterial = repairMaterial;
+			this.repairMaterials = Ingredient.fromItems(repairMaterials);
 		}
 
 
@@ -59,29 +60,30 @@ public class InsanityMaterialStats {
 
 		@Override
 		public Ingredient getRepairMaterial() {
-			return Ingredient.fromItems(repairMaterial);
+			return repairMaterials;
 		}
 	}
 
 	public enum InsanityArmorMaterials implements IArmorMaterial {
 
-		AMETHYST_ARMOR("amethyst", 100, new int[]{3, 7, 8, 4}, 40, amethyst, "item.armor.equip_diamond", 0.0f),
-		RUBY_ARMOR("ruby", 90, new int[]{4, 8, 9, 4}, 40, ruby, "item.armor.equip_diamond", 0.0f);
+		AMETHYST_ARMOR("amethyst", 100, new int[]{3, 7, 8, 4}, 40, "item.armor.equip_diamond", 0.0f, amethyst),
+		RUBY_ARMOR("ruby", 90, new int[]{4, 8, 9, 4}, 40, "item.armor.equip_diamond", 0.0f, ruby),
+		ULTIMATE_ARMOR("ultimate", 200, new int[]{6, 10, 12, 6}, 100, "item.armor.equip_diamond", 0.0f, titanium_ingot, uranium_ingot);
 
 
 		private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 		private String name, equipSound;
 		private int durability, enchantability;
-		private Item repairItem;
+		private Ingredient repairItems;
 		private int[] damageRedutionAmount; //{boots, leggings, chestplate, helmet}
 		private float toughness;
 
-		InsanityArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, Item repairItem, String equipSound, float toughness) {
+		InsanityArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, String equipSound, float toughness, Item... repairItems) {
 			this.name = name;
 			this.durability = durability;
 			this.damageRedutionAmount = damageReductionAmount;
 			this.enchantability = enchantability;
-			this.repairItem = repairItem;
+			this.repairItems = Ingredient.fromItems(repairItems);
 			this.equipSound = equipSound;
 			this.toughness = toughness;
 		}
@@ -109,7 +111,7 @@ public class InsanityMaterialStats {
 
 		@Override
 		public Ingredient getRepairMaterial() {
-			return Ingredient.fromItems(repairItem);
+			return repairItems;
 		}
 
 		@Override

@@ -16,7 +16,6 @@ public class InsanityMobs {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 		MinecraftForge.EVENT_BUS.register(this);
 
-
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

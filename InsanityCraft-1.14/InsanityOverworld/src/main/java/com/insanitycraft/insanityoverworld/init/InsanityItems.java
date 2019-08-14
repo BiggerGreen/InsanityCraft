@@ -1,6 +1,5 @@
 package com.insanitycraft.insanityoverworld.init;
 
-import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -50,6 +49,17 @@ public class InsanityItems {
 	public static Item uranium_nugget;
 
 
+	public static Item ultimatePickAxe;
+	public static Item ultimateAxe;
+	public static Item ultimateShovel;
+	//public static Item ultimateHoe;
+	public static Item ultimateSword;
+
+	public static Item ultimateHelmet;
+	public static Item ultimateChestplate;
+	public static Item ultimateLeggings;
+	public static Item ultimateBoots;
+
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
@@ -85,9 +95,19 @@ public class InsanityItems {
 				titanium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("titanium_nugget")),
 
 				uranium_ingot = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_ingot")),
-				uranium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_nugget"))
+				uranium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_nugget")),
 
+															//TODO change these stats!
+				ultimatePickAxe = new PickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_pickaxe"),
+				ultimateAxe = new AxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
+				ultimateShovel = new ShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
+				//ultimateHoe = new HoeItem(ULTIMATE_TIER, 0, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_hoe"),
+				ultimateSword = new SwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
 
+				ultimateHelmet = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
+				ultimateChestplate = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_chestplate"),
+				ultimateLeggings = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_leggings"),
+				ultimateBoots = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_boots")
 
 				);
 
