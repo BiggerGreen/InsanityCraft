@@ -17,7 +17,6 @@ import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroupIns
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityBlocks {
 
-	//Amethyst
 
 	public static Block amethystBlock;
 	public static Block amethystOre;
@@ -48,14 +47,14 @@ public class InsanityBlocks {
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
 				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("amethyst_block")),
-				amethystOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("amethyst_ore")),
+				amethystOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("amethyst_ore")),
 				rubyBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("ruby_block")),
-				rubyOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("ruby_ore")),
+				rubyOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("ruby_ore")),
 
 				titaniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_block")),
-				titaniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_ore")),
+				titaniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_ore")),
 				uraniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_block")),
-				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_ore"))
+				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_ore"))
 
 
 
@@ -73,8 +72,8 @@ public class InsanityBlocks {
 
 				titaniumBlockItem = (BlockItem)new BlockItem(titaniumBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(titaniumBlock.getRegistryName()),
 				titaniumOreItem = (BlockItem)new BlockItem(titaniumOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(titaniumOre.getRegistryName()),
-				uraniumBlockItem = (BlockItem)new BlockItem(titaniumBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(uraniumBlock.getRegistryName()),
-				uraniumOreItem = (BlockItem)new BlockItem(titaniumOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(uraniumOre.getRegistryName())
+				uraniumBlockItem = (BlockItem)new BlockItem(uraniumBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(uraniumBlock.getRegistryName()),
+				uraniumOreItem = (BlockItem)new BlockItem(uraniumOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(uraniumOre.getRegistryName())
 
 
 		);
