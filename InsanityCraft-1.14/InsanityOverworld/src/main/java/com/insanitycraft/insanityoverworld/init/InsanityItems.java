@@ -16,7 +16,6 @@ import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.Ins
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityItems {
 
-	//Amethyst
 	public static Item amethyst;
 
 	public static Item amethystPickAxe;
@@ -30,8 +29,6 @@ public class InsanityItems {
 	public static Item amethystLeggings;
 	public static Item amethystBoots;
 
-
-	//Ruby
 	public static Item ruby;
 
 	public static Item rubyPickAxe;
@@ -46,11 +43,18 @@ public class InsanityItems {
 	public static Item rubyBoots;
 
 
+	public static Item titanium_ingot;
+	public static Item titanium_nugget;
+
+	public static Item uranium_ingot;
+	public static Item uranium_nugget;
+
+
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
 
-				amethyst = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(getLocation("amethyst")),
+				amethyst = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("amethyst")),
 
 				amethystPickAxe = new PickaxeItem(AMETHYST_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_pickaxe"),
 				amethystAxe = new AxeItem(AMETHYST_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_axe"),
@@ -75,10 +79,17 @@ public class InsanityItems {
 				rubyHelmet = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_helmet"),
 				rubyChestplate = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_chestplate"),
 				rubyLeggings = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_leggings"),
-				rubyBoots = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_boots")
+				rubyBoots = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_boots"),
+
+				titanium_ingot = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("titanium_ingot")),
+				titanium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("titanium_nugget")),
+
+				uranium_ingot = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_ingot")),
+				uranium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_nugget"))
 
 
-		);
+
+				);
 
 
 	}
