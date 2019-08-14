@@ -20,7 +20,6 @@ public class InsanityItems {
 	public static Item amethystPickAxe;
 	public static Item amethystAxe;
 	public static Item amethystShovel;
-	//public static Item amethystHoe; I don't know if we will add a hoe. Link
 	public static Item amethystSword;
 
 	public static Item amethystHelmet;
@@ -33,7 +32,6 @@ public class InsanityItems {
 	public static Item rubyPickAxe;
 	public static Item rubyAxe;
 	public static Item rubyShovel;
-	//public static Item rubyHoe;
 	public static Item rubySword;
 
 	public static Item rubyHelmet;
@@ -52,7 +50,6 @@ public class InsanityItems {
 	public static Item ultimatePickAxe;
 	public static Item ultimateAxe;
 	public static Item ultimateShovel;
-	//public static Item ultimateHoe;
 	public static Item ultimateSword;
 
 	public static Item ultimateHelmet;
@@ -69,7 +66,6 @@ public class InsanityItems {
 				amethystPickAxe = new PickaxeItem(AMETHYST_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_pickaxe"),
 				amethystAxe = new AxeItem(AMETHYST_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_axe"),
 				amethystShovel = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_shovel"),
-				//amethystHoe = new HoeItem(AMETHYST_TIER, 0, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_hoe"),
 				amethystSword = new SwordItem(AMETHYST_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_sword"),
 
 				amethystHelmet = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_helmet"),
@@ -83,7 +79,6 @@ public class InsanityItems {
 				rubyPickAxe = new PickaxeItem(RUBY_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_pickaxe"),
 				rubyAxe = new AxeItem(RUBY_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_axe"),
 				rubyShovel = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_shovel"),
-				//rubyHoe = new HoeItem(RUBY_TIER, 0, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_hoe"),
 				rubySword = new SwordItem(RUBY_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_sword"),
 
 				rubyHelmet = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_helmet"),
@@ -101,7 +96,6 @@ public class InsanityItems {
 				ultimatePickAxe = new PickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_pickaxe"),
 				ultimateAxe = new AxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
 				ultimateShovel = new ShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
-				//ultimateHoe = new HoeItem(ULTIMATE_TIER, 0, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_hoe"),
 				ultimateSword = new SwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
 
 				ultimateHelmet = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
