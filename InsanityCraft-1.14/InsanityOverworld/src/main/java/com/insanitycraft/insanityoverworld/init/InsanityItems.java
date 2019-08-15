@@ -1,5 +1,7 @@
 package com.insanitycraft.insanityoverworld.init;
 
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.items.ItemDebug;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -14,6 +16,9 @@ import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.Ins
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityItems {
+
+	private static Item debug;
+
 
 	public static Item amethyst;
 
@@ -59,6 +64,10 @@ public class InsanityItems {
 
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
+		if(InsanityOverworld.debug) {
+			event.getRegistry().register(debug = new ItemDebug(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("debug"));
+		}
+
 		event.getRegistry().registerAll(
 
 				amethyst = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("amethyst")),

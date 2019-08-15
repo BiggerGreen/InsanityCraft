@@ -14,6 +14,8 @@ import static com.insanitycraft.insanityoverworld.util.Reference.*;
 @Mod(value = MODID)
 public class InsanityOverworld {
 
+	public static boolean debug = true;
+
 	public static ItemGroup itemGroupInsanityOverworld; //TODO Find a better name
 
 	public InsanityOverworld() {
