@@ -17,7 +17,7 @@ import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.Ins
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityItems {
 
-	private static Item debug;
+	static Item debug;
 
 
 	public static Item amethyst;
