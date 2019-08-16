@@ -2,7 +2,10 @@ package com.insanitycraft.insanityoverworld.init;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import com.insanitycraft.insanityoverworld.items.ItemDebug;
+import com.insanitycraft.insanityoverworld.items.UltimateSwordItem;
 import com.insanitycraft.insanityoverworld.util.Reference;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
@@ -105,7 +108,7 @@ public class InsanityItems {
 				ultimatePickAxe = new PickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_pickaxe"),
 				ultimateAxe = new AxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
 				ultimateShovel = new ShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
-				ultimateSword = new SwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
+				ultimateSword = new UltimateSwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
 
 				ultimateHelmet = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
 				ultimateChestplate = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_chestplate"),
@@ -114,8 +117,13 @@ public class InsanityItems {
 
 				);
 
+	}
+
+	private static void addEnchantment(Item item, Enchantment enchantment, int level) {
+		item.getDefaultInstance().addEnchantment(enchantment, level);
 
 	}
+
 
 	private static ResourceLocation getLocation(String name) {
 		return new ResourceLocation(Reference.MODID, name);
