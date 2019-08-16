@@ -1,6 +1,9 @@
 package com.insanitycraft.insanityoverworld.init;
 
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.items.*;
 import com.insanitycraft.insanityoverworld.util.Reference;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
@@ -14,6 +17,9 @@ import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.Ins
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityItems {
+
+	static Item debug;
+
 
 	public static Item amethyst;
 
@@ -59,6 +65,10 @@ public class InsanityItems {
 
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
+		if(InsanityOverworld.debug) {
+			event.getRegistry().register(debug = new ItemDebug(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("debug"));
+		}
+
 		event.getRegistry().registerAll(
 
 				amethyst = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("amethyst")),
@@ -93,20 +103,25 @@ public class InsanityItems {
 				uranium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_nugget")),
 
 															//TODO change these stats!
-				ultimatePickAxe = new PickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_pickaxe"),
-				ultimateAxe = new AxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
-				ultimateShovel = new ShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
-				ultimateSword = new SwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
+				ultimatePickAxe = new UltimatePickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_pickaxe"),
+				ultimateAxe = new UltimateAxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
+				ultimateShovel = new UltimateShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
+				ultimateSword = new UltimateSwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
 
-				ultimateHelmet = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
-				ultimateChestplate = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_chestplate"),
-				ultimateLeggings = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_leggings"),
-				ultimateBoots = new ArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_boots")
+				ultimateHelmet = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
+				ultimateChestplate = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_chestplate"),
+				ultimateLeggings = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_leggings"),
+				ultimateBoots = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_boots")
 
 				);
 
+	}
+
+	private static void addEnchantment(Item item, Enchantment enchantment, int level) {
+		item.getDefaultInstance().addEnchantment(enchantment, level);
 
 	}
+
 
 	private static ResourceLocation getLocation(String name) {
 		return new ResourceLocation(Reference.MODID, name);

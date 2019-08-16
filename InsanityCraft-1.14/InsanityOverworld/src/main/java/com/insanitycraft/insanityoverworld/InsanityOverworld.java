@@ -1,5 +1,6 @@
 package com.insanitycraft.insanityoverworld;
 
+import com.insanitycraft.insanityoverworld.init.InsanityItems;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;
 import net.minecraft.item.ItemGroup;
@@ -13,6 +14,8 @@ import static com.insanitycraft.insanityoverworld.util.Reference.*;
 
 @Mod(value = MODID)
 public class InsanityOverworld {
+
+	public static boolean debug = true;
 
 	public static ItemGroup itemGroupInsanityOverworld; //TODO Find a better name
 
