@@ -17,7 +17,7 @@ public class InsanityMaterialStats {
 	public enum InsanityToolTier implements IItemTier {
 		AMETHYST_TIER(11f, 11f, 2000, 4, 70, amethyst),
 		RUBY_TIER(16f, 11f, 1500, 5, 85, ruby),
-		ULTIMATE_TIER(36f, 15f, 3000, 10, 100, titanium_ingot);
+		ULTIMATE_TIER(36f, 18f, 3000, 10, 100, titanium_ingot);
 
 		private float attackDamage, efficiency;
 		private int durability, harvestLevel, enchantability;
