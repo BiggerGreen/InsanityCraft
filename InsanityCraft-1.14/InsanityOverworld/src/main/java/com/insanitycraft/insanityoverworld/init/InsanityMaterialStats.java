@@ -15,6 +15,7 @@ public class InsanityMaterialStats {
 
 
 	public enum InsanityToolTier implements IItemTier {
+		//TODO change stats
 		AMETHYST_TIER(11f, 11f, 2000, 4, 70, amethyst),
 		RUBY_TIER(16f, 11f, 1500, 5, 85, ruby),
 		ULTIMATE_TIER(36f, 18f, 3000, 10, 100, titanium_ingot);
@@ -68,6 +69,7 @@ public class InsanityMaterialStats {
 		//Chestplate durability = 16 * durability
 		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, "item.armor.equip_diamond", 2.5f, amethyst),
 		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, "item.armor.equip_diamond", 3.0f, ruby),
+		//TODO change durability
 		ULTIMATE_ARMOR("ultimate", 200, new int[]{7, 9, 10, 7}, 100, "item.armor.equip_diamond", 0.0f, titanium_ingot);
 
 
