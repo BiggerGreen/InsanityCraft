@@ -58,6 +58,8 @@ public class InsanityItems {
 	public static Item ultimateShovel;
 	public static Item ultimateSword;
 
+	public static Item ultimateBow;
+
 	public static Item ultimateHelmet;
 	public static Item ultimateChestplate;
 	public static Item ultimateLeggings;
@@ -107,6 +109,8 @@ public class InsanityItems {
 				ultimateAxe = new UltimateAxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
 				ultimateShovel = new UltimateShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
 				ultimateSword = new UltimateSwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
+
+				ultimateBow = new UltimateBowItem(new Item.Properties().group(itemGroupInsanityOverworld).maxStackSize(1).defaultMaxDamage(1000)).setRegistryName("ultimate_bow"),
 
 				ultimateHelmet = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
 				ultimateChestplate = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_chestplate"),

@@ -12,10 +12,10 @@ import static com.insanitycraft.insanityoverworld.init.InsanityBlocks.*;
 
 public class WorldGenOres {
 
-	private static final CountRangeConfig amethystConfig = new CountRangeConfig(9, 5, 0, 64);
-	private static final int amethystVeinSize = 7;
-	private static final CountRangeConfig rubyConfig = new CountRangeConfig(9, 5, 0, 64);
-	private static final int rubyVeinSize = 7;
+	private static final CountRangeConfig amethystConfig = new CountRangeConfig(3, 5, 0, 14);
+	private static final int amethystVeinSize = 4;
+	private static final CountRangeConfig rubyConfig = new CountRangeConfig(1, 0, 0, 10);
+	private static final int rubyVeinSize = 2;
 	private static final CountRangeConfig titaniumConfig = new CountRangeConfig(4, 5, 0, 20);
 	private static final int titaniumVeinSize = 5;
 	private static final CountRangeConfig uraniumConfig = new CountRangeConfig(4, 5, 0, 20);
