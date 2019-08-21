@@ -1,18 +1,19 @@
 package com.insanitycraft.insanityoverworld.init;
 
+import com.insanitycraft.insanityoverworld.block.BlockGenericEgg;
+import com.insanitycraft.insanityoverworld.block.BlockItemGenericEgg;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroupInsanityOverworld;
+import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroup;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityBlocks {
@@ -43,6 +44,17 @@ public class InsanityBlocks {
 	public static BlockItem rubyOreItem;
 
 
+	//region eggs
+
+	public static Block cowEggBlock;
+
+
+	public static BlockItem cowEggItem;
+
+
+	//endregion
+
+
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
@@ -54,9 +66,13 @@ public class InsanityBlocks {
 				titaniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_block")),
 				titaniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_ore")),
 				uraniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_block")),
-				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_ore"))
+				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_ore")),
+
+				//region eggs
+				cowEggBlock = new BlockGenericEgg(getLocation("cow_egg_ore"))
 
 
+				//endregion
 
 		);
 	}
@@ -65,17 +81,20 @@ public class InsanityBlocks {
 	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
 
-				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystBlock.getRegistryName()),
-				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(amethystOre.getRegistryName()),
-				rubyBlockItem = (BlockItem)new BlockItem(rubyBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(rubyBlock.getRegistryName()),
-				rubyOreItem = (BlockItem)new BlockItem(rubyOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(rubyOre.getRegistryName()),
+				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroup)).setRegistryName(amethystBlock.getRegistryName()),
+				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroup)).setRegistryName(amethystOre.getRegistryName()),
+				rubyBlockItem = (BlockItem)new BlockItem(rubyBlock, new Item.Properties().group(itemGroup)).setRegistryName(rubyBlock.getRegistryName()),
+				rubyOreItem = (BlockItem)new BlockItem(rubyOre, new Item.Properties().group(itemGroup)).setRegistryName(rubyOre.getRegistryName()),
 
-				titaniumBlockItem = (BlockItem)new BlockItem(titaniumBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(titaniumBlock.getRegistryName()),
-				titaniumOreItem = (BlockItem)new BlockItem(titaniumOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(titaniumOre.getRegistryName()),
-				uraniumBlockItem = (BlockItem)new BlockItem(uraniumBlock, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(uraniumBlock.getRegistryName()),
-				uraniumOreItem = (BlockItem)new BlockItem(uraniumOre, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(uraniumOre.getRegistryName())
+				titaniumBlockItem = (BlockItem)new BlockItem(titaniumBlock, new Item.Properties().group(itemGroup)).setRegistryName(titaniumBlock.getRegistryName()),
+				titaniumOreItem = (BlockItem)new BlockItem(titaniumOre, new Item.Properties().group(itemGroup)).setRegistryName(titaniumOre.getRegistryName()),
+				uraniumBlockItem = (BlockItem)new BlockItem(uraniumBlock, new Item.Properties().group(itemGroup)).setRegistryName(uraniumBlock.getRegistryName()),
+				uraniumOreItem = (BlockItem)new BlockItem(uraniumOre, new Item.Properties().group(itemGroup)).setRegistryName(uraniumOre.getRegistryName()),
 
+				//region eggs
+				cowEggItem = new BlockItemGenericEgg(cowEggBlock)
 
+				//endregion
 		);
 	}
 
