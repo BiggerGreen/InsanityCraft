@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "insanityoverworld:block/titanium_block"
+        "all": "insanityoverworld:blocks/titanium_block"
     }
 }
