@@ -30,6 +30,10 @@ minecraft {
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
+
+    //replace "@DEBUG@", "RELEASE"
+    //replaceIn "Reference.java"
+    
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {

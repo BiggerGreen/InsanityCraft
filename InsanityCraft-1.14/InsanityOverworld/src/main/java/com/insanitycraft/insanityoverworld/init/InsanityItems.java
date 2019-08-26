@@ -4,6 +4,7 @@ import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import com.insanitycraft.insanityoverworld.items.*;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
@@ -58,60 +59,74 @@ public class InsanityItems {
 	public static Item ultimateShovel;
 	public static Item ultimateSword;
 
+	public static Item ultimateBow;
+
 	public static Item ultimateHelmet;
 	public static Item ultimateChestplate;
 	public static Item ultimateLeggings;
 	public static Item ultimateBoots;
 
+
+
+	public static Item enderdragonSpawnEgg;
+	public static Item witherSpawnEgg;
+
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		if(InsanityOverworld.debug) {
-			event.getRegistry().register(debug = new ItemDebug(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("debug"));
+			event.getRegistry().register(debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"));
 		}
 
 		event.getRegistry().registerAll(
 
-				amethyst = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("amethyst")),
+				amethyst = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("amethyst")),
 
-				amethystPickAxe = new PickaxeItem(AMETHYST_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_pickaxe"),
-				amethystAxe = new AxeItem(AMETHYST_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_axe"),
-				amethystShovel = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_shovel"),
-				amethystSword = new SwordItem(AMETHYST_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_sword"),
+				amethystPickAxe = new PickaxeItem(AMETHYST_TIER, 1, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_pickaxe"),
+				amethystAxe = new AxeItem(AMETHYST_TIER, 6, -3.4F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_axe"),
+				amethystShovel = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_shovel"),
+				amethystSword = new SwordItem(AMETHYST_TIER, 3, -2.6F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_sword"),
 
-				amethystHelmet = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_helmet"),
-				amethystChestplate = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_chestplate"),
-				amethystLeggings = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_leggings"),
-				amethystBoots = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("amethyst_boots"),
+				amethystHelmet = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_helmet"),
+				amethystChestplate = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_chestplate"),
+				amethystLeggings = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_leggings"),
+				amethystBoots = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_boots"),
 
 
-				ruby = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("ruby")),
+				ruby = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("ruby")),
 
-				rubyPickAxe = new PickaxeItem(RUBY_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_pickaxe"),
-				rubyAxe = new AxeItem(RUBY_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_axe"),
-				rubyShovel = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_shovel"),
-				rubySword = new SwordItem(RUBY_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_sword"),
+				rubyPickAxe = new PickaxeItem(RUBY_TIER, 1, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_pickaxe"),
+				rubyAxe = new AxeItem(RUBY_TIER, 6, -3.4F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_axe"),
+				rubyShovel = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_shovel"),
+				rubySword = new SwordItem(RUBY_TIER, 3, -2.6F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_sword"),
 
-				rubyHelmet = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_helmet"),
-				rubyChestplate = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_chestplate"),
-				rubyLeggings = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_leggings"),
-				rubyBoots = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ruby_boots"),
+				rubyHelmet = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("ruby_helmet"),
+				rubyChestplate = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ruby_chestplate"),
+				rubyLeggings = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("ruby_leggings"),
+				rubyBoots = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ruby_boots"),
 
-				titanium_ingot = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("titanium_ingot")),
-				titanium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("titanium_nugget")),
+				titanium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("titanium_ingot")),
+				titanium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("titanium_nugget")),
 
-				uranium_ingot = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_ingot")),
-				uranium_nugget = new Item(new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName(getLocation("uranium_nugget")),
+				uranium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("uranium_ingot")),
+				uranium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("uranium_nugget")),
 
 															//TODO change these stats!
-				ultimatePickAxe = new UltimatePickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_pickaxe"),
-				ultimateAxe = new UltimateAxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_axe"),
-				ultimateShovel = new UltimateShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_shovel"),
-				ultimateSword = new UltimateSwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_sword"),
+				ultimatePickAxe = new UltimatePickaxeItem(ULTIMATE_TIER, 1, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
+				ultimateAxe = new UltimateAxeItem(ULTIMATE_TIER, 6, -3.4F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_axe"),
+				ultimateShovel = new UltimateShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_shovel"),
+				ultimateSword = new UltimateSwordItem(ULTIMATE_TIER, 3, -2.6F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_sword"),
 
-				ultimateHelmet = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_helmet"),
-				ultimateChestplate = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_chestplate"),
-				ultimateLeggings = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_leggings"),
-				ultimateBoots = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroupInsanityOverworld)).setRegistryName("ultimate_boots")
+				ultimateBow = new UltimateBowItem(new Item.Properties().group(itemGroup).maxStackSize(1).defaultMaxDamage(1000)).setRegistryName("ultimate_bow"),
+
+				ultimateHelmet = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_helmet"),
+				ultimateChestplate = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_chestplate"),
+				ultimateLeggings = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_leggings"),
+				ultimateBoots = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_boots"),
+
+
+
+				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
+				witherSpawnEgg = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg")
 
 				);
 

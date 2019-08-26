@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 public class ItemGroupInsanityOverworld extends ItemGroup {
 
 	public ItemGroupInsanityOverworld() {
-		super("insanity_overworld_group");
+		super("insanity_overworld");
 	}
 
 	@Override

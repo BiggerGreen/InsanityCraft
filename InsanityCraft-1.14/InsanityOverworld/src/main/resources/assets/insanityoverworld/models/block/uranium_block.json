@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "insanityoverworld:block/uranium_block"
+        "all": "insanityoverworld:blocks/uranium_block"
     }
 }
