@@ -110,7 +110,7 @@ public class InsanityBlocks {
 	public static Block zombieEggOre;
 	public static Block zombiePigmanEggOre;
 
-	//public static Block catEggOre;
+	public static Block catEggOre;
 	//public static Block codEggOre;
 	public static Block endermiteEggOre;
 	public static Block foxEggOre;
@@ -128,7 +128,7 @@ public class InsanityBlocks {
 	//public static Block vexEggOre;
 	//public static Block wanderingTraderEggOre;
 	//public static Block zombieHorseEggOre;
-	public static Block villagerZombieEggOre;
+	//public static Block villagerZombieEggOre;
 
 
 	public static BlockItem batEggItem;
@@ -175,7 +175,7 @@ public class InsanityBlocks {
 	public static BlockItem zombieEggItem;
 	public static BlockItem zombiePigmanEggItem;
 
-	//public static BlockItem catEggItem;
+	public static BlockItem catEggItem;
 	//public static BlockItem codEggItem;
 	public static BlockItem endermiteEggItem;
 	public static BlockItem foxEggItem;
@@ -255,6 +255,7 @@ public class InsanityBlocks {
 				zombieEggOre = new BlockMobOre(getLocation("zombie_ore")),
 				zombiePigmanEggOre = new BlockMobOre(getLocation("zombie_pigman_ore")),
 
+				catEggOre = new BlockMobOre(getLocation("cat_ore")),
 				endermiteEggOre = new BlockMobOre(getLocation("endermite_ore")),
 				foxEggOre = new BlockMobOre(getLocation("fox_ore")),
 				ghastEggOre = new BlockMobOre(getLocation("ghast_ore")),
@@ -325,6 +326,7 @@ public class InsanityBlocks {
 				zombieEggItem = new BlockItemMobOre(zombieEggOre),
 				zombiePigmanEggItem = new BlockItemMobOre(zombiePigmanEggOre),
 
+				catEggItem = new BlockItemMobOre(catEggOre),
 				endermiteEggItem = new BlockItemMobOre(endermiteEggOre),
 				foxEggItem = new BlockItemMobOre(foxEggOre),
 				ghastEggItem = new BlockItemMobOre(ghastEggOre),

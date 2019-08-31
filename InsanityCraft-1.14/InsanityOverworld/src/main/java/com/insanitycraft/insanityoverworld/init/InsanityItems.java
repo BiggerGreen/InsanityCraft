@@ -118,7 +118,14 @@ public class InsanityItems {
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		if(InsanityOverworld.debug) {
-			event.getRegistry().register(debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"));
+			event.getRegistry().registerAll(
+
+					debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
+
+
+					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -3F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
+					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -3.4F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
+					);
 		}
 
 		event.getRegistry().registerAll(
@@ -191,10 +198,6 @@ public class InsanityItems {
 				ultimateChestplate = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_chestplate"),
 				ultimateLeggings = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_leggings"),
 				ultimateBoots = new UltimateArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_boots"),
-
-				battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -3F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
-				queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -3.4F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe"),
-
 
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),

@@ -40,6 +40,8 @@ public class WorldGenOres {
 			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, titaniumOre.getDefaultState(), titaniumVeinSize), Placement.COUNT_RANGE, titaniumConfig));
 			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, uraniumOre.getDefaultState(), uraniumVeinSize), Placement.COUNT_RANGE, uraniumConfig));
 
+
+			//region Mob Ore spawn
 			addMobOres(biome, batEggOre, 2, 1, 128);
 			addMobOres(biome, blazeEggOre, 2, 1, 128);
 			addMobOres(biome, cavespiderEggOre, 2, 1, 128);
@@ -84,6 +86,7 @@ public class WorldGenOres {
 			addMobOres(biome, zombieEggOre, 2, 1, 128);
 			addMobOres(biome, zombiePigmanEggOre, 2, 1, 128);
 
+			addMobOres(biome, catEggOre, 2, 1, 128);
 			addMobOres(biome, endermiteEggOre, 2, 1, 128);
 			addMobOres(biome, foxEggOre, 2, 1, 128);
 			addMobOres(biome, ghastEggOre, 2, 1, 128);
@@ -91,6 +94,7 @@ public class WorldGenOres {
 			addMobOres(biome, ravagerEggOre, 2, 1, 128);
 			addMobOres(biome, shulkerEggOre, 2, 1, 128);
 
+			//endregion
 		}
 	}
 
