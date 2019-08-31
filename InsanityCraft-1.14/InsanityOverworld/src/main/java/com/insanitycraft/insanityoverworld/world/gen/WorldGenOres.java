@@ -84,6 +84,13 @@ public class WorldGenOres {
 			addMobOres(biome, zombieEggOre, 2, 1, 128);
 			addMobOres(biome, zombiePigmanEggOre, 2, 1, 128);
 
+			addMobOres(biome, endermiteEggOre, 2, 1, 128);
+			addMobOres(biome, foxEggOre, 2, 1, 128);
+			addMobOres(biome, ghastEggOre, 2, 1, 128);
+			addMobOres(biome, pillagerEggOre, 2, 1, 128);
+			addMobOres(biome, ravagerEggOre, 2, 1, 128);
+			addMobOres(biome, shulkerEggOre, 2, 1, 128);
+
 		}
 	}
 

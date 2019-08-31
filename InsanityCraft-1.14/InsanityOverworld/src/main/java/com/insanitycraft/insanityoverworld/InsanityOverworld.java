@@ -20,11 +20,15 @@ public class InsanityOverworld {
 
 	public InsanityOverworld() {
 
+		/*
 		if(VERSIONTYPE.equals("@DEBUG@")) {
 			debug = true;
 		}else {
 			debug = false;
 		}
+		 */
+
+		debug = true;
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);

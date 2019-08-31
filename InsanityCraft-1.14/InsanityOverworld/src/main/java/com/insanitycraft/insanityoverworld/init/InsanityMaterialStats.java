@@ -9,6 +9,8 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
+import javax.annotation.Nullable;
+
 import static com.insanitycraft.insanityoverworld.init.InsanityItems.*;
 
 public class InsanityMaterialStats {
@@ -18,13 +20,24 @@ public class InsanityMaterialStats {
 		//TODO change stats
 		AMETHYST_TIER(11f, 11f, 2000, 4, 70, amethyst),
 		RUBY_TIER(16f, 11f, 1500, 5, 85, ruby),
-		ULTIMATE_TIER(36f, 18f, 3000, 10, 100, titanium_ingot);
+		ULTIMATE_TIER(36f, 18f, 3000, 10, 100, titanium_ingot),
+		PINK_TORMALINE_TIER(7f, 10f, 1100, 4, 65, pinkTormaline),
+		TIGER_EYE_TIER(8f, 12f, 1600, 4, 75, tigerEye),
+
+
+
+
+		BATTLE_AXE_TIER(46, 15f, 1500, 3, 75, null),
+		QUEEN_BATTLE_AXE_TIER(662, 15f, 2200, 3, 100, null);
+
+
+
 
 		private float attackDamage, efficiency;
 		private int durability, harvestLevel, enchantability;
 		private Item repairItem;
 
-		InsanityToolTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item repairItem) {
+		InsanityToolTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, @Nullable Item repairItem) {
 			this.attackDamage = attackDamage;
 			this.efficiency = efficiency;
 			this.durability = durability;
@@ -69,8 +82,11 @@ public class InsanityMaterialStats {
 		//Chestplate durability = 16 * durability
 		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, "item.armor.equip_diamond", 2.5f, amethyst),
 		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, "item.armor.equip_diamond", 3.0f, ruby),
+
 		//TODO change durability
-		ULTIMATE_ARMOR("ultimate", 200, new int[]{7, 9, 10, 7}, 100, "item.armor.equip_diamond", 0.0f, titanium_ingot);
+		ULTIMATE_ARMOR("ultimate", 200, new int[]{7, 9, 10, 7}, 100, "item.armor.equip_diamond", 0.0f, titanium_ingot),
+		PINK_TORMALINE_ARMOR("pink_tormaline", 50, new int[]{2,5,7,3}, 40, "item.armor.equid_diamond", 0.0f, pinkTormaline),
+		TIGER_EYE_ARMOR("tiger_eye", 80, new int[]{4,7,8,4}, 55, "item.armor.equid_diamond", 0.0f, tigerEye);
 
 
 		private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
