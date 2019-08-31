@@ -10,7 +10,7 @@ issueTrackerURL="https://github.com/BiggerGreen/InsanityCraft/issues" #optional
 # The modid of the mod
 modId="insanityoverworld" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="0.1.1-1.14.4" #mandatory
+version="pre-alpha.2-1.14.4" #mandatory
  # A display name for the mod
 displayName="InsanityCraft Overworld" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
@@ -26,6 +26,7 @@ authors="BiggerGreen, Lord_Dargon, Targren, Corrupted_Link." #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 A rootin', tootin', big boss shootin' adventure of EPIC PROPORTIONS!
+
 Inspired by TheyCallMeDanger's OreSpawn mod.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.

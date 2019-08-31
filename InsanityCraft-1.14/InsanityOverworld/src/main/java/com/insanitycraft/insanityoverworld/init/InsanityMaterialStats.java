@@ -26,7 +26,7 @@ public class InsanityMaterialStats {
 
 
 
-
+		ZANGESU_TIER(496, 15f, 9000, 3, 100, null),
 		BATTLE_AXE_TIER(46, 15f, 1500, 3, 75, null),
 		QUEEN_BATTLE_AXE_TIER(662, 15f, 2200, 3, 100, null);
 
