@@ -43,6 +43,28 @@ public class InsanityBlocks {
 	public static BlockItem rubyBlockItem;
 	public static BlockItem rubyOreItem;
 
+	/*
+	-cat
+	-cod
+	-endermite
+	-fox
+	-ghast
+	-mule
+	-pillager
+	-pufferfish
+	-ravager
+	-salmon
+	-shulker
+	-silverfish
+	-skeleton horse
+	-trader llama
+	-tropical fish
+	-vex
+	-wandering trader
+	-zombie horse
+	-villager zombie
+	 */
+
 	//region vanilla eggs
 	public static Block batEggOre;
 	public static Block blazeEggOre;
@@ -88,6 +110,26 @@ public class InsanityBlocks {
 	public static Block zombieEggOre;
 	public static Block zombiePigmanEggOre;
 
+	public static Block catEggOre;
+	//public static Block codEggOre;
+	public static Block endermiteEggOre;
+	public static Block foxEggOre;
+	public static Block ghastEggOre;
+	//public static Block muleEggOre;
+	public static Block pillagerEggOre;
+	//public static Block pufferfishEggOre;
+	public static Block ravagerEggOre;
+	//public static Block salmonEggOre;
+	public static Block shulkerEggOre;
+	//public static Block silverfishEggOre;
+	//public static Block skeletonHorseEggOre;
+	//public static Block traderLlamaEggOre;
+	//public static Block tropicalFishEggOre;
+	//public static Block vexEggOre;
+	//public static Block wanderingTraderEggOre;
+	//public static Block zombieHorseEggOre;
+	//public static Block villagerZombieEggOre;
+
 
 	public static BlockItem batEggItem;
 	public static BlockItem blazeEggItem;
@@ -132,6 +174,26 @@ public class InsanityBlocks {
 	public static BlockItem wolfEggItem;
 	public static BlockItem zombieEggItem;
 	public static BlockItem zombiePigmanEggItem;
+
+	public static BlockItem catEggItem;
+	//public static BlockItem codEggItem;
+	public static BlockItem endermiteEggItem;
+	public static BlockItem foxEggItem;
+	public static BlockItem ghastEggItem;
+	//public static BlockItem muleEggItem;
+	public static BlockItem pillagerEggItem;
+	//public static BlockItem pufferfishEggItem;
+	public static BlockItem ravagerEggItem;
+	//public static BlockItem salmonEggItem;
+	public static BlockItem shulkerEggItem;
+	//public static BlockItem silverfishEggItem;
+	//public static BlockItem skeletonHorseEggItem;
+	//public static BlockItem traderLlamaEggItem;
+	//public static BlockItem tropicalFishEggItem;
+	//public static BlockItem vexEggItem;
+	//public static BlockItem wanderingTraderEggItem;
+	//public static BlockItem zombieHorseEggItem;
+	//public static BlockItem villagerZombieEggItem;
 	//endregion
 
 
@@ -191,9 +253,15 @@ public class InsanityBlocks {
 				witherSkeletonEggOre = new BlockMobOre(getLocation("wither_skeleton_ore")),
 				wolfEggOre = new BlockMobOre(getLocation("wolf_ore")),
 				zombieEggOre = new BlockMobOre(getLocation("zombie_ore")),
-				zombiePigmanEggOre = new BlockMobOre(getLocation("zombie_pigman_ore"))
+				zombiePigmanEggOre = new BlockMobOre(getLocation("zombie_pigman_ore")),
 
-
+				catEggOre = new BlockMobOre(getLocation("cat_ore")),
+				endermiteEggOre = new BlockMobOre(getLocation("endermite_ore")),
+				foxEggOre = new BlockMobOre(getLocation("fox_ore")),
+				ghastEggOre = new BlockMobOre(getLocation("ghast_ore")),
+				pillagerEggOre = new BlockMobOre(getLocation("pillager_ore")),
+				ravagerEggOre = new BlockMobOre(getLocation("ravager_ore")),
+				shulkerEggOre = new BlockMobOre(getLocation("shulker_ore"))
 				//endregion
 
 		);
@@ -256,7 +324,15 @@ public class InsanityBlocks {
 				witherSkeletonEggItem = new BlockItemMobOre(witherSkeletonEggOre),
 				wolfEggItem = new BlockItemMobOre(wolfEggOre),
 				zombieEggItem = new BlockItemMobOre(zombieEggOre),
-				zombiePigmanEggItem = new BlockItemMobOre(zombiePigmanEggOre)
+				zombiePigmanEggItem = new BlockItemMobOre(zombiePigmanEggOre),
+
+				catEggItem = new BlockItemMobOre(catEggOre),
+				endermiteEggItem = new BlockItemMobOre(endermiteEggOre),
+				foxEggItem = new BlockItemMobOre(foxEggOre),
+				ghastEggItem = new BlockItemMobOre(ghastEggOre),
+				pillagerEggItem = new BlockItemMobOre(pillagerEggOre),
+				ravagerEggItem = new BlockItemMobOre(ravagerEggOre),
+				shulkerEggItem = new BlockItemMobOre(shulkerEggOre)
 				//endregion
 		);
 	}
