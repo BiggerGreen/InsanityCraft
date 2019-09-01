@@ -1,5 +1,5 @@
 {
-
+	"itemGroup.insanity_overworld": "Insanity Overworld",
 
 
 	"item.insanityoverworld.amethyst": "Amethyst",
@@ -20,6 +20,7 @@
 	"item.insanityoverworld.ruby_chestplate": "Ruby Chestplate",
 	"item.insanityoverworld.ruby_leggings": "Ruby Leggings",
 	"item.insanityoverworld.ruby_boots": "Ruby Boots",
+
 	"item.insanityoverworld.lapis_pickaxe": "Lapis Pickaxe",
 	"item.insanityoverworld.lapis_axe": "Lapis Axe",
 	"item.insanityoverworld.lapis_shovel": "Lapis Shovel",
@@ -28,6 +29,7 @@
 	"item.insanityoverworld.lapis_chestplate": "Lapis Chestplate",
 	"item.insanityoverworld.lapis_leggings": "Lapis Leggings",
 	"item.insanityoverworld.lapis_boots": "Lapis Boots",
+
 	"item.insanityoverworld.titanium_nugget": "Titanium Nugget",
 	"item.insanityoverworld.titanium_ingot": "Titanium Ingot",
 	"item.insanityoverworld.uranium_nugget": "Uranium Nugget",
@@ -40,6 +42,7 @@
 	"item.insanityoverworld.ultimate_chestplate": "Ultimate Chestplate",
 	"item.insanityoverworld.ultimate_leggings": "Ultimate Leggings",
 	"item.insanityoverworld.ultimate_boots": "Ultimate Boots",
+
 	"item.insanityoverworld.moth_scale": "Moth Scale",
 	"item.insanityoverworld.moth_scale_helmet": "Moth Scale Helmet",
 	"item.insanityoverworld.moth_scale_chestplate": "Moth Scale Chestplate",
@@ -50,6 +53,7 @@
 	"item.insanityoverworld.lava_chestplate": "Lava Chestplate",
 	"item.insanityoverworld.lava_leggings": "Lava Leggings",
 	"item.insanityoverworld.lava_boots": "Lava Boots",
+
 	"item.insanityoverworld.pink_tourmaline": "Pink Tourmaline Ingot",
 	"item.insanityoverworld.pink_tourmaline_helmet": "Pink Tourmaline Helmet",
 	"item.insanityoverworld.pink_tourmaline_chestplate": "Pink Tourmaline Chestplate",
@@ -68,10 +72,13 @@
 	"item.insanityoverworld.tiger_eye_axe": "Tiger Eye Axe",
 	"item.insanityoverworld.tiger_eye_shovel": "Tiger Eye Shovel",
 	"item.insanityoverworld.tiger_eye_sword": "Tiger Eye Sword",
+
 	"item.insanityoverworld.zangetsu_blade": "Zangetsu Blade",
 	"item.insanityoverworld.zangetsu_guard": "Zangetsu Guard",
 	"item.insanityoverworld.zangetsu_handle": "Zangetsu Handle",
+
 	"item.insanityoverworld.zangetsu": "Zangetsu",
+
 	"item.insanityoverworld.mantis_claw": "Mantis Claw",
 	"item.insanityoverworld.giant_mole_nose": "Giant Mole Nose",
 	"item.insanityoverworld.basilisc_scale": "Basilisc Scale",
@@ -95,6 +102,7 @@
 	"item.insanityoverworld.kraken_repellent": "Kraken Repellent",
 	"item.insanityoverworld.dead_stink_bug": "Dead Stink Bug",
 	"item.insanityoverworld.extreme_torch": "Extreme Torch",
+
 	"item.insanityoverworld.enderdragon_spawn_egg": "Ender Dragon Spawn Egg",
 	"item.insanityoverworld.wither_spawn_egg": "Wither Boss Spawn Egg",
 
@@ -111,6 +119,7 @@
 	"block.insanityoverworld.pink_tourmaline_block": "Pink Tourmaline Block",
 	"block.insanityoverworld.tiger_eye_ore": "Tiger Eye Ore",
 	"block.insanityoverworld.tiger_eye_block": "Tiger Eye Block",
+
 	"block.insanityoverworld.mobzilla_scale_block": "Mobzilla Scale Block",
 	"block.insanityoverworld.ender_pearl_block": "Ender Pearl Block",
 	"block.insanityoverworld.eye_of_ender_block": "Eye of Ender Block",
