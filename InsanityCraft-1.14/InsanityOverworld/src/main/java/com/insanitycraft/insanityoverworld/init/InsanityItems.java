@@ -3,7 +3,6 @@ package com.insanitycraft.insanityoverworld.init;
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import com.insanitycraft.insanityoverworld.items.*;
 import com.insanitycraft.insanityoverworld.util.Reference;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -47,17 +46,17 @@ public class InsanityItems {
 	public static Item rubyBoots;
 
 
-	public static Item pinkTormaline;
+	public static Item pinkTourmaline;
 
-	public static Item pinkTormalinePickAxe;
-	public static Item pinkTormalineAxe;
-	public static Item pinkTormalineShovel;
-	public static Item pinkTormalineSword;
+	public static Item pinkTourmalinePickAxe;
+	public static Item pinkTourmalineAxe;
+	public static Item pinkTourmalineShovel;
+	public static Item pinkTourmalineSword;
 
-	public static Item pinkTormalineHelmet;
-	public static Item pinkTormalineChestplate;
-	public static Item pinkTormalineLeggings;
-	public static Item pinkTormalineBoots;
+	public static Item pinkTourmalineHelmet;
+	public static Item pinkTourmalineChestplate;
+	public static Item pinkTourmalineLeggings;
+	public static Item pinkTourmalineBoots;
 
 
 	public static Item tigerEye;
@@ -97,7 +96,7 @@ public class InsanityItems {
 	public static Item mantisClaw;
 	public static Item queenBattleAxe;
 
-	public static Item zangesu;
+	public static Item zangetsu;
 
 	//TODO find out how to do these
 	//public static Item rayGun;
@@ -118,7 +117,7 @@ public class InsanityItems {
 
 					debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
 
-					zangesu = new EnchantedSwordItem(ZANGESU_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("zangesu"),
+					zangetsu = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("zangetsu"),
 
 					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
 					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
@@ -153,17 +152,17 @@ public class InsanityItems {
 				rubyBoots = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ruby_boots"),
 
 
-				pinkTormaline = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("pink_tormaline")),
+				pinkTourmaline = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("pink_tourmaline")),
 
-				pinkTormalinePickAxe = new PickaxeItem(PINK_TORMALINE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_pickaxe"),
-				pinkTormalineAxe = new AxeItem(PINK_TORMALINE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_axe"),
-				pinkTormalineShovel = new ShovelItem(PINK_TORMALINE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_shovel"),
-				pinkTormalineSword = new SwordItem(PINK_TORMALINE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_sword"),
+				pinkTourmalinePickAxe = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_pickaxe"),
+				pinkTourmalineAxe = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_axe"),
+				pinkTourmalineShovel = new ShovelItem(PINK_TOURMALINE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_shovel"),
+				pinkTourmalineSword = new SwordItem(PINK_TOURMALINE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_sword"),
 
-				pinkTormalineHelmet = new ArmorItem(PINK_TORMALINE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_helmet"),
-				pinkTormalineChestplate = new ArmorItem(PINK_TORMALINE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_chestplate"),
-				pinkTormalineLeggings = new ArmorItem(PINK_TORMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_leggings"),
-				pinkTormalineBoots = new ArmorItem(PINK_TORMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("pink_tormaline_boots"),
+				pinkTourmalineHelmet = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_helmet"),
+				pinkTourmalineChestplate = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_chestplate"),
+				pinkTourmalineLeggings = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_leggings"),
+				pinkTourmalineBoots = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_boots"),
 
 				tigerEye = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("tiger_eye")),
 

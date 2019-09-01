@@ -49,7 +49,7 @@ public class EnchantedSwordItem extends SwordItem {
 					stack.addEnchantment(Enchantments.UNBREAKING, 3);
 					stack.addEnchantment(Enchantments.FIRE_ASPECT, 2);
 					stack.addEnchantment(Enchantments.SWEEPING, 3);
-				}else if(stack.getItem() == InsanityItems.zangesu) {
+				}else if(stack.getItem() == InsanityItems.zangetsu) {
 					stack.addEnchantment(Enchantments.KNOCKBACK, 2);
 					stack.addEnchantment(Enchantments.FIRE_ASPECT, 2);
 				}
