@@ -60,7 +60,24 @@ public class EnchantedArmorItem extends ArmorItem {
 					stack.addEnchantment(Enchantments.DEPTH_STRIDER, 3);
 				}
 				//endregion
-
+				//region lapis armor
+				if(stack.getItem() == lapisHelmet) {
+					stack.addEnchantment(Enchantments.PROTECTION, 1);
+					stack.addEnchantment(Enchantments.RESPIRATION, 1);
+					stack.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
+				}
+				if(stack.getItem() == lapisChestplate) {
+					stack.addEnchantment(Enchantments.PROTECTION, 1);
+				}
+				if(stack.getItem() == lapisLeggings) {
+					stack.addEnchantment(Enchantments.PROTECTION, 1);
+				}
+				if(stack.getItem() == lapisBoots) {
+					stack.addEnchantment(Enchantments.PROTECTION, 1);
+					stack.addEnchantment(Enchantments.FEATHER_FALLING, 1);
+					stack.addEnchantment(Enchantments.DEPTH_STRIDER, 1);
+				}
+				//endregion
 
 			}
 		}

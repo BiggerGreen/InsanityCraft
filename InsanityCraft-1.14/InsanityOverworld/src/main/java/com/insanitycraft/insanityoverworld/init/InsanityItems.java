@@ -91,6 +91,19 @@ public class InsanityItems {
 	public static Item ultimateLeggings;
 	public static Item ultimateBoots;
 
+
+	public static Item lapisPickAxe;
+	public static Item lapisAxe;
+	public static Item lapisShovel;
+	public static Item lapisSword;
+
+	public static Item lapisHelmet;
+	public static Item lapisChestplate;
+	public static Item lapisLeggings;
+	public static Item lapisBoots;
+
+
+
 	public static Item battleAxe;
 	public static Item bigHammer;
 	public static Item mantisClaw;
@@ -117,10 +130,10 @@ public class InsanityItems {
 
 					debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
 
-					zangetsu = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("zangetsu"),
+					zangetsu = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("zangetsu"),
 
-					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
-					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
+					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
+					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
 					);
 		}
 
@@ -131,7 +144,7 @@ public class InsanityItems {
 				amethystPickAxe = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_pickaxe"),
 				amethystAxe = new AxeItem(AMETHYST_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_axe"),
 				amethystShovel = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_shovel"),
-				amethystSword = new SwordItem(AMETHYST_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_sword"),
+				amethystSword = new SwordItem(AMETHYST_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_sword"),
 
 				amethystHelmet = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_helmet"),
 				amethystChestplate = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_chestplate"),
@@ -144,7 +157,7 @@ public class InsanityItems {
 				rubyPickAxe = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_pickaxe"),
 				rubyAxe = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_axe"),
 				rubyShovel = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_shovel"),
-				rubySword = new SwordItem(RUBY_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_sword"),
+				rubySword = new SwordItem(RUBY_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_sword"),
 
 				rubyHelmet = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("ruby_helmet"),
 				rubyChestplate = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ruby_chestplate"),
@@ -157,7 +170,7 @@ public class InsanityItems {
 				pinkTourmalinePickAxe = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_pickaxe"),
 				pinkTourmalineAxe = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_axe"),
 				pinkTourmalineShovel = new ShovelItem(PINK_TOURMALINE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_shovel"),
-				pinkTourmalineSword = new SwordItem(PINK_TOURMALINE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_sword"),
+				pinkTourmalineSword = new SwordItem(PINK_TOURMALINE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_sword"),
 
 				pinkTourmalineHelmet = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_helmet"),
 				pinkTourmalineChestplate = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_chestplate"),
@@ -169,7 +182,7 @@ public class InsanityItems {
 				tigerEyePickAxe = new PickaxeItem(TIGER_EYE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_pickaxe"),
 				tigerEyeAxe = new AxeItem(TIGER_EYE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_axe"),
 				tigerEyeShovel = new ShovelItem(TIGER_EYE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_shovel"),
-				tigerEyeSword = new SwordItem(TIGER_EYE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_sword"),
+				tigerEyeSword = new SwordItem(TIGER_EYE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_sword"),
 
 				tigerEyeHelmet = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_helmet"),
 				tigerEyeChestplate = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_chestplate"),
@@ -183,10 +196,10 @@ public class InsanityItems {
 				uranium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("uranium_nugget")),
 
 															//TODO change these stats!
-				ultimatePickAxe = new UltimatePickaxeItem(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
-				ultimateAxe = new UltimateAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_axe"),
-				ultimateShovel = new UltimateShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_shovel"),
-				ultimateSword = new EnchantedSwordItem(ULTIMATE_TIER, 3, -2.4F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_sword"),
+				ultimatePickAxe = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
+				ultimateAxe = new EnchantedAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_axe"),
+				ultimateShovel = new EnchantedShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_shovel"),
+				ultimateSword = new EnchantedSwordItem(ULTIMATE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_sword"),
 
 				ultimateBow = new UltimateBowItem(new Item.Properties().group(itemGroup).maxStackSize(1).defaultMaxDamage(1000)).setRegistryName("ultimate_bow"),
 
@@ -195,6 +208,16 @@ public class InsanityItems {
 				ultimateLeggings = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_leggings"),
 				ultimateBoots = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_boots"),
 
+
+				lapisPickAxe = new EnchantedPickaxe(LAPIS_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_pickaxe"),
+				lapisAxe = new EnchantedAxeItem(LAPIS_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_axe"),
+				lapisShovel = new EnchantedShovelItem(LAPIS_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_shovel"),
+				lapisSword = new EnchantedSwordItem(LAPIS_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_sword"),
+
+				lapisHelmet = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("lapis_helmet"),
+				lapisChestplate = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("lapis_chestplate"),
+				lapisLeggings = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("lapis_leggings"),
+				lapisBoots = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lapis_boots"),
 
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),

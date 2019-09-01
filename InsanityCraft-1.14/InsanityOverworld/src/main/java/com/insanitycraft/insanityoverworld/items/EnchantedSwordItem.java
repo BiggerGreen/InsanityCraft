@@ -9,6 +9,9 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.world.World;
 
+import static com.insanitycraft.insanityoverworld.init.InsanityItems.*;
+import static net.minecraft.enchantment.Enchantments.*;
+
 public class EnchantedSwordItem extends SwordItem {
 	public EnchantedSwordItem(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder) {
 		super(tier, attackDamageIn, attackSpeedIn, builder);
@@ -28,40 +31,38 @@ public class EnchantedSwordItem extends SwordItem {
 
 			if(stack.getEnchantmentTagList().isEmpty()) {
 				nbt.putBoolean("added", true);
-				if(stack.getItem() == InsanityItems.battleAxe) {
-					stack.addEnchantment(Enchantments.LOOTING, 3);
-					stack.addEnchantment(Enchantments.UNBREAKING, 3);
-				}else if(stack.getItem() == InsanityItems.queenBattleAxe) {
-					stack.addEnchantment(Enchantments.SHARPNESS, 5);
-					stack.addEnchantment(Enchantments.SMITE, 5);
-					stack.addEnchantment(Enchantments.BANE_OF_ARTHROPODS, 5);
-					stack.addEnchantment(Enchantments.KNOCKBACK, 3);
-					stack.addEnchantment(Enchantments.LOOTING, 3);
-					stack.addEnchantment(Enchantments.UNBREAKING, 3);
-					stack.addEnchantment(Enchantments.FIRE_ASPECT, 2);
-					stack.addEnchantment(Enchantments.SWEEPING, 3);
-				}else if(stack.getItem() == InsanityItems.ultimateSword) {
-					stack.addEnchantment(Enchantments.SHARPNESS, 5);
-					stack.addEnchantment(Enchantments.SMITE, 5);
-					stack.addEnchantment(Enchantments.BANE_OF_ARTHROPODS, 5);
-					stack.addEnchantment(Enchantments.KNOCKBACK, 3);
-					stack.addEnchantment(Enchantments.LOOTING, 3);
-					stack.addEnchantment(Enchantments.UNBREAKING, 3);
-					stack.addEnchantment(Enchantments.FIRE_ASPECT, 2);
-					stack.addEnchantment(Enchantments.SWEEPING, 3);
-				}else if(stack.getItem() == InsanityItems.zangetsu) {
-					stack.addEnchantment(Enchantments.KNOCKBACK, 2);
-					stack.addEnchantment(Enchantments.FIRE_ASPECT, 2);
+				if(stack.getItem() == battleAxe) {
+					stack.addEnchantment(LOOTING, 3);
+					stack.addEnchantment(UNBREAKING, 3);
 				}
-
-				//stack.addEnchantment(Enchantments.SWEEPING, 3);
-				//InsanityLog.info(nbt);
-
+				if(stack.getItem() == queenBattleAxe) {
+					stack.addEnchantment(SHARPNESS, 5);
+					stack.addEnchantment(SMITE, 5);
+					stack.addEnchantment(BANE_OF_ARTHROPODS, 5);
+					stack.addEnchantment(KNOCKBACK, 3);
+					stack.addEnchantment(LOOTING, 3);
+					stack.addEnchantment(UNBREAKING, 3);
+					stack.addEnchantment(FIRE_ASPECT, 2);
+					stack.addEnchantment(SWEEPING, 3);
+				}
+				if(stack.getItem() == ultimateSword) {
+					stack.addEnchantment(SHARPNESS, 5);
+					stack.addEnchantment(SMITE, 5);
+					stack.addEnchantment(BANE_OF_ARTHROPODS, 5);
+					stack.addEnchantment(KNOCKBACK, 3);
+					stack.addEnchantment(LOOTING, 3);
+					stack.addEnchantment(UNBREAKING, 3);
+					stack.addEnchantment(FIRE_ASPECT, 2);
+					stack.addEnchantment(SWEEPING, 3);
+				}
+				if(stack.getItem() == zangetsu) {
+					stack.addEnchantment(KNOCKBACK, 2);
+					stack.addEnchantment(FIRE_ASPECT, 2);
+				}
+				if(stack.getItem() == lapisSword) {
+					stack.addEnchantment(SHARPNESS, 1);
+				}
 			}
-
 		}
-
-		//InsanityLog.info(nbt);
 	}
-
 }
