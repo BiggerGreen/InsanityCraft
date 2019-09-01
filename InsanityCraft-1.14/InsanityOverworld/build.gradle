@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = 'pre-alpha.2-1.14.4'
+version = 'alpha.1.0.0-1.14.4'
 group = 'com.insanitycraft.insanityoverworld' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'insanityoverworld'
 
