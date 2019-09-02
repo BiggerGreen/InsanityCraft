@@ -28,7 +28,7 @@ public class InsanityOverworld {
 		}
 		 */
 
-		debug = true;
+		debug = false;
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);

@@ -1,5 +1,7 @@
 package com.insanitycraft.insanityoverworld.items;
 
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
@@ -13,7 +15,12 @@ import net.minecraft.item.Items;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponent;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class UltimateBowItem extends BowItem {
 
@@ -179,9 +186,5 @@ public class UltimateBowItem extends BowItem {
 
 		return f;
 	}
-
-
-
-
 
 }

@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "insanityoverworld:item/pink_tormaline_shovel"
-    }
-}

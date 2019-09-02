@@ -4,7 +4,9 @@ import com.insanitycraft.insanityoverworld.block.BlockMobOre;
 import com.insanitycraft.insanityoverworld.block.BlockItemMobOre;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -14,6 +16,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroup;
+import static net.minecraftforge.common.ToolType.*;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InsanityBlocks {
@@ -31,6 +34,12 @@ public class InsanityBlocks {
 	public static Block uraniumBlock;
 	public static Block uraniumOre;
 
+	public static Block pinkTourmalineBlock;
+	public static Block pinkTourmalineOre;
+
+	public static Block tigerEyeBlock;
+	public static Block tigerEyeOre;
+
 	public static BlockItem titaniumBlockItem;
 	public static BlockItem titaniumOreItem;
 
@@ -43,18 +52,17 @@ public class InsanityBlocks {
 	public static BlockItem rubyBlockItem;
 	public static BlockItem rubyOreItem;
 
+	public static BlockItem pinkTourmalineBlockItem;
+	public static BlockItem pinkTourmalineOreItem;
+
+	public static BlockItem tigerEyeBlockItem;
+	public static BlockItem tigerEyeOreItem;
+
 	/*
-	-cat
 	-cod
-	-endermite
-	-fox
-	-ghast
 	-mule
-	-pillager
 	-pufferfish
-	-ravager
 	-salmon
-	-shulker
 	-silverfish
 	-skeleton horse
 	-trader llama
@@ -200,15 +208,21 @@ public class InsanityBlocks {
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
-				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("amethyst_block")),
-				amethystOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("amethyst_ore")),
-				rubyBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("ruby_block")),
-				rubyOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("ruby_ore")),
+				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("amethyst_block")),
+				amethystOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("amethyst_ore")),
+				rubyBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("ruby_block")),
+				rubyOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("ruby_ore")),
 
-				titaniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_block")),
-				titaniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("titanium_ore")),
-				uraniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_block")),
-				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(ToolType.PICKAXE)).setRegistryName(getLocation("uranium_ore")),
+				titaniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("titanium_block")),
+				titaniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("titanium_ore")),
+				uraniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("uranium_block")),
+				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("uranium_ore")),
+
+				pinkTourmalineBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("pink_tourmaline_block")),
+				pinkTourmalineOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("pink_tourmaline_ore")),
+
+				tigerEyeBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("tiger_eye_block")),
+				tigerEyeOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName(getLocation("tiger_eye_ore")),
 
 				//region vanilla eggs
 				batEggOre = new BlockMobOre(getLocation("bat_ore")),
@@ -280,6 +294,13 @@ public class InsanityBlocks {
 				titaniumOreItem = (BlockItem)new BlockItem(titaniumOre, new Item.Properties().group(itemGroup)).setRegistryName(titaniumOre.getRegistryName()),
 				uraniumBlockItem = (BlockItem)new BlockItem(uraniumBlock, new Item.Properties().group(itemGroup)).setRegistryName(uraniumBlock.getRegistryName()),
 				uraniumOreItem = (BlockItem)new BlockItem(uraniumOre, new Item.Properties().group(itemGroup)).setRegistryName(uraniumOre.getRegistryName()),
+
+				pinkTourmalineBlockItem = (BlockItem)new BlockItem(pinkTourmalineBlock, new Item.Properties().group(itemGroup)).setRegistryName(pinkTourmalineBlock.getRegistryName()),
+				pinkTourmalineOreItem = (BlockItem)new BlockItem(pinkTourmalineOre, new Item.Properties().group(itemGroup)).setRegistryName(pinkTourmalineOre.getRegistryName()),
+				tigerEyeBlockItem = (BlockItem)new BlockItem(tigerEyeBlock, new Item.Properties().group(itemGroup)).setRegistryName(tigerEyeBlock.getRegistryName()),
+				tigerEyeOreItem = (BlockItem)new BlockItem(tigerEyeOre, new Item.Properties().group(itemGroup)).setRegistryName(tigerEyeOre.getRegistryName()),
+
+
 
 				//region vanilla eggs
 				batEggItem = new BlockItemMobOre(batEggOre),
