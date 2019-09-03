@@ -27,11 +27,11 @@ public class WorldGenOres {
 	private static final CountRangeConfig uraniumConfig = new CountRangeConfig(1, 0, 0, 15);
 	private static final int uraniumVeinSize = 1;
 
-	private static final int pinkTourmalineVeinSize = 6;
-	private static final CountRangeConfig pinkTourmalineConfig = new CountRangeConfig(6, 10,10, 128);
+	private static final int pinkTourmalineVeinSize = 5;
+	private static final CountRangeConfig pinkTourmalineConfig = new CountRangeConfig(3, 10,10, 128);
 
-	private static final int tigerEyeVeinSize = 6;
-	private static final CountRangeConfig tigerEyeConfig = new CountRangeConfig(6, 10,10, 128);
+	private static final int tigerEyeVeinSize = 3;
+	private static final CountRangeConfig tigerEyeConfig = new CountRangeConfig(2, 10,10, 128);
 
 
 	public static void setupOreGen() {

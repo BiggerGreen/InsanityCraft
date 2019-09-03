@@ -10,12 +10,14 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ObjectHolder;
 
 import static com.insanitycraft.insanityoverworld.InsanityOverworld.*;
 import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.InsanityToolTier.*;
 import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.InsanityArmorMaterials.*;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(Reference.MODID)
 public class InsanityItems {
 
 	static Item debug;
@@ -119,9 +121,17 @@ public class InsanityItems {
 
 
 
-
+	//region misc
 	public static Item enderdragonSpawnEgg;
 	public static Item witherSpawnEgg;
+	public static Item ironGolemSpawnEgg;
+	public static Item snowGolemSpawnEgg;
+
+
+	public static Item instaNetherPortal;
+
+	public static Item blankRecord;
+	//endregion
 
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -134,12 +144,14 @@ public class InsanityItems {
 
 					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
 					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
+
 					);
 		}
 
 		event.getRegistry().registerAll(
 
-				amethyst = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("amethyst")),
+				//region materials
+				amethyst = new Item(new Item.Properties().group(itemGroup)).setRegistryName("amethyst"),
 
 				amethystPickAxe = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_pickaxe"),
 				amethystAxe = new AxeItem(AMETHYST_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_axe"),
@@ -152,7 +164,7 @@ public class InsanityItems {
 				amethystBoots = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_boots"),
 
 
-				ruby = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("ruby")),
+				ruby = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ruby"),
 
 				rubyPickAxe = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_pickaxe"),
 				rubyAxe = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_axe"),
@@ -165,7 +177,7 @@ public class InsanityItems {
 				rubyBoots = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ruby_boots"),
 
 
-				pinkTourmaline = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("pink_tourmaline")),
+				pinkTourmaline = new Item(new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline"),
 
 				pinkTourmalinePickAxe = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_pickaxe"),
 				pinkTourmalineAxe = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_axe"),
@@ -177,7 +189,7 @@ public class InsanityItems {
 				pinkTourmalineLeggings = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_leggings"),
 				pinkTourmalineBoots = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_boots"),
 
-				tigerEye = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("tiger_eye")),
+				tigerEye = new Item(new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye"),
 
 				tigerEyePickAxe = new PickaxeItem(TIGER_EYE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_pickaxe"),
 				tigerEyeAxe = new AxeItem(TIGER_EYE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_axe"),
@@ -189,11 +201,11 @@ public class InsanityItems {
 				tigerEyeLeggings = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_leggings"),
 				tigerEyeBoots = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_boots"),
 
-				titanium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("titanium_ingot")),
-				titanium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("titanium_nugget")),
+				titanium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName("titanium_ingot"),
+				titanium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName("titanium_nugget"),
 
-				uranium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("uranium_ingot")),
-				uranium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName(getLocation("uranium_nugget")),
+				uranium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName("uranium_ingot"),
+				uranium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName("uranium_nugget"),
 
 															//TODO change these stats!
 				ultimatePickAxe = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
@@ -219,16 +231,22 @@ public class InsanityItems {
 				lapisLeggings = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("lapis_leggings"),
 				lapisBoots = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lapis_boots"),
 
+				//endregion
+				//region misc
+
+				instaNetherPortal = new InstaNetherPortalItem().setRegistryName("insta_nether_portal"),
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
-				witherSpawnEgg = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg")
+				witherSpawnEgg = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),
+				ironGolemSpawnEgg= new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
+				snowGolemSpawnEgg = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
+
+				blankRecord = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_record")
+
+				//endregion
 
 				);
 
 	}
 
-
-	private static ResourceLocation getLocation(String name) {
-		return new ResourceLocation(Reference.MODID, name);
-	}
 }
