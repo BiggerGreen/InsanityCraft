@@ -16,11 +16,7 @@ public class ItemDebug extends Item {
 	public ActionResultType onItemUse(ItemUseContext context) {
 		PlayerEntity player = context.getPlayer();
 
-		if(player.dimension != DimensionType.OVERWORLD) {
-			player.changeDimension(DimensionType.OVERWORLD);
-		}else {
-			player.changeDimension(DimensionType.THE_END); //Change to mod Dimension when added
-		}
+		//TODO add things for this item to do
 
 		return ActionResultType.SUCCESS;
 	}

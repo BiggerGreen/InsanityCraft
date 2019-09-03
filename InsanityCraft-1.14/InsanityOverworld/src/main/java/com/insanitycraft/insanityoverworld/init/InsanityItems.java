@@ -136,11 +136,19 @@ public class InsanityItems {
 	public static Item ironGolemSpawnEgg;
 	public static Item snowGolemSpawnEgg;
 
-
 	public static Item instaNetherPortal;
 
 	public static Item blankRecord;
+
+	public static Item enderDragonTooth;
 	//endregion
+
+
+	//region item that are not registered here
+	public static Item antSpawnEgg;
+
+	//endregion
+
 
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -216,7 +224,6 @@ public class InsanityItems {
 				uranium_ingot = new Item(new Item.Properties().group(itemGroup)).setRegistryName("uranium_ingot"),
 				uranium_nugget = new Item(new Item.Properties().group(itemGroup)).setRegistryName("uranium_nugget"),
 
-															//TODO change these stats!
 				ultimatePickAxe = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
 				ultimateAxe = new EnchantedAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_axe"),
 				ultimateShovel = new EnchantedShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_shovel"),
@@ -258,7 +265,9 @@ public class InsanityItems {
 				ironGolemSpawnEgg= new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
 				snowGolemSpawnEgg = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
 
-				blankRecord = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_record")
+				blankRecord = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_record"),
+
+				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth")
 
 				//endregion
 
