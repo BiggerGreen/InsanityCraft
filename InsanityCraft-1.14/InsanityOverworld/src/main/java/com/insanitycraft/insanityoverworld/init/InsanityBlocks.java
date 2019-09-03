@@ -10,7 +10,6 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,7 +22,7 @@ import static net.minecraftforge.common.ToolType.*;
 @ObjectHolder(Reference.MODID)
 public class InsanityBlocks {
 
-
+	//region Materials
 	public static Block amethystBlock;
 	public static Block amethystOre;
 
@@ -59,21 +58,7 @@ public class InsanityBlocks {
 
 	public static BlockItem tigerEyeBlockItem;
 	public static BlockItem tigerEyeOreItem;
-
-	/*
-	-cod
-	-mule
-	-pufferfish
-	-salmon
-	-silverfish
-	-skeleton horse
-	-trader llama
-	-tropical fish
-	-vex
-	-wandering trader
-	-zombie horse
-	-villager zombie
-	 */
+	//endregion
 
 	//region vanilla eggs
 	public static Block batEggOre;
@@ -206,10 +191,20 @@ public class InsanityBlocks {
 	//public static BlockItem villagerZombieEggItem;
 	//endregion
 
+	//region misc
+	public static Block enderEyeBlock;
+	public static Block enderPearlBlock;
+
+	public static BlockItem enderEyeBlockItem;
+	public static BlockItem enderPearlBlockItem;
+
+
+	//endregion
 
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
+				//region Materials
 				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_block"),
 				amethystOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_ore"),
 				rubyBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
@@ -225,6 +220,7 @@ public class InsanityBlocks {
 
 				tigerEyeBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("tiger_eye_block"),
 				tigerEyeOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("tiger_eye_ore"),
+				//endregion
 
 				//region vanilla eggs
 				batEggOre = new BlockMobOre(getLocation("bat_ore")),
@@ -277,16 +273,20 @@ public class InsanityBlocks {
 				ghastEggOre = new BlockMobOre(getLocation("ghast_ore")),
 				pillagerEggOre = new BlockMobOre(getLocation("pillager_ore")),
 				ravagerEggOre = new BlockMobOre(getLocation("ravager_ore")),
-				shulkerEggOre = new BlockMobOre(getLocation("shulker_ore"))
+				shulkerEggOre = new BlockMobOre(getLocation("shulker_ore")),
 				//endregion
 
+				//region misc
+				enderEyeBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block"),
+				enderPearlBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block")
+				//endregion
 		);
 	}
 
 	@SubscribeEvent
 	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
-
+				//region Material
 				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroup)).setRegistryName(amethystBlock.getRegistryName()),
 				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroup)).setRegistryName(amethystOre.getRegistryName()),
 				rubyBlockItem = (BlockItem)new BlockItem(rubyBlock, new Item.Properties().group(itemGroup)).setRegistryName(rubyBlock.getRegistryName()),
@@ -302,7 +302,7 @@ public class InsanityBlocks {
 				tigerEyeBlockItem = (BlockItem)new BlockItem(tigerEyeBlock, new Item.Properties().group(itemGroup)).setRegistryName(tigerEyeBlock.getRegistryName()),
 				tigerEyeOreItem = (BlockItem)new BlockItem(tigerEyeOre, new Item.Properties().group(itemGroup)).setRegistryName(tigerEyeOre.getRegistryName()),
 
-
+				//endregion
 
 				//region vanilla eggs
 				batEggItem = new BlockItemMobOre(batEggOre),
@@ -355,7 +355,12 @@ public class InsanityBlocks {
 				ghastEggItem = new BlockItemMobOre(ghastEggOre),
 				pillagerEggItem = new BlockItemMobOre(pillagerEggOre),
 				ravagerEggItem = new BlockItemMobOre(ravagerEggOre),
-				shulkerEggItem = new BlockItemMobOre(shulkerEggOre)
+				shulkerEggItem = new BlockItemMobOre(shulkerEggOre),
+				//endregion
+
+				//region misc
+				enderEyeBlockItem = (BlockItem)new BlockItem(enderEyeBlock, new Item.Properties().group(itemGroup)).setRegistryName(enderEyeBlock.getRegistryName()),
+				enderPearlBlockItem = (BlockItem)new BlockItem(enderPearlBlock, new Item.Properties().group(itemGroup)).setRegistryName(enderPearlBlock.getRegistryName())
 				//endregion
 		);
 	}
