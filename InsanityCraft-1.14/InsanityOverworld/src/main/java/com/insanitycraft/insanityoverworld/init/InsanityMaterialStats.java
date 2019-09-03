@@ -84,6 +84,7 @@ public class InsanityMaterialStats {
 		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, "item.armor.equip_diamond", 2.5f, amethyst),
 		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, "item.armor.equip_diamond", 3.0f, ruby),
 		LAPIS_ARMOR("lapis", 15, new int[]{2, 5, 6, 2}, 9, "item.armor.equip_iron", 0f, Items.LAPIS_LAZULI),
+		LAVA_ARMOR("lava", 30, new int[]{2,5,7,2}, 20, "item.armor.equip_diamond", 0f, lavaCrystal),
 
 		//TODO change durability
 		ULTIMATE_ARMOR("ultimate", 200, new int[]{7, 9, 10, 7}, 100, "item.armor.equip_diamond", 0.0f, titanium_ingot),

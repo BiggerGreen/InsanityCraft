@@ -22,7 +22,7 @@ public class InsanityItems {
 
 	static Item debug;
 
-
+	//region materials
 	public static Item amethyst;
 
 	public static Item amethystPickAxe;
@@ -105,6 +105,15 @@ public class InsanityItems {
 	public static Item lapisBoots;
 
 
+	public static Item lavaCrystal;
+
+	public static Item lavaHelmet;
+	public static Item lavaChestplate;
+	public static Item lavaLeggings;
+	public static Item lavaBoots;
+
+
+	//endregion
 
 	public static Item battleAxe;
 	public static Item bigHammer;
@@ -230,6 +239,14 @@ public class InsanityItems {
 				lapisChestplate = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("lapis_chestplate"),
 				lapisLeggings = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("lapis_leggings"),
 				lapisBoots = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lapis_boots"),
+
+
+				lavaCrystal = new Item(new Item.Properties().group(itemGroup)).setRegistryName("lava_crystal"),
+
+				lavaHelmet = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("lava_helmet"),
+				lavaChestplate = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("lava_chestplate"),
+				lavaLeggings = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("lava_leggings"),
+				lavaBoots = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lava_boots"),
 
 				//endregion
 				//region misc
