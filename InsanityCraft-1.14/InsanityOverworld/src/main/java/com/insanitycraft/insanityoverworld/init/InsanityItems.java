@@ -120,6 +120,9 @@ public class InsanityItems {
 	public static Item mantisClaw;
 	public static Item queenBattleAxe;
 
+	public static Item zangetsuGuard;
+	public static Item zangetsuBlade;
+	public static Item zangetsuHandle;
 	public static Item zangetsu;
 
 	//TODO find out how to do these
@@ -137,6 +140,7 @@ public class InsanityItems {
 	public static Item snowGolemSpawnEgg;
 
 	public static Item instaNetherPortal;
+	public static Item minersDream;
 
 	public static Item blankRecord;
 
@@ -146,6 +150,7 @@ public class InsanityItems {
 
 	//region item that are not registered here
 	public static Item antSpawnEgg;
+	public static Item nytemairsSpawnEgg;
 
 	//endregion
 
@@ -156,8 +161,6 @@ public class InsanityItems {
 			event.getRegistry().registerAll(
 
 					debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
-
-					zangetsu = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("zangetsu"),
 
 					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
 					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
@@ -256,9 +259,21 @@ public class InsanityItems {
 				lavaBoots = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lava_boots"),
 
 				//endregion
+
+				zangetsu = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("zangetsu"),
+
+				zangetsuBlade = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_blade"),
+				zangetsuHandle = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_handle"),
+				zangetsuGuard = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_guard"),
+
+
+
+
+
 				//region misc
 
 				instaNetherPortal = new InstaNetherPortalItem().setRegistryName("insta_nether_portal"),
+				minersDream = new MinersDreamItem().setRegistryName("miners_dream"),
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
 				witherSpawnEgg = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),

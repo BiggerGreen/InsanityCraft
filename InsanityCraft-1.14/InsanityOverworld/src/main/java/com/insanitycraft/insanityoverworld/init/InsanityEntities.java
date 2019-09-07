@@ -1,8 +1,10 @@
 package com.insanitycraft.insanityoverworld.init;
 
 import com.insanitycraft.insanityoverworld.client.renderer.entity.AntRenderer;
+import com.insanitycraft.insanityoverworld.client.renderer.entity.NytemairsRenderer;
+import com.insanitycraft.insanityoverworld.client.renderer.entity.model.NytemairsModel;
 import com.insanitycraft.insanityoverworld.entity.EntityAnt;
-import com.insanitycraft.insanityoverworld.util.Reference;
+import com.insanitycraft.insanityoverworld.entity.EntityNytemairs;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -22,10 +24,13 @@ import static com.insanitycraft.insanityoverworld.util.Reference.*;
 public class InsanityEntities {
 
 	public static EntityType<?> ENTITY_ANT = EntityType.Builder.create(EntityAnt::new, EntityClassification.CREATURE).build(MODID + ":ant").setRegistryName("ant");
+	//Nytemairs
+	public static EntityType<?> ENTITY_NYTEMAIRS = EntityType.Builder.create(EntityNytemairs::new, EntityClassification.MONSTER).build(MODID + ":nytemairs").setRegistryName("nytemairs");
 
 
 	public static void registerEntityRenders() {
 		RenderingRegistry.registerEntityRenderingHandler(EntityAnt.class, AntRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityNytemairs.class, NytemairsRenderer::new);
 	}
 
 
@@ -33,7 +38,8 @@ public class InsanityEntities {
 	public static void registerEntitis(final RegistryEvent.Register<EntityType<?>> event) {
 		event.getRegistry().registerAll(
 
-				ENTITY_ANT
+				ENTITY_ANT,
+				ENTITY_NYTEMAIRS
 
 		);
 	}
@@ -41,7 +47,8 @@ public class InsanityEntities {
 	@SubscribeEvent
 	public static void registerSpawnEggs(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
-				antSpawnEgg = registerSpawnEgg(ENTITY_ANT, 0x1c1001, 0x38250d, "brown_ant_spawnegg")
+				antSpawnEgg = registerSpawnEgg(ENTITY_ANT, 0x1c1001, 0x38250d, "brown_ant_spawnegg"),
+				nytemairsSpawnEgg = registerSpawnEgg(ENTITY_NYTEMAIRS, 0x1c1001, 0x38250d, "nytemairs_spawnegg")
 
 
 		);
