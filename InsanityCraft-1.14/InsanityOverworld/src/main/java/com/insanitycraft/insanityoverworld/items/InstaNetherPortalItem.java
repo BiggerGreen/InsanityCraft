@@ -1,6 +1,6 @@
 package com.insanitycraft.insanityoverworld.items;
 
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -12,12 +12,11 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class ItemDebug extends Item {
+public class InstaNetherPortalItem extends Item {
 
-	public ItemDebug(Properties properties) {
-		super(properties);
+	public InstaNetherPortalItem() {
+		super(new Item.Properties().group(InsanityOverworld.itemGroup));
 	}
-
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity playerEntity, Hand hand) {
@@ -25,6 +24,9 @@ public class ItemDebug extends Item {
 		playerEntity.setActiveHand(hand);
 		BlockPos pos = playerEntity.getPosition();
 		Direction direction = playerEntity.getAdjustedHorizontalFacing();
+		if(!playerEntity.abilities.isCreativeMode) {
+			stack.shrink(1);
+		}
 		if(!world.isRemote) {
 			for(int x = 0; x <= 3; x++) {
 				for(int y = 0; y <= 4; y++) {

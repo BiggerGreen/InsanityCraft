@@ -10,6 +10,7 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.world.World;
 
 import static com.insanitycraft.insanityoverworld.init.InsanityItems.*;
+import static net.minecraft.enchantment.Enchantments.*;
 
 public class EnchantedArmorItem extends ArmorItem {
 
@@ -32,50 +33,46 @@ public class EnchantedArmorItem extends ArmorItem {
 				nbt.putBoolean("added", true);
 				//region ultimate armor
 				if(stack.getItem() == ultimateHelmet) {
-					stack.addEnchantment(Enchantments.PROTECTION, 3);
-					stack.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.BLAST_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.RESPIRATION, 3);
-					stack.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
+					stack.addEnchantment(PROTECTION, 3);
+					stack.addEnchantment(FIRE_PROTECTION, 1);
+					stack.addEnchantment(BLAST_PROTECTION, 1);
+					stack.addEnchantment(PROJECTILE_PROTECTION, 1);
+					stack.addEnchantment(RESPIRATION, 3);
+					stack.addEnchantment(AQUA_AFFINITY, 1);
 				}
-				if(stack.getItem() == ultimateChestplate) {
-					stack.addEnchantment(Enchantments.PROTECTION, 3);
-					stack.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.BLAST_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 1);
-				}
-				if(stack.getItem() == ultimateLeggings) {
-					stack.addEnchantment(Enchantments.PROTECTION, 3);
-					stack.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.BLAST_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 1);
+				if(stack.getItem() == ultimateChestplate || stack.getItem() == ultimateLeggings) {
+					stack.addEnchantment(PROTECTION, 3);
+					stack.addEnchantment(FIRE_PROTECTION, 1);
+					stack.addEnchantment(BLAST_PROTECTION, 1);
+					stack.addEnchantment(PROJECTILE_PROTECTION, 1);
 				}
 				if(stack.getItem() == ultimateBoots) {
-					stack.addEnchantment(Enchantments.PROTECTION, 3);
-					stack.addEnchantment(Enchantments.FIRE_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.BLAST_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 1);
-					stack.addEnchantment(Enchantments.FEATHER_FALLING, 4);
-					stack.addEnchantment(Enchantments.DEPTH_STRIDER, 3);
+					stack.addEnchantment(PROTECTION, 3);
+					stack.addEnchantment(FIRE_PROTECTION, 1);
+					stack.addEnchantment(BLAST_PROTECTION, 1);
+					stack.addEnchantment(PROJECTILE_PROTECTION, 1);
+					stack.addEnchantment(FEATHER_FALLING, 4);
+					stack.addEnchantment(DEPTH_STRIDER, 3);
 				}
 				//endregion
 				//region lapis armor
 				if(stack.getItem() == lapisHelmet) {
-					stack.addEnchantment(Enchantments.PROTECTION, 1);
-					stack.addEnchantment(Enchantments.RESPIRATION, 1);
-					stack.addEnchantment(Enchantments.AQUA_AFFINITY, 1);
+					stack.addEnchantment(PROTECTION, 1);
+					stack.addEnchantment(RESPIRATION, 1);
+					stack.addEnchantment(AQUA_AFFINITY, 1);
 				}
-				if(stack.getItem() == lapisChestplate) {
-					stack.addEnchantment(Enchantments.PROTECTION, 1);
-				}
-				if(stack.getItem() == lapisLeggings) {
-					stack.addEnchantment(Enchantments.PROTECTION, 1);
+				if(stack.getItem() == lapisChestplate || stack.getItem() == lapisLeggings) {
+					stack.addEnchantment(PROTECTION, 1);
 				}
 				if(stack.getItem() == lapisBoots) {
-					stack.addEnchantment(Enchantments.PROTECTION, 1);
-					stack.addEnchantment(Enchantments.FEATHER_FALLING, 1);
-					stack.addEnchantment(Enchantments.DEPTH_STRIDER, 1);
+					stack.addEnchantment(PROTECTION, 1);
+					stack.addEnchantment(FEATHER_FALLING, 1);
+					stack.addEnchantment(DEPTH_STRIDER, 1);
+				}
+				//endregion
+				//region lava armor
+				if(stack.getItem() == lavaHelmet || stack.getItem() == lavaChestplate || stack.getItem() == lavaLeggings || stack.getItem() == lavaBoots) {
+					stack.addEnchantment(FIRE_PROTECTION, 4);
 				}
 				//endregion
 

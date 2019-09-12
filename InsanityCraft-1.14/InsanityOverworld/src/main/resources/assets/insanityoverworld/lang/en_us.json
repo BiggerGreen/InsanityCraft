@@ -2,6 +2,7 @@
 	"itemGroup.insanity_overworld": "Insanity Overworld",
 
 
+	"comment_": "items",
 	"item.insanityoverworld.amethyst": "Amethyst",
 	"item.insanityoverworld.amethyst_pickaxe": "Amethyst Pickaxe",
 	"item.insanityoverworld.amethyst_axe": "Amethyst Axe",
@@ -20,7 +21,6 @@
 	"item.insanityoverworld.ruby_chestplate": "Ruby Chestplate",
 	"item.insanityoverworld.ruby_leggings": "Ruby Leggings",
 	"item.insanityoverworld.ruby_boots": "Ruby Boots",
-
 	"item.insanityoverworld.lapis_pickaxe": "Lapis Pickaxe",
 	"item.insanityoverworld.lapis_axe": "Lapis Axe",
 	"item.insanityoverworld.lapis_shovel": "Lapis Shovel",
@@ -29,7 +29,6 @@
 	"item.insanityoverworld.lapis_chestplate": "Lapis Chestplate",
 	"item.insanityoverworld.lapis_leggings": "Lapis Leggings",
 	"item.insanityoverworld.lapis_boots": "Lapis Boots",
-
 	"item.insanityoverworld.titanium_nugget": "Titanium Nugget",
 	"item.insanityoverworld.titanium_ingot": "Titanium Ingot",
 	"item.insanityoverworld.uranium_nugget": "Uranium Nugget",
@@ -48,12 +47,12 @@
 	"item.insanityoverworld.moth_scale_chestplate": "Moth Scale Chestplate",
 	"item.insanityoverworld.moth_scale_leggings": "Moth Scale Leggings",
 	"item.insanityoverworld.moth_scale_boots": "Moth Scale Boots",
+
 	"item.insanityoverworld.lava_crystal": "Lava Crystal",
 	"item.insanityoverworld.lava_helmet": "Lava Helmet",
 	"item.insanityoverworld.lava_chestplate": "Lava Chestplate",
 	"item.insanityoverworld.lava_leggings": "Lava Leggings",
 	"item.insanityoverworld.lava_boots": "Lava Boots",
-
 	"item.insanityoverworld.pink_tourmaline": "Pink Tourmaline Ingot",
 	"item.insanityoverworld.pink_tourmaline_helmet": "Pink Tourmaline Helmet",
 	"item.insanityoverworld.pink_tourmaline_chestplate": "Pink Tourmaline Chestplate",
@@ -72,11 +71,9 @@
 	"item.insanityoverworld.tiger_eye_axe": "Tiger Eye Axe",
 	"item.insanityoverworld.tiger_eye_shovel": "Tiger Eye Shovel",
 	"item.insanityoverworld.tiger_eye_sword": "Tiger Eye Sword",
-
 	"item.insanityoverworld.zangetsu_blade": "Zangetsu Blade",
 	"item.insanityoverworld.zangetsu_guard": "Zangetsu Guard",
 	"item.insanityoverworld.zangetsu_handle": "Zangetsu Handle",
-
 	"item.insanityoverworld.zangetsu": "Zangetsu",
 
 	"item.insanityoverworld.mantis_claw": "Mantis Claw",
@@ -95,7 +92,7 @@
 	"item.insanityoverworld.ray_gun": "Ray Gun",
 	"item.insanityoverworld.water_dragon_scale": "Water Dragon Scale",
 	"item.insanityoverworld.dead_irukandji": "Dead Irukandji",
-	"item.insanityoverworld.miner_dream": "Miner's Dream",
+	"item.insanityoverworld.miners_dream": "Miner's Dream",
 	"item.insanityoverworld.mobzilla_scale": "Mobzilla Scale",
 	"item.insanityoverworld.nether_tracker": "Nether Tracker",
 	"item.insanityoverworld.creeper_repellent": "Creeper Repellent",
@@ -105,8 +102,17 @@
 
 	"item.insanityoverworld.enderdragon_spawn_egg": "Ender Dragon Spawn Egg",
 	"item.insanityoverworld.wither_spawn_egg": "Wither Boss Spawn Egg",
+	"item.insanityoverworld.iron_golem_spawn_egg": "Iron Golem Spawn Egg",
+	"item.insanityoverworld.snow_golem_spawn_egg": "Snow Golem Spawn Egg",
+
+	"item.insanityoverworld.blank_record": "Blank Record",
 
 
+
+
+
+
+	"comment_": "blocks",
 	"block.insanityoverworld.amethyst_block": "Amethyst Block",
 	"block.insanityoverworld.amethyst_ore": "Amethyst Ore",
 	"block.insanityoverworld.ruby_block": "Ruby Block",
@@ -121,11 +127,12 @@
 	"block.insanityoverworld.tiger_eye_block": "Tiger Eye Block",
 
 	"block.insanityoverworld.mobzilla_scale_block": "Mobzilla Scale Block",
+
 	"block.insanityoverworld.ender_pearl_block": "Ender Pearl Block",
-	"block.insanityoverworld.eye_of_ender_block": "Eye of Ender Block",
+	"block.insanityoverworld.ender_eye_block": "Eye of Ender Block",
 	"block.insanityoverworld.lava_foam": "Lava Foam",
 
-	"comment": "Petrified Spawn Eggs",
+	"comment_": "Petrified Spawn Eggs",
 	"block.insanityoverworld.bat_ore": "Petrified Bat Spawn Egg",
 	"block.insanityoverworld.blaze_ore": "Petrified Blaze Spawn Egg",
 	"block.insanityoverworld.cat_ore": "Petrified Cat Spawn Egg",

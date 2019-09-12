@@ -1,7 +1,5 @@
 package com.insanitycraft.insanityoverworld.items;
 
-import com.insanitycraft.insanityoverworld.init.InsanityItems;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;

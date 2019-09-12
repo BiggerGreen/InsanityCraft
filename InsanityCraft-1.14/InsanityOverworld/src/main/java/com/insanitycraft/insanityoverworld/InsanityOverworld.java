@@ -1,5 +1,6 @@
 package com.insanitycraft.insanityoverworld;
 
+import com.insanitycraft.insanityoverworld.init.InsanityEntities;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;
 import net.minecraft.item.ItemGroup;
@@ -28,7 +29,7 @@ public class InsanityOverworld {
 		}
 		 */
 
-		debug = false;
+		debug = true;
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
@@ -43,7 +44,7 @@ public class InsanityOverworld {
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
-
+		InsanityEntities.registerEntityRenders();
 	}
 
 }
