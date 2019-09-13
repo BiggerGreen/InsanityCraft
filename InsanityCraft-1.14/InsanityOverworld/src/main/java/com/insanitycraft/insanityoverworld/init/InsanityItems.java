@@ -145,11 +145,13 @@ public class InsanityItems {
 	public static Item blankRecord;
 
 	public static Item enderDragonTooth;
+	public static Item moleNose;
+	public static Item serpentTongue;
 	//endregion
 
 
 	//region item that are not registered here
-	public static Item antSpawnEgg;
+	public static Item giantMoleSpawnEgg;
 	public static Item nytemairsSpawnEgg;
 
 	//endregion
@@ -282,7 +284,9 @@ public class InsanityItems {
 
 				blankRecord = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_record"),
 
-				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth")
+				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth"),
+				moleNose = new Item(new Item.Properties().group(itemGroup)).setRegistryName("giant_mole_nose"),
+				serpentTongue = new Item(new Item.Properties().group(itemGroup)).setRegistryName("sea_serpent_tongue")
 
 				//endregion
 

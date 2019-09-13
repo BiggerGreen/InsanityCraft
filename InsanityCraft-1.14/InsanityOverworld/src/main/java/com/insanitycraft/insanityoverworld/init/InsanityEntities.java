@@ -1,9 +1,9 @@
 package com.insanitycraft.insanityoverworld.init;
 
-import com.insanitycraft.insanityoverworld.client.renderer.entity.AntRenderer;
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.client.renderer.entity.GiantMoleRenderer;
 import com.insanitycraft.insanityoverworld.client.renderer.entity.NytemairsRenderer;
-import com.insanitycraft.insanityoverworld.client.renderer.entity.model.NytemairsModel;
-import com.insanitycraft.insanityoverworld.entity.EntityAnt;
+import com.insanitycraft.insanityoverworld.entity.EntityGiantMole;
 import com.insanitycraft.insanityoverworld.entity.EntityNytemairs;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -23,23 +23,23 @@ import static com.insanitycraft.insanityoverworld.util.Reference.*;
 @ObjectHolder(MODID)
 public class InsanityEntities {
 
-	public static EntityType<?> ENTITY_ANT = EntityType.Builder.create(EntityAnt::new, EntityClassification.CREATURE).build(MODID + ":ant").setRegistryName("ant");
-	//Nytemairs
 	public static EntityType<?> ENTITY_NYTEMAIRS = EntityType.Builder.create(EntityNytemairs::new, EntityClassification.MONSTER).build(MODID + ":nytemairs").setRegistryName("nytemairs");
+	public static EntityType<?> ENTITY_GIANT_MOLE = EntityType.Builder.create(EntityGiantMole::new, EntityClassification.MONSTER).build(MODID + ":giant_mole").setRegistryName("giant_mole");
 
 
 	public static void registerEntityRenders() {
-		RenderingRegistry.registerEntityRenderingHandler(EntityAnt.class, AntRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityNytemairs.class, NytemairsRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityGiantMole.class, GiantMoleRenderer::new);
 	}
 
 
 	@SubscribeEvent
 	public static void registerEntitis(final RegistryEvent.Register<EntityType<?>> event) {
+		if(InsanityOverworld.debug)
 		event.getRegistry().registerAll(
 
-				ENTITY_ANT,
-				ENTITY_NYTEMAIRS
+				ENTITY_NYTEMAIRS,
+				ENTITY_GIANT_MOLE
 
 		);
 	}
@@ -47,9 +47,8 @@ public class InsanityEntities {
 	@SubscribeEvent
 	public static void registerSpawnEggs(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
-				antSpawnEgg = registerSpawnEgg(ENTITY_ANT, 0x1c1001, 0x38250d, "brown_ant_spawnegg"),
-				nytemairsSpawnEgg = registerSpawnEgg(ENTITY_NYTEMAIRS, 0x1c1001, 0x38250d, "nytemairs_spawnegg")
-
+				nytemairsSpawnEgg = registerSpawnEgg(ENTITY_NYTEMAIRS, 0x1c1001, 0x38250d, "nytemairs_spawnegg"),
+				giantMoleSpawnEgg = registerSpawnEgg(ENTITY_GIANT_MOLE, 0, 1, "giant_mole_spawnegg")
 
 		);
 	}

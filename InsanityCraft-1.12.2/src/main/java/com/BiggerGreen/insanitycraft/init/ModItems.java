@@ -7,13 +7,12 @@ import com.BiggerGreen.insanitycraft.items.ItemBase;
 import com.BiggerGreen.insanitycraft.tools.ToolUltimateHoe;
 import com.BiggerGreen.insanitycraft.tools.ToolUltimatePickaxe;
 import com.BiggerGreen.insanitycraft.tools.ToolUltimateShovel;
-
 import net.minecraft.item.Item;
 
 public class ModItems
 {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
-	
+
 	public static final Item RUBY = new ItemBase("ruby");
 	public static final Item URANIUM_NUGGET = new ItemBase("uranium_nugget");
 	public static final Item URANIUM_INGOT = new ItemBase("uranium_ingot");
@@ -45,7 +44,7 @@ public class ModItems
 	public static final Item BIG_BERTHA_HANDLE = new ItemBase("big_bertha_handle");
 	public static final Item DEAD_STINK_BUG = new ItemBase("dead_stink_bug");
 	public static final Item DEAD_IRUKANDJI = new ItemBase("dead_irukandji");
-	public static final Item HOE_ULTIMATE = new ToolUltimateHoe("hoe_ultimate");
-	public static final Item PICKAXE_ULTIMATE = new ToolUltimatePickaxe("pickaxe_ultimate");
-	public static final Item SHOVEL_ULTIMATE = new ToolUltimateShovel("shovel_ultimate");
+	//public static final Item HOE_ULTIMATE = new ToolUltimateHoe("hoe_ultimate");
+	//public static final Item PICKAXE_ULTIMATE = new ToolUltimatePickaxe("pickaxe_ultimate");
+	//public static final Item SHOVEL_ULTIMATE = new ToolUltimateShovel("shovel_ultimate");
 }

@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class NytemairsRenderer extends MobRenderer<EntityNytemairs, NytemairsModel<EntityNytemairs>> {
 	public NytemairsRenderer(EntityRendererManager p_i50961_1_) {
-		super(p_i50961_1_, new NytemairsModel<>(), 1);
+		super(p_i50961_1_, new NytemairsModel<>(1), 1);
 	}
 
 	@Nullable

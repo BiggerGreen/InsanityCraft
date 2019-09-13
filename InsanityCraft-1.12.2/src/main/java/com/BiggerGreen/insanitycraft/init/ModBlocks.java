@@ -4,18 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.BiggerGreen.insanitycraft.blocks.BlockBase;
-import com.BiggerGreen.insanitycraft.blocks.ExtremeTorch;
 import com.BiggerGreen.insanitycraft.blocks.PinkTourmalineBlock;
 import com.BiggerGreen.insanitycraft.blocks.RubyBlock;
-import com.BiggerGreen.insanitycraft.blocks.TigerEyeBlock;
 
+import com.BiggerGreen.insanitycraft.blocks.TigerEyeBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class ModBlocks
 {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
-	
+
 	public static final Block RUBY_BLOCK = new RubyBlock("ruby_block", Material.IRON);
 	public static final Block AMETHYST_BLOCK = new RubyBlock("amethyst_block", Material.IRON);
 	public static final Block TITANIUM_BLOCK = new RubyBlock("titanium_block", Material.IRON);

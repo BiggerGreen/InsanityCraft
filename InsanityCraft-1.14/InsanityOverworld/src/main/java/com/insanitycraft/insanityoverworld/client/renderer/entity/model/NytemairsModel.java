@@ -5,16 +5,17 @@ import com.insanitycraft.insanityoverworld.entity.EntityNytemairs;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
-import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
 public class NytemairsModel<T extends EntityNytemairs> extends EntityModel<T> {
+	private float wingspeed = 1.0F;
 	private final RendererModel Nitemare;
 	private final RendererModel Body;
 	private final RendererModel Neck;
 	private final RendererModel wings;
-	private final RendererModel Left;
+	private final RendererModel wingLeft;
 	private final RendererModel bone;
-	private final RendererModel right;
+	private final RendererModel wingRight;
 	private final RendererModel bone2;
 	private final RendererModel legs;
 	private final RendererModel left;
@@ -36,7 +37,9 @@ public class NytemairsModel<T extends EntityNytemairs> extends EntityModel<T> {
 	private final RendererModel Bottom;
 	private final RendererModel Teeth;
 
-	public NytemairsModel() {
+	public NytemairsModel(float f1) {
+		this.wingspeed = f1;
+
 		textureWidth = 128;
 		textureHeight = 128;
 
@@ -59,29 +62,29 @@ public class NytemairsModel<T extends EntityNytemairs> extends EntityModel<T> {
 		wings.setRotationPoint(4.75F, -21.85F, -5.0F);
 		Nitemare.addChild(wings);
 
-		Left = new RendererModel(this);
-		Left.setRotationPoint(0.0F, 0.0F, 0.0F);
-		setRotationAngle(Left, 0.0F, 0.0F, -0.2618F);
-		wings.addChild(Left);
-		Left.cubeList.add(new ModelBox(Left, 0, 84, 3.25F, -6.75F, -5.0F, 1, 1, 16, 0.0F, false));
+		wingLeft = new RendererModel(this);
+		wingLeft.setRotationPoint(0.0F, 0.0F, 0.0F);
+		setRotationAngle(wingLeft, 0.0F, 0.0F, -0.2618F);
+		wings.addChild(wingLeft);
+		wingLeft.cubeList.add(new ModelBox(wingLeft, 0, 84, 3.25F, -6.75F, -5.0F, 1, 1, 16, 0.0F, false));
 
 		bone = new RendererModel(this);
 		bone.setRotationPoint(3.75F, -6.25F, -9.0F);
 		setRotationAngle(bone, 0.0F, -1.5708F, 0.0F);
-		Left.addChild(bone);
+		wingLeft.addChild(bone);
 		bone.cubeList.add(new ModelBox(bone, 86, 92, 19.5F, 0.0F, -36.5F, -15, 0, 36, 0.0F, false));
 		bone.cubeList.add(new ModelBox(bone, 0, 84, 3.5F, -0.5F, -36.5F, 1, 1, 37, 0.0F, false));
 
-		right = new RendererModel(this);
-		right.setRotationPoint(-39.75F, -8.0F, 0.0F);
-		setRotationAngle(right, 0.0F, 0.0F, 0.2618F);
-		wings.addChild(right);
-		right.cubeList.add(new ModelBox(right, 0, 84, 27.25F, -6.75F, -5.0F, 1, 1, 16, 0.0F, false));
+		wingRight = new RendererModel(this);
+		wingRight.setRotationPoint(-39.75F, -8.0F, 0.0F);
+		setRotationAngle(wingRight, 0.0F, 0.0F, 0.2618F);
+		wings.addChild(wingRight);
+		wingRight.cubeList.add(new ModelBox(wingRight, 0, 84, 27.25F, -6.75F, -5.0F, 1, 1, 16, 0.0F, false));
 
 		bone2 = new RendererModel(this);
 		bone2.setRotationPoint(3.75F, -6.25F, -9.0F);
 		setRotationAngle(bone2, 0.0F, -1.5708F, 0.0F);
-		right.addChild(bone2);
+		wingRight.addChild(bone2);
 		bone2.cubeList.add(new ModelBox(bone2, 0, 84, 3.5F, -0.5F, -24.25F, 1, 1, 37, 0.0F, false));
 		bone2.cubeList.add(new ModelBox(bone2, 84, 91, 19.5F, 0.0F, -24.5F, -15, 0, 37, 0.0F, false));
 
@@ -223,5 +226,20 @@ public class NytemairsModel<T extends EntityNytemairs> extends EntityModel<T> {
 		modelRenderer.rotateAngleZ = z;
 	}
 
+	@Override
+	public void setRotationAngles(T entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		float newAngle = 0.0f;
+		float lspeed = 0.0F;
+		float tailspeed = 0.76F;
+		float tailamp = 0.25F;
+		float pi4 = 0.7853982F;
+		super.setRotationAngles(entity, f, f1, f2, f3, f4, f5);
+		newAngle = -pi4 + MathHelper.cos(f2 * 0.05F * this.wingspeed) * 3.1415927F * 0.02F;
+
+
+		this.wingRight.rotateAngleZ = -newAngle * 2.0F;
+		this.wingLeft.rotateAngleZ = newAngle;
+
+	}
 
 }

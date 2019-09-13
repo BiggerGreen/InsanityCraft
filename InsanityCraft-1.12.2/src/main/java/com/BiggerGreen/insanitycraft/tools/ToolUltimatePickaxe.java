@@ -9,12 +9,12 @@ import net.minecraft.item.ItemPickaxe;
 
 public class ToolUltimatePickaxe extends ItemPickaxe implements IHasModel {
 
-	protected ToolUltimatePickaxe(String name, ToolMaterial material) {
+	public ToolUltimatePickaxe(String name, ToolMaterial material) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.TOOLS);
-		
+
 		ModItems.ITEMS.add(this);
 	}
 	
