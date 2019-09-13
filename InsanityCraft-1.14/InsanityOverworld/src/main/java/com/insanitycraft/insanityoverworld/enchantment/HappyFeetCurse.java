@@ -8,7 +8,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.world.World;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -50,11 +49,9 @@ public class HappyFeetCurse extends Enchantment {
 			return;
 		}
 		Random random = new Random();
-		int bound = 5;
+		int bound = 5;//in minutes
 		if(random.nextInt((bound * 20) * 60) == 1) {
 			player.jump();
-			player.jump();
-			InsanityLog.info("JUMP JUMP JUMP JUMP JUMP JUMP JUMP JUMP JUMP JUMP JUMP JUMP");
 		}
 	}
 }
