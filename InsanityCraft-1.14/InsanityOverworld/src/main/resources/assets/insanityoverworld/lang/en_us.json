@@ -182,5 +182,11 @@
 	"block.insanityoverworld.wither_skeleton_ore": "Petrified Wither Skeleton Spawn Egg",
 	"block.insanityoverworld.wolf_ore": "Petrified Wolf Spawn Egg",
 	"block.insanityoverworld.zombie_ore": "Petrified Zombie Spawn Egg",
-	"block.insanityoverworld.zombie_pigman_ore": "Petrified Zombie Pigman Spawn Egg"
+	"block.insanityoverworld.zombie_pigman_ore": "Petrified Zombie Pigman Spawn Egg",
+
+
+
+
+	"item.insanityoverworld.debug": "Debug",
+	"item.insanityoverworld.dev_stick": "Dev Stick"
 }

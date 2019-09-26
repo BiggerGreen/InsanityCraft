@@ -39,12 +39,10 @@ public class InstaNetherPortalItem extends Item {
 					}else if(direction == Direction.EAST) {
 						newPos = new BlockPos(pos.getX() + 2, pos.getY() + y, pos.getZ() + x);
 					}else if(direction == Direction.WEST) {
-						newPos = new BlockPos(pos.getX() - 2, pos.getY() + y, pos.getZ() + x);
+						newPos = new BlockPos(pos.getX() - 2, pos.getY() + y, pos.getZ() - x);
 					}
 					if(x == 1 || x == 2) {
-						if(y == 1 || y == 2 || y == 3) {
-							//world.setBlockState(newPos, Blocks.FIRE.getDefaultState());
-						}else {
+						if(y != 1 && y != 2 && y != 3) {
 							world.setBlockState(newPos, Blocks.OBSIDIAN.getDefaultState());
 						}
 					}else {
@@ -61,7 +59,6 @@ public class InstaNetherPortalItem extends Item {
 			}else if(direction == Direction.WEST) {
 				world.setBlockState(new BlockPos(pos.getX() - 2, pos.getY() + 1, pos.getZ() - 1), Blocks.FIRE.getDefaultState());
 			}
-
 
 			return new ActionResult<>(ActionResultType.SUCCESS, stack);
 		}
