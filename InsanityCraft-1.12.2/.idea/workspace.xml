@@ -2,53 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29eb20e0-a420-4854-b4b9-c86758cccb0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/forge.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/forgeChunkLoading.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/splash.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2019-09-28-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2019-09-28-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2019-09-28-3.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug-3.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/options.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/DIM-1/data/capabilities.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/DIM-1/data/villages_nether.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/DIM-1/forcedchunks.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/DIM1/data/capabilities.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/DIM1/data/villages_end.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/DIM1/forcedchunks.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/advancements/18b3a035-3e67-34ed-889e-932160306e4f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/data/Mineshaft.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/data/capabilities.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/data/villages.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/forcedchunks.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/level.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/level.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/playerdata/18b3a035-3e67-34ed-889e-932160306e4f.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/region/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/region/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/session.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/New World/stats/18b3a035-3e67-34ed-889e-932160306e4f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/2019-09-28_15.37.28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usercache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usernamecache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityDimensions/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityDimensions/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityDimensions/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityDimensions/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityDimensions/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityDimensions/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityDimensions/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityDimensions/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityDimensions/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityDimensions/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityDimensions/src/main/java/com/example/examplemod/ExampleMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityDimensions/src/main/java/com/example/examplemod/ExampleMod2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityMods/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityMods/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityMods/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityMods/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityMods/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityMods/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityMods/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityMods/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityMods/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityMods/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsanityMods/src/main/java/com/example/examplemod/ExampleMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/InsanityMods/src/main/java/com/example/examplemod/ExampleMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
