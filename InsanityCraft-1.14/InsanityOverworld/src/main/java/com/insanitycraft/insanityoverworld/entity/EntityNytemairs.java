@@ -8,4 +8,5 @@ public class EntityNytemairs extends MonsterEntity {
 	public EntityNytemairs(EntityType<? extends MonsterEntity> type, World p_i48553_2_) {
 		super(type, p_i48553_2_);
 	}
+
 }

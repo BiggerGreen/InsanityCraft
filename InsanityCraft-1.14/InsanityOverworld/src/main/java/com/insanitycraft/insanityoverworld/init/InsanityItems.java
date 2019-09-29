@@ -6,7 +6,6 @@ import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -21,6 +20,7 @@ import static com.insanitycraft.insanityoverworld.init.InsanityMaterialStats.Ins
 public class InsanityItems {
 
 	static Item debug;
+	static Item devStick;
 
 	//region materials
 	public static Item amethyst;
@@ -140,17 +140,27 @@ public class InsanityItems {
 	public static Item snowGolemSpawnEgg;
 
 	public static Item instaNetherPortal;
+	public static Item instaShelter;
 	public static Item minersDream;
 
-	public static Item blankRecord;
+	//discs
+	public static Item blankDisc;
+
+	//public static Item disc;
 
 	public static Item enderDragonTooth;
+	public static Item moleNose;
+	public static Item serpentTongue;
 	//endregion
 
 
 	//region item that are not registered here
-	public static Item antSpawnEgg;
+	public static Item giantMoleSpawnEgg;
 	public static Item nytemairsSpawnEgg;
+
+	public static Item appleCowEgg;
+	public static Item goldenAppleCowEgg;
+	public static Item enchantedAppleCowEgg;
 
 	//endregion
 
@@ -161,6 +171,7 @@ public class InsanityItems {
 			event.getRegistry().registerAll(
 
 					debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
+					devStick = new ItemDevStick().setRegistryName("dev_stick"),
 
 					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
 					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
@@ -273,6 +284,7 @@ public class InsanityItems {
 				//region misc
 
 				instaNetherPortal = new InstaNetherPortalItem().setRegistryName("insta_nether_portal"),
+				instaShelter = new InstaShelterItem().setRegistryName("insta_shelter"),
 				minersDream = new MinersDreamItem().setRegistryName("miners_dream"),
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
@@ -280,9 +292,11 @@ public class InsanityItems {
 				ironGolemSpawnEgg= new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
 				snowGolemSpawnEgg = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
 
-				blankRecord = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_record"),
+				blankDisc = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_disc"),
 
-				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth")
+				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth"),
+				moleNose = new Item(new Item.Properties().group(itemGroup)).setRegistryName("giant_mole_nose"),
+				serpentTongue = new Item(new Item.Properties().group(itemGroup)).setRegistryName("sea_serpent_tongue")
 
 				//endregion
 
