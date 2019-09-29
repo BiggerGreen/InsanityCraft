@@ -48,7 +48,7 @@ public class SteadyFeetEnchantment extends Enchantment {
 		Block standingOn = world.getBlockState(belowPlayer).getBlock();
 		InsanityLog.info(standingOn);
 		if(standingOn == ICE) {
-			player.jump();
+			//player.jump();
 		}
 	}
 

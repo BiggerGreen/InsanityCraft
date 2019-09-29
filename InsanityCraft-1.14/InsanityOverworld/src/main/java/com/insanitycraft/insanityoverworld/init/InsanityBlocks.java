@@ -5,6 +5,7 @@ import com.insanitycraft.insanityoverworld.block.BlockItemMobOre;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.GlassBlock;
+import net.minecraft.block.MushroomBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -201,6 +202,14 @@ public class InsanityBlocks {
 
 	//endregion
 
+
+
+	//region Not usable blocks
+	public static Block appleBlock;
+	public static Block goldenAppleBlock;
+
+	//endregion
+
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
@@ -278,7 +287,13 @@ public class InsanityBlocks {
 
 				//region misc
 				enderEyeBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block"),
-				enderPearlBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block")
+				enderPearlBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block"),
+				//endregion
+
+
+				//region not usable blocks
+				appleBlock = new MushroomBlock(Block.Properties.create(Material.AIR)).setRegistryName("apple_block"),
+				goldenAppleBlock = new MushroomBlock(Block.Properties.create(Material.AIR)).setRegistryName("golden_apple_block")
 				//endregion
 		);
 	}

@@ -45,7 +45,6 @@ public class HappyFeetCurse extends Enchantment {
 		if(!EnchantmentUtils.hasEnchantment(player.getItemStackFromSlot(EquipmentSlotType.FEET), InsanityEnchantments.HAPPYFEET))
 			return;
 		if(!player.onGround) {
-			InsanityLog.info("Isn't onGround");
 			return;
 		}
 		Random random = new Random();

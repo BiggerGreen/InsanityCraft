@@ -100,16 +100,24 @@
 	"item.insanityoverworld.dead_stink_bug": "Dead Stink Bug",
 	"item.insanityoverworld.extreme_torch": "Extreme Torch",
 
+	"item.insanityoverworld.ender_dragon_tooth": "Ender Dragon Tooth",
+
+	"item.insanityoverworld.blank_disc": "Blank Disc",
+	"item.insanityoverworld.insta_nether_portal": "Instant Nether Portal",
+
+	"comment_": "My Mob spawn eggs",
+	"item.insanityoverworld.apple_cow_spawn_egg": "Apple Cow Spawn Egg",
+	"item.insanityoverworld.golden_apple_cow_spawn_egg": "Golden Apple Cow Spawn Egg",
+	"item.insanityoverworld.enchanted_apple_cow_spawn_egg": "Enchanted Golden Apple Cow Spawn Egg",
+
+	"item.insanityoverworld.giant_mole_spawn_egg": "Giant Mole Spawn Egg",
+
+
+	"comment_": "Vanilla Mob spawn eggs",
 	"item.insanityoverworld.enderdragon_spawn_egg": "Ender Dragon Spawn Egg",
 	"item.insanityoverworld.wither_spawn_egg": "Wither Boss Spawn Egg",
 	"item.insanityoverworld.iron_golem_spawn_egg": "Iron Golem Spawn Egg",
 	"item.insanityoverworld.snow_golem_spawn_egg": "Snow Golem Spawn Egg",
-
-	"item.insanityoverworld.blank_record": "Blank Record",
-
-
-
-
 
 
 	"comment_": "blocks",
@@ -185,8 +193,16 @@
 	"block.insanityoverworld.zombie_pigman_ore": "Petrified Zombie Pigman Spawn Egg",
 
 
+	"comment_": "Entities",
+	"entity.insanityoverworld.giant_mole": "Giant Mole",
+
+	"entity.insanityoverworld.apple_cow": "Apple Cow",
+	"entity.insanityoverworld.golden_apple_cow": "Golden Apple Cow",
+	"entity.insanityoverworld.enchanted_apple_cow": "Enchanted Golden Apple Cow",
 
 
+
+	"comment_": "Dev Stuff",
 	"item.insanityoverworld.debug": "Debug",
 	"item.insanityoverworld.dev_stick": "Dev Stick"
 }

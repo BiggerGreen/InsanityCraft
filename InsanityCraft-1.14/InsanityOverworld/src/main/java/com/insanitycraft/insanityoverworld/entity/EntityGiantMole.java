@@ -18,8 +18,6 @@ public class EntityGiantMole extends MonsterEntity implements IMob {
 
 	public EntityGiantMole(EntityType<EntityGiantMole> type, World world) {
 		super(type, world);
-		//size = EntitySize.flexible(14.0F, 3.0F);
-		//recalculateSize();
 	}
 
 
