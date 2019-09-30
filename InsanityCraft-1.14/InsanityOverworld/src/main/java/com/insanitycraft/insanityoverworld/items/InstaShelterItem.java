@@ -1,6 +1,7 @@
 package com.insanitycraft.insanityoverworld.items;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -25,21 +26,37 @@ public class InstaShelterItem extends Item {
 		}
 		ItemStack stack = playerIn.getHeldItem(handIn);
 		ServerWorld serverWorld = (ServerWorld)worldIn;
-		BlockPos playerPos = new BlockPos(playerIn.posX - 3 , playerIn.posY - 1, playerIn.posZ - 3);
 		Direction playerDirection = playerIn.getAdjustedHorizontalFacing();
+		BlockPos playerPos = playerIn.getPosition();
+		Rotation rotation = Rotation.CLOCKWISE_180;
 		if(!playerIn.abilities.isCreativeMode) {
 			stack.shrink(1);
 		}
-		generateShelter(serverWorld, playerPos, playerDirection);
+
+		if(playerDirection == Direction.NORTH) {
+			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ + 3);
+			rotation = Rotation.CLOCKWISE_180;
+		}else if(playerDirection == Direction.SOUTH) {
+			playerPos = new BlockPos(playerIn.posX - 3 , playerIn.posY - 1, playerIn.posZ - 3);
+			rotation = Rotation.NONE;
+		}else if(playerDirection == Direction.EAST) {
+			playerPos = new BlockPos(playerIn.posX - 3, playerIn.posY - 1, playerIn.posZ + 3);
+			rotation = Rotation.COUNTERCLOCKWISE_90;
+		}else if(playerDirection == Direction.WEST) {
+			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ - 3);
+			rotation = Rotation.CLOCKWISE_90;
+		}
+
+		generateShelter(serverWorld, playerPos, rotation);
 
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
 
-	private void generateShelter(ServerWorld world, BlockPos pos, Direction direction) {
+	private void generateShelter(ServerWorld world, BlockPos pos, Rotation rotation) {
 		Template template = world.getStructureTemplateManager().getTemplate(new ResourceLocation(Reference.MODID, "struct_shelter"));
-		Rotation rotation;
+		InsanityLog.info(new ResourceLocation(Reference.MODID, "struct_shelter"));
 		PlacementSettings settings = new PlacementSettings();
-
+		settings.setRotation(rotation);
 
 		template.addBlocksToWorld(world, pos, settings);
 
