@@ -141,6 +141,7 @@ public class InsanityItems {
 
 	public static Item instaNetherPortal;
 	public static Item instaShelter;
+	public static Item instaGarden;
 	public static Item minersDream;
 
 	//discs
@@ -285,6 +286,7 @@ public class InsanityItems {
 
 				instaNetherPortal = new InstaNetherPortalItem().setRegistryName("insta_nether_portal"),
 				instaShelter = new InstaShelterItem().setRegistryName("insta_shelter"),
+				instaGarden = new InstaGardenItem().setRegistryName("insta_garden"),
 				minersDream = new MinersDreamItem().setRegistryName("miners_dream"),
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
