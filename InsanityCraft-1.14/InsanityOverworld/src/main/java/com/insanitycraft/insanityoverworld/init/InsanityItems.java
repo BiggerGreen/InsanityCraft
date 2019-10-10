@@ -117,7 +117,6 @@ public class InsanityItems {
 
 	public static Item battleAxe;
 	public static Item bigHammer;
-	public static Item mantisClaw;
 	public static Item queenBattleAxe;
 
 	public static Item zangetsuGuard;
@@ -152,11 +151,23 @@ public class InsanityItems {
 	public static Item enderDragonTooth;
 	public static Item moleNose;
 	public static Item serpentTongue;
+	public static Item mantisClaw;
+	public static Item scorpionTail;
+	public static Item basiliscScale;
+	public static Item katterkillerJaw;
+
+
+
 	//endregion
 
 
 	//region item that are not registered here
 	public static Item giantMoleSpawnEgg;
+	public static Item triffidSpawnEgg;
+	public static Item mothraSpawnEgg;
+	public static Item katterkillerSpawnEgg;
+	public static Item trexSpawnEgg;
+	public static Item krakenSpawnEgg;
 	public static Item nytemairsSpawnEgg;
 
 	public static Item appleCowEgg;
@@ -172,11 +183,7 @@ public class InsanityItems {
 			event.getRegistry().registerAll(
 
 					debug = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
-					devStick = new ItemDevStick().setRegistryName("dev_stick"),
-
-					battleAxe = new EnchantedSwordItem(BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("battle_axe"),
-					queenBattleAxe = new EnchantedSwordItem(QUEEN_BATTLE_AXE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("queen_battle_axe")
-
+					devStick = new ItemDevStick().setRegistryName("dev_stick")
 					);
 		}
 
@@ -278,7 +285,21 @@ public class InsanityItems {
 				zangetsuHandle = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_handle"),
 				zangetsuGuard = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_guard"),
 
+				//region Boss Drops
 
+				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth"),
+				moleNose = new Item(new Item.Properties().group(itemGroup)).setRegistryName("giant_mole_nose"),
+				serpentTongue = new Item(new Item.Properties().group(itemGroup)).setRegistryName("sea_serpent_tongue"),
+				katterkillerJaw = new Item(new Item.Properties().group(itemGroup)).setRegistryName("katterkiller_jaw"),
+				basiliscScale = new Item(new Item.Properties().group(itemGroup)).setRegistryName("basilisc_scale"),
+
+
+				mantisClaw = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(itemGroup)).setRegistryName("mantis_claw"),
+				scorpionTail = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(itemGroup)).setRegistryName("scorpion_tail"),
+
+
+
+				//endregion
 
 
 
@@ -294,11 +315,7 @@ public class InsanityItems {
 				ironGolemSpawnEgg= new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
 				snowGolemSpawnEgg = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
 
-				blankDisc = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_disc"),
-
-				enderDragonTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth"),
-				moleNose = new Item(new Item.Properties().group(itemGroup)).setRegistryName("giant_mole_nose"),
-				serpentTongue = new Item(new Item.Properties().group(itemGroup)).setRegistryName("sea_serpent_tongue")
+				blankDisc = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_disc")
 
 				//endregion
 

@@ -14,18 +14,18 @@ import static net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType.*
 
 public class WorldGenOres {
 
-	private static final int eggVeinSize = 2;
+	private static final int eggVeinSize = 3;
 	private static final int maxEggVeins = 3;
 	private static final int maxEggHeight = 128;
 
-	private static final CountRangeConfig amethystConfig = new CountRangeConfig(8, 0, 0, 25);
+	private static final CountRangeConfig amethystConfig = new CountRangeConfig(8, 5, 5, 25);
 	private static final int amethystVeinSize = 5;
-	private static final CountRangeConfig rubyConfig = new CountRangeConfig(3, 0, 0, 20);
-	private static final int rubyVeinSize = 2;
-	private static final CountRangeConfig titaniumConfig = new CountRangeConfig(1, 0, 0, 15);
-	private static final int titaniumVeinSize = 1;
-	private static final CountRangeConfig uraniumConfig = new CountRangeConfig(1, 0, 0, 15);
-	private static final int uraniumVeinSize = 1;
+	private static final CountRangeConfig rubyConfig = new CountRangeConfig(3, 5, 5, 20);
+	private static final int rubyVeinSize = 4;
+	private static final CountRangeConfig titaniumConfig = new CountRangeConfig(1, 5, 5, 15);
+	private static final int titaniumVeinSize = 3;
+	private static final CountRangeConfig uraniumConfig = new CountRangeConfig(1, 5, 5, 15);
+	private static final int uraniumVeinSize = 3;
 
 	private static final int pinkTourmalineVeinSize = 5;
 	private static final CountRangeConfig pinkTourmalineConfig = new CountRangeConfig(3, 10,10, 128);
@@ -50,7 +50,6 @@ public class WorldGenOres {
 			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, rubyOre.getDefaultState(), rubyVeinSize), Placement.COUNT_RANGE, rubyConfig));
 			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, titaniumOre.getDefaultState(), titaniumVeinSize), Placement.COUNT_RANGE, titaniumConfig));
 			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, uraniumOre.getDefaultState(), uraniumVeinSize), Placement.COUNT_RANGE, uraniumConfig));
-
 
 			//region Mob Ore spawn
 			addMobOres(biome, batEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
@@ -107,6 +106,7 @@ public class WorldGenOres {
 
 			//endregion
 		}
+
 	}
 
 
