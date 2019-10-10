@@ -12,6 +12,7 @@
 	"item.insanityoverworld.amethyst_chestplate": "Amethyst Chestplate",
 	"item.insanityoverworld.amethyst_leggings": "Amethyst Leggings",
 	"item.insanityoverworld.amethyst_boots": "Amethyst Boots",
+	
 	"item.insanityoverworld.ruby": "Ruby",
 	"item.insanityoverworld.ruby_pickaxe": "Ruby Pickaxe",
 	"item.insanityoverworld.ruby_axe": "Ruby Axe",
@@ -21,6 +22,7 @@
 	"item.insanityoverworld.ruby_chestplate": "Ruby Chestplate",
 	"item.insanityoverworld.ruby_leggings": "Ruby Leggings",
 	"item.insanityoverworld.ruby_boots": "Ruby Boots",
+	
 	"item.insanityoverworld.lapis_pickaxe": "Lapis Pickaxe",
 	"item.insanityoverworld.lapis_axe": "Lapis Axe",
 	"item.insanityoverworld.lapis_shovel": "Lapis Shovel",
@@ -29,6 +31,7 @@
 	"item.insanityoverworld.lapis_chestplate": "Lapis Chestplate",
 	"item.insanityoverworld.lapis_leggings": "Lapis Leggings",
 	"item.insanityoverworld.lapis_boots": "Lapis Boots",
+	
 	"item.insanityoverworld.titanium_nugget": "Titanium Nugget",
 	"item.insanityoverworld.titanium_ingot": "Titanium Ingot",
 	"item.insanityoverworld.uranium_nugget": "Uranium Nugget",
@@ -53,24 +56,27 @@
 	"item.insanityoverworld.lava_chestplate": "Lava Chestplate",
 	"item.insanityoverworld.lava_leggings": "Lava Leggings",
 	"item.insanityoverworld.lava_boots": "Lava Boots",
+	
 	"item.insanityoverworld.pink_tourmaline": "Pink Tourmaline Ingot",
 	"item.insanityoverworld.pink_tourmaline_helmet": "Pink Tourmaline Helmet",
 	"item.insanityoverworld.pink_tourmaline_chestplate": "Pink Tourmaline Chestplate",
 	"item.insanityoverworld.pink_tourmaline_leggings": "Pink Tourmaline Leggings",
 	"item.insanityoverworld.pink_tourmaline_boots": "Pink Tourmaline Boots",
+	"item.insanityoverworld.pink_tourmaline_pickaxe": "Pink Tourmaline Pickaxe",
+	"item.insanityoverworld.pink_tourmaline_axe": "Pink Tourmaline Axe",
+	"item.insanityoverworld.pink_tourmaline_shovel": "Pink Tourmaline Shovel",
+	"item.insanityoverworld.pink_tourmaline_sword": "Pink Tourmaline Sword",
+	
 	"item.insanityoverworld.tiger_eye": "Tiger Eye Ingot",
 	"item.insanityoverworld.tiger_eye_helmet": "Tiger Eye Helmet",
 	"item.insanityoverworld.tiger_eye_chestplate": "Tiger Eye Chestplate",
 	"item.insanityoverworld.tiger_eye_leggings": "Tiger Eye Leggings",
 	"item.insanityoverworld.tiger_eye_boots": "Tiger Eye Boots",
-	"item.insanityoverworld.pink_tourmaline_pickaxe": "Pink Tourmaline Pickaxe",
-	"item.insanityoverworld.pink_tourmaline_axe": "Pink Tourmaline Axe",
-	"item.insanityoverworld.pink_tourmaline_shovel": "Pink Tourmaline Shovel",
-	"item.insanityoverworld.pink_tourmaline_sword": "Pink Tourmaline Sword",
 	"item.insanityoverworld.tiger_eye_pickaxe": "Tiger Eye Pickaxe",
 	"item.insanityoverworld.tiger_eye_axe": "Tiger Eye Axe",
 	"item.insanityoverworld.tiger_eye_shovel": "Tiger Eye Shovel",
 	"item.insanityoverworld.tiger_eye_sword": "Tiger Eye Sword",
+	
 	"item.insanityoverworld.zangetsu_blade": "Zangetsu Blade",
 	"item.insanityoverworld.zangetsu_guard": "Zangetsu Guard",
 	"item.insanityoverworld.zangetsu_handle": "Zangetsu Handle",
@@ -80,7 +86,7 @@
 	"item.insanityoverworld.giant_mole_nose": "Giant Mole Nose",
 	"item.insanityoverworld.basilisc_scale": "Basilisc Scale",
 	"item.insanityoverworld.nytemair_scale": "Nytemair Scale",
-	"item.insanityoverworld.giant_scorpion_scale": "Giant Scorpion Scale",
+	"item.insanityoverworld.giant_scorpion_tail": "Giant Scorpion Tail",
 	"item.insanityoverworld.big_hammer": "Big Hammer",
 	"item.insanityoverworld.triffid_goo": "Triffid Goo",
 	"item.insanityoverworld.kraken_tooth": "Kraken Tooth",
@@ -89,11 +95,11 @@
 	"item.insanityoverworld.katterkiller_jaw": "Katterkiller Jaw",
 	"item.insanityoverworld.loch_ness_monster_scale": "Loch Ness Monster Scale",
 	"item.insanityoverworld.hopping_bug_sclale": "Hopping Bug Scale",
-	"item.insanityoverworld.ray_gun": "Ray Gun",
+	"item.insanityoverworld.ray_gun": "A Frickin' Ray Gun!",
 	"item.insanityoverworld.water_dragon_scale": "Water Dragon Scale",
 	"item.insanityoverworld.dead_irukandji": "Dead Irukandji",
 	"item.insanityoverworld.miners_dream": "Miner's Dream",
-	"item.insanityoverworld.mobzilla_scale": "Mobzilla Scale",
+	"item.insanityoverworld.mobzilla_scale": "Mojira Scale",
 	"item.insanityoverworld.nether_tracker": "Nether Tracker",
 	"item.insanityoverworld.creeper_repellent": "Creeper Repellent",
 	"item.insanityoverworld.kraken_repellent": "Kraken Repellent",
@@ -134,7 +140,7 @@
 	"block.insanityoverworld.tiger_eye_ore": "Tiger Eye Ore",
 	"block.insanityoverworld.tiger_eye_block": "Tiger Eye Block",
 
-	"block.insanityoverworld.mobzilla_scale_block": "Mobzilla Scale Block",
+	"block.insanityoverworld.mobzilla_scale_block": "Mojira Scale Block",
 
 	"block.insanityoverworld.ender_pearl_block": "Ender Pearl Block",
 	"block.insanityoverworld.ender_eye_block": "Eye of Ender Block",
@@ -205,4 +211,9 @@
 	"comment_": "Dev Stuff",
 	"item.insanityoverworld.debug": "Debug",
 	"item.insanityoverworld.dev_stick": "Dev Stick"
+	
+	"entity.insanityoverworld.giant_mole": "Giant Mole",
+	"entity.insanityoverworld.giant_scorpion": "Giant Scorpion",
+	"entity.insanityoverworld.katterkiller": "Katterkiller",
+	
 }
