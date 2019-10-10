@@ -53,7 +53,7 @@ public class InstaShelterItem extends Item {
 	}
 
 	private void generateShelter(ServerWorld world, BlockPos pos, Rotation rotation) {
-		Template template = world.getStructureTemplateManager().getTemplate(new ResourceLocation(Reference.MODID, "struct_shelter"));
+		Template template = world.getStructureTemplateManager().getTemplate(new ResourceLocation(Reference.MODID, "struct_instant_shelter"));
 		PlacementSettings settings = new PlacementSettings();
 		settings.setRotation(rotation);
 

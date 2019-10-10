@@ -22,8 +22,8 @@ public class SpecialSwordItem extends SwordItem {
 	}
 
 	@Override
-	public boolean hitEntity(ItemStack stack, LivingEntity player, LivingEntity entity) {
-		super.hitEntity(stack, player, entity);
+	public boolean hitEntity(ItemStack stack, LivingEntity entity, LivingEntity player) {
+		super.hitEntity(stack, entity, player);
 		if(!player.world.isRemote) {
 			if(stack.getItem() == mantisClaw) {
 				entity.heal(-1.0F);
@@ -38,25 +38,5 @@ public class SpecialSwordItem extends SwordItem {
 		return true;
 	}
 
-	/*
-	@Override
-	public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
-		super.onLeftClickEntity(stack, player, entity);
-		if(!player.world.isRemote) {
-			if(entity instanceof LivingEntity) {
-				LivingEntity livingEntity = (LivingEntity)entity;
-				if(stack.getItem() == mantisClaw) {
-					livingEntity.heal(-1.0F);
-					player.heal(1.0F);
-					return true;
-				}else if(stack.getItem() == scorpionTail) {
-					int length = 10 + player.world.rand.nextInt(10);
-					((LivingEntity)entity).addPotionEffect(new EffectInstance(Effects.POISON, length * 20, 0));
-					return true;
-				}
-			}
-		} return true;
-	}
-	
-	 */
+
 }

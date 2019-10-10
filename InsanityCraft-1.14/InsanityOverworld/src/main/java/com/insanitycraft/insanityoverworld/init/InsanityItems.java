@@ -150,10 +150,14 @@ public class InsanityItems {
 
 	public static Item enderDragonTooth;
 	public static Item moleNose;
+	public static Item triffidGoo;
+	public static Item trexTooth;
+	public static Item krakenTooth;
 	public static Item serpentTongue;
 	public static Item mantisClaw;
 	public static Item scorpionTail;
 	public static Item basiliscScale;
+	public static Item nytemairScale;
 	public static Item katterkillerJaw;
 
 
@@ -292,6 +296,10 @@ public class InsanityItems {
 				serpentTongue = new Item(new Item.Properties().group(itemGroup)).setRegistryName("sea_serpent_tongue"),
 				katterkillerJaw = new Item(new Item.Properties().group(itemGroup)).setRegistryName("katterkiller_jaw"),
 				basiliscScale = new Item(new Item.Properties().group(itemGroup)).setRegistryName("basilisc_scale"),
+				nytemairScale = new Item(new Item.Properties().group(itemGroup)).setRegistryName("nytemair_scale"),
+				trexTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("trex_tooth"),
+				krakenTooth = new Item(new Item.Properties().group(itemGroup)).setRegistryName("kraken_tooth"),
+				triffidGoo = new Item(new Item.Properties().group(itemGroup)).setRegistryName("triffid_goo"),
 
 
 				mantisClaw = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(itemGroup)).setRegistryName("mantis_claw"),

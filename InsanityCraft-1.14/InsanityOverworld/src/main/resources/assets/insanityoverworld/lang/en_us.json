@@ -86,20 +86,21 @@
 	"item.insanityoverworld.giant_mole_nose": "Giant Mole Nose",
 	"item.insanityoverworld.basilisc_scale": "Basilisc Scale",
 	"item.insanityoverworld.nytemair_scale": "Nytemair Scale",
-	"item.insanityoverworld.giant_scorpion_tail": "Giant Scorpion Tail",
+	"item.insanityoverworld.scorpion_tail": "Giant Scorpion Tail",
 	"item.insanityoverworld.big_hammer": "Big Hammer",
 	"item.insanityoverworld.triffid_goo": "Triffid Goo",
 	"item.insanityoverworld.kraken_tooth": "Kraken Tooth",
 	"item.insanityoverworld.trex_tooth": "TRex Tooth",
 	"item.insanityoverworld.sea_serpent_tongue": "Sea Serpent Tongue",
 	"item.insanityoverworld.katterkiller_jaw": "Katterkiller Jaw",
+
 	"item.insanityoverworld.loch_ness_monster_scale": "Loch Ness Monster Scale",
 	"item.insanityoverworld.hopping_bug_sclale": "Hopping Bug Scale",
 	"item.insanityoverworld.ray_gun": "A Frickin' Ray Gun!",
 	"item.insanityoverworld.water_dragon_scale": "Water Dragon Scale",
 	"item.insanityoverworld.dead_irukandji": "Dead Irukandji",
 	"item.insanityoverworld.miners_dream": "Miner's Dream",
-	"item.insanityoverworld.mobzilla_scale": "Mojira Scale",
+	"item.insanityoverworld.mojira_scale": "Mojira Scale",
 	"item.insanityoverworld.nether_tracker": "Nether Tracker",
 	"item.insanityoverworld.creeper_repellent": "Creeper Repellent",
 	"item.insanityoverworld.kraken_repellent": "Kraken Repellent",
@@ -201,19 +202,16 @@
 
 	"comment_": "Entities",
 	"entity.insanityoverworld.giant_mole": "Giant Mole",
+	"entity.insanityoverworld.giant_scorpion": "Giant Scorpion",
+	"entity.insanityoverworld.katterkiller": "Katterkiller",
 
 	"entity.insanityoverworld.apple_cow": "Apple Cow",
 	"entity.insanityoverworld.golden_apple_cow": "Golden Apple Cow",
 	"entity.insanityoverworld.enchanted_apple_cow": "Enchanted Golden Apple Cow",
 
 
-
 	"comment_": "Dev Stuff",
 	"item.insanityoverworld.debug": "Debug",
-	"item.insanityoverworld.dev_stick": "Dev Stick"
-	
-	"entity.insanityoverworld.giant_mole": "Giant Mole",
-	"entity.insanityoverworld.giant_scorpion": "Giant Scorpion",
-	"entity.insanityoverworld.katterkiller": "Katterkiller",
+	"item.insanityoverworld.dev_stick": "Dev Stick",
 	
 }

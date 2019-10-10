@@ -2,6 +2,7 @@ package com.insanitycraft.insanityoverworld;
 
 import com.insanitycraft.insanityoverworld.client.renderer.entity.layers.LinksHornsLayer;
 import com.insanitycraft.insanityoverworld.init.InsanityConfig;
+import com.insanitycraft.insanityoverworld.init.InsanityDungeons;
 import com.insanitycraft.insanityoverworld.init.InsanityEntities;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
@@ -43,6 +44,9 @@ public class InsanityOverworld {
 	public static InsanityConfig config;
 
 	public InsanityOverworld() {
+		InsanityLog.info(InsanityDungeons.TEST.getName());
+		InsanityLog.info(InsanityDungeons.TEST.getLocation());
+		InsanityLog.info(InsanityDungeons.TEST);
 
 		/*
 		if(VERSIONTYPE.equals("@DEBUG@")) {
