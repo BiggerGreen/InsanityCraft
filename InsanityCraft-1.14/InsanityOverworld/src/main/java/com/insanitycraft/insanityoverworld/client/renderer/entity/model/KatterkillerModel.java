@@ -1,6 +1,7 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
 import com.insanitycraft.insanityoverworld.entity.EntityKatterkiller;
+import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
@@ -62,7 +63,7 @@ public class KatterkillerModel<T extends EntityKatterkiller> extends EntityModel
 		bone3.cubeList.add(new ModelBox(bone3, 2, 7, 2.0F, -14.0F, 9.0F, 1, 2, 2, 0.0F, false));
 		bone3.cubeList.add(new ModelBox(bone3, 2, 7, -4.0F, -14.0F, 9.0F, 1, 2, 2, 0.0F, false));
 		bone3.cubeList.add(new ModelBox(bone3, 2, 7, -12.0F, -9.0F, 9.0F, 7, 1, 1, 0.0F, false));
-		bone3.cubeList.add(new ModelBox(bone3, 2, 7, -5.0F, -2.0F, 8.0F, 2, 2, 2, 0.0F, false));
+		bone3.cubeList.add(new ModelBox(bone3, 35, 34, -5.0F, -2.0F, 8.0F, 2, 2, 2, 0.0F, false));
 		bone3.cubeList.add(new ModelBox(bone3, 43, 30, 2.0F, -2.0F, 8.0F, 2, 2, 2, 0.0F, false));
 
 		bone4 = new RendererModel(this);
@@ -169,6 +170,8 @@ public class KatterkillerModel<T extends EntityKatterkiller> extends EntityModel
 
 	@Override
 	public void render(T entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		GlStateManager.scalef(4.2f, 4.2f, 4.2f);
+		GlStateManager.translatef(0, -1.14f, -0.8f);
 		bb_main.render(f5);
 		bone.render(f5);
 		bone2.render(f5);
