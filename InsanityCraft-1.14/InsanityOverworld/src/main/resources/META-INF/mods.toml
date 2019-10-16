@@ -15,10 +15,12 @@ version="alpha.1.0.0-1.14.4" #mandatory
 displayName="InsanityCraft Overworld" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
+
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://www.curseforge.com/minecraft/mc-mods/insanitycraft" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="examplemod.png" #optional
+
 # A text field displayed in the mod UI
 credits="Thanks for InsanityCraft goes to Link, Dargon, and Targren! Without you guys, this dream would've never come true. Also, thanks to TheyCallMeDanger for writing OreSpawn, the inspiration for this mod!" #optional
 # A text field displayed in the mod UI

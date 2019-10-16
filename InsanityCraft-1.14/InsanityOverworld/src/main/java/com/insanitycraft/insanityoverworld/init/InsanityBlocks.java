@@ -1,5 +1,7 @@
 package com.insanitycraft.insanityoverworld.init;
 
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.block.BlockDebug;
 import com.insanitycraft.insanityoverworld.block.BlockMobOre;
 import com.insanitycraft.insanityoverworld.block.BlockItemMobOre;
 import com.insanitycraft.insanityoverworld.util.Reference;
@@ -22,6 +24,12 @@ import static net.minecraftforge.common.ToolType.*;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(Reference.MODID)
 public class InsanityBlocks {
+
+	//region Dev
+	public static Block debugBlock;
+	public static BlockItem debugItem;
+
+	//endregion
 
 	//region Materials
 	public static Block amethystBlock;
@@ -212,6 +220,13 @@ public class InsanityBlocks {
 
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+		if(InsanityOverworld.debug) {
+			event.getRegistry().registerAll(
+					debugBlock = new BlockDebug(Block.Properties.create(Material.ANVIL)).setRegistryName("debug_block")
+			);
+		}
+
+
 		event.getRegistry().registerAll(
 				//region Materials
 				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_block"),
@@ -300,6 +315,11 @@ public class InsanityBlocks {
 
 	@SubscribeEvent
 	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
+		if(InsanityOverworld.debug) {
+			event.getRegistry().registerAll(
+					debugItem = (BlockItem)new BlockItem(debugBlock, new Item.Properties()).setRegistryName(debugBlock.getRegistryName()));
+		}
+
 		event.getRegistry().registerAll(
 				//region Material
 				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroup)).setRegistryName(amethystBlock.getRegistryName()),

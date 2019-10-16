@@ -1,5 +1,7 @@
 package com.insanitycraft.insanityoverworld.items;
 
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.init.InsanityConfig;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -10,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class ItemDevStick extends Item {
@@ -23,11 +26,17 @@ public class ItemDevStick extends Item {
 	}
 
 	@Override
+	public boolean canPlayerBreakBlockWhileHolding(BlockState p_195938_1_, World p_195938_2_, BlockPos p_195938_3_, PlayerEntity p_195938_4_) {
+		return false;
+	}
+
+	@Override
 	public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
 		if(entity instanceof LivingEntity) {
 			LivingEntity livingEntity = (LivingEntity)entity;
 			livingEntity.setHealth(0);
 		}
+		InsanityLog.info(entity);
 		return true;
 	}
 
@@ -43,6 +52,9 @@ public class ItemDevStick extends Item {
 			if(tileEntity != null)
 				InsanityLog.info(tileEntity.serializeNBT());
 		}
+
+		InsanityLog.info(InsanityOverworld.config.testInt.get());
+
 		return super.onItemUse(context);
 	}
 }
