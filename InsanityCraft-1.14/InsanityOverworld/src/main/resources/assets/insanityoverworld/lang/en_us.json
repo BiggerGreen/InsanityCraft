@@ -40,6 +40,7 @@
 	"item.insanityoverworld.ultimate_axe": "Ultimate Axe",
 	"item.insanityoverworld.ultimate_shovel": "Ultimate Shovel",
 	"item.insanityoverworld.ultimate_sword": "Ultimate Sword",
+	"item.insanityoverworld.ultimate_bow": "Ultimate Bow",
 	"item.insanityoverworld.ultimate_helmet": "Ultimate Helmet",
 	"item.insanityoverworld.ultimate_chestplate": "Ultimate Chestplate",
 	"item.insanityoverworld.ultimate_leggings": "Ultimate Leggings",
@@ -111,6 +112,8 @@
 
 	"item.insanityoverworld.blank_disc": "Blank Disc",
 	"item.insanityoverworld.insta_nether_portal": "Instant Nether Portal",
+	"item.insanityoverworld.insta_shelter": "Instant Shelter",
+	"item.insanityoverworld.insta_garden": "Instant Garden",
 
 	"comment_": "My Mob spawn eggs",
 	"item.insanityoverworld.apple_cow_spawn_egg": "Apple Cow Spawn Egg",
@@ -210,8 +213,14 @@
 	"entity.insanityoverworld.enchanted_apple_cow": "Enchanted Golden Apple Cow",
 
 
+	"comment_": "Config",
+
+	"config.insanityoverworld.prop.extended_player_models.desc": "Enable Extended Player Models",
+
+
+
 	"comment_": "Dev Stuff",
 	"item.insanityoverworld.debug": "Debug",
-	"item.insanityoverworld.dev_stick": "Dev Stick",
+	"item.insanityoverworld.dev_stick": "Dev Stick"
 	
 }

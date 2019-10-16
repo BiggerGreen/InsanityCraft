@@ -193,4 +193,23 @@ public class KatterkillerModel<T extends EntityKatterkiller> extends EntityModel
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
 	}
+/*
+	@Override
+	public void setLivingAnimations(T entity, float limbSwing, float limbSwingAmount, float partialTickTime) {
+
+		bone.rotateAngleY = limbSwingAmount;
+		bone2.rotateAngleX = limbSwingAmount;
+		bone3.rotateAngleZ = limbSwingAmount;
+
+	}
+
+ */
+	@Override
+	public void setRotationAngles(T p_212844_1_, float p_212844_2_, float p_212844_3_, float p_212844_4_, float p_212844_5_, float p_212844_6_, float p_212844_7_) {
+		bone.rotateAngleY = p_212844_2_;
+		bone2.rotateAngleX = p_212844_2_;
+		bone3.rotateAngleZ = p_212844_2_;
+
+		bb_main.rotateAngleY = p_212844_3_;
+	}
 }

@@ -78,9 +78,10 @@ public class InsanityOverworld {
 
 	@OnlyIn(Dist.CLIENT)
 	private void finishLoading(final FMLLoadCompleteEvent event) {
-		InsanityLog.info("Finish Loading");
-		EntityRenderer playerRender = Minecraft.getInstance().getRenderManager().getRenderer(AbstractClientPlayerEntity.class);
-		InsanityLog.info(playerRender); //TODO Find out what I need to do here
+		if(config.extendedPlayerModels.get()) {
+			InsanityLog.info("Finish Loading");
+			EntityRenderer playerRender = Minecraft.getInstance().getRenderManager().getRenderer(AbstractClientPlayerEntity.class);
+			InsanityLog.info(playerRender); //TODO Find out what I need to do here
 		/*if(playerRender instanceof DefaultRenderer) {
 			PlayerRenderer playerRenderer = (PlayerRenderer)playerRender;
 			InsanityLog.info(playerRenderer);
@@ -88,6 +89,7 @@ public class InsanityOverworld {
 		}
 
 		 */
+		}
 	}
 
 	private void setupConfig() {

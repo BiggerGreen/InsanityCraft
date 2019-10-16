@@ -27,7 +27,7 @@ public class InsanityEntities {
 	public static EntityType<?> ENTITY_TRIFFID = EntityType.Builder.create(EntityTriffid::new, EntityClassification.MONSTER).build(MODID + ":triffid").setRegistryName("triffid");
 	public static EntityType<?> ENTITY_MOTHRA = EntityType.Builder.create(EntityMothra::new, EntityClassification.MONSTER).size(5.0F, 3.0F).build(MODID + ":mothra").setRegistryName("mothra");
 	public static EntityType<?> ENTITY_KATTERKILLER = EntityType.Builder.create(EntityKatterkiller::new, EntityClassification.MONSTER).size(8.0F, 5.0F).build(MODID + ":katterkiller").setRegistryName("katterkiller");
-	public static EntityType<?> ENTITY_TREX = EntityType.Builder.create(EntityTrex::new, EntityClassification.MONSTER).build(MODID + ":trex").setRegistryName("trex");
+	public static EntityType<?> ENTITY_TREX = EntityType.Builder.create(EntityTrex::new, EntityClassification.MONSTER).size(6.0F, 4.0F).build(MODID + ":trex").setRegistryName("trex");
 	public static EntityType<?> ENTITY_KRAKEN = EntityType.Builder.create(EntityKraken::new, EntityClassification.MONSTER).size(3.0F, 16.5F).build(MODID + ":kraken").setRegistryName("kraken");
 
 	//Ambient
