@@ -1,6 +1,7 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
 import com.insanitycraft.insanityoverworld.entity.EntityTrex;
+import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
@@ -76,12 +77,15 @@ public class TrexModel<T extends EntityTrex> extends EntityModel<T> {
 
 	@Override
 	public void render(T entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		GlStateManager.scalef(5, 5, 5);
+		GlStateManager.translatef(0, -1.125f, 0);
 		Lower_Jaw.render(f5);
 		Head.render(f5);
 		Upper_Jaw.render(f5);
 		Body.render(f5);
 		Left_Leg.render(f5);
-		Right_Leg.render(f5);	}
+		Right_Leg.render(f5);
+	}
 
 	public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;

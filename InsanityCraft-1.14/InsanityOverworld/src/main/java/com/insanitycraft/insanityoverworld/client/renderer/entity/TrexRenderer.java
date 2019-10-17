@@ -3,6 +3,7 @@ package com.insanitycraft.insanityoverworld.client.renderer.entity;
 import com.insanitycraft.insanityoverworld.client.renderer.entity.model.TrexModel;
 import com.insanitycraft.insanityoverworld.entity.EntityTrex;
 import com.insanitycraft.insanityoverworld.util.Reference;
+import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -20,4 +21,17 @@ public class TrexRenderer extends MobRenderer<EntityTrex, TrexModel<EntityTrex>>
 	protected ResourceLocation getEntityTexture(EntityTrex entityTrex) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/trex.png");
 	}
+
+
+	@Override
+	protected void applyRotations(EntityTrex entity, float p_77043_2_, float p_77043_3_, float p_77043_4_) {
+		super.applyRotations(entity, p_77043_2_, p_77043_3_, p_77043_4_);
+
+		if(entity.hasCustomName()) {
+			if("Conga".equals(entity.getName().getString())) { //Conga is an artist for the mod if your wondering.
+				GlStateManager.scalef(0.2f, 0.2f, 0.2f);
+			}
+		}
+	}
+
 }

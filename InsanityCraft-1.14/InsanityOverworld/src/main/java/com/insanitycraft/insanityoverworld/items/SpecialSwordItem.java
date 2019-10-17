@@ -1,24 +1,18 @@
 package com.insanitycraft.insanityoverworld.items;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.potion.Potion;
-import net.minecraft.world.World;
 
 import static com.insanitycraft.insanityoverworld.init.InsanityItems.*;
-import static net.minecraft.enchantment.Enchantments.*;
 
 public class SpecialSwordItem extends SwordItem {
 	public SpecialSwordItem(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder) {
 		super(tier, attackDamageIn, attackSpeedIn, builder);
+
 	}
 
 	@Override

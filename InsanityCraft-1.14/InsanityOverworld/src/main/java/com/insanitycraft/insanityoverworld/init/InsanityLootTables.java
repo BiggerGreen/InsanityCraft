@@ -8,7 +8,6 @@ import net.minecraftforge.registries.ObjectHolder;
 import java.util.Collections;
 import java.util.Set;
 
-@ObjectHolder(Reference.MODID)
 public class InsanityLootTables {
 
 	private static final Set<ResourceLocation> LOOT_TABLES = Sets.newHashSet();
@@ -19,7 +18,7 @@ public class InsanityLootTables {
 
 
 	private static ResourceLocation register(String id) {
-		return register(new ResourceLocation(id));
+		return register(new ResourceLocation(Reference.MODID, id));
 	}
 
 	private static ResourceLocation register(ResourceLocation id) {
