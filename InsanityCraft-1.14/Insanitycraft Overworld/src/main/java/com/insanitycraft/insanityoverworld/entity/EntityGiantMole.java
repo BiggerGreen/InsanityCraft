@@ -41,13 +41,10 @@ public class EntityGiantMole extends MonsterEntity implements IMob {
 	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
-		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(200.0D);
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20000.0D);
 		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.35F);
 		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(18.0F);
 	}
-
-
-
 
 	@Override
 	public void setCustomName(@Nullable ITextComponent name) {

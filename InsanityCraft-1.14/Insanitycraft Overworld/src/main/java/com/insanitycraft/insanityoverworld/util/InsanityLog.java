@@ -12,6 +12,10 @@ public class InsanityLog  {
 		logger.log(logLevel, String.valueOf(object));
 	}
 
+	public static void log(Level logLevel, String text, Object format) {
+		logger.log(logLevel, text, format);
+	}
+
 	public static void log(Level logLevel, Exception e) {
 		logger.log(logLevel, e);
 	}
@@ -24,6 +28,10 @@ public class InsanityLog  {
 		log(Level.INFO, object);
 	}
 
+	public static void info(String text, Object format) {
+		log(Level.INFO, text, format);
+	}
+
 	public static void info(Exception e) {
 		log(Level.INFO, e);
 	}
@@ -34,5 +42,17 @@ public class InsanityLog  {
 
 	public static void debug(Exception e) {
 		log(Level.DEBUG, e);
+	}
+
+	public static void warn(Object object) {
+		log(Level.WARN, object);
+	}
+
+	public static void warn(String text, Object format) {
+		log(Level.WARN, text, format);
+	}
+
+	public static void warn(Exception e) {
+		log(Level.WARN, e);
 	}
 }

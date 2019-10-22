@@ -34,6 +34,8 @@ public class ItemDevStick extends Item {
 	public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
 		if(entity instanceof LivingEntity) {
 			LivingEntity livingEntity = (LivingEntity)entity;
+			InsanityLog.info(livingEntity.getMaxHealth());
+			InsanityLog.info(livingEntity);
 			livingEntity.setHealth(0);
 		}
 		InsanityLog.info(entity);

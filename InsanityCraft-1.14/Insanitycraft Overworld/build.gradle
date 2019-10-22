@@ -14,8 +14,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = minecraft_version + '-' + mod_version + '-' + build_type
-group = 'com.insanitycraft.insanityoverworld' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'insanityoverworld'
+group = mod_package + modid // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = modid
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -110,7 +110,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "insanityoverworld",
+            "Specification-Title": modid,
             "Specification-Vendor": "examplemodsareus",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
