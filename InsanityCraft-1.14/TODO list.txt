@@ -13,3 +13,8 @@ finish ai
 add loottables
 
 config file
+
+
+Kaiju Jigen
+
+start the mod
