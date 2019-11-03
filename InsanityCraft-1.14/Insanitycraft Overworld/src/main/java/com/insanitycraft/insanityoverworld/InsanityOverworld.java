@@ -1,6 +1,5 @@
 package com.insanitycraft.insanityoverworld;
 
-import com.insanitycraft.insanityoverworld.client.renderer.entity.layers.LinksHornsLayer;
 import com.insanitycraft.insanityoverworld.init.InsanityConfig;
 import com.insanitycraft.insanityoverworld.init.InsanityDungeons;
 import com.insanitycraft.insanityoverworld.init.InsanityEntities;
@@ -9,19 +8,12 @@ import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.renderer.entity.DefaultRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.entity.IEntityRenderer;
-import net.minecraft.client.renderer.entity.PlayerRenderer;
-import net.minecraft.client.renderer.entity.model.PlayerModel;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;

@@ -5,6 +5,7 @@ import com.insanitycraft.insanityoverworld.entity.EntityKraken;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;

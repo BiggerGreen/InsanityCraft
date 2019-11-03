@@ -36,6 +36,10 @@ public class EntityKraken extends MonsterEntity implements IMob {
 		return 11.0F;
 	}
 
+	@Override
+	public boolean isNonBoss() {
+		return false;
+	}
 
 	@Override
 	public void setCustomName(@Nullable ITextComponent name) {

@@ -1,7 +1,6 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
 import com.insanitycraft.insanityoverworld.entity.EntityKraken;
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
@@ -26,31 +25,32 @@ public class KrakenModel<T extends EntityKraken> extends EntityModel<T> {
 	private final RendererModel tentacle2_3;
 	private final RendererModel tentacle2_4;
 	private final RendererModel tentacle3;
-	private final RendererModel Tentacle3_1;
-	private final RendererModel Tentacle3_2;
-	private final RendererModel Tentacle3_3;
-	private final RendererModel Tentacle4;
-	private final RendererModel Tentacle4_1;
-	private final RendererModel Tentacle4_2;
-	private final RendererModel Tentacle4_3;
-	private final RendererModel InnerTentacle1;
-	private final RendererModel InnerTentacle1_1;
-	private final RendererModel InnerTentacle1_2;
-	private final RendererModel InnerTentacle2;
-	private final RendererModel InnerTentacle2_1;
-	private final RendererModel InnerTentacle2_2;
-	private final RendererModel InnerTentacle3;
-	private final RendererModel InnerTentacle3_1;
-	private final RendererModel InnerTentacle3_2;
-	private final RendererModel InnerTentacle4;
-	private final RendererModel InnerTentacle4_1;
-	private final RendererModel InnerTentacle4_2;
-	private final RendererModel InnerTentacle5;
-	private final RendererModel InnerTentacle5_1;
-	private final RendererModel InnerTentacle5_2;
-	private final RendererModel InnerTentacle6;
-	private final RendererModel InnerTentacle6_1;
-	private final RendererModel InnerTentacle6_2;
+	private final RendererModel tentacle3_1;
+	private final RendererModel tentacle3_2;
+	private final RendererModel tentacle3_3;
+	private final RendererModel tentacle4;
+	private final RendererModel tentacle4_1;
+	private final RendererModel tentacle4_2;
+	private final RendererModel tentacle4_3;
+	private final RendererModel innerTentacle1;
+	private final RendererModel innerTentacle1_1;
+	private final RendererModel innerTentacle1_2;
+	private final RendererModel innerTentacle2;
+	private final RendererModel innerTentacle2_1;
+	private final RendererModel innerTentacle2_2;
+	private final RendererModel innerTentacle3;
+	private final RendererModel innerTentacle3_1;
+	private final RendererModel innerTentacle3_2;
+	private final RendererModel innerTentacle4;
+	private final RendererModel innerTentacle4_1;
+	private final RendererModel innerTentacle4_2;
+	private final RendererModel innerTentacle5;
+	private final RendererModel innerTentacle5_1;
+	private final RendererModel innerTentacle5_2;
+	private final RendererModel innerTentacle6;
+	private final RendererModel innerTentacle6_1;
+	private final RendererModel innerTentacle6_2;
+
 
 	public KrakenModel() {
 		textureWidth = 256;
@@ -197,130 +197,130 @@ public class KrakenModel<T extends EntityKraken> extends EntityModel<T> {
 		setRotationAngle(tentacle3, 1.5708F, 0.0F, 0.0F);
 		tentacle3.cubeList.add(new ModelBox(tentacle3, 54, 229, 0.0F, -5.8F, -2.975F, 8, 8, 8, 0.0F, false));
 
-		Tentacle3_1 = new RendererModel(this);
-		Tentacle3_1.setRotationPoint(8.0F, -1.75F, 1.0F);
-		tentacle3.addChild(Tentacle3_1);
-		Tentacle3_1.cubeList.add(new ModelBox(Tentacle3_1, 12, 215, 0.0F, -3.05F, -27.975F, 6, 6, 31, 0.0F, false));
+		tentacle3_1 = new RendererModel(this);
+		tentacle3_1.setRotationPoint(8.0F, -1.75F, 1.0F);
+		tentacle3.addChild(tentacle3_1);
+		tentacle3_1.cubeList.add(new ModelBox(tentacle3_1, 12, 215, 0.0F, -3.05F, -27.975F, 6, 6, 31, 0.0F, false));
 
-		Tentacle3_2 = new RendererModel(this);
-		Tentacle3_2.setRotationPoint(2.25F, 0.0F, -28.0F);
-		Tentacle3_1.addChild(Tentacle3_2);
-		Tentacle3_2.cubeList.add(new ModelBox(Tentacle3_2, 47, 223, -2.25F, -2.05F, -28.975F, 5, 4, 29, 0.0F, false));
+		tentacle3_2 = new RendererModel(this);
+		tentacle3_2.setRotationPoint(2.25F, 0.0F, -28.0F);
+		tentacle3_1.addChild(tentacle3_2);
+		tentacle3_2.cubeList.add(new ModelBox(tentacle3_2, 47, 223, -2.25F, -2.05F, -28.975F, 5, 4, 29, 0.0F, false));
 
-		Tentacle3_3 = new RendererModel(this);
-		Tentacle3_3.setRotationPoint(0.0F, 0.0F, -29.0F);
-		Tentacle3_2.addChild(Tentacle3_3);
-		Tentacle3_3.cubeList.add(new ModelBox(Tentacle3_3, 40, 219, -1.25F, -1.05F, -28.975F, 3, 2, 29, 0.0F, false));
+		tentacle3_3 = new RendererModel(this);
+		tentacle3_3.setRotationPoint(0.0F, 0.0F, -29.0F);
+		tentacle3_2.addChild(tentacle3_3);
+		tentacle3_3.cubeList.add(new ModelBox(tentacle3_3, 40, 219, -1.25F, -1.05F, -28.975F, 3, 2, 29, 0.0F, false));
 
-		Tentacle4 = new RendererModel(this);
-		Tentacle4.setRotationPoint(-12.0F, 5.9F, 5.675F);
-		setRotationAngle(Tentacle4, 1.5708F, 3.1416F, 0.0F);
-		Tentacle4.cubeList.add(new ModelBox(Tentacle4, 54, 229, 0.0F, -5.4F, -2.975F, 8, 8, 8, 0.0F, false));
+		tentacle4 = new RendererModel(this);
+		tentacle4.setRotationPoint(-12.0F, 5.9F, 5.675F);
+		setRotationAngle(tentacle4, 1.5708F, 3.1416F, 0.0F);
+		tentacle4.cubeList.add(new ModelBox(tentacle4, 54, 229, 0.0F, -5.4F, -2.975F, 8, 8, 8, 0.0F, false));
 
-		Tentacle4_1 = new RendererModel(this);
-		Tentacle4_1.setRotationPoint(8.0F, -1.75F, 1.0F);
-		Tentacle4.addChild(Tentacle4_1);
-		Tentacle4_1.cubeList.add(new ModelBox(Tentacle4_1, 12, 215, 0.0F, -2.65F, -27.975F, 6, 6, 31, 0.0F, false));
+		tentacle4_1 = new RendererModel(this);
+		tentacle4_1.setRotationPoint(8.0F, -1.75F, 1.0F);
+		tentacle4.addChild(tentacle4_1);
+		tentacle4_1.cubeList.add(new ModelBox(tentacle4_1, 12, 215, 0.0F, -2.65F, -27.975F, 6, 6, 31, 0.0F, false));
 
-		Tentacle4_2 = new RendererModel(this);
-		Tentacle4_2.setRotationPoint(2.25F, 0.0F, -28.0F);
-		Tentacle4_1.addChild(Tentacle4_2);
-		Tentacle4_2.cubeList.add(new ModelBox(Tentacle4_2, 47, 223, -2.25F, -1.65F, -28.975F, 5, 4, 29, 0.0F, false));
+		tentacle4_2 = new RendererModel(this);
+		tentacle4_2.setRotationPoint(2.25F, 0.0F, -28.0F);
+		tentacle4_1.addChild(tentacle4_2);
+		tentacle4_2.cubeList.add(new ModelBox(tentacle4_2, 47, 223, -2.25F, -1.65F, -28.975F, 5, 4, 29, 0.0F, false));
 
-		Tentacle4_3 = new RendererModel(this);
-		Tentacle4_3.setRotationPoint(0.0F, 0.0F, -29.0F);
-		Tentacle4_2.addChild(Tentacle4_3);
-		Tentacle4_3.cubeList.add(new ModelBox(Tentacle4_3, 40, 219, -1.25F, -0.65F, -28.975F, 3, 2, 29, 0.0F, false));
+		tentacle4_3 = new RendererModel(this);
+		tentacle4_3.setRotationPoint(0.0F, 0.0F, -29.0F);
+		tentacle4_2.addChild(tentacle4_3);
+		tentacle4_3.cubeList.add(new ModelBox(tentacle4_3, 40, 219, -1.25F, -0.65F, -28.975F, 3, 2, 29, 0.0F, false));
 
-		InnerTentacle1 = new RendererModel(this);
-		InnerTentacle1.setRotationPoint(12.0F, 13.0F, 2.1333F);
-		setRotationAngle(InnerTentacle1, 1.5708F, 0.0F, 0.0F);
-		InnerTentacle1.cubeList.add(new ModelBox(InnerTentacle1, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
+		innerTentacle1 = new RendererModel(this);
+		innerTentacle1.setRotationPoint(12.0F, 13.0F, 2.1333F);
+		setRotationAngle(innerTentacle1, 1.5708F, 0.0F, 0.0F);
+		innerTentacle1.cubeList.add(new ModelBox(innerTentacle1, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
 
-		InnerTentacle1_1 = new RendererModel(this);
-		InnerTentacle1_1.setRotationPoint(4.0F, -0.95F, -29.85F);
-		InnerTentacle1.addChild(InnerTentacle1_1);
-		InnerTentacle1_1.cubeList.add(new ModelBox(InnerTentacle1_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
+		innerTentacle1_1 = new RendererModel(this);
+		innerTentacle1_1.setRotationPoint(4.0F, -0.95F, -29.85F);
+		innerTentacle1.addChild(innerTentacle1_1);
+		innerTentacle1_1.cubeList.add(new ModelBox(innerTentacle1_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
 
-		InnerTentacle1_2 = new RendererModel(this);
-		InnerTentacle1_2.setRotationPoint(0.0F, 0.0F, -31.0F);
-		InnerTentacle1_1.addChild(InnerTentacle1_2);
-		InnerTentacle1_2.cubeList.add(new ModelBox(InnerTentacle1_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
+		innerTentacle1_2 = new RendererModel(this);
+		innerTentacle1_2.setRotationPoint(0.0F, 0.0F, -31.0F);
+		innerTentacle1_1.addChild(innerTentacle1_2);
+		innerTentacle1_2.cubeList.add(new ModelBox(innerTentacle1_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
 
-		InnerTentacle2 = new RendererModel(this);
-		InnerTentacle2.setRotationPoint(-11.0F, 13.0F, 0.1333F);
-		setRotationAngle(InnerTentacle2, 1.5708F, 3.1416F, 0.0F);
-		InnerTentacle2.cubeList.add(new ModelBox(InnerTentacle2, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
+		innerTentacle2 = new RendererModel(this);
+		innerTentacle2.setRotationPoint(-11.0F, 13.0F, 0.1333F);
+		setRotationAngle(innerTentacle2, 1.5708F, 3.1416F, 0.0F);
+		innerTentacle2.cubeList.add(new ModelBox(innerTentacle2, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
 
-		InnerTentacle2_1 = new RendererModel(this);
-		InnerTentacle2_1.setRotationPoint(4.0F, -0.95F, -29.85F);
-		InnerTentacle2.addChild(InnerTentacle2_1);
-		InnerTentacle2_1.cubeList.add(new ModelBox(InnerTentacle2_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
+		innerTentacle2_1 = new RendererModel(this);
+		innerTentacle2_1.setRotationPoint(4.0F, -0.95F, -29.85F);
+		innerTentacle2.addChild(innerTentacle2_1);
+		innerTentacle2_1.cubeList.add(new ModelBox(innerTentacle2_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
 
-		InnerTentacle2_2 = new RendererModel(this);
-		InnerTentacle2_2.setRotationPoint(0.0F, 0.0F, -31.0F);
-		InnerTentacle2_1.addChild(InnerTentacle2_2);
-		InnerTentacle2_2.cubeList.add(new ModelBox(InnerTentacle2_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
+		innerTentacle2_2 = new RendererModel(this);
+		innerTentacle2_2.setRotationPoint(0.0F, 0.0F, -31.0F);
+		innerTentacle2_1.addChild(innerTentacle2_2);
+		innerTentacle2_2.cubeList.add(new ModelBox(innerTentacle2_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
 
-		InnerTentacle3 = new RendererModel(this);
-		InnerTentacle3.setRotationPoint(-5.2F, 13.1F, -8.8667F);
-		setRotationAngle(InnerTentacle3, 1.5708F, 1.5708F, 0.0F);
-		InnerTentacle3.cubeList.add(new ModelBox(InnerTentacle3, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
+		innerTentacle3 = new RendererModel(this);
+		innerTentacle3.setRotationPoint(-5.2F, 13.1F, -8.8667F);
+		setRotationAngle(innerTentacle3, 1.5708F, 1.5708F, 0.0F);
+		innerTentacle3.cubeList.add(new ModelBox(innerTentacle3, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
 
-		InnerTentacle3_1 = new RendererModel(this);
-		InnerTentacle3_1.setRotationPoint(4.0F, -0.95F, -29.85F);
-		InnerTentacle3.addChild(InnerTentacle3_1);
-		InnerTentacle3_1.cubeList.add(new ModelBox(InnerTentacle3_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
+		innerTentacle3_1 = new RendererModel(this);
+		innerTentacle3_1.setRotationPoint(4.0F, -0.95F, -29.85F);
+		innerTentacle3.addChild(innerTentacle3_1);
+		innerTentacle3_1.cubeList.add(new ModelBox(innerTentacle3_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
 
-		InnerTentacle3_2 = new RendererModel(this);
-		InnerTentacle3_2.setRotationPoint(0.0F, 0.0F, -31.0F);
-		InnerTentacle3_1.addChild(InnerTentacle3_2);
-		InnerTentacle3_2.cubeList.add(new ModelBox(InnerTentacle3_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
+		innerTentacle3_2 = new RendererModel(this);
+		innerTentacle3_2.setRotationPoint(0.0F, 0.0F, -31.0F);
+		innerTentacle3_1.addChild(innerTentacle3_2);
+		innerTentacle3_2.cubeList.add(new ModelBox(innerTentacle3_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
 
-		InnerTentacle4 = new RendererModel(this);
-		InnerTentacle4.setRotationPoint(6.8F, 13.1F, -8.8667F);
-		setRotationAngle(InnerTentacle4, 1.5708F, 1.5708F, 0.0F);
-		InnerTentacle4.cubeList.add(new ModelBox(InnerTentacle4, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
+		innerTentacle4 = new RendererModel(this);
+		innerTentacle4.setRotationPoint(6.8F, 13.1F, -8.8667F);
+		setRotationAngle(innerTentacle4, 1.5708F, 1.5708F, 0.0F);
+		innerTentacle4.cubeList.add(new ModelBox(innerTentacle4, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
 
-		InnerTentacle4_1 = new RendererModel(this);
-		InnerTentacle4_1.setRotationPoint(4.0F, -0.95F, -29.85F);
-		InnerTentacle4.addChild(InnerTentacle4_1);
-		InnerTentacle4_1.cubeList.add(new ModelBox(InnerTentacle4_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
+		innerTentacle4_1 = new RendererModel(this);
+		innerTentacle4_1.setRotationPoint(4.0F, -0.95F, -29.85F);
+		innerTentacle4.addChild(innerTentacle4_1);
+		innerTentacle4_1.cubeList.add(new ModelBox(innerTentacle4_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
 
-		InnerTentacle4_2 = new RendererModel(this);
-		InnerTentacle4_2.setRotationPoint(0.0F, 0.0F, -31.0F);
-		InnerTentacle4_1.addChild(InnerTentacle4_2);
-		InnerTentacle4_2.cubeList.add(new ModelBox(InnerTentacle4_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
+		innerTentacle4_2 = new RendererModel(this);
+		innerTentacle4_2.setRotationPoint(0.0F, 0.0F, -31.0F);
+		innerTentacle4_1.addChild(innerTentacle4_2);
+		innerTentacle4_2.cubeList.add(new ModelBox(innerTentacle4_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
 
-		InnerTentacle5 = new RendererModel(this);
-		InnerTentacle5.setRotationPoint(-6.9F, 13.1F, 13.1333F);
-		setRotationAngle(InnerTentacle5, 1.5708F, -1.5708F, 0.0F);
-		InnerTentacle5.cubeList.add(new ModelBox(InnerTentacle5, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
+		innerTentacle5 = new RendererModel(this);
+		innerTentacle5.setRotationPoint(-6.9F, 13.1F, 13.1333F);
+		setRotationAngle(innerTentacle5, 1.5708F, -1.5708F, 0.0F);
+		innerTentacle5.cubeList.add(new ModelBox(innerTentacle5, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
 
-		InnerTentacle5_1 = new RendererModel(this);
-		InnerTentacle5_1.setRotationPoint(4.0F, -0.95F, -29.85F);
-		InnerTentacle5.addChild(InnerTentacle5_1);
-		InnerTentacle5_1.cubeList.add(new ModelBox(InnerTentacle5_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
+		innerTentacle5_1 = new RendererModel(this);
+		innerTentacle5_1.setRotationPoint(4.0F, -0.95F, -29.85F);
+		innerTentacle5.addChild(innerTentacle5_1);
+		innerTentacle5_1.cubeList.add(new ModelBox(innerTentacle5_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
 
-		InnerTentacle5_2 = new RendererModel(this);
-		InnerTentacle5_2.setRotationPoint(0.0F, 0.0F, -31.0F);
-		InnerTentacle5_1.addChild(InnerTentacle5_2);
-		InnerTentacle5_2.cubeList.add(new ModelBox(InnerTentacle5_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
+		innerTentacle5_2 = new RendererModel(this);
+		innerTentacle5_2.setRotationPoint(0.0F, 0.0F, -31.0F);
+		innerTentacle5_1.addChild(innerTentacle5_2);
+		innerTentacle5_2.cubeList.add(new ModelBox(innerTentacle5_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
 
-		InnerTentacle6 = new RendererModel(this);
-		InnerTentacle6.setRotationPoint(5.1F, 13.1F, 13.1333F);
-		setRotationAngle(InnerTentacle6, 1.5708F, -1.5708F, 0.0F);
-		InnerTentacle6.cubeList.add(new ModelBox(InnerTentacle6, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
+		innerTentacle6 = new RendererModel(this);
+		innerTentacle6.setRotationPoint(5.1F, 13.1F, 13.1333F);
+		setRotationAngle(innerTentacle6, 1.5708F, -1.5708F, 0.0F);
+		innerTentacle6.cubeList.add(new ModelBox(innerTentacle6, 18, 219, 1.0F, -3.85F, -29.8333F, 6, 6, 31, 0.0F, false));
 
-		InnerTentacle6_1 = new RendererModel(this);
-		InnerTentacle6_1.setRotationPoint(4.0F, -0.95F, -29.85F);
-		InnerTentacle6.addChild(InnerTentacle6_1);
-		InnerTentacle6_1.cubeList.add(new ModelBox(InnerTentacle6_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
+		innerTentacle6_1 = new RendererModel(this);
+		innerTentacle6_1.setRotationPoint(4.0F, -0.95F, -29.85F);
+		innerTentacle6.addChild(innerTentacle6_1);
+		innerTentacle6_1.cubeList.add(new ModelBox(innerTentacle6_1, 26, 221, -2.0F, -1.9F, -30.9833F, 4, 4, 31, 0.0F, false));
 
-		InnerTentacle6_2 = new RendererModel(this);
-		InnerTentacle6_2.setRotationPoint(0.0F, 0.0F, -31.0F);
-		InnerTentacle6_1.addChild(InnerTentacle6_2);
-		InnerTentacle6_2.cubeList.add(new ModelBox(InnerTentacle6_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
+		innerTentacle6_2 = new RendererModel(this);
+		innerTentacle6_2.setRotationPoint(0.0F, 0.0F, -31.0F);
+		innerTentacle6_1.addChild(innerTentacle6_2);
+		innerTentacle6_2.cubeList.add(new ModelBox(innerTentacle6_2, 26, 212, -1.0F, -0.9F, -34.9833F, 2, 2, 35, 0.0F, false));
 	}
 
 	@Override
@@ -332,30 +332,61 @@ public class KrakenModel<T extends EntityKraken> extends EntityModel<T> {
 		tentacle1.render(scale);
 		tentacle2.render(scale);
 		tentacle3.render(scale);
-		Tentacle4.render(scale);
-		InnerTentacle1.render(scale);
-		InnerTentacle2.render(scale);
-		InnerTentacle3.render(scale);
-		InnerTentacle4.render(scale);
-		InnerTentacle5.render(scale);
-		InnerTentacle6.render(scale);
+		tentacle4.render(scale);
+		innerTentacle1.render(scale);
+		innerTentacle2.render(scale);
+		innerTentacle3.render(scale);
+		innerTentacle4.render(scale);
+		innerTentacle5.render(scale);
+		innerTentacle6.render(scale);
 
 	}
 
-	//I Hate this
-	//			Link
+	private boolean hasRandom = false;
+
 	@Override
 	public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
-/*
-		this.tentacle1_1.rotateAngleY = -(0.2F * MathHelper.sin(ageInTicks * 0.4F + 1) + 0.5F);
-		this.tentacle1_2.rotateAngleY = (0.3F * MathHelper.sin(ageInTicks * 0.4F + 2) + 0.3F);
-		this.tentacle1_3.rotateAngleY = (0.5F * MathHelper.sin(ageInTicks * 0.4F + 2) + 0.4F);
-		this.tentacle1_4.rotateAngleY = (0.2F * MathHelper.sin(ageInTicks * 0.4F + 2) + 0.3F);
 
- */
-		this.tentacle1_1.rotateAngleY = -swingTentacle(ageInTicks, 0.3F, 0.4F, 1, 0.3F);
-		this.tentacle1_2.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.4F, 2, F);
-		this.tentacle1_2.rotateAngleY = swingTentacle(ageInTicks, 0.4F, 0.4F, 3, 0.3F);
+
+		//region long tentacles
+
+		this.tentacle1_1.rotateAngleY = -swingTentacle(ageInTicks, 0.3F, 0.3F, 1, 0.3F);
+		this.tentacle1_2.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.3F, 2 , 0.2F);
+		this.tentacle1_3.rotateAngleY = swingTentacle(ageInTicks, 0.2F, 0.3F, 3, 0.2F);
+		this.tentacle1_4.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.3F, 3, 0.2F);
+
+		this.tentacle2_1.rotateAngleY = -swingTentacle(ageInTicks, 0.3F, 0.3F, 5, 0.3F);
+		this.tentacle2_2.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.3F, 6, 0.2F);
+		this.tentacle2_3.rotateAngleY = swingTentacle(ageInTicks, 0.2F, 0.3F, 7, 0.2F);
+		this.tentacle2_4.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.3F, 7, 0.2F);
+		//endregion
+
+
+		//region short tentacles
+		this.tentacle3_1.rotateAngleY = -swingTentacle(ageInTicks, 0.3F, 0.4F, 2, 0.2F);
+		this.tentacle3_2.rotateAngleY = swingTentacle(ageInTicks, 0.05F, 0.4F, 4, 0.2F);
+		this.tentacle3_3.rotateAngleY = swingTentacle(ageInTicks, 0.1F, 0.4F, 4, 0.2F);
+
+		this.tentacle4_1.rotateAngleY = -swingTentacle(ageInTicks, 0.3F, 0.4F, 6, 0.2F);
+		this.tentacle4_2.rotateAngleY = swingTentacle(ageInTicks, 0.05F, 0.4F, 8, 0.2F);
+		this.tentacle4_3.rotateAngleY = swingTentacle(ageInTicks, 0.2F, 0.4F, 8, 0.2F);
+
+		this.innerTentacle1.rotateAngleZ = -swingTentacle(ageInTicks, 0.3F, 0.2F, 1, 0.4F);
+		this.innerTentacle1_1.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.2F, 3, 0.4F);
+		this.innerTentacle1_2.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.2F, 8, 0.4F);
+
+		this.innerTentacle2.rotateAngleZ = swingTentacle(ageInTicks, 0.3F, 0.2F, 3, 0.4F);
+		this.innerTentacle2_1.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.2F, 7, 0.4F);
+		this.innerTentacle2_2.rotateAngleY = swingTentacle(ageInTicks, 0.3F, 0.2F, 5, 0.4F);
+
+
+		//wait for updated model
+		//this.innerTentacle3.rotateAngleX = -swingTentacle(ageInTicks, 0.3F, 0.2F, 1, 0.4F);
+		//this.innerTentacle4.rotateAngleZ = -swingTentacle(ageInTicks, 0.3F, 0.2F, 1, 0.4F);
+		//this.innerTentacle5.rotateAngleY = -swingTentacle(ageInTicks, 0.3F, 0.2F, 1, 0.4F);
+
+
+		//endregion
 
 	}
 
@@ -365,10 +396,10 @@ public class KrakenModel<T extends EntityKraken> extends EntityModel<T> {
 		modelRenderer.rotateAngleZ = z;
 	}
 
+	//keep the speed the same for each part of a tentacle
 	private float swingTentacle(float ageInTicks, float swingAmount, float speed, int offset, float sidedSwingAmount) {
 		float swingAmount1 = (swingAmount * MathHelper.sin(ageInTicks * speed + offset) + sidedSwingAmount);
 
-		InsanityLog.info("SwingAmount: " + swingAmount1);
 		return swingAmount1;
 	}
 }
