@@ -1,11 +1,12 @@
 package com.insanitycraft.insanityoverworld.entity;
 
-import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.Pose;
-import net.minecraft.entity.SharedMonsterAttributes;
+import com.insanitycraft.insanityoverworld.entity.ai.controller.FlyHelperController;
+import com.insanitycraft.insanityoverworld.entity.ai.goal.RandomFlyGoal;
+import net.minecraft.entity.*;
+import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
@@ -14,12 +15,24 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class EntityKraken extends MonsterEntity implements IMob {
+public class EntityKraken extends FlyingEntity implements IMob {
 
 	private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.BLUE, BossInfo.Overlay.PROGRESS);
 
 	public EntityKraken(EntityType<EntityKraken> type, World world) {
 		super(type, world);
+		this.moveController = new FlyHelperController(this);
+
+	}
+
+	@Override
+	protected void registerGoals() {
+
+		this.goalSelector.addGoal(1, new RandomFlyGoal(this));
+		this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 8.0F));
+		this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+
 	}
 
 	@Override
@@ -28,7 +41,8 @@ public class EntityKraken extends MonsterEntity implements IMob {
 		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1000.0D);
 		this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(1.0F);
 		this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(10.0F);
-		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(40.0F);
+		this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(100.0D);
+		//		this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(40.0F);
 	}
 
 	@Override

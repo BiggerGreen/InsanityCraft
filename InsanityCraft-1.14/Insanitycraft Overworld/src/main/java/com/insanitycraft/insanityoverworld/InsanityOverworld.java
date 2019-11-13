@@ -22,8 +22,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import java.util.Map;
-
 import static com.insanitycraft.insanityoverworld.util.Reference.*;
 
 @Mod(value = MODID)
@@ -39,14 +37,6 @@ public class InsanityOverworld {
 		InsanityLog.info(InsanityDungeons.TEST.getName());
 		InsanityLog.info(InsanityDungeons.TEST.getLocation());
 		InsanityLog.info(InsanityDungeons.TEST);
-
-		/*
-		if(VERSIONTYPE.equals("@DEBUG@")) {
-			debug = true;
-		}else {
-			debug = false;
-		}
-		 */
 
 		debug = true;
 

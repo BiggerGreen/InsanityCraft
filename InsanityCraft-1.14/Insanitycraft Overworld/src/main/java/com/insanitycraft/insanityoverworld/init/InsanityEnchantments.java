@@ -27,10 +27,10 @@ public class InsanityEnchantments {
 	public static void registerEnchantments(final RegistryEvent.Register<Enchantment> event) {
 		if(InsanityOverworld.debug) {
 			event.getRegistry().register(STEADYFEET = new SteadyFeetEnchantment());
+			event.getRegistry().register(HAPPYFEET = new HappyFeetCurse());
 
 		}
 
-		event.getRegistry().register(HAPPYFEET = new HappyFeetCurse());
 
 	}
 
