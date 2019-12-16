@@ -1,7 +1,6 @@
 package com.insanitycraft.insanityoverworld.entity;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.text.ITextComponent;
@@ -11,13 +10,15 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class EntityTriffid extends MonsterEntity implements IMob {
+public class NytemairsEntity extends MonsterEntity {
 
-	private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.WHITE, BossInfo.Overlay.PROGRESS);
+	private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.PURPLE, BossInfo.Overlay.PROGRESS);
 
-	public EntityTriffid(EntityType<EntityTriffid> type, World world) {
-		super(type, world);
+	public NytemairsEntity(EntityType<? extends MonsterEntity> type, World p_i48553_2_) {
+		super(type, p_i48553_2_);
 	}
+
+
 
 	@Override
 	public void setCustomName(@Nullable ITextComponent name) {
@@ -48,5 +49,6 @@ public class EntityTriffid extends MonsterEntity implements IMob {
 		super.onKillCommand();
 		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
 	}
+
 
 }

@@ -1,13 +1,13 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;//Made with Blockbench
 //Paste this code into your mod.
 
-import com.insanitycraft.insanityoverworld.entity.EntityNytemairs;
+import com.insanitycraft.insanityoverworld.entity.NytemairsEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.util.math.MathHelper;
 
-public class NytemairsModel<T extends EntityNytemairs> extends EntityModel<T> {
+public class NytemairsModel<T extends NytemairsEntity> extends EntityModel<T> {
 	private float wingspeed = 1.0F;
 	private final RendererModel Nitemare;
 	private final RendererModel Body;
@@ -217,7 +217,7 @@ public class NytemairsModel<T extends EntityNytemairs> extends EntityModel<T> {
 	}
 
 	@Override
-	public void render(EntityNytemairs entity, float f, float f1, float f2, float f3, float f4, float f5) {
+	public void render(NytemairsEntity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		Nitemare.render(f5);
 	}
 	public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {

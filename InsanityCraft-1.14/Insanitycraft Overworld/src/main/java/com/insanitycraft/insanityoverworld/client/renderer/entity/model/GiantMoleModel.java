@@ -1,13 +1,13 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
-import com.insanitycraft.insanityoverworld.entity.EntityGiantMole;
+import com.insanitycraft.insanityoverworld.entity.GiantMoleEntity;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.util.math.MathHelper;
 
-public class GiantMoleModel<T extends EntityGiantMole> extends EntityModel<T> {
+public class GiantMoleModel<T extends GiantMoleEntity> extends EntityModel<T> {
 	private final RendererModel body;
 	private final RendererModel tail;
 	private final RendererModel nose;

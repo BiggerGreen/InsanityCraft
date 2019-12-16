@@ -1,10 +1,9 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.layers;
 
-import com.insanitycraft.insanityoverworld.entity.EntityGoldenAppleCow;
+import com.insanitycraft.insanityoverworld.entity.GoldenAppleCowEntity;
 import com.insanitycraft.insanityoverworld.init.InsanityBlocks;
 import com.insanitycraft.insanityoverworld.init.InsanityEntities;
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
@@ -13,7 +12,7 @@ import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import net.minecraft.client.renderer.entity.model.CowModel;
 import net.minecraft.client.renderer.texture.AtlasTexture;
 
-public class AppleCowAppleLayer<T extends EntityGoldenAppleCow> extends LayerRenderer<T, CowModel<T>> {
+public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRenderer<T, CowModel<T>> {
 
 	public AppleCowAppleLayer(IEntityRenderer<T, CowModel<T>> entityRendererIn) {
 		super(entityRendererIn);

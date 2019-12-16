@@ -1,13 +1,13 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
-import com.insanitycraft.insanityoverworld.entity.EntityKraken;
+import com.insanitycraft.insanityoverworld.entity.KrakenEntity;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.util.math.MathHelper;
 
-public class KrakenModel<T extends EntityKraken> extends EntityModel<T> {
+public class KrakenModel<T extends KrakenEntity> extends EntityModel<T> {
 	private final RendererModel headBody;
 	private final RendererModel leftFins;
 	private final RendererModel rightFins;

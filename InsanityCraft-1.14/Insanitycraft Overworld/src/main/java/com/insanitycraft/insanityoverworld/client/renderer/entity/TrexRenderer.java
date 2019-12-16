@@ -1,7 +1,7 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity;
 
 import com.insanitycraft.insanityoverworld.client.renderer.entity.model.TrexModel;
-import com.insanitycraft.insanityoverworld.entity.EntityTrex;
+import com.insanitycraft.insanityoverworld.entity.TrexEntity;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
 
-public class TrexRenderer extends MobRenderer<EntityTrex, TrexModel<EntityTrex>> {
+public class TrexRenderer extends MobRenderer<TrexEntity, TrexModel<TrexEntity>> {
 
 	public TrexRenderer(EntityRendererManager p_i50961_1_) {
 		super(p_i50961_1_, new TrexModel<>(), 1);
@@ -18,13 +18,13 @@ public class TrexRenderer extends MobRenderer<EntityTrex, TrexModel<EntityTrex>>
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(EntityTrex entityTrex) {
+	protected ResourceLocation getEntityTexture(TrexEntity trexEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/trex.png");
 	}
 
 
 	@Override
-	protected void applyRotations(EntityTrex entity, float p_77043_2_, float p_77043_3_, float p_77043_4_) {
+	protected void applyRotations(TrexEntity entity, float p_77043_2_, float p_77043_3_, float p_77043_4_) {
 		super.applyRotations(entity, p_77043_2_, p_77043_3_, p_77043_4_);
 
 		if(entity.hasCustomName()) {

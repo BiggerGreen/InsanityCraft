@@ -1,12 +1,12 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
-import com.insanitycraft.insanityoverworld.entity.EntityMothra;
+import com.insanitycraft.insanityoverworld.entity.MothraEntity;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 
-public class MothraModel<T extends EntityMothra> extends EntityModel<T> {
+public class MothraModel<T extends MothraEntity> extends EntityModel<T> {
 	private final RendererModel body;
 	private final RendererModel head;
 	private final RendererModel feet;

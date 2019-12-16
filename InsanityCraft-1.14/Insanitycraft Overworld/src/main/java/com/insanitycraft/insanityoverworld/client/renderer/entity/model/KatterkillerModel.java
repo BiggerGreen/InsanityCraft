@@ -1,12 +1,12 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
-import com.insanitycraft.insanityoverworld.entity.EntityKatterkiller;
+import com.insanitycraft.insanityoverworld.entity.KatterkillerEntity;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 
-public class KatterkillerModel<T extends EntityKatterkiller> extends EntityModel<T> {
+public class KatterkillerModel<T extends KatterkillerEntity> extends EntityModel<T> {
 	private final RendererModel bb_main;
 	private final RendererModel bone;
 	private final RendererModel bone2;

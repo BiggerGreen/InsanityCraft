@@ -1,12 +1,12 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
-import com.insanitycraft.insanityoverworld.entity.EntityTrex;
+import com.insanitycraft.insanityoverworld.entity.TrexEntity;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 
-public class TrexModel<T extends EntityTrex> extends EntityModel<T> {
+public class TrexModel<T extends TrexEntity> extends EntityModel<T> {
 	private final RendererModel Lower_Jaw;
 	private final RendererModel Head;
 	private final RendererModel Upper_Jaw;

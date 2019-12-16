@@ -6,7 +6,6 @@ import com.insanitycraft.insanityoverworld.entity.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,33 +21,33 @@ import static com.insanitycraft.insanityoverworld.util.Reference.*;
 public class InsanityEntities {
 
 	//Zangetsu Bosses
-	public static EntityType<?> ENTITY_NYTEMAIRS = EntityType.Builder.create(EntityNytemairs::new, EntityClassification.MONSTER).build(MODID + ":nytemairs").setRegistryName("nytemairs");
-	public static EntityType<?> ENTITY_GIANT_MOLE = EntityType.Builder.create(EntityGiantMole::new, EntityClassification.MONSTER).size(5.0F, 3.0F).build(MODID + ":giant_mole").setRegistryName("giant_mole");
-	public static EntityType<?> ENTITY_TRIFFID = EntityType.Builder.create(EntityTriffid::new, EntityClassification.MONSTER).build(MODID + ":triffid").setRegistryName("triffid");
-	public static EntityType<?> ENTITY_MOTHRA = EntityType.Builder.create(EntityMothra::new, EntityClassification.MONSTER).size(5.0F, 3.0F).build(MODID + ":mothra").setRegistryName("mothra");
-	public static EntityType<?> ENTITY_KATTERKILLER = EntityType.Builder.create(EntityKatterkiller::new, EntityClassification.MONSTER).size(8.0F, 5.0F).build(MODID + ":katterkiller").setRegistryName("katterkiller");
-	public static EntityType<?> ENTITY_TREX = EntityType.Builder.create(EntityTrex::new, EntityClassification.MONSTER).size(6.0F, 4.0F).build(MODID + ":trex").setRegistryName("trex");
-	public static EntityType<?> ENTITY_KRAKEN = EntityType.Builder.create(EntityKraken::new, EntityClassification.MONSTER).size(3.0F, 16.5F).build(MODID + ":kraken").setRegistryName("kraken");
+	public static EntityType<?> ENTITY_NYTEMAIRS = EntityType.Builder.create(NytemairsEntity::new, EntityClassification.MONSTER).build(MODID + ":nytemairs").setRegistryName("nytemairs");
+	public static EntityType<?> ENTITY_GIANT_MOLE = EntityType.Builder.create(GiantMoleEntity::new, EntityClassification.MONSTER).size(5.0F, 3.0F).build(MODID + ":giant_mole").setRegistryName("giant_mole");
+	public static EntityType<?> ENTITY_TRIFFID = EntityType.Builder.create(TriffidEntity::new, EntityClassification.MONSTER).build(MODID + ":triffid").setRegistryName("triffid");
+	public static EntityType<?> ENTITY_MOTHRA = EntityType.Builder.create(MothraEntity::new, EntityClassification.MONSTER).size(5.0F, 3.0F).build(MODID + ":mothra").setRegistryName("mothra");
+	public static EntityType<?> ENTITY_KATTERKILLER = EntityType.Builder.create(KatterkillerEntity::new, EntityClassification.MONSTER).size(8.0F, 5.0F).build(MODID + ":katterkiller").setRegistryName("katterkiller");
+	public static EntityType<?> ENTITY_TREX = EntityType.Builder.create(TrexEntity::new, EntityClassification.MONSTER).size(6.0F, 4.0F).build(MODID + ":trex").setRegistryName("trex");
+	public static EntityType<?> ENTITY_KRAKEN = EntityType.Builder.create(KrakenEntity::new, EntityClassification.MONSTER).size(3.0F, 16.5F).build(MODID + ":kraken").setRegistryName("kraken");
 
 	//Ambient
-	public static EntityType<?> ENTITY_APPLE_COW = EntityType.Builder.create(EntityGoldenAppleCow::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "apple_cow").setRegistryName("apple_cow");
-	public static EntityType<?> ENTITY_GOLDEN_COW = EntityType.Builder.create(EntityGoldenAppleCow::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "golden_apple_cow").setRegistryName("golden_apple_cow");
-	public static EntityType<?> ENTITY_ENCHANTED_COW = EntityType.Builder.create(EntityGoldenAppleCow::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
+	public static EntityType<?> ENTITY_APPLE_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "apple_cow").setRegistryName("apple_cow");
+	public static EntityType<?> ENTITY_GOLDEN_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "golden_apple_cow").setRegistryName("golden_apple_cow");
+	public static EntityType<?> ENTITY_ENCHANTED_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
 
 
 	public static void registerEntityRenders() {
-		RenderingRegistry.registerEntityRenderingHandler(EntityNytemairs.class, NytemairsRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityGiantMole.class, GiantMoleRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityTriffid.class, TriffidRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityMothra.class, MothraRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityKatterkiller.class, KatterkillerRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityTrex.class, TrexRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityKraken.class, KrakenRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(NytemairsEntity.class, NytemairsRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(GiantMoleEntity.class, GiantMoleRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(TriffidEntity.class, TriffidRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(MothraEntity.class, MothraRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(KatterkillerEntity.class, KatterkillerRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(TrexEntity.class, TrexRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(KrakenEntity.class, KrakenRenderer::new);
 
 
 
 
-		RenderingRegistry.registerEntityRenderingHandler(EntityGoldenAppleCow.class, GoldenAppleCowRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(GoldenAppleCowEntity.class, GoldenAppleCowRenderer::new);
 	}
 
 

@@ -1,7 +1,7 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity;
 
 import com.insanitycraft.insanityoverworld.client.renderer.entity.layers.AppleCowAppleLayer;
-import com.insanitycraft.insanityoverworld.entity.EntityGoldenAppleCow;
+import com.insanitycraft.insanityoverworld.entity.GoldenAppleCowEntity;
 import com.insanitycraft.insanityoverworld.init.InsanityEntities;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.client.renderer.culling.ICamera;
@@ -13,7 +13,7 @@ import org.lwjgl.opengl.GL11;
 
 import javax.annotation.Nullable;
 
-public class GoldenAppleCowRenderer extends MobRenderer<EntityGoldenAppleCow, CowModel<EntityGoldenAppleCow>> {
+public class GoldenAppleCowRenderer extends MobRenderer<GoldenAppleCowEntity, CowModel<GoldenAppleCowEntity>> {
 
 	public GoldenAppleCowRenderer(EntityRendererManager p_i50961_1_) {
 		super(p_i50961_1_, new CowModel<>(), 0.7F);
@@ -21,7 +21,7 @@ public class GoldenAppleCowRenderer extends MobRenderer<EntityGoldenAppleCow, Co
 	}
 
 	@Override
-	public boolean shouldRender(EntityGoldenAppleCow livingEntity, ICamera camera, double camX, double camY, double camZ) {
+	public boolean shouldRender(GoldenAppleCowEntity livingEntity, ICamera camera, double camX, double camY, double camZ) {
 		if(livingEntity.getType() == InsanityEntities.ENTITY_ENCHANTED_COW) {
 			GL11.glColor3f(1.0F, 1.0F, 1.0F);
 		}
@@ -30,7 +30,7 @@ public class GoldenAppleCowRenderer extends MobRenderer<EntityGoldenAppleCow, Co
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(EntityGoldenAppleCow entity) {
+	protected ResourceLocation getEntityTexture(GoldenAppleCowEntity entity) {
 		if(entity.getType() == InsanityEntities.ENTITY_APPLE_COW) {
 			return new ResourceLocation(Reference.MODID, "textures/entity/applecow/apple_cow.png");
 		}else {

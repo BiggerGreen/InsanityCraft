@@ -1,13 +1,9 @@
 package com.insanitycraft.insanityoverworld.entity;
 
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.ServerBossInfo;
@@ -15,14 +11,13 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class EntityMothra extends MonsterEntity implements IMob {
+public class TriffidEntity extends MonsterEntity implements IMob {
 
-	private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.YELLOW, BossInfo.Overlay.PROGRESS);
+	private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.WHITE, BossInfo.Overlay.PROGRESS);
 
-	public EntityMothra(EntityType<EntityMothra> type, World world) {
+	public TriffidEntity(EntityType<TriffidEntity> type, World world) {
 		super(type, world);
 	}
-
 
 	@Override
 	public void setCustomName(@Nullable ITextComponent name) {
@@ -54,11 +49,4 @@ public class EntityMothra extends MonsterEntity implements IMob {
 		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
 	}
 
-	@Override
-	public void onKillEntity(LivingEntity entity) {
-		super.onKillEntity(entity);
-		if(entity instanceof PlayerEntity) {
-			InsanityLog.info("You fool");
-		}
-	}
 }

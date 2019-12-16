@@ -1,11 +1,11 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
-import com.insanitycraft.insanityoverworld.entity.EntityTriffid;
+import com.insanitycraft.insanityoverworld.entity.TriffidEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 
-public class TriffidModel<T extends EntityTriffid> extends EntityModel<T> {
+public class TriffidModel<T extends TriffidEntity> extends EntityModel<T> {
 	private final RendererModel Triffid;
 	private final RendererModel Roots;
 	private final RendererModel bone4;

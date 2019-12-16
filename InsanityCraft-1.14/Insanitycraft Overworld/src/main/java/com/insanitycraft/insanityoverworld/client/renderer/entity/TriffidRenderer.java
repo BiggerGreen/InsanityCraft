@@ -1,7 +1,7 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity;
 
 import com.insanitycraft.insanityoverworld.client.renderer.entity.model.TriffidModel;
-import com.insanitycraft.insanityoverworld.entity.EntityTriffid;
+import com.insanitycraft.insanityoverworld.entity.TriffidEntity;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
 
-public class TriffidRenderer extends MobRenderer<EntityTriffid, TriffidModel<EntityTriffid>> {
+public class TriffidRenderer extends MobRenderer<TriffidEntity, TriffidModel<TriffidEntity>> {
 
 	public TriffidRenderer(EntityRendererManager p_i50961_1_) {
 		super(p_i50961_1_, new TriffidModel<>(), 1);
@@ -17,7 +17,7 @@ public class TriffidRenderer extends MobRenderer<EntityTriffid, TriffidModel<Ent
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(EntityTriffid entityTriffid) {
+	protected ResourceLocation getEntityTexture(TriffidEntity triffidEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/triffid.png");
 	}
 }
