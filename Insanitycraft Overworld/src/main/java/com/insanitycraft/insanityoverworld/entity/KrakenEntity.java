@@ -1,8 +1,6 @@
 package com.insanitycraft.insanityoverworld.entity;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
-import com.insanitycraft.insanityoverworld.entity.ai.controller.FlyHelperController;
-import com.insanitycraft.insanityoverworld.entity.ai.goal.RandomFlyGoal;
 import com.insanitycraft.insanityoverworld.util.GenericTargetSorter;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.block.Block;
@@ -16,9 +14,7 @@ import net.minecraft.entity.passive.SquidEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec3i;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.ServerBossInfo;
@@ -104,6 +100,14 @@ public class KrakenEntity extends MobEntity implements IMob {
 		if(isAlive()) {
 			if(currentFlightTarget == null) {
 				currentFlightTarget = new BlockPos(posX, posY - 10.0D, posZ);
+			}else if(posY < currentFlightTarget.getY()) {
+				Vec3d motion = getMotion();
+				motion.mul(0, 0.72D, 0);
+				setMotion(motion);
+			}else {
+				Vec3d motion = getMotion();
+				motion.mul(0, 0.5D, 0);
+				setMotion(motion);
 			}
 
 			if(weatherUpdate > 0) {
@@ -217,6 +221,23 @@ public class KrakenEntity extends MobEntity implements IMob {
 					if(posY > 190.0D) {
 						release = true;
 					}
+
+					caught.setMotion(getMotion());
+					caught.posX = posX;
+					if(posY - caught.posY > 16.0D) {
+						LivingEntity entity = caught;
+						Vec3d newMotion = caught.getMotion();
+						newMotion.add(0, 0.25D, 0);
+						entity.setMotion(newMotion);
+					}
+
+					caught.posX = posX;
+					caught.posY = posY - 15.0D;
+					caught.posZ = posZ;
+					if(world.rand.nextInt(50) == 1) {
+						attackEntityAsMob(caught);
+					}
+
 				}
 			}
 		}
