@@ -33,19 +33,19 @@ public class InstaShelterItem extends Item {
 			stack.shrink(1);
 		}
 
-		if(playerDirection == Direction.NORTH) {
-			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ + 3);
-			rotation = Rotation.CLOCKWISE_180;
-		}else if(playerDirection == Direction.SOUTH) {
-			playerPos = new BlockPos(playerIn.posX - 3 , playerIn.posY - 1, playerIn.posZ - 3);
-			rotation = Rotation.NONE;
-		}else if(playerDirection == Direction.EAST) {
-			playerPos = new BlockPos(playerIn.posX - 3, playerIn.posY - 1, playerIn.posZ + 3);
-			rotation = Rotation.COUNTERCLOCKWISE_90;
-		}else if(playerDirection == Direction.WEST) {
-			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ - 3);
-			rotation = Rotation.CLOCKWISE_90;
-		}
+//		if(playerDirection == Direction.NORTH) {
+//			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ + 3);
+//			rotation = Rotation.CLOCKWISE_180;
+//		}else if(playerDirection == Direction.SOUTH) {
+//			playerPos = new BlockPos(playerIn.posX - 3 , playerIn.posY - 1, playerIn.posZ - 3);
+//			rotation = Rotation.NONE;
+//		}else if(playerDirection == Direction.EAST) {
+//			playerPos = new BlockPos(playerIn.posX - 3, playerIn.posY - 1, playerIn.posZ + 3);
+//			rotation = Rotation.COUNTERCLOCKWISE_90;
+//		}else if(playerDirection == Direction.WEST) {
+//			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ - 3);
+//			rotation = Rotation.CLOCKWISE_90;
+//		}
 
 		generateShelter(serverWorld, playerPos, rotation);
 

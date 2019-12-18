@@ -21,14 +21,14 @@ public class FlyHelperController extends MovementController {
 		if(this.action == Action.MOVE_TO) {
 			if(this.courceChangeCooldown-- <= 0) {
 				this.courceChangeCooldown += this.creature.getRNG().nextInt(5) + 2;
-				Vec3d vec3d = new Vec3d(this.posX - this.creature.posX, this.posY - this.creature.posY, this.posZ - this.creature.posZ);
-				double d0 = vec3d.length();
-				vec3d = vec3d.normalize();
-				if(this.offsetBB(vec3d, MathHelper.ceil(d0))) {
-					this.creature.setMotion(this.creature.getMotion().add(vec3d.scale(0.1D)));
-				}else {
+//				Vec3d vec3d = new Vec3d(this.posX - this.creature.posX, this.posY - this.creature.posY, this.posZ - this.creature.posZ);
+//				double d0 = vec3d.length();
+//				vec3d = vec3d.normalize();
+//				if(this.offsetBB(vec3d, MathHelper.ceil(d0))) {
+//					this.creature.setMotion(this.creature.getMotion().add(vec3d.scale(0.1D)));
+//				}else {
 					this.action = Action.WAIT;
-				}
+//				}
 			}
 		}
 	}
@@ -38,9 +38,9 @@ public class FlyHelperController extends MovementController {
 
 		for(int i = 1; i < p_220673_2_; ++i) {
 			axisalignedbb = axisalignedbb.offset(vec3d);
-			if (!this.creature.world.isCollisionBoxesEmpty(this.creature, axisalignedbb)) {
-				return false;
-			}
+//			if (!this.creature.world.isCollisionBoxesEmpty(this.creature, axisalignedbb)) {
+//				return false;
+//			}
 		}
 
 		return true;

@@ -40,16 +40,16 @@ public class WorldGenOres {
 				//END ores
 				continue;
 			}
-			if(biome.getCategory() == Biome.Category.NETHER) {
-				biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NETHERRACK, pinkTourmalineOre.getDefaultState(), pinkTourmalineVeinSize), Placement.COUNT_RANGE, pinkTourmalineConfig));
-				biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NETHERRACK, tigerEyeOre.getDefaultState(), tigerEyeVeinSize), Placement.COUNT_RANGE, tigerEyeConfig));
-				continue;
-			}
-
-			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, amethystOre.getDefaultState(), amethystVeinSize), Placement.COUNT_RANGE, amethystConfig));
-			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, rubyOre.getDefaultState(), rubyVeinSize), Placement.COUNT_RANGE, rubyConfig));
-			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, titaniumOre.getDefaultState(), titaniumVeinSize), Placement.COUNT_RANGE, titaniumConfig));
-			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, uraniumOre.getDefaultState(), uraniumVeinSize), Placement.COUNT_RANGE, uraniumConfig));
+//			if(biome.getCategory() == Biome.Category.NETHER) {
+//				biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NETHERRACK, pinkTourmalineOre.getDefaultState(), pinkTourmalineVeinSize), Placement.COUNT_RANGE, pinkTourmalineConfig));
+//				biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NETHERRACK, tigerEyeOre.getDefaultState(), tigerEyeVeinSize), Placement.COUNT_RANGE, tigerEyeConfig));
+//				continue;
+//			}
+//
+//			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, amethystOre.getDefaultState(), amethystVeinSize), Placement.COUNT_RANGE, amethystConfig));
+//			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, rubyOre.getDefaultState(), rubyVeinSize), Placement.COUNT_RANGE, rubyConfig));
+//			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, titaniumOre.getDefaultState(), titaniumVeinSize), Placement.COUNT_RANGE, titaniumConfig));
+//			biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, uraniumOre.getDefaultState(), uraniumVeinSize), Placement.COUNT_RANGE, uraniumConfig));
 
 			//region Mob Ore spawn
 			addMobOres(biome, batEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
@@ -111,7 +111,7 @@ public class WorldGenOres {
 
 
 	private static void addMobOres(Biome biome, Block block, int size, int count, int maxHeight) {
-		biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size), Placement.COUNT_RANGE, new CountRangeConfig(count, 0, 0, maxHeight)));
+//		biome.addFeature(UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size), Placement.COUNT_RANGE, new CountRangeConfig(count, 0, 0, maxHeight)));
 	}
 
 }

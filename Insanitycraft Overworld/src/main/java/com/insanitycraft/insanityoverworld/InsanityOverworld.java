@@ -62,8 +62,8 @@ public class InsanityOverworld {
 	private void finishLoading(final FMLLoadCompleteEvent event) {
 		if(config.extendedPlayerModels.get()) {
 			InsanityLog.info("Finish Loading");
-			EntityRenderer playerRender = Minecraft.getInstance().getRenderManager().getRenderer(AbstractClientPlayerEntity.class);
-			InsanityLog.info(playerRender); //TODO Find out what I need to do here
+//			EntityRenderer playerRender = Minecraft.getInstance().getRenderManager().getRenderer(AbstractClientPlayerEntity.class);
+//			InsanityLog.info(playerRender); //TODO Find out what I need to do here
 		/*if(playerRender instanceof DefaultRenderer) {
 			PlayerRenderer playerRenderer = (PlayerRenderer)playerRender;
 			InsanityLog.info(playerRenderer);

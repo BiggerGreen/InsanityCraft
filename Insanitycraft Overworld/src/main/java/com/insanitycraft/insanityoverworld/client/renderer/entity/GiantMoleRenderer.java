@@ -18,7 +18,9 @@ public class GiantMoleRenderer extends MobRenderer<GiantMoleEntity, GiantMoleMod
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(GiantMoleEntity giantMoleEntity) {
+	public ResourceLocation getEntityTexture(GiantMoleEntity giantMoleEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/giant_mole.png");
 	}
+
+
 }

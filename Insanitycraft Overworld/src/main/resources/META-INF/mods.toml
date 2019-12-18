@@ -1,11 +1,11 @@
 
 modLoader="javafml"
-loaderVersion="[28,)"
+loaderVersion="[30,)"
 issueTrackerURL="https://github.com/BiggerGreen/InsanityCraft/issues"
 
 [[mods]]
 modId="insanityoverworld"
-version="alpha.1.0.0-1.14.4"
+version="${file.jarVersion}"
 displayName="InsanityCraft Overworld"
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
@@ -25,12 +25,12 @@ Inspired by TheyCallMeDanger's OreSpawn mod.
 [[dependencies.insanityoverworld]]
     modId="forge"
     mandatory=true
-    versionRange="[28,)"
+    versionRange="[30,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.insanityoverworld]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[1.15.1]"
     ordering="NONE"
     side="BOTH"

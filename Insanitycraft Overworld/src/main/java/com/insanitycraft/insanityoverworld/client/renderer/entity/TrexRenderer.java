@@ -18,20 +18,20 @@ public class TrexRenderer extends MobRenderer<TrexEntity, TrexModel<TrexEntity>>
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(TrexEntity trexEntity) {
+	public ResourceLocation getEntityTexture(TrexEntity trexEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/trex.png");
 	}
 
 
-	@Override
-	protected void applyRotations(TrexEntity entity, float p_77043_2_, float p_77043_3_, float p_77043_4_) {
-		super.applyRotations(entity, p_77043_2_, p_77043_3_, p_77043_4_);
-
-		if(entity.hasCustomName()) {
-			if("Conga".equals(entity.getName().getString())) { //Conga is an artist for the mod if your wondering.
-				GlStateManager.scalef(0.2f, 0.2f, 0.2f);
-			}
-		}
-	}
+//	@Override
+//	protected void applyRotations(TrexEntity entity, float p_77043_2_, float p_77043_3_, float p_77043_4_) {
+//		super.applyRotations(entity, p_77043_2_, p_77043_3_, p_77043_4_);
+//
+//		if(entity.hasCustomName()) {
+//			if("Conga".equals(entity.getName().getString())) { //Conga is an artist for the mod if your wondering.
+//				GlStateManager.scalef(0.2f, 0.2f, 0.2f);
+//			}
+//		}
+//	}
 
 }

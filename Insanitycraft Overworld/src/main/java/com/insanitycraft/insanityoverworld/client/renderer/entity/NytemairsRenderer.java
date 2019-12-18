@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 
 public class NytemairsRenderer extends MobRenderer<NytemairsEntity, NytemairsModel<NytemairsEntity>> {
 	public NytemairsRenderer(EntityRendererManager p_i50961_1_) {
-		super(p_i50961_1_, new NytemairsModel<>(1), 1);
+		super(p_i50961_1_, new NytemairsModel<>(), 1);
 	}
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(NytemairsEntity entity) {
+	public ResourceLocation getEntityTexture(NytemairsEntity entity) {
 		return new ResourceLocation(Reference.MODID,"textures/entity/nytemairs/nytemairs.png");
 	}
 }

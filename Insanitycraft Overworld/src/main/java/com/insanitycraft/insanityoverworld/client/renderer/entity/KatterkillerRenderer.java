@@ -17,7 +17,7 @@ public class KatterkillerRenderer extends MobRenderer<KatterkillerEntity, Katter
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(KatterkillerEntity katterkillerEntity) {
+	public ResourceLocation getEntityTexture(KatterkillerEntity katterkillerEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/katterkiller.png");
 	}
 }
