@@ -204,6 +204,8 @@ public class InsanityBlocks {
 	public static Block enderEyeBlock;
 	public static Block enderPearlBlock;
 
+	public static int hi = 2;
+
 	public static BlockItem enderEyeBlockItem;
 	public static BlockItem enderPearlBlockItem;
 
@@ -226,7 +228,6 @@ public class InsanityBlocks {
 			);
 		}
 
-
 		event.getRegistry().registerAll(
 				//region Materials
 				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_block"),
@@ -239,12 +240,13 @@ public class InsanityBlocks {
 				uraniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_block"),
 				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_ore"),
 
-				pinkTourmalineBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("pink_tourmaline_block"),
-				pinkTourmalineOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("pink_tourmaline_ore"),
+				pinkTourmalineBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).func_226896_b_()).setRegistryName("pink_tourmaline_block"),
+				pinkTourmalineOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).func_226896_b_()).setRegistryName("pink_tourmaline_ore"),
 
-				tigerEyeBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("tiger_eye_block"),
-				tigerEyeOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("tiger_eye_ore"),
+				tigerEyeBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).func_226896_b_()).setRegistryName("tiger_eye_block"),
+				tigerEyeOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).func_226896_b_()).setRegistryName("tiger_eye_ore"),
 				//endregion
+
 
 				//region vanilla eggs
 				batEggOre = new BlockMobOre(getLocation("bat_ore")),
