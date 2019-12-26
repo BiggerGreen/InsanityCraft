@@ -5,4 +5,4 @@
 
 The newest releases can be found on [Curseforge](https://www.curseforge.com/minecraft/mc-mods/insanitycraft)
 
-You can join the [Discord](https://discord.gg/p4u57uF) and ask to become a Tester this will give you accses to test build (you won't get a build yet but probably in the future) 
+You can join the [Discord](https://discord.gg/p4u57uF) and ask to become a Tester this will give you accses to test builds (you won't get a build yet but probably in the future) 
