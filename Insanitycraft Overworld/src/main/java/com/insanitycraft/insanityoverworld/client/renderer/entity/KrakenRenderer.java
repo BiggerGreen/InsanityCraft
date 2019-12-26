@@ -17,7 +17,7 @@ public class KrakenRenderer extends MobRenderer<KrakenEntity, KrakenModel<Kraken
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(KrakenEntity krakenEntity) {
+	public ResourceLocation getEntityTexture(KrakenEntity krakenEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/kraken.png");
 	}
 }

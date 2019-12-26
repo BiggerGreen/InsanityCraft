@@ -34,16 +34,16 @@ public class InstaShelterItem extends Item {
 		}
 
 		if(playerDirection == Direction.NORTH) {
-			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ + 3);
+			playerPos = playerIn.getPosition().add(3, -1, 3);
 			rotation = Rotation.CLOCKWISE_180;
 		}else if(playerDirection == Direction.SOUTH) {
-			playerPos = new BlockPos(playerIn.posX - 3 , playerIn.posY - 1, playerIn.posZ - 3);
+			playerPos = playerIn.getPosition().add(-3, -1, -3);
 			rotation = Rotation.NONE;
 		}else if(playerDirection == Direction.EAST) {
-			playerPos = new BlockPos(playerIn.posX - 3, playerIn.posY - 1, playerIn.posZ + 3);
+			playerPos = playerIn.getPosition().add(-3, -1, 3);
 			rotation = Rotation.COUNTERCLOCKWISE_90;
 		}else if(playerDirection == Direction.WEST) {
-			playerPos = new BlockPos(playerIn.posX + 3 , playerIn.posY - 1, playerIn.posZ - 3);
+			playerPos = playerIn.getPosition().add(3, -1, -3);
 			rotation = Rotation.CLOCKWISE_90;
 		}
 

@@ -17,7 +17,7 @@ public class TriffidRenderer extends MobRenderer<TriffidEntity, TriffidModel<Tri
 
 	@Nullable
 	@Override
-	protected ResourceLocation getEntityTexture(TriffidEntity triffidEntity) {
+	public ResourceLocation getEntityTexture(TriffidEntity triffidEntity) {
 		return new ResourceLocation(Reference.MODID, "textures/entity/triffid.png");
 	}
 }

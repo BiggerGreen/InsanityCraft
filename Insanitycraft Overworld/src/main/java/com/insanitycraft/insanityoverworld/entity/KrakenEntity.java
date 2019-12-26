@@ -17,8 +17,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
-import net.minecraft.world.ServerBossInfo;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerBossInfo;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.storage.WorldInfo;
 
@@ -99,11 +99,11 @@ public class KrakenEntity extends MobEntity implements IMob {
 		super.tick();
 		if(isAlive()) {
 			if(currentFlightTarget == null) {
-				currentFlightTarget = new BlockPos(posX, posY - 10.0D, posZ);
-			}else if(posY < currentFlightTarget.getY()) {
-				Vec3d motion = getMotion();
-				motion.mul(0, 0.72D, 0);
-				setMotion(motion);
+				//currentFlightTarget = new BlockPos(posX, posY - 10.0D, posZ);
+//			}else if(posY < currentFlightTarget.getY()) {
+//				Vec3d motion = getMotion();
+//				motion.mul(0, 0.72D, 0);
+//				setMotion(motion);
 			}else {
 				Vec3d motion = getMotion();
 				motion.mul(0, 0.5D, 0);
@@ -144,12 +144,12 @@ public class KrakenEntity extends MobEntity implements IMob {
 			if(world.rand.nextInt(400) == 1 && !InsanityOverworld.config.playNice.get()) {
 				if(world instanceof ServerWorld) {
 					ServerWorld serverWorld = (ServerWorld)world;
-					serverWorld.addLightningBolt(new LightningBoltEntity(world, posX, posY - 16.0D, posZ, false));
+//					serverWorld.addLightningBolt(new LightningBoltEntity(world, posX, posY - 16.0D, posZ, false));
 				}
 			}
 
 			if(currentFlightTarget == null) {
-				currentFlightTarget = new BlockPos(posX, posY, posZ);
+//				currentFlightTarget = new BlockPos(posX, posY, posZ);
 			}
 
 			int i;
@@ -163,7 +163,7 @@ public class KrakenEntity extends MobEntity implements IMob {
 					if(target != null) {
 						if(!target.isCreative()) {
 							if(getEntitySenses().canSee(target)) {
-								currentFlightTarget.add(target.posX, target.posY + 15, target.posZ);
+//								currentFlightTarget.add(target.posX, target.posY + 15, target.posZ);
 								attackWithSomething(target);
 							}
 						} else {
@@ -175,7 +175,7 @@ public class KrakenEntity extends MobEntity implements IMob {
 						LivingEntity livingEntity = null;
 						livingEntity = findSomethingToAttack();
 						if(livingEntity != null) {
-							currentFlightTarget.add(livingEntity.posX, livingEntity.posY + 15, livingEntity.posZ);
+//							currentFlightTarget.add(livingEntity.posX, livingEntity.posY + 15, livingEntity.posZ);
 							attackWithSomething(livingEntity);
 						}
 					}
@@ -185,11 +185,11 @@ public class KrakenEntity extends MobEntity implements IMob {
 
 				int groundDist;
 				for(groundDist = 0; groundDist < 31; ++groundDist) {
-					block = world.getBlockState(new BlockPos(posX, posY- groundDist, posZ)).getBlock();
-					if(block != Blocks.AIR) {
-						straight_down = 0;
-						break;
-					}
+//					block = world.getBlockState(new BlockPos(posX, posY- groundDist, posZ)).getBlock();
+//					if(block != Blocks.AIR) {
+//						straight_down = 0;
+//						break;
+//					}
 				}
 
 				groundDist = 20 - groundDist;
@@ -208,7 +208,7 @@ public class KrakenEntity extends MobEntity implements IMob {
 						zDir = 0;
 					}
 
-					currentFlightTarget.add(posX + xDir, posY + groundDist + rand.nextInt(9) - 6, posZ + zDir);
+//					currentFlightTarget.add(posX + xDir, posY + groundDist + rand.nextInt(9) - 6, posZ + zDir);
 					block = world.getBlockState(currentFlightTarget).getBlock();
 					if(block == Blocks.AIR) {
 						block = Blocks.STONE;
@@ -217,26 +217,26 @@ public class KrakenEntity extends MobEntity implements IMob {
 			}
 			if(caught != null) {
 				if(caught.isAlive()) {
-					currentFlightTarget.add(posX, 200, posZ);
-					if(posY > 190.0D) {
-						release = true;
-					}
-
-					caught.setMotion(getMotion());
-					caught.posX = posX;
-					if(posY - caught.posY > 16.0D) {
-						LivingEntity entity = caught;
-						Vec3d newMotion = caught.getMotion();
-						newMotion.add(0, 0.25D, 0);
-						entity.setMotion(newMotion);
-					}
-
-					caught.posX = posX;
-					caught.posY = posY - 15.0D;
-					caught.posZ = posZ;
-					if(world.rand.nextInt(50) == 1) {
-						attackEntityAsMob(caught);
-					}
+//					currentFlightTarget.add(posX, 200, posZ);
+//					if(posY > 190.0D) {
+//						release = true;
+//					}
+//
+//					caught.setMotion(getMotion());
+//					caught.posX = posX;
+//					if(posY - caught.posY > 16.0D) {
+//						LivingEntity entity = caught;
+//						Vec3d newMotion = caught.getMotion();
+//						newMotion.add(0, 0.25D, 0);
+//						entity.setMotion(newMotion);
+//					}
+//
+//					caught.posX = posX;
+//					caught.posY = posY - 15.0D;
+//					caught.posZ = posZ;
+//					if(world.rand.nextInt(50) == 1) {
+//						attackEntityAsMob(caught);
+//					}
 
 				}
 			}
@@ -246,15 +246,15 @@ public class KrakenEntity extends MobEntity implements IMob {
 
 	private void attackWithSomething(LivingEntity entity) {
 		if(caught == null) {
-			double dist = (posX - entity.posX) * (posX - entity.posX);
-			dist += (posZ - entity.posZ) * (posZ - entity.posZ);
-			dist += (posY - entity.posY - 15.0D) * (posY - entity.posY - 15.0D);
-			if(dist < 30.0D) {
-				caught = entity;
-				InsanityLog.info("Caught: " + caught);
-				release = false;
-
-			}
+//			double dist = (posX - entity.posX) * (posX - entity.posX);
+//			dist += (posZ - entity.posZ) * (posZ - entity.posZ);
+//			dist += (posY - entity.posY - 15.0D) * (posY - entity.posY - 15.0D);
+//			if(dist < 30.0D) {
+//				caught = entity;
+//				InsanityLog.info("Caught: " + caught);
+//				release = false;
+//
+//			}
 		}
 	}
 

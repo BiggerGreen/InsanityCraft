@@ -34,16 +34,16 @@ public class InstaGardenItem extends Item {
 		}
 
 		if(playerDirection == Direction.NORTH) {
-			playerPos = new BlockPos(playerIn.posX + 8 , playerIn.posY - 1, playerIn.posZ - 1);
+			playerPos = playerIn.getPosition().add(8, -1, -1);
 			rotation = Rotation.CLOCKWISE_180;
 		}else if(playerDirection == Direction.SOUTH) {
-			playerPos = new BlockPos(playerIn.posX - 8 , playerIn.posY - 1, playerIn.posZ + 1);
+			playerPos = playerIn.getPosition().add(-8, -1, 1);
 			rotation = Rotation.NONE;
 		}else if(playerDirection == Direction.EAST) {
-			playerPos = new BlockPos(playerIn.posX + 1, playerIn.posY - 1, playerIn.posZ + 8);
+			playerPos = playerIn.getPosition().add(1, -1, 8);
 			rotation = Rotation.COUNTERCLOCKWISE_90;
 		}else if(playerDirection == Direction.WEST) {
-			playerPos = new BlockPos(playerIn.posX - 1 , playerIn.posY - 1, playerIn.posZ - 8);
+			playerPos = playerIn.getPosition().add(-1, -1, -8);
 			rotation = Rotation.CLOCKWISE_90;
 		}
 
