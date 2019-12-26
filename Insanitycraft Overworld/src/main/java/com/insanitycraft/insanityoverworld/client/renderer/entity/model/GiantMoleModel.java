@@ -20,10 +20,10 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 //	private final ModelRenderer bone8;
 //	private final ModelRenderer bone9;
 //	private final ModelRenderer bone10;
-//	private final ModelRenderer foot1;
-//	private final ModelRenderer foot2;
-//	private final ModelRenderer foot3;
-//	private final ModelRenderer foot4;
+	private final ModelRenderer foot1;
+	private final ModelRenderer foot2;
+	private final ModelRenderer foot3;
+	private final ModelRenderer foot4;
 
 	public GiantMoleModel () {
 		textureWidth = 64;
@@ -37,54 +37,37 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 		//body.func_228301_a_(	,	,	,	,	,	,size);
 		body.setTextureOffset(0, 44);
 		body.func_228301_a_(-6.0F, -5.25F, -7.3333F, 12, 9, 11, 0.0F);
-
 		body.setTextureOffset(0, 50);
 		body.func_228301_a_(-5.0F, -4.25F, -13.3333F, 10, 8, 6, 0.0F);
-
 		body.setTextureOffset(40, 24);
 		body.func_228301_a_(-4.0F, -3.25F, -16.3333F, 8, 6, 3, 0.0F);
-
 		body.setTextureOffset(0, 51);
 		body.func_228301_a_(-5.0F, -4.25F, -3.6667F, 10, 8, 5, 0.0F);
-
 		body.setTextureOffset(0, 55);
 		body.func_228301_a_(-4.0F, -3.25F, -8.6667F, 8, 7, 3, 0.0F);
-
 		body.setTextureOffset(0, 58);
 		body.func_228301_a_(-3.0F, -1.25F, -10.6667F, 6, 5, 1, 0.0F);
 
 		tail = new ModelRenderer(this, 0, 0);
 		tail.setRotationPoint(-0.3333F, 21.5F, 14.1667F);
-
 		tail.setTextureOffset(50, 57);
 		tail.func_228301_a_(-0.6667F, -0.5F, -0.1667F, 1, 1, 6, 0.0F);
-
 		tail.setTextureOffset(52, 58);
 		tail.func_228301_a_(-1.6667F, -0.5F, 4.8333F, 1, 1, 5, 0.0F);
-
 		tail.setTextureOffset(54, 59);
 		tail.func_228301_a_(-0.6667F, -0.5F, 8.8333F, 1, 1, 4, 0.0F);
 
 		nose = new ModelRenderer(this, 0, 0);
 		nose.setRotationPoint(0.0F, 21.125F, -9.0625F);
-
 		nose.setTextureOffset(0, 23);
 		nose.func_228301_a_(-2.0F, -4.125F, -5.9375F, 4, 4, 1, 0.0F);
-
 		nose.func_228301_a_(2.0F, -3.125F, -5.9375F, 3, 1, 1, 0.0F);
-
 		nose.func_228301_a_(2.0F, -1.125F, -5.9375F, 3, 1, 1, 0.0F);
-
 		nose.func_228301_a_(-5.0F, -3.125F, -5.9375F, 3, 1, 1, 0.0F);
-
 		nose.func_228301_a_(-5.0F, -1.125F, -5.9375F, 3, 1, 1, 0.0F);
-
 		nose.func_228301_a_(-1.5F, -7.125F, -5.9375F, 1, 3, 1, 0.0F);
-
 		nose.func_228301_a_(0.5F, -7.125F, -5.9375F, 1, 3, 1, 0.0F);
-
 		nose.func_228301_a_(-1.5F, -0.125F, -5.9375F, 1, 3, 1, 0.0F);
-
 		nose.func_228301_a_(0.5F, -0.125F, -5.9375F, 1, 3, 1, 0.0F);
 
 		//		nose.func_228301_a_(4.5F, -0.5F, -0.5F, 1, 3, 1, 0.0F);
@@ -132,25 +115,35 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 //		bone10.setRotationPoint(1.0F, -4.625F, -5.4375F);
 //		setRotationAngle(bone10, 0.0F, 0.0F, 1.5708F);
 //		nose.addChild(bone10);
-//
-//		foot1 = new ModelRenderer(this);
-//		foot1.setRotationPoint(5.5F, 23.5F, -6.1667F);
-//		foot1.cubeList.add(new ModelBox(foot1, 0, 37, -1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F, false));
-//		foot1.cubeList.add(new ModelBox(foot1, 16, 39, -1.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
-//		foot1.cubeList.add(new ModelBox(foot1, 16, 39, 0.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
-//
-//		foot2 = new ModelRenderer(this);
-//		foot2.setRotationPoint(-5.5F, 23.5F, -6.1667F);
-//		foot2.cubeList.add(new ModelBox(foot2, 0, 37, -1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F, false));
-//		foot2.cubeList.add(new ModelBox(foot2, 16, 39, -1.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
-//		foot2.cubeList.add(new ModelBox(foot2, 16, 39, 0.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
-//
+
+		foot1 = new ModelRenderer(this, 0, 0);
+		foot1.setRotationPoint(5.5F, 23.5F, -6.1667F);
+		foot1.setTextureOffset(0, 37);
+		foot1.func_228301_a_(-1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F);
+		foot1.setTextureOffset(16, 39);
+		foot1.func_228301_a_(-1.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F);
+		foot1.func_228301_a_(0.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F);
+
+		foot2 = new ModelRenderer(this, 0, 0);
+		foot2.setTextureOffset(0, 37);
+		foot2.func_228301_a_(-1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F);
+		foot2.setTextureOffset(16, 39);
+		foot2.func_228301_a_(-1.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F);
+		foot2.func_228301_a_(0.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F);
+
+
+		foot3 = new ModelRenderer(this, 0, 0);
+
+
+
+		foot4 = new ModelRenderer(this, 0, 0);
+
 //		foot3 = new ModelRenderer(this);
 //		foot3.setRotationPoint(-5.5F, 23.5F, 5.8333F);
 //		foot3.cubeList.add(new ModelBox(foot3, 0, 37, -1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F, false));
 //		foot3.cubeList.add(new ModelBox(foot3, 16, 39, -1.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
 //		foot3.cubeList.add(new ModelBox(foot3, 16, 39, 0.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
-//
+
 //		foot4 = new ModelRenderer(this);
 //		foot4.setRotationPoint(5.5F, 23.5F, 5.8333F);
 //		foot4.cubeList.add(new ModelBox(foot4, 0, 37, -1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F, false));
@@ -160,7 +153,7 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 
 	@Override
 	public Iterable<ModelRenderer> func_225601_a_() {
-		return ImmutableList.of(body, tail, nose, noseNipple);
+		return ImmutableList.of(body, tail, nose, noseNipple, foot1, foot2, foot3, foot4);
 	}
 
 	@Override
