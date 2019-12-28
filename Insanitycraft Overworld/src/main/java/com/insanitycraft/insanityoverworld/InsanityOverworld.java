@@ -34,9 +34,6 @@ public class InsanityOverworld {
 	public static InsanityConfig config;
 
 	public InsanityOverworld() {
-		InsanityLog.info(InsanityDungeons.TEST.getName());
-		InsanityLog.info(InsanityDungeons.TEST.getLocation());
-		InsanityLog.info(InsanityDungeons.TEST);
 
 		debug = true;
 

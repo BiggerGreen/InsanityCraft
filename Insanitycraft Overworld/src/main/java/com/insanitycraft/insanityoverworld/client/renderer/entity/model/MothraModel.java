@@ -1,31 +1,38 @@
 package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
+import com.google.common.collect.ImmutableList;
 import com.insanitycraft.insanityoverworld.entity.MothraEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.model.SegmentedModel;
+import net.minecraft.client.renderer.model.ModelRenderer;
 
-public class MothraModel<T extends MothraEntity> extends EntityModel<T> {
-	@Override
-	public void func_225597_a_(T t, float v, float v1, float v2, float v3, float v4) {
-
-	}
-
-	@Override
-	public void func_225598_a_(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
-
-	}
-	//	private final ModelRenderer body;
+public class MothraModel<T extends MothraEntity> extends SegmentedModel<T> {
+	private final ModelRenderer body;
 //	private final ModelRenderer head;
 //	private final ModelRenderer feet;
 //	private final ModelRenderer leftWing1;
 //	private final ModelRenderer leftWing2;
 //	private final ModelRenderer rightWing1;
 //	private final ModelRenderer rightWing2;
-//
-//	public MothraModel() {
-//		textureWidth = 64;
-//		textureHeight = 64;
+
+	public MothraModel() {
+		textureWidth = 64;
+		textureHeight = 64;
+
+		RenderSystem.scalef(4, 4, 4);
+		RenderSystem.translatef(0, -1.065F, 0);
+
+		body = new ModelRenderer(this, 0, 0);
+		body.setRotationPoint(0.0F, 24.0F, 0.0F);
+		body.setTextureOffset(0,39);
+		body.func_228301_a_(-3.0F, -7.0F, -5.0F, 5, 5, 9, 0.0F);
+		body.setTextureOffset(51, 46);
+		body.func_228301_a_(-2.0F, -6.0F, 4.0F, 3, 3, 1, 0.0F);
+	}
+
 //
 //		body = new ModelRenderer(this);
 //		body.setRotationPoint(0.0F, 24.0F, 0.0F);
@@ -71,6 +78,17 @@ public class MothraModel<T extends MothraEntity> extends EntityModel<T> {
 //		setRotationAngle(rightWing2, 0.0F, 0.3491F, 0.0F);
 //		rightWing2.cubeList.add(new ModelBox(rightWing2, 0, 54, -10.2F, -0.5F, 0.5F, 19, 1, 9, 0.0F, false));
 //	}
+
+	@Override
+	public Iterable<ModelRenderer> func_225601_a_() {
+		return ImmutableList.of(body);
+	}
+
+	@Override
+	public void func_225597_a_(T entity, float f, float f1, float f2, float f3, float f4) {
+
+	}
+
 //
 //	@Override
 //	public void render(T entity, float f, float f1, float f2, float f3, float f4, float f5) {
