@@ -42,15 +42,15 @@ public class WorldGenOres {
 			}
 
 			if(biome.getCategory() == Biome.Category.NETHER) {
-				biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NETHERRACK, pinkTourmalineOre.getDefaultState(), pinkTourmalineVeinSize)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(pinkTourmalineConfig)));
-				biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NETHERRACK, tigerEyeOre.getDefaultState(), tigerEyeVeinSize)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(tigerEyeConfig)));
+				addOre(biome, NETHERRACK, pinkTourmalineOre, pinkTourmalineVeinSize, pinkTourmalineConfig);
+				addOre(biome, NETHERRACK, tigerEyeOre, tigerEyeVeinSize, tigerEyeConfig);
 				continue;
 			}
 
-			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NATURAL_STONE, amethystOre.getDefaultState(), amethystVeinSize)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(amethystConfig)));
-			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NATURAL_STONE, rubyOre.getDefaultState(), rubyVeinSize)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(rubyConfig)));
-			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NATURAL_STONE, titaniumOre.getDefaultState(), titaniumVeinSize)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(titaniumConfig)));
-			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NATURAL_STONE, uraniumOre.getDefaultState(), uraniumVeinSize)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(uraniumConfig)));
+			addOre(biome, NATURAL_STONE, amethystOre, amethystVeinSize, amethystConfig);
+			addOre(biome, NATURAL_STONE, rubyOre, rubyVeinSize, rubyConfig);
+			addOre(biome, NATURAL_STONE, titaniumOre, titaniumVeinSize, titaniumConfig);
+			addOre(biome, NATURAL_STONE, uraniumOre, uraniumVeinSize, uraniumConfig);
 
 			//region Mob Ore spawn
 			addMobOres(biome, batEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
@@ -114,5 +114,10 @@ public class WorldGenOres {
 	private static void addMobOres(Biome biome, Block block, int size, int count, int maxHeight) {
 		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(count, 0, 0, maxHeight))));
 	}
+
+	private static void addOre(Biome biome, OreFeatureConfig.FillerBlockType fillerBlockType, Block block, int size, CountRangeConfig config) {
+		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(fillerBlockType, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(config)));
+	}
+
 
 }
