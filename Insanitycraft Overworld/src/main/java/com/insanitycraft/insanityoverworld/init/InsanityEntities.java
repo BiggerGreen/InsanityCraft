@@ -51,6 +51,7 @@ public class InsanityEntities {
 	}
 
 
+
 	@SubscribeEvent
 	public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
 		if(InsanityOverworld.debug)

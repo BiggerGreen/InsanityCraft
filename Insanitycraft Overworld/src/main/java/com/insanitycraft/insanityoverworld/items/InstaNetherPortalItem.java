@@ -41,6 +41,9 @@ public class InstaNetherPortalItem extends Item {
 					}else if(direction == Direction.WEST) {
 						newPos = new BlockPos(pos.getX() - 2, pos.getY() + y, pos.getZ() - x);
 					}
+
+					world.setBlockState(newPos, Blocks.AIR.getDefaultState()); //Remove all blocks before placing new ones
+
 					if(x == 1 || x == 2) {
 						if(y != 1 && y != 2 && y != 3) {
 							world.setBlockState(newPos, Blocks.OBSIDIAN.getDefaultState());

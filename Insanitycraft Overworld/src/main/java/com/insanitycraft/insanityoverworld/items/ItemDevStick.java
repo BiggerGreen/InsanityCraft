@@ -57,8 +57,6 @@ public class ItemDevStick extends Item {
 				InsanityLog.info(tileEntity.serializeNBT());
 		}
 
-		InsanityLog.info(InsanityOverworld.config.testInt.get());
-
 		return super.onItemUse(context);
 	}
 }

@@ -52,23 +52,12 @@ public class InsanityOverworld {
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
-		InsanityEntities.registerEntityRenders();
+//		InsanityEntities.registerEntityRenders();
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	private void finishLoading(final FMLLoadCompleteEvent event) {
-		if(config.extendedPlayerModels.get()) {
-			InsanityLog.info("Finish Loading");
-//			EntityRenderer playerRender = Minecraft.getInstance().getRenderManager().getRenderer(AbstractClientPlayerEntity.class);
-//			InsanityLog.info(playerRender); //TODO Find out what I need to do here
-		/*if(playerRender instanceof DefaultRenderer) {
-			PlayerRenderer playerRenderer = (PlayerRenderer)playerRender;
-			InsanityLog.info(playerRenderer);
-			playerRenderer.addLayer(new LinksHornsLayer(playerRenderer));
-		}
 
-		 */
-		}
 	}
 
 	private void setupConfig() {
@@ -79,15 +68,4 @@ public class InsanityOverworld {
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, configBuilder.build(), MODID + ".toml");
 	}
 
-
-	//TODO list
-	//Add the other mobs
-	//Animation for the mobs
-
-	//fix ore gen
-
-
-
-
-	//--name=Corrupted_Link --uuid=166d690ac70c48f59559f6b04e754c52
 }
