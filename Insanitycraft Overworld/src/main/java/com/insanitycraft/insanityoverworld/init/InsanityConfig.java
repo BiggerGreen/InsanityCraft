@@ -6,7 +6,7 @@ public class InsanityConfig {
 
 	public BooleanValue playNice;
 
-	public IntValue testInt;
+	public IntValue bridgeLength;
 
 
 
@@ -18,7 +18,7 @@ public class InsanityConfig {
 
 		playNice = builder.comment("Disables some of the attacks from bosses").comment("config.insanityoverworld.prop.play_nice.desc").define("play_nice", false);
 
-		testInt = builder.comment("Test").translation("config.insanityoverworld.prop.test.desc").defineInRange("test", 2, 0, 5);
+		bridgeLength = builder.comment("The length of the Insta Bridge Item").translation("config.insanityoverworld.prop.test.desc").defineInRange("bridgeLength", 32, 0, 128);
 
 		builder.pop();
 

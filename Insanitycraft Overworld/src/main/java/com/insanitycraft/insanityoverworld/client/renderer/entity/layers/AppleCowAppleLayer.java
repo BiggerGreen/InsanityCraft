@@ -23,11 +23,6 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 	}
 
 	@Override
-	public void func_225628_a_(MatrixStack matrixStack, IRenderTypeBuffer iRenderTypeBuffer, int i, T t, float v, float v1, float v2, float v3, float v4, float v5) {
-
-	}
-
-	/*@Override //TODO this
 	public void func_225628_a_(MatrixStack matrixStack, IRenderTypeBuffer iRenderTypeBuffer, int i, T entity, float v, float v1, float v2, float v3, float v4, float v5) {
 		if(!entity.isChild() && !entity.isInvisible()) {
 			BlockRendererDispatcher rendererDispatcher = Minecraft.getInstance().getBlockRendererDispatcher();
@@ -38,33 +33,33 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 				blockState = InsanityBlocks.appleBlock.getDefaultState();
 			}
 			int lvt_13_1_ = LivingRenderer.func_229117_c_(entity, 0.0F);
-			matrixStack.func_227860_a_();
-			matrixStack.func_227861_a_(0.5F, -0.5F, 0.5F);
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-48.0F));
-			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);
-			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);
+			matrixStack.func_227860_a_();																						//pushMatrix
+			matrixStack.func_227861_a_(0.2F, 0.15F, 0.5F); 									//translate
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));								//rotate
+			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);									//scale
+			matrixStack.func_227861_a_(-0.5F, -0.5F, 0.5F);									//translate
 			rendererDispatcher.func_228791_a_(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
-			matrixStack.func_227865_b_();
-			matrixStack.func_227860_a_();
-			matrixStack.func_227861_a_(0.20000000298023224D, -0.3499999940395355D, 0.5D);
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));
-			matrixStack.func_227861_a_(0.10000000149011612D, 0.0D, -0.6000000238418579D);
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-48.0F));
-			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);
-			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);
+			matrixStack.func_227865_b_();																						//popMatrix
+			matrixStack.func_227860_a_();																						//pushMatrix
+			matrixStack.func_227861_a_(0.20000000298023224D, -0.3499999940395355D, 0.5D);	//translate
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));								//rotate
+			matrixStack.func_227861_a_(0.10000000149011612D, 0.0D, -0.6000000238418579D);	//translate
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-48.0F));							//rotate
+			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);									//scale
+			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);									//translate
 			rendererDispatcher.func_228791_a_(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
-			matrixStack.func_227865_b_();
-			matrixStack.func_227860_a_();
+			matrixStack.func_227865_b_();																						//popMatrix
+			matrixStack.func_227860_a_();																						//pushMatrix
 			this.getEntityModel().getHead().func_228307_a_(matrixStack);
-			matrixStack.func_227861_a_(0.5F, -0.5F, 0.5F);
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-78.0F));
-			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);
-			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);
+			matrixStack.func_227861_a_(0.5F, -0.5F, 0.5F);									//translate
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-78.0F));							//rotate
+			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);									//scale
+			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);									//translate
 
 			rendererDispatcher.func_228791_a_(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
-			matrixStack.func_227865_b_();
+			matrixStack.func_227865_b_();																						//popMatrix
 		}
-	}*/
+	}
 
 	//
 	//	@Override

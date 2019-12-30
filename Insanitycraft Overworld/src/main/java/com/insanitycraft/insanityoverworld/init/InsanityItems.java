@@ -143,6 +143,10 @@ public class InsanityItems {
 	public static Item instaGarden;
 	public static Item minersDream;
 
+	public static Item stairsUp;
+	public static Item stairsDown;
+	public static Item bridge;
+
 	//discs
 	public static Item blankDisc;
 
@@ -317,6 +321,8 @@ public class InsanityItems {
 				instaShelter = new InstaShelterItem().setRegistryName("insta_shelter"),
 				instaGarden = new InstaGardenItem().setRegistryName("insta_garden"),
 				minersDream = new MinersDreamItem().setRegistryName("miners_dream"),
+
+				bridge = new StairItem().setRegistryName("bridge"),
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
 				witherSpawnEgg = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),

@@ -54,7 +54,7 @@ public class MinersDreamItem extends Item {
 								world.getBlockState(newPos) == DIORITE.getDefaultState() || world.getBlockState(newPos) == ANDESITE.getDefaultState() ||
 								world.getBlockState(newPos) == GRAVEL.getDefaultState() || world.getBlockState(newPos) == DIRT.getDefaultState() ||
 								world.getBlockState(newPos) == COBBLESTONE.getDefaultState() || world.getBlockState(newPos) == LAVA.getDefaultState() ||
-								world.getBlockState(newPos) == WATER.getDefaultState()) {
+								world.getBlockState(newPos) == WATER.getDefaultState() || world.getBlockState(newPos) == NETHERRACK.getDefaultState()) {
 
 							world.setBlockState(newPos, AIR.getDefaultState());
 							if(x == 0 && y == 0 && z % 5 == 0) {

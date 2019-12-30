@@ -6,6 +6,7 @@ import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUseContext;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -20,37 +21,39 @@ public class InstaGardenItem extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-		if(!(worldIn instanceof ServerWorld)) {
-			return super.onItemRightClick(worldIn, playerIn, handIn);
+	public ActionResultType onItemUse(ItemUseContext context) {
+		World world = context.getWorld();
+		if(!(world instanceof ServerWorld)) {
+			return ActionResultType.FAIL;
 		}
-		ItemStack stack = playerIn.getHeldItem(handIn);
-		ServerWorld serverWorld = (ServerWorld)worldIn;
-		Direction playerDirection = playerIn.getAdjustedHorizontalFacing();
-		BlockPos playerPos = playerIn.getPosition();
-		Rotation rotation = Rotation.CLOCKWISE_180;
-		if(!playerIn.abilities.isCreativeMode) {
+		ItemStack stack = context.getItem();
+		PlayerEntity playerEntity = context.getPlayer();
+		ServerWorld serverWorld = (ServerWorld)world;
+		Direction direction = context.getPlacementHorizontalFacing();
+		BlockPos pos = context.getPos();
+		Rotation rotation = Rotation.NONE;
+		if(!playerEntity.abilities.isCreativeMode) {
 			stack.shrink(1);
 		}
 
-		if(playerDirection == Direction.NORTH) {
-			playerPos = playerIn.getPosition().add(8, -1, -1);
+		if(direction == Direction.NORTH) {
+			pos = pos.add(8, 0, 0);
 			rotation = Rotation.CLOCKWISE_180;
-		}else if(playerDirection == Direction.SOUTH) {
-			playerPos = playerIn.getPosition().add(-8, -1, 1);
+		}else if(direction == Direction.SOUTH) {
+			pos = pos.add(-8, 0, 0);
 			rotation = Rotation.NONE;
-		}else if(playerDirection == Direction.EAST) {
-			playerPos = playerIn.getPosition().add(1, -1, 8);
+		}else if(direction == Direction.EAST) {
+			pos = pos.add(0, 0, 8);
 			rotation = Rotation.COUNTERCLOCKWISE_90;
-		}else if(playerDirection == Direction.WEST) {
-			playerPos = playerIn.getPosition().add(-1, -1, -8);
+		}else if(direction == Direction.WEST) {
+			pos = pos.add(0, 0, -8);
 			rotation = Rotation.CLOCKWISE_90;
 		}
 
+		generateShelter(serverWorld, pos, rotation);
 
-		generateShelter(serverWorld, playerPos, rotation);
+		return ActionResultType.SUCCESS;
 
-		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
 
 	private void generateShelter(ServerWorld world, BlockPos pos, Rotation rotation) {

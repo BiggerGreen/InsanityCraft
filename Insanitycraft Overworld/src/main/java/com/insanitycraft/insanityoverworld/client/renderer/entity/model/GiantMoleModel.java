@@ -29,9 +29,6 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 		textureWidth = 64;
 		textureHeight = 64;
 
-		RenderSystem.scalef(5,5,5);
-		RenderSystem.translatef(0, -1.2F, 0);
-
 		body = new ModelRenderer(this, 0, 0);
 		body.setRotationPoint(0.0F, 19.25F, 2.3333F);
 		//body.func_228301_a_(	,	,	,	,	,	,size);
@@ -149,11 +146,21 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 //		foot4.cubeList.add(new ModelBox(foot4, 0, 37, -1.5F, -0.5F, -2.8333F, 3, 1, 5, 0.0F, false));
 //		foot4.cubeList.add(new ModelBox(foot4, 16, 39, -1.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
 //		foot4.cubeList.add(new ModelBox(foot4, 16, 39, 0.5F, -0.5F, -5.8333F, 1, 1, 3, 0.0F, false));
+
 	}
 
 	@Override
 	public Iterable<ModelRenderer> func_225601_a_() {
 		return ImmutableList.of(body, tail, nose, noseNipple, foot1, foot2, foot3, foot4);
+	}
+
+	@Override
+	public void func_225598_a_(MatrixStack matrixStack, IVertexBuilder p_225598_2_, int p_225598_3_, int p_225598_4_, float p_225598_5_, float p_225598_6_, float p_225598_7_, float p_225598_8_) {
+//		matrixStack.func_227860_a_();																						//pushMatrix
+//		matrixStack.func_227862_a_(5, 5, 5);												//scale
+//		matrixStack.func_227861_a_(0, -1.2F, 0);		 									//translate
+//		matrixStack.func_227865_b_();																						//popMatrix
+
 	}
 
 	@Override
