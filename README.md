@@ -3,6 +3,11 @@
 
 We are currently working on a 1.12.2 and 1.15.1 build
 
+## About
+
+These mods are a about killing big mobs
+
+
 ## Downloads
 
 The newest releases can be found on [Curseforge](https://www.curseforge.com/minecraft/mc-mods/insanitycraft)
