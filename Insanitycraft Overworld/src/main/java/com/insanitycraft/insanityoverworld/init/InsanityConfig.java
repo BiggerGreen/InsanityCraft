@@ -18,7 +18,7 @@ public class InsanityConfig {
 
 		playNice = builder.comment("Disables some of the attacks from bosses").comment("config.insanityoverworld.prop.play_nice.desc").define("play_nice", false);
 
-		bridgeLength = builder.comment("The length of the Insta Bridge Item").translation("config.insanityoverworld.prop.test.desc").defineInRange("test", 32, 0, 128);
+		bridgeLength = builder.comment("The length of the Insta Bridge Item").translation("config.insanityoverworld.prop.test.desc").defineInRange("bridgeLength", 32, 0, 128);
 
 		builder.pop();
 

@@ -40,7 +40,7 @@ public class InsanityEntities {
 //		RenderingRegistry.registerEntityRenderingHandler(NytemairsEntity.class, NytemairsRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GIANT_MOLE, GiantMoleRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(TriffidEntity.class, TriffidRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(ENTITY_MOTHRA, MothraRenderer::new);
+//		RenderingRegistry.registerEntityRenderingHandler(ENTITY_MOTHRA, MothraRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(KatterkillerEntity.class, KatterkillerRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(TrexEntity.class, TrexRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(KrakenEntity.class, KrakenRenderer::new);

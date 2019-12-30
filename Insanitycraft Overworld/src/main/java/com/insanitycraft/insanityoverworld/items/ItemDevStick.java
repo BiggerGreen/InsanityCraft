@@ -50,11 +50,17 @@ public class ItemDevStick extends Item {
 		World world = context.getWorld();
 		BlockState blockState = world.getBlockState(context.getPos());
 		TileEntity tileEntity = world.getTileEntity(context.getPos());
+		BlockState state2 = player.getBlockState();
+
+		BlockPos oi = context.getPos();
 		if(!context.getWorld().isRemote) {
 			if(blockState != null)
 				InsanityLog.info(blockState);
 			if(tileEntity != null)
 				InsanityLog.info(tileEntity.serializeNBT());
+			if(state2 != null) {
+				InsanityLog.info(state2);
+			}
 		}
 
 		return super.onItemUse(context);

@@ -52,7 +52,7 @@ public class InsanityOverworld {
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
-//		InsanityEntities.registerEntityRenders();
+		InsanityEntities.registerEntityRenders();
 	}
 
 	@OnlyIn(Dist.CLIENT)
