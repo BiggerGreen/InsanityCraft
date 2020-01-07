@@ -216,7 +216,7 @@ public class InsanityItems {
 				rubyPickAxe = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_pickaxe"),
 				rubyAxe = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_axe"),
 				rubyShovel = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_shovel"),
-				rubySword = new SwordItem(RUBY_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_sword"),
+				rubySword = new SwordItem(RUBY_TIER, 3, -1.7F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_sword"),
 
 				rubyHelmet = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("ruby_helmet"),
 				rubyChestplate = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ruby_chestplate"),
@@ -257,7 +257,7 @@ public class InsanityItems {
 				ultimatePickAxe = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
 				ultimateAxe = new EnchantedAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_axe"),
 				ultimateShovel = new EnchantedShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_shovel"),
-				ultimateSword = new EnchantedSwordItem(ULTIMATE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_sword"),
+				ultimateSword = new EnchantedSwordItem(ULTIMATE_TIER, 3, -1.3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_sword"),
 
 				ultimateBow = new UltimateBowItem(new Item.Properties().group(itemGroup).maxStackSize(1).defaultMaxDamage(1000)).setRegistryName("ultimate_bow"),
 
