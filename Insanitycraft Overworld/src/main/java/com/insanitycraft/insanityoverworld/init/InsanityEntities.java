@@ -31,9 +31,9 @@ public class InsanityEntities {
 //	public static EntityType<?> ENTITY_KRAKEN = EntityType.Builder.create(KrakenEntity::new, EntityClassification.MONSTER).size(3.0F, 16.5F).build(MODID + ":kraken").setRegistryName("kraken");
 //
 //	//Ambient
-	public static EntityType ENTITY_APPLE_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "apple_cow").setRegistryName("apple_cow");
-	public static EntityType ENTITY_GOLDEN_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "golden_apple_cow").setRegistryName("golden_apple_cow");
-	public static EntityType ENTITY_ENCHANTED_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + "enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
+	public static EntityType ENTITY_APPLE_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":apple_cow").setRegistryName("apple_cow");
+	public static EntityType ENTITY_GOLDEN_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":golden_apple_cow").setRegistryName("golden_apple_cow");
+	public static EntityType ENTITY_ENCHANTED_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
 
 
 	public static void registerEntityRenders() {
@@ -51,10 +51,8 @@ public class InsanityEntities {
 	}
 
 
-
 	@SubscribeEvent
 	public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
-		if(InsanityOverworld.debug)
 		event.getRegistry().registerAll(
 
 //				ENTITY_NYTEMAIRS,
@@ -98,4 +96,5 @@ public class InsanityEntities {
 		item.setRegistryName(name);
 		return item;
 	}
+
 }
