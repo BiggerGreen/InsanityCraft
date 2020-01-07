@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WBP",
+    "SCI",
+    "DDD"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:seeds"
+    },
+    "B": {
+      "item": "minecraft:bamboo"
+    }
+    "P": {
+      "item": "minercaft:potato"
+    }
+    "S": {
+      "item": "minecraft:sugar_cane"
+    }
+    "C": {
+      "item": "minecraft:cactus"
+    }
+    "I": {
+      "item": "minecraft:water_bucket"
+    }
+    "D": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "insanityoverworld:insta_garden"
+  }
+}
