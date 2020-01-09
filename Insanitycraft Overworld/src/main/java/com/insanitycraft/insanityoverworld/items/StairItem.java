@@ -1,6 +1,7 @@
 package com.insanitycraft.insanityoverworld.items;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.init.InsanityConfig;
 import com.insanitycraft.insanityoverworld.init.InsanityItems;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.block.Block;
@@ -34,7 +35,7 @@ public class StairItem extends Item {
 
 		if(!world.isRemote) {
 			if(stack.getItem() == InsanityItems.bridge) {
-				for(int x = 1; x <= InsanityOverworld.config.bridgeLength.get(); x++) {
+				for(int x = 0; x <= InsanityOverworld.config.bridgeLength.get(); x++) {
 					BlockPos newPos = new BlockPos(pos);
 					if(direction == Direction.SOUTH) {
 						newPos = pos.add(0, 0, x);
@@ -47,7 +48,7 @@ public class StairItem extends Item {
 					}
 
 					Block block = world.getBlockState(newPos).getBlock();
-					if(block != Blocks.AIR) {
+					if(x != 0 && block != Blocks.AIR) {
 						break;
 					}
 
@@ -57,6 +58,54 @@ public class StairItem extends Item {
 						world.setBlockState(torchPos, Blocks.TORCH.getDefaultState());
 					}
 
+				}
+			}else if(stack.getItem() == InsanityItems.stairsUp) {
+				for(int xy = 0; xy <= InsanityOverworld.config.stairHeight.get(); xy++) {
+					BlockPos newPos = new BlockPos(pos);
+					if(direction == Direction.SOUTH) {
+						newPos = pos.add(0, xy, xy);
+					}else if(direction == Direction.NORTH) {
+						newPos = pos.add(0, xy, -(xy));
+					}else if(direction == Direction.EAST) {
+						newPos = pos.add(xy, xy, 0);
+					}else if(direction == Direction.WEST) {
+						newPos = pos.add(-(xy), xy, 0);
+					}
+
+					Block block = world.getBlockState(newPos).getBlock();
+					if(xy != 0 && block != Blocks.AIR) {
+						break;
+					}
+
+					world.setBlockState(newPos, Blocks.COBBLESTONE.getDefaultState());
+					if((xy - 1) % 8 == 0) {
+						BlockPos torchPos = newPos.add(0, 1, 0);
+						world.setBlockState(torchPos, Blocks.TORCH.getDefaultState());
+					}
+				}
+			}else if(stack.getItem() == InsanityItems.stairsDown) {
+				for(int xy = 0; xy >= -(InsanityOverworld.config.stairHeight.get()); xy--) {
+					BlockPos newPos = new BlockPos(pos);
+					if(direction == Direction.SOUTH) {
+						newPos = pos.add(0, xy, -(xy));
+					}else if(direction == Direction.NORTH) {
+						newPos = pos.add(0, xy, xy);
+					}else if(direction == Direction.EAST) {
+						newPos = pos.add(-(xy), xy, 0);
+					}else if(direction == Direction.WEST) {
+						newPos = pos.add(xy, xy, 0);
+					}
+
+					Block block = world.getBlockState(newPos).getBlock();
+					if(xy != 0 && block != Blocks.AIR) {
+						break;
+					}
+
+					world.setBlockState(newPos, Blocks.COBBLESTONE.getDefaultState());
+					if((xy - 1) % 8 == 0) {
+						BlockPos torchPos = newPos.add(0, 1, 0);
+						world.setBlockState(torchPos, Blocks.TORCH.getDefaultState());
+					}
 				}
 			}
 			return ActionResultType.SUCCESS;
