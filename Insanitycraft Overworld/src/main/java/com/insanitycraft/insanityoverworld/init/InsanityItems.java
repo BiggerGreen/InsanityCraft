@@ -323,6 +323,8 @@ public class InsanityItems {
 				minersDream = new MinersDreamItem().setRegistryName("miners_dream"),
 
 				bridge = new StairItem().setRegistryName("bridge"),
+				stairsUp = new StairItem().setRegistryName("stairs_up"),
+				stairsDown = new StairItem().setRegistryName("stairs_down"),
 
 				enderdragonSpawnEgg = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
 				witherSpawnEgg = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),
