@@ -36,6 +36,10 @@ public class InsanityEntities {
 	public static EntityType ENTITY_ENCHANTED_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
 
 
+	//Other
+	public static EntityType ENTIIY_GIRLFIREND = EntityType.Builder.create(GirlfriendEntity::new, EntityClassification.MISC).build(MODID + ":girlfriend").setRegistryName("girlfriend");
+
+
 	public static void registerEntityRenders() {
 //		RenderingRegistry.registerEntityRenderingHandler(NytemairsEntity.class, NytemairsRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GIANT_MOLE, GiantMoleRenderer::new);
@@ -48,6 +52,9 @@ public class InsanityEntities {
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_APPLE_COW, GoldenAppleCowRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GOLDEN_COW, GoldenAppleCowRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_ENCHANTED_COW, GoldenAppleCowRenderer::new);
+
+
+		RenderingRegistry.registerEntityRenderingHandler(ENTIIY_GIRLFIREND, GirlfriendRenderer::new);
 	}
 
 
@@ -58,10 +65,12 @@ public class InsanityEntities {
 //				ENTITY_NYTEMAIRS,
 				ENTITY_GIANT_MOLE,
 //				ENTITY_TRIFFID,
-				ENTITY_MOTHRA
+				ENTITY_MOTHRA,
 //				ENTITY_KATTERKILLER,
 //				ENTITY_TREX,
 //				ENTITY_KRAKEN
+
+				ENTIIY_GIRLFIREND
 
 		);
 
