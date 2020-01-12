@@ -29,7 +29,10 @@ public class InsanityEntities {
 //	public static EntityType<?> ENTITY_KATTERKILLER = EntityType.Builder.create(KatterkillerEntity::new, EntityClassification.MONSTER).size(8.0F, 5.0F).build(MODID + ":katterkiller").setRegistryName("katterkiller");
 //	public static EntityType<?> ENTITY_TREX = EntityType.Builder.create(TrexEntity::new, EntityClassification.MONSTER).size(6.0F, 4.0F).build(MODID + ":trex").setRegistryName("trex");
 //	public static EntityType<?> ENTITY_KRAKEN = EntityType.Builder.create(KrakenEntity::new, EntityClassification.MONSTER).size(3.0F, 16.5F).build(MODID + ":kraken").setRegistryName("kraken");
-//
+
+	public static EntityType ENTITY_WATER_DRAGON = EntityType.Builder.create(WaterDragonEntity::new, EntityClassification.WATER_CREATURE).size(5.0F, 3.2F).build(MODID + ":water_dragon").setRegistryName("water_dragon");
+
+
 //	//Ambient
 	public static EntityType ENTITY_APPLE_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":apple_cow").setRegistryName("apple_cow");
 	public static EntityType ENTITY_GOLDEN_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":golden_apple_cow").setRegistryName("golden_apple_cow");
@@ -48,6 +51,7 @@ public class InsanityEntities {
 //		RenderingRegistry.registerEntityRenderingHandler(KatterkillerEntity.class, KatterkillerRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(TrexEntity.class, TrexRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(KrakenEntity.class, KrakenRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(ENTITY_WATER_DRAGON, WaterDragonRenderer::new);
 
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_APPLE_COW, GoldenAppleCowRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GOLDEN_COW, GoldenAppleCowRenderer::new);
@@ -69,6 +73,9 @@ public class InsanityEntities {
 //				ENTITY_KATTERKILLER,
 //				ENTITY_TREX,
 //				ENTITY_KRAKEN
+
+
+				ENTITY_WATER_DRAGON,
 
 				ENTIIY_GIRLFIREND
 
@@ -92,6 +99,7 @@ public class InsanityEntities {
 //				katterkillerSpawnEgg = registerSpawnEgg(ENTITY_KATTERKILLER, 0xa10606, 0x2e0101, "katterkiller_spawn_egg"),
 //				trexSpawnEgg = registerSpawnEgg(ENTITY_TREX, 0xa10606, 0x2e0101, "trex_spawn_egg"),
 //				krakenSpawnEgg = registerSpawnEgg(ENTITY_KRAKEN, 0xa10606, 0x2e0101, "kraken_spawn_egg"),
+				waterDragonSawnEgg = registerSpawnEgg(ENTITY_WATER_DRAGON, 0xa10606, 0x2e0101, "water_dragon_spawn_egg"),
 
 				appleCowEgg = registerSpawnEgg(ENTITY_APPLE_COW, 0xed1d0e, 0xed1c1c, "apple_cow_spawn_egg"),
 				goldenAppleCowEgg = registerSpawnEgg(ENTITY_GOLDEN_COW, 0xed1d0e, 0xCFB53B, "golden_apple_cow_spawn_egg"),

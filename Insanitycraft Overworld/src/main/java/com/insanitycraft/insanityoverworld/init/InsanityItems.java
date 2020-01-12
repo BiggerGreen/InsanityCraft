@@ -179,6 +179,7 @@ public class InsanityItems {
 	public static Item trexSpawnEgg;
 	public static Item krakenSpawnEgg;
 	public static Item nytemairsSpawnEgg;
+	public static Item waterDragonSawnEgg;
 
 	public static Item appleCowEgg;
 	public static Item goldenAppleCowEgg;
