@@ -20,12 +20,11 @@ public class InsanityMaterialStats {
 	public enum InsanityToolTier implements IItemTier {
 		AMETHYST_TIER(11f, 11f, 2000, 4, 19, amethyst),
 		RUBY_TIER(16f, 11f, 1500, 5, 21, ruby),
-		ULTIMATE_TIER(36f, 18f, 3000, 10, 30, titanium_ingot),
+		ULTIMATE_TIER(36f, 18f, 3000, 10, 30, null),
 		PINK_TOURMALINE_TIER(7f, 10f, 1100, 4, 17, pinkTourmaline),
 		TIGER_EYE_TIER(8f, 12f, 1600, 4, 22, tigerEye),
 		LAPIS_TIER(2f, 6f, 250, 2, 14, Items.LAPIS_LAZULI),
 
-		//TODO change these stats
 		MANTIS_CLAW_TIER(6f, 0f, 2000, 3, 1, null),
 		SCORPION_TAIL_TIER(6f, 0f, 2000, 3, 1, null),
 		ZANGETSU_TIER(496, 15f, 9000, 3, 1, null);
