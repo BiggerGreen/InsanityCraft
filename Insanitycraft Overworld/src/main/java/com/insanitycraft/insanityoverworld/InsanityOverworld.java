@@ -52,7 +52,6 @@ public class InsanityOverworld {
 		InsanityEntities.registerEntityRenders();
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	private void finishLoading(final FMLLoadCompleteEvent event) {
 
 	}

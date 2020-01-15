@@ -1,7 +1,6 @@
 package com.insanitycraft.insanityoverworld.items;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
-import com.insanitycraft.insanityoverworld.inventory.container.ContainerProvider;
 import com.insanitycraft.insanityoverworld.inventory.container.TrackerContainer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -23,7 +22,7 @@ public class TrackerItem extends Item {
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
 		ItemStack stack = playerIn.getHeldItem(handIn);
 		if(!worldIn.isRemote) {
-			NetworkHooks.openGui((ServerPlayerEntity)playerIn, new ContainerProvider(stack.getDisplayName(), (i, inv, p) -> new TrackerContainer(i, inv)));
+			NetworkHooks.openGui((ServerPlayerEntity)playerIn, TrackerContainer.provider);
 		}
 		return new ActionResult<>(ActionResultType.SUCCESS, stack);
 	}
