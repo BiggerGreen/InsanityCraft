@@ -1,6 +1,5 @@
 package com.insanitycraft.insanityoverworld.init;
 
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
@@ -11,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class InsanityEvents {
 
 	@SubscribeEvent
@@ -23,7 +22,6 @@ public class InsanityEvents {
 
 		if(event.getSpawnReason() == SpawnReason.SPAWN_EGG) {
 			LivingEntity livingEntity = event.getEntityLiving();
-			InsanityLog.info("Spawned: " + livingEntity);
 			if(livingEntity instanceof EnderDragonEntity && world.dimension.getType() != DimensionType.THE_END) {
 				// Makes the dragon behave like the old one
 				CompoundNBT tag = new CompoundNBT();

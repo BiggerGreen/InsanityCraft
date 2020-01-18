@@ -21,11 +21,6 @@ repositories {
     maven {
         url "http://tehnut.info/maven"
     }
-    maven {
-        name "yarn2mcp"
-        url "https://maven.tterrag.com/"
-    }
-
 }
 
 version = minecraft_version + '-' + mod_version + '-' + build_type
@@ -102,16 +97,18 @@ dependencies {
 
 }
 
-// Example for how to get properties into the manifest for reading by the runtime..
 jar {
+
+    archiveName = "${baseName}-${version}.${extension}"
+
     manifest {
         attributes([
             "Specification-Title": modid,
-            "Specification-Vendor": "examplemodsareus",
+            "Specification-Vendor": "Corrupted_Link",
             "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
+            "Implementation-Title": modid,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"examplemodsareus",
+            "Implementation-Vendor" :"Corrupted_Link",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
