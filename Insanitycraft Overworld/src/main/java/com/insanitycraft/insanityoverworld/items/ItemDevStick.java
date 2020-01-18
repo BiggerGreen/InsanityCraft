@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
@@ -38,9 +39,13 @@ public class ItemDevStick extends Item {
 			LivingEntity livingEntity = (LivingEntity)entity;
 			InsanityLog.info(livingEntity.getMaxHealth());
 			InsanityLog.info(livingEntity);
+			InsanityLog.info(livingEntity.getTags());
 			livingEntity.setHealth(0);
 		}
 		InsanityLog.info(entity);
+		CompoundNBT tag = new CompoundNBT();
+		InsanityLog.info(entity);
+		InsanityLog.info(entity.getTags().toString());
 		return true;
 	}
 

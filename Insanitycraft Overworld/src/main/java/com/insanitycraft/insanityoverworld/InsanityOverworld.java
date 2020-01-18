@@ -3,6 +3,7 @@ package com.insanitycraft.insanityoverworld;
 import com.insanitycraft.insanityoverworld.init.InsanityConfig;
 import com.insanitycraft.insanityoverworld.init.InsanityDungeons;
 import com.insanitycraft.insanityoverworld.init.InsanityEntities;
+import com.insanitycraft.insanityoverworld.init.InsanityEvents;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;

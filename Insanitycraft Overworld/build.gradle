@@ -21,6 +21,10 @@ repositories {
     maven {
         url "http://tehnut.info/maven"
     }
+    maven {
+        name "yarn2mcp"
+        url "https://maven.tterrag.com/"
+    }
 
 }
 
