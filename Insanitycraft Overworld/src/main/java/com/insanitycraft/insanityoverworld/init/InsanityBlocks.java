@@ -18,6 +18,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroup;
 import static net.minecraftforge.common.ToolType.*;
 
@@ -313,6 +316,7 @@ public class InsanityBlocks {
 				goldenAppleBlock = new MushroomBlock(Block.Properties.create(Material.AIR)).setRegistryName("golden_apple_block")
 				//endregion
 		);
+
 	}
 
 	@SubscribeEvent
