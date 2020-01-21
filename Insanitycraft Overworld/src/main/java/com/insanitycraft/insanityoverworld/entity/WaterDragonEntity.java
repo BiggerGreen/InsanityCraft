@@ -10,10 +10,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.goal.BreedGoal;
-import net.minecraft.entity.ai.goal.LookAtGoal;
-import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.monster.GuardianEntity;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.WaterMobEntity;
@@ -30,6 +28,7 @@ import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class WaterDragonEntity extends WaterMobEntity implements IMob {
 
@@ -49,9 +48,11 @@ public class WaterDragonEntity extends WaterMobEntity implements IMob {
 
 	@Override
 	protected void registerGoals() {
-		//goalSelector.addGoal(0, new SwimGoal(this));
+		goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.25D));
 		goalSelector.addGoal(4, new LookAtGoal(this, PlayerEntity.class, 8.0F));
 		goalSelector.addGoal(4, new LookRandomlyGoal(this));
+
+		targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, LivingEntity.class, 10, true, true, new TargetPredicate(this)));
 	}
 
 	@Override
@@ -69,65 +70,65 @@ public class WaterDragonEntity extends WaterMobEntity implements IMob {
 			super.updateAITasks();
 			this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
 
-			if(world.rand.nextInt(200) == 1) {
-				setAttackTarget(null);
-			}
+//			if(world.rand.nextInt(200) == 1) {
+//				setAttackTarget(null);
+//			}
 
-			if(world.getDifficulty() != Difficulty.PEACEFUL && world.rand.nextInt(5) == 2) {
-				LivingEntity livingEntity = findTarget();
-				if(livingEntity != null) {
-					InsanityLog.info(livingEntity);
-					faceEntity(livingEntity, 10.0F, 10.0F);
-					if(getDistanceSq(livingEntity) < (4.0F + livingEntity.getWidth() / 2.0F) * (4.0F + livingEntity.getWidth() / 2.0F)) {
-						if(world.rand.nextInt(4) == 3 || world.rand.nextInt(5) == 4) {
-							attackEntityAsMob(livingEntity);
-						}
-					}
-				}
-			}
+//			if(world.getDifficulty() != Difficulty.PEACEFUL && world.rand.nextInt(5) == 2) {
+//				LivingEntity livingEntity = findTarget();
+//				if(livingEntity != null) {
+//					InsanityLog.info(livingEntity);
+//					faceEntity(livingEntity, 10.0F, 10.0F);
+//					if(getDistanceSq(livingEntity) < (4.0F + livingEntity.getWidth() / 2.0F) * (4.0F + livingEntity.getWidth() / 2.0F)) {
+//						if(world.rand.nextInt(4) == 3 || world.rand.nextInt(5) == 4) {
+//							attackEntityAsMob(livingEntity);
+//						}
+//					}
+//				}
+//			}
 
 
 		}
 	}
 
-	private LivingEntity findTarget() {
-		List entites = world.getEntitiesWithinAABB(LivingEntity.class, getBoundingBox().grow(14.0D, 4.0D, 14.0D));
-		Collections.sort(entites, targetSorter);
-		Iterator iterator = entites.iterator();
-		LivingEntity livingEntity;
-
-		do {
-			if(!iterator.hasNext()) {
-				return null;
-			}
-			livingEntity = (LivingEntity)iterator.next();
-		}while(!isTarget(livingEntity)); {
-			return livingEntity;
-		}
-
-	}
-
-	private boolean isTarget(LivingEntity livingEntity) {
-		if(livingEntity == null) {
-			return false;
-		}else if(livingEntity == this) {
-			return false;
-		}else if(!livingEntity.isAlive()) {
-			return false;
-		}else {
-			if(!getEntitySenses().canSee(livingEntity)) {
-				return false;
-			}else if(livingEntity instanceof PlayerEntity) {
-				if(((PlayerEntity)livingEntity).isCreative()) {
-					return false;
-				}else {
-					return true;
-				}
-			}else {
-				return true;
-			}
-		}
-	}
+//	private LivingEntity findTarget() {
+//		List entites = world.getEntitiesWithinAABB(LivingEntity.class, getBoundingBox().grow(14.0D, 4.0D, 14.0D));
+//		Collections.sort(entites, targetSorter);
+//		Iterator iterator = entites.iterator();
+//		LivingEntity livingEntity;
+//
+//		do {
+//			if(!iterator.hasNext()) {
+//				return null;
+//			}
+//			livingEntity = (LivingEntity)iterator.next();
+//		}while(!isTarget(livingEntity)); {
+//			return livingEntity;
+//		}
+//
+//	}
+//
+//	private boolean isTarget(LivingEntity livingEntity) {
+//		if(livingEntity == null) {
+//			return false;
+//		}else if(livingEntity == this) {
+//			return false;
+//		}else if(!livingEntity.isAlive()) {
+//			return false;
+//		}else {
+//			if(!getEntitySenses().canSee(livingEntity)) {
+//				return false;
+//			}else if(livingEntity instanceof PlayerEntity) {
+//				if(((PlayerEntity)livingEntity).isCreative()) {
+//					return false;
+//				}else {
+//					return true;
+//				}
+//			}else {
+//				return true;
+//			}
+//		}
+//	}
 
 
 
@@ -154,4 +155,30 @@ public class WaterDragonEntity extends WaterMobEntity implements IMob {
 		super.onKillCommand();
 		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
 	}
+
+
+	static class TargetPredicate implements Predicate<LivingEntity> {
+		private final WaterDragonEntity parent;
+
+		public TargetPredicate(WaterDragonEntity waterDragonEntity) {
+			parent = waterDragonEntity;
+		}
+
+		@Override
+		public boolean test(@Nullable LivingEntity entity) {
+			if(entity.getDistanceSq(parent) > 9.0D) {
+				if(entity instanceof GuardianEntity) {
+					return false;
+				}else return !(entity instanceof WaterMobEntity);
+			}else {
+				return false;
+			}
+		}
+	}
+
+
+
+
+
+
 }
