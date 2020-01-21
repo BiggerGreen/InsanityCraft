@@ -33,31 +33,31 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 				blockState = InsanityBlocks.appleBlock.getDefaultState();
 			}
 			int lvt_13_1_ = LivingRenderer.func_229117_c_(entity, 0.0F);
-			matrixStack.func_227860_a_();																						//pushMatrix
-			matrixStack.func_227861_a_(0.2F, 0.15F, 0.5F); 									//translate
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));								//rotate
-			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);									//scale
-			matrixStack.func_227861_a_(-0.5F, -0.5F, 0.5F);									//translate
-			rendererDispatcher.func_228791_a_(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
-			matrixStack.func_227865_b_();																						//popMatrix
-			matrixStack.func_227860_a_();																						//pushMatrix
-			matrixStack.func_227861_a_(0.20000000298023224D, -0.3499999940395355D, 0.5D);	//translate
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));								//rotate
-			matrixStack.func_227861_a_(0.10000000149011612D, 0.0D, -0.6000000238418579D);	//translate
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-48.0F));							//rotate
-			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);									//scale
-			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);									//translate
-			rendererDispatcher.func_228791_a_(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
-			matrixStack.func_227865_b_();																						//popMatrix
-			matrixStack.func_227860_a_();																						//pushMatrix
+			matrixStack.push();
+			matrixStack.translate(0.2F, 0.15F, 0.5F);
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));
+			matrixStack.scale(-1.0F, -1.0F, 1.0F);
+			matrixStack.translate(-0.5F, -0.5F, 0.5F);
+			rendererDispatcher.renderBlock(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
+			matrixStack.pop();
+			matrixStack.push();
+			matrixStack.translate(0.20000000298023224D, -0.3499999940395355D, 0.5D);
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(42.0F));
+			matrixStack.translate(0.10000000149011612D, 0.0D, -0.6000000238418579D);
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-48.0F));
+			matrixStack.scale(-1.0F, -1.0F, 1.0F);
+			matrixStack.translate(-0.5D, -0.5D, -0.5D);
+			rendererDispatcher.renderBlock(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
+			matrixStack.pop();
+			matrixStack.push();
 			this.getEntityModel().getHead().func_228307_a_(matrixStack);
-			matrixStack.func_227861_a_(0.5F, -0.5F, 0.5F);									//translate
-			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-78.0F));							//rotate
-			matrixStack.func_227862_a_(-1.0F, -1.0F, 1.0F);									//scale
-			matrixStack.func_227861_a_(-0.5D, -0.5D, -0.5D);									//translate
+			matrixStack.translate(0.5F, -0.5F, 0.5F);
+			matrixStack.func_227863_a_(Vector3f.field_229181_d_.func_229187_a_(-78.0F));
+			matrixStack.scale(-1.0F, -1.0F, 1.0F);
+			matrixStack.translate(-0.5D, -0.5D, -0.5D);
 
-			rendererDispatcher.func_228791_a_(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
-			matrixStack.func_227865_b_();																						//popMatrix
+			rendererDispatcher.renderBlock(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
+			matrixStack.pop();
 		}
 	}
 

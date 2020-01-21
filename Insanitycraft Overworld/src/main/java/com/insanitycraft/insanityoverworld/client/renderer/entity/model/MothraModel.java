@@ -28,9 +28,9 @@ public class MothraModel<T extends MothraEntity> extends SegmentedModel<T> {
 		body = new ModelRenderer(this, 0, 0);
 		body.setRotationPoint(0.0F, 24.0F, 0.0F);
 		body.setTextureOffset(0,39);
-		body.func_228301_a_(-3.0F, -7.0F, -5.0F, 5, 5, 9, 0.0F);
+		body.addBox(-3.0F, -7.0F, -5.0F, 5, 5, 9, 0.0F);
 		body.setTextureOffset(51, 46);
-		body.func_228301_a_(-2.0F, -6.0F, 4.0F, 3, 3, 1, 0.0F);
+		body.addBox(-2.0F, -6.0F, 4.0F, 3, 3, 1, 0.0F);
 	}
 
 //
@@ -85,11 +85,11 @@ public class MothraModel<T extends MothraEntity> extends SegmentedModel<T> {
 	}
 
 	@Override
-	public void func_225597_a_(T entity, float f, float f1, float f2, float f3, float f4) {
+	public void render(T t, float v, float v1, float v2, float v3, float v4) {
 
 	}
 
-//
+	//
 //	@Override
 //	public void render(T entity, float f, float f1, float f2, float f3, float f4, float f5) {
 //		GlStateManager.scalef(4, 4, 4);

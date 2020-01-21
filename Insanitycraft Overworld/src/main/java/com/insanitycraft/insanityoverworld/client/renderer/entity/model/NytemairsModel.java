@@ -6,13 +6,14 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 
 public class NytemairsModel<T extends NytemairsEntity> extends EntityModel<T> {
+
 	@Override
-	public void func_225597_a_(T t, float v, float v1, float v2, float v3, float v4) {
+	public void render(T t, float v, float v1, float v2, float v3, float v4) {
 
 	}
 
 	@Override
-	public void func_225598_a_(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
+	public void render(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
 
 	}
 	//	private float wingspeed = 1.0F;

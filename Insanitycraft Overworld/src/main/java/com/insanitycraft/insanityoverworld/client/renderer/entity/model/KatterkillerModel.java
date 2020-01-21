@@ -8,13 +8,14 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 
 public class KatterkillerModel<T extends KatterkillerEntity> extends EntityModel<T> {
+
 	@Override
-	public void func_225597_a_(T t, float v, float v1, float v2, float v3, float v4) {
+	public void render(T t, float v, float v1, float v2, float v3, float v4) {
 
 	}
 
 	@Override
-	public void func_225598_a_(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
+	public void render(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
 
 	}
 	//	private final ModelRenderer bb_main;

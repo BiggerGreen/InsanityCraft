@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.SquidEntity;
@@ -31,7 +30,7 @@ public class KrakenEntity extends MobEntity implements IMob {
 
 	private final ServerBossInfo bossInfo = new ServerBossInfo(getDisplayName(), BossInfo.Color.BLUE, BossInfo.Overlay.PROGRESS);
 
-	private GenericTargetSorter TargetSorter = null;
+	private GenericTargetSorter targetSorter = null;
 	private BlockPos currentFlightTarget = null;
 	private LivingEntity caught = null;
 	private int targetNum = 0;
@@ -42,7 +41,7 @@ public class KrakenEntity extends MobEntity implements IMob {
 
 	public KrakenEntity(EntityType<KrakenEntity> type, World world) {
 		super(type, world);
-		TargetSorter = new GenericTargetSorter(this);
+		targetSorter = new GenericTargetSorter(this);
 	}
 
 	@Override
@@ -259,29 +258,25 @@ public class KrakenEntity extends MobEntity implements IMob {
 	}
 
 	private LivingEntity findSomethingToAttack() {
-		if(InsanityOverworld.config.playNice.get()) {
-			return null;
-		}else {
-			List entities = world.getEntitiesWithinAABB(LivingEntity.class, getBoundingBox().grow(20.0D, 40.0D, 20.0D));
-			Collections.sort(entities, TargetSorter);
-			Iterator iterator = entities.iterator();
-			Entity entity;
-			LivingEntity livingEntity;
 
-			do {
-				if(!iterator.hasNext()) {
-					return null;
-				}
+		List entities = world.getEntitiesWithinAABB(LivingEntity.class, getBoundingBox().grow(20.0D, 40.0D, 20.0D));
+		Collections.sort(entities, targetSorter);
+		Iterator iterator = entities.iterator();
+		LivingEntity livingEntity;
 
-				entity = (Entity)iterator.next();
-				livingEntity = (LivingEntity)entity;
-			}while(!isSuitableTarget(livingEntity));
+		do {
+			if(!iterator.hasNext()) {
+				return null;
+			}
+
+			livingEntity = (LivingEntity)iterator.next();
+		}while(!isTarget(livingEntity)); {
 			InsanityLog.info("Target: " + livingEntity);
 			return livingEntity;
 		}
 	}
 
-	private boolean isSuitableTarget(LivingEntity livingEntity) {
+	private boolean isTarget(LivingEntity livingEntity) {
 		if(livingEntity == null) {
 			return false;
 		}else if(livingEntity == this) {
