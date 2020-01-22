@@ -1,5 +1,6 @@
 package com.insanitycraft.insanityoverworld.data;
 
+import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -11,13 +12,10 @@ public class DataGenerators {
 	@SubscribeEvent
 	public static void gatherData(GatherDataEvent event) {
 		DataGenerator dataGenerator = event.getGenerator();
-		if(event.includeClient()) {
+		InsanityLog.info(event.getGenerator().getOutputFolder());
 
-		}
+		dataGenerator.addProvider(new LootTableGenerator(dataGenerator));
 
-		if(event.includeServer()) {
-			dataGenerator.addProvider(new LootTableGenerator(dataGenerator));
-		}
 
 	}
 

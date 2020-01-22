@@ -1,15 +1,18 @@
 package com.insanitycraft.insanityoverworld.data;
 
 import com.google.common.collect.ImmutableList;
-import com.insanitycraft.insanityoverworld.init.InsanityBlocks;
+import com.google.common.collect.Lists;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DirectoryCache;
 import net.minecraft.data.LootTableProvider;
 import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.*;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
@@ -30,10 +33,16 @@ public class LootTableGenerator extends LootTableProvider {
 	}
 
 
+	@Override
+	protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {
+		map.forEach((name, table) -> LootTableManager.func_227508_a_(validationtracker, name, table));
+	}
+
 	private static class BlockTables extends BlockLootTables {
 
 		@Override
 		protected void addTables() {
+			//region SelfDropBlocks
 			registerDropSelfLootTable(
 					//Egg ores
 					batEggOre,
@@ -85,14 +94,85 @@ public class LootTableGenerator extends LootTableProvider {
 					witherSkeletonEggOre,
 					wolfEggOre,
 					zombieEggOre,
-					zombiePigmanEggOre
+					zombiePigmanEggOre,
+					//Other
+					amethystBlock,
+					rubyBlock,
+					titaniumBlock,
+					uraniumBlock,
+					pinkTourmalineBlock,
+					tigerEyeBlock,
+					enderEyeBlock,
+					enderPearlBlock
+
 
 			);
+			//endregion
+
+
 		}
 
 		@Override
 		protected Iterable<Block> getKnownBlocks() {
-			return super.getKnownBlocks();
+			return Lists.newArrayList(batEggOre,
+					blazeEggOre,
+					catEggOre,
+					cavespiderEggOre,
+					chickenEggOre,
+					cowEggOre,
+					creeperEggOre,
+					dolphinEggOre,
+					donkeyEggOre,
+					drownedEggOre,
+					elderGuardianEggOre,
+					enderdragonEggOre,
+					endermanEggOre,
+					endermiteEggOre,
+					evokerEggOre,
+					foxEggOre,
+					ghastEggOre,
+					guardianEggOre,
+					horseEggOre,
+					huskEggOre,
+					ironGolemEggOre,
+					llamaEggOre,
+					magmacubeEggOre,
+					mooshroomEggOre,
+					ocelotEggOre,
+					pandabearEggOre,
+					parrotEggOre,
+					phantomEggOre,
+					pigEggOre,
+					pillagerEggOre,
+					polarbearEggOre,
+					rabbitEggOre,
+					ravagerEggOre,
+					sheepEggOre,
+					shulkerEggOre,
+					skeletonEggOre,
+					slimeEggOre,
+					snowGolemEggOre,
+					spiderEggOre,
+					squidEggOre,
+					strayEggOre,
+					turtleEggOre,
+					villagerEggOre,
+					vindicatorEggOre,
+					witchEggOre,
+					witherEggOre,
+					witherSkeletonEggOre,
+					wolfEggOre,
+					zombieEggOre,
+					zombiePigmanEggOre,
+					//Other
+					amethystBlock,
+					rubyBlock,
+					titaniumBlock,
+					uraniumBlock,
+					pinkTourmalineBlock,
+					tigerEyeBlock,
+					enderEyeBlock,
+					enderPearlBlock);
 		}
 
 		protected void registerDropSelfLootTable(Block... blocks) {
@@ -103,5 +183,8 @@ public class LootTableGenerator extends LootTableProvider {
 
 	}
 
-
+	@Override
+	public String getName() {
+		return "InsanityCraft Overworld Block Loot Tables";
+	}
 }

@@ -410,5 +410,4 @@ public class InsanityBlocks {
 		return new ResourceLocation(Reference.MODID, name);
 	}
 
-
 }
