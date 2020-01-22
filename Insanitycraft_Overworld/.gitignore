@@ -26,4 +26,4 @@ server
 forge*changelog.txt
 
 /lib/
-/src/generated/
+/src/generated
