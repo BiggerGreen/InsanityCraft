@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:squid_ore",
-          "conditions": [
-            {
-              "condition": "minecraft:survives_explosion"
-            }
-          ]
+          "name": "insanityoverworld:squid_ore"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }
