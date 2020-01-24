@@ -141,9 +141,11 @@ public class WaterDragonModel<T extends WaterDragonEntity> extends SegmentedMode
     }
 
     @Override
-    public Iterable<ModelRenderer> func_225601_a_() {
+    public Iterable<ModelRenderer> getParts() {
         return ImmutableList.of(TorsoP1, NeckP2);
     }
+
+
 
     /**
      * This is a helper function from Tabula to set the rotation of model parts

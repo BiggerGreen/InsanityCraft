@@ -1,9 +1,6 @@
 package com.insanitycraft.insanityoverworld;
 
-import com.insanitycraft.insanityoverworld.init.InsanityConfig;
-import com.insanitycraft.insanityoverworld.init.InsanityDungeons;
-import com.insanitycraft.insanityoverworld.init.InsanityEntities;
-import com.insanitycraft.insanityoverworld.init.InsanityEvents;
+import com.insanitycraft.insanityoverworld.init.*;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;
@@ -51,6 +48,7 @@ public class InsanityOverworld {
 
 	private void clientSetup(final FMLClientSetupEvent event) {
 		InsanityEntities.registerEntityRenders();
+		InsanityContainerTypes.registerScreens();
 	}
 
 	private void finishLoading(final FMLLoadCompleteEvent event) {

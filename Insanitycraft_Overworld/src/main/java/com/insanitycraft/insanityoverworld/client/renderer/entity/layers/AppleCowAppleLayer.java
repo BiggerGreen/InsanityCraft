@@ -23,7 +23,7 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 	}
 
 	@Override
-	public void func_225628_a_(MatrixStack matrixStack, IRenderTypeBuffer iRenderTypeBuffer, int i, T entity, float v, float v1, float v2, float v3, float v4, float v5) {
+	public void render(MatrixStack matrixStack, IRenderTypeBuffer iRenderTypeBuffer, int i, T entity, float v, float v1, float v2, float v3, float v4, float v5) {
 		if(!entity.isChild() && !entity.isInvisible()) {
 			BlockRendererDispatcher rendererDispatcher = Minecraft.getInstance().getBlockRendererDispatcher();
 			BlockState blockState = InsanityBlocks.appleBlock.getDefaultState();
@@ -32,19 +32,19 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 			}else if(entity.getType() == InsanityEntities.ENTITY_APPLE_COW) {
 				blockState = InsanityBlocks.appleBlock.getDefaultState();
 			}
-			int lvt_13_1_ = LivingRenderer.func_229117_c_(entity, 0.0F);
+			int lvt_13_1_ = LivingRenderer.getPackedOverlay(entity, 0.0F);
 			matrixStack.push();
 			matrixStack.translate(0.2F, 0.15F, 0.5F);
-			matrixStack.rotate(Vector3f.field_229181_d_.func_229187_a_(42.0F));
+			matrixStack.rotate(Vector3f.YP.rotationDegrees(42.0F));
 			matrixStack.scale(-1.0F, -1.0F, 1.0F);
 			matrixStack.translate(-0.5F, -0.5F, 0.5F);
 			rendererDispatcher.renderBlock(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
 			matrixStack.pop();
 			matrixStack.push();
 			matrixStack.translate(0.20000000298023224D, -0.3499999940395355D, 0.5D);
-			matrixStack.rotate(Vector3f.field_229181_d_.func_229187_a_(42.0F));
+			matrixStack.rotate(Vector3f.YP.rotationDegrees(42.0F));
 			matrixStack.translate(0.10000000149011612D, 0.0D, -0.6000000238418579D);
-			matrixStack.rotate(Vector3f.field_229181_d_.func_229187_a_(-48.0F));
+			matrixStack.rotate(Vector3f.YP.rotationDegrees(-48.0F));
 			matrixStack.scale(-1.0F, -1.0F, 1.0F);
 			matrixStack.translate(-0.5D, -0.5D, -0.5D);
 			rendererDispatcher.renderBlock(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
@@ -52,7 +52,7 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 			matrixStack.push();
 			this.getEntityModel().getHead().setAnglesAndRotation(matrixStack);
 			matrixStack.translate(0.5F, -0.5F, 0.5F);
-			matrixStack.rotate(Vector3f.field_229181_d_.func_229187_a_(-78.0F));
+			matrixStack.rotate(Vector3f.YP.rotationDegrees(-78.0F));
 			matrixStack.scale(-1.0F, -1.0F, 1.0F);
 			matrixStack.translate(-0.5D, -0.5D, -0.5D);
 

@@ -23,8 +23,12 @@ public class InsanityContainerTypes {
 				TRACKER.setRegistryName("tracker")
 		);
 
+	}
+
+	public static void registerScreens() {
 		registerScreen(TRACKER, TrackerScreen::new);
 	}
+
 
 
 	private static <S extends Screen & IHasContainer<C>, C extends Container> void registerScreen(ContainerType<C> type, ScreenManager.IScreenFactory<C, S> factory) {

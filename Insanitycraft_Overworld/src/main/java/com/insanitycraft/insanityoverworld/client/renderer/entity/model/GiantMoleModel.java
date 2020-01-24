@@ -158,7 +158,7 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 	}
 
 	@Override
-	public Iterable<ModelRenderer> func_225601_a_() {
+	public Iterable<ModelRenderer> getParts() {
 		return ImmutableList.of(body, tail, nose, noseNipple, foot1, foot2, foot3, foot4);
 	}
 

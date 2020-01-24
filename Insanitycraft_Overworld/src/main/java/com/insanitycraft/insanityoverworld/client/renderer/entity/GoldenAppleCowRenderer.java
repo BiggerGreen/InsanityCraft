@@ -21,12 +21,13 @@ public class GoldenAppleCowRenderer extends MobRenderer<GoldenAppleCowEntity, Co
 	}
 
 	@Override
-	public boolean func_225626_a_(GoldenAppleCowEntity p_225626_1_, ClippingHelperImpl p_225626_2_, double p_225626_3_, double p_225626_5_, double p_225626_7_) {
+	public boolean shouldRender(GoldenAppleCowEntity p_225626_1_, ClippingHelperImpl p_225626_2_, double p_225626_3_, double p_225626_5_, double p_225626_7_) {
 		if(p_225626_1_.getType() == InsanityEntities.ENTITY_ENCHANTED_COW) {
 			GL11.glColor3f(1.0F, 1.0F, 1.0F);
 		}
 		return true;
 	}
+
 
 	@Nullable
 	@Override

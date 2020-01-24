@@ -207,8 +207,6 @@ public class InsanityBlocks {
 	public static Block enderEyeBlock;
 	public static Block enderPearlBlock;
 
-	public static int hi = 2;
-
 	public static BlockItem enderEyeBlockItem;
 	public static BlockItem enderPearlBlockItem;
 
