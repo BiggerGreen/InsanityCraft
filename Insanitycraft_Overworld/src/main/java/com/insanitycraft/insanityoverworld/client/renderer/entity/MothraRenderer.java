@@ -18,6 +18,6 @@ public class MothraRenderer extends MobRenderer<MothraEntity, MothraModel<Mothra
 	@Nullable
 	@Override
 	public ResourceLocation getEntityTexture(MothraEntity mothraEntity) {
-		return new ResourceLocation(Reference.MODID, "textures/entity/mothra.png");
+		return new ResourceLocation(Reference.MODID, "textures/entity/mothra/mothra.png");
 	}
 }
