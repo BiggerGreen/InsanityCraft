@@ -12,10 +12,11 @@ public class DataGenerators {
 	@SubscribeEvent
 	public static void gatherData(GatherDataEvent event) {
 		DataGenerator dataGenerator = event.getGenerator();
-		InsanityLog.info(event.getGenerator().getOutputFolder());
 
-		dataGenerator.addProvider(new LootTableGenerator(dataGenerator));
-
+		if(event.includeServer()) {
+			dataGenerator.addProvider(new LootTableGenerator(dataGenerator));
+			dataGenerator.addProvider(new AdvancementsGenerator(dataGenerator));
+		}
 
 	}
 
