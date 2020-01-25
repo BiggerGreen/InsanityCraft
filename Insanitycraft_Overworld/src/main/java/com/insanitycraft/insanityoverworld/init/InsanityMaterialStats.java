@@ -9,6 +9,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 
 import javax.annotation.Nullable;
 
@@ -79,23 +80,24 @@ public class InsanityMaterialStats {
 
 	public enum InsanityArmorMaterials implements IArmorMaterial {
 		//Chestplate durability = 16 * durability
-		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, "item.armor.equip_diamond", 2.5f, amethyst),
-		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, "item.armor.equip_diamond", 3.0f, ruby),
-		LAPIS_ARMOR("lapis", 15, new int[]{2, 5, 6, 2}, 9, "item.armor.equip_iron", 0f, Items.LAPIS_LAZULI),
-		LAVA_ARMOR("lava", 57, new int[]{6,8,9,6}, 20, "item.armor.equip_diamond", 3.0f, lavaCrystal),
-		ULTIMATE_ARMOR("ultimate", 75, new int[]{7, 9, 10, 7}, 100, "item.armor.equip_diamond", 4.0f, titanium_ingot),
-		PINK_TOURMALINE_ARMOR("pink_tourmaline", 33, new int[]{2,5,7,3}, 40, "item.armor.equip_diamond", 2.0f, pinkTourmaline),
-		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, "item.armor.equip_diamond", 2.5f, tigerEye);
+		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, amethyst),
+		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, ruby),
+		LAPIS_ARMOR("lapis", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, Items.LAPIS_LAZULI),
+		LAVA_ARMOR("lava", 57, new int[]{6,8,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, lavaCrystal),
+		ULTIMATE_ARMOR("ultimate", 75, new int[]{7, 9, 10, 7}, 100, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0f, titanium_ingot),
+		PINK_TOURMALINE_ARMOR("pink_tourmaline", 33, new int[]{2,5,7,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, pinkTourmaline),
+		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, tigerEye);
 
 
 		private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
-		private String name, equipSound;
+		private String name;
+		private SoundEvent equipSound;
 		private int durability, enchantability;
 		private Item repairItem;
 		private int[] damageRedutionAmount; //{boots, leggings, chestplate, helmet}
 		private float toughness;
 
-		InsanityArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, String equipSound, float toughness, Item repairItem) {
+		InsanityArmorMaterials(String name, int durability, int[] damageReductionAmount, int enchantability, SoundEvent equipSound, float toughness, Item repairItem) {
 			this.name = name;
 			this.durability = durability;
 			this.damageRedutionAmount = damageReductionAmount;
@@ -123,7 +125,7 @@ public class InsanityMaterialStats {
 
 		@Override
 		public SoundEvent getSoundEvent() {
-			return new SoundEvent(new ResourceLocation(equipSound));
+			return equipSound;
 		}
 
 		@Override
