@@ -118,16 +118,19 @@ public class InsanityBlocks {
 	public static Block zombiePigmanEggOre;
 
 	public static Block catEggOre;
-	//public static Block codEggOre;
 	public static Block endermiteEggOre;
 	public static Block foxEggOre;
 	public static Block ghastEggOre;
-	//public static Block muleEggOre;
 	public static Block pillagerEggOre;
-	//public static Block pufferfishEggOre;
 	public static Block ravagerEggOre;
-	//public static Block salmonEggOre;
 	public static Block shulkerEggOre;
+
+
+	//maybe we will add them later
+	//public static Block codEggOre;
+	//public static Block muleEggOre;
+	//public static Block pufferfishEggOre;
+	//public static Block salmonEggOre;
 	//public static Block silverfishEggOre;
 	//public static Block skeletonHorseEggOre;
 	//public static Block traderLlamaEggOre;
@@ -183,16 +186,18 @@ public class InsanityBlocks {
 	public static BlockItem zombiePigmanEggItem;
 
 	public static BlockItem catEggItem;
-	//public static BlockItem codEggItem;
 	public static BlockItem endermiteEggItem;
 	public static BlockItem foxEggItem;
 	public static BlockItem ghastEggItem;
-	//public static BlockItem muleEggItem;
 	public static BlockItem pillagerEggItem;
-	//public static BlockItem pufferfishEggItem;
 	public static BlockItem ravagerEggItem;
-	//public static BlockItem salmonEggItem;
 	public static BlockItem shulkerEggItem;
+
+	//maybe we will add them later
+	//public static BlockItem codEggItem;
+	//public static BlockItem muleEggItem;
+	//public static BlockItem pufferfishEggItem;
+	//public static BlockItem salmonEggItem;
 	//public static BlockItem silverfishEggItem;
 	//public static BlockItem skeletonHorseEggItem;
 	//public static BlockItem traderLlamaEggItem;

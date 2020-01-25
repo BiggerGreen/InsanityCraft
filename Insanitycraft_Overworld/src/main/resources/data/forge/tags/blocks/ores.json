@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ores/amethyst",
+    "#forge:ores/ruby",
+    "#forge:ores/pink_tourmaline",
+    "#forge:ores/tiger_eye"
+  ]
+}

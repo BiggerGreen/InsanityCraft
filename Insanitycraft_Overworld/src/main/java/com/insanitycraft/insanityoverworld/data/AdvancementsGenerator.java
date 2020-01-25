@@ -45,15 +45,29 @@ public class AdvancementsGenerator extends AdvancementProvider {
 			}
 		});
 
-		new OreAdvancements().accept(consumer);
+		new EggOreAdvancements().accept(consumer);
 
 	}
 
-	private static class OreAdvancements implements Consumer<Consumer<Advancement>> {
+	@Override
+	public String getName() {
+		return "Insanitycraft Overworld Advancements";
+	}
+
+	private static class EggOreAdvancements implements Consumer<Consumer<Advancement>> {
 
 		@Override
 		public void accept(Consumer<Advancement> advancementConsumer) {
-			Advancement root = Advancement.Builder.builder().withDisplay(batEggOre, new TranslationTextComponent("advancements.insanityoverworld.ore.root.title", new Object[0]), new TranslationTextComponent("advancements.insanityoverworld.ore.root.description", new Object[0]), new ResourceLocation("textures/gui/advancements/backgrounds/stone.png"), FrameType.TASK, true/* show_toast */, false/* announce_to_chat */, false/* hidden */).withCriterion("get_egg_ore", Instance.forItems(new IItemProvider[]{batEggOre})).register(advancementConsumer, "insanityoverworld:ore/root");
+			Advancement root = Advancement.Builder.builder().withDisplay(batEggOre,
+					new TranslationTextComponent("advancements.insanityoverworld.egg_ore.root.title"),
+					new TranslationTextComponent("advancements.insanityoverworld.egg_ore.root.description"),
+					new ResourceLocation("textures/gui/advancements/backgrounds/stone.png"),
+					FrameType.TASK,
+					true/* show_toast */,
+					false/* announce_to_chat */,
+					false/* hidden */)
+					.withCriterion("get_egg_ore", Instance.forItems(new IItemProvider[]{batEggOre}))
+					.register(advancementConsumer, "insanityoverworld:egg_ore/root");
 		}
 	}
 

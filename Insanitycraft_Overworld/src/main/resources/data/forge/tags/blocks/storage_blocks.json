@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/amethyst",
+    "#forge:storage_blocks/ruby",
+    "#forge:storage_blocks/pink_tourmaline",
+    "#forge:storage_blocks/tiger_eye"
+  ]
+}
