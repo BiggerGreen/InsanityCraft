@@ -22,7 +22,7 @@ public class InsanityItems {
 	static Item debug;
 	static Item devStick;
 
-	//region materials
+	//region materials //TODO rewrite registry
 	public static Item amethyst;
 
 	public static Item amethystPickAxe;

@@ -12,11 +12,17 @@ public class InsanityTags {
 
 	public static class Items {
 
+		public static final Tag<Item> GEMS_AMETHYST = forgeTag("gems/amethyst");
+		public static final Tag<Item> GEMS_RUBY = forgeTag("gems/ruby");
+
 		public static final Tag<Item> ORES_AMETHYST = forgeTag("ores/amethyst");
 		public static final Tag<Item> ORES_RUBY = forgeTag("ores/ruby");
 
 		public static final Tag<Item> STORAGE_BLOCKS_AMETHYST = forgeTag("storage_blocks/amethyst");
 		public static final Tag<Item> STORAGE_BLOCKS_RUBY = forgeTag("storage_blocks/ruby");
+
+		public static final Tag<Item> INGOTS_PINK_TOURMALINE = forgeTag("ingots/pink_tourmaline");
+		public static final Tag<Item> INGOTS_TIGER_EYE = forgeTag("ingots/tiger_eye");
 
 		public static final Tag<Item> ORES_PINK_TOURMALINE = forgeTag("ores/pink_tourmaline");
 		public static final Tag<Item> ORES_TIGER_EYE = forgeTag("ores/tiger_eye");

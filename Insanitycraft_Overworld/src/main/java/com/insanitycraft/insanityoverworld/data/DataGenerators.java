@@ -17,6 +17,7 @@ public class DataGenerators {
 			dataGenerator.addProvider(new AdvancementsGenerator(dataGenerator));
 			dataGenerator.addProvider(new TagGenerator.BlockTagGenerator(dataGenerator));
 			dataGenerator.addProvider(new TagGenerator.ItemTagGenerator(dataGenerator));
+			dataGenerator.addProvider(new RecipeGenerator(dataGenerator));
 		}
 
 	}
