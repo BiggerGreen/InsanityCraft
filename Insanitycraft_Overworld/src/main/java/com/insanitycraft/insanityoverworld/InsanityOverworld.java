@@ -4,6 +4,7 @@ import com.insanitycraft.insanityoverworld.init.*;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -47,6 +48,7 @@ public class InsanityOverworld {
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
+		InsanityBlocks.setRenderLayers();
 		InsanityEntities.registerEntityRenders();
 		InsanityContainerTypes.registerScreens();
 	}
