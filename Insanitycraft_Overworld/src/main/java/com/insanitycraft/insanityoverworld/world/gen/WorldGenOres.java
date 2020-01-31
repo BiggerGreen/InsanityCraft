@@ -112,11 +112,11 @@ public class WorldGenOres {
 
 
 	private static void addMobOres(Biome biome, Block block, int size, int count, int maxHeight) {
-		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(count, 0, 0, maxHeight))));
+		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(count, 0, 0, maxHeight))));
 	}
 
 	private static void addOre(Biome biome, OreFeatureConfig.FillerBlockType fillerBlockType, Block block, int size, CountRangeConfig config) {
-		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(fillerBlockType, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(config)));
+		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(fillerBlockType, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(config)));
 	}
 
 

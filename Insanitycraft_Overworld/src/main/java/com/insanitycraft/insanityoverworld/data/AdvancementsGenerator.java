@@ -11,8 +11,10 @@ import net.minecraft.data.AdvancementProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DirectoryCache;
 import net.minecraft.data.IDataProvider;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TranslationTextComponent;
+import org.jline.utils.ShutdownHooks;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -57,7 +59,7 @@ public class AdvancementsGenerator extends AdvancementProvider {
 	private static class EggOreAdvancements implements Consumer<Consumer<Advancement>> {
 
 		@Override
-		public void accept(Consumer<Advancement> advancementConsumer) {
+		public void accept(Consumer<Advancement> consumer) {
 			Advancement root = Advancement.Builder.builder().withDisplay(batEggOre,
 					getTitle("root"),
 					getDescription("root"),
@@ -66,345 +68,83 @@ public class AdvancementsGenerator extends AdvancementProvider {
 					true/* show_toast */,
 					true/* announce_to_chat */,
 					false/* hidden */)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(new ItemPredicate(InsanityTags.Items.SPAWN_EGG_ORE, null, MinMaxBounds.IntBound.UNBOUNDED, MinMaxBounds.IntBound.UNBOUNDED, EnchantmentPredicate.field_226534_b_, EnchantmentPredicate.field_226534_b_, null, NBTPredicate.ANY)))
-					.register(advancementConsumer, getID("root"));
+					.withCriterion("get_egg_ore",
+							InventoryChangeTrigger.Instance.forItems(new ItemPredicate(InsanityTags.Items.SPAWN_EGG_ORE,
+									null,
+									MinMaxBounds.IntBound.UNBOUNDED,
+									MinMaxBounds.IntBound.UNBOUNDED,
+									EnchantmentPredicate.field_226534_b_,
+									EnchantmentPredicate.field_226534_b_,
+									null,
+									NBTPredicate.ANY)))
+					.register(consumer, getID("root"));
+
+			Advancement batOre = getOreAdvancement(consumer, root, "bat_ore", batEggOre);
+			Advancement blazeOre = getOreAdvancement(consumer, root, "blaze_ore", blazeEggOre);
+			Advancement catOre = getOreAdvancement(consumer, root, "cat_ore", catEggOre);
+			Advancement cavespiderOre = getOreAdvancement(consumer, root, "cavespider_ore", cavespiderEggOre);
+			Advancement chickenOre = getOreAdvancement(consumer, root, "chicken_ore", chickenEggOre);
+			Advancement cowOre = getOreAdvancement(consumer, root, "cow_ore", cowEggOre);
+			Advancement creeperOre = getOreAdvancement(consumer, root, "creeper_ore", creeperEggOre);
+			Advancement dolphinOre = getOreAdvancement(consumer, root, "dolphin_ore", dolphinEggOre);
+			Advancement donkeyOre = getOreAdvancement(consumer, root, "donkey_ore", donkeyEggOre);
+			Advancement drownedOre = getOreAdvancement(consumer, root, "drowned_ore", drownedEggOre);
+			Advancement elderGuardianOre = getOreAdvancement(consumer, root, "elderGuardian_ore", elderGuardianEggOre);
+			Advancement enderdragonOre = getOreAdvancement(consumer, root, "enderdragon_ore", enderdragonEggOre);
+			Advancement endermanOre = getOreAdvancement(consumer, root, "enderman_ore", endermanEggOre);
+			Advancement evokerOre = getOreAdvancement(consumer, root, "evoker_ore", evokerEggOre);
+			Advancement foxOre = getOreAdvancement(consumer, root, "fox_ore", foxEggOre);
+			Advancement ghastOre = getOreAdvancement(consumer, root, "ghast_ore", ghastEggOre);
+			Advancement guardianOre = getOreAdvancement(consumer, root, "guardian_ore", guardianEggOre);
+			Advancement horseOre = getOreAdvancement(consumer, root, "horse_ore", horseEggOre);
+			Advancement huskOre = getOreAdvancement(consumer, root, "husk_ore", huskEggOre);
+			Advancement ironGolemOre = getOreAdvancement(consumer, root, "ironGolem_ore", ironGolemEggOre);
+			Advancement llamaOre = getOreAdvancement(consumer, root, "llama_ore", llamaEggOre);
+			Advancement magmacubeOre = getOreAdvancement(consumer, root, "magmacube_ore", magmacubeEggOre);
+			Advancement mooshroomOre = getOreAdvancement(consumer, root, "mooshroom_ore", mooshroomEggOre);
+			Advancement ocelotOre = getOreAdvancement(consumer, root, "ocelot_ore", ocelotEggOre);
+			Advancement pandabearOre = getOreAdvancement(consumer, root, "pandabear_ore", pandabearEggOre);
+			Advancement parrotOre = getOreAdvancement(consumer, root, "parrot_ore", parrotEggOre);
+			Advancement phantomOre = getOreAdvancement(consumer, root, "phantom_ore", phantomEggOre);
+			Advancement pigOre = getOreAdvancement(consumer, root, "pig_ore", pigEggOre);
+			Advancement pillagerOre = getOreAdvancement(consumer, root, "pillager_ore", pillagerEggOre);
+			Advancement polarbearOre = getOreAdvancement(consumer, root, "polarbear_ore", polarbearEggOre);
+			Advancement rabbitOre = getOreAdvancement(consumer, root, "rabbit_ore", rabbitEggOre);
+			Advancement ravagerOre = getOreAdvancement(consumer, root, "ravager_ore", ravagerEggOre);
+			Advancement sheepOre = getOreAdvancement(consumer, root, "sheep_ore", sheepEggOre);
+			Advancement shulkerOre = getOreAdvancement(consumer, root, "shulker_ore", shulkerEggOre);
+			Advancement skeletonOre = getOreAdvancement(consumer, root, "skeleton_ore", skeletonEggOre);
+			Advancement slimeOre = getOreAdvancement(consumer, root, "slime_ore", slimeEggOre);
+			Advancement snowGolemOre = getOreAdvancement(consumer, root, "snowGolem_ore", snowGolemEggOre);
+			Advancement spiderOre = getOreAdvancement(consumer, root, "spider_ore", spiderEggOre);
+			Advancement squidOre = getOreAdvancement(consumer, root, "squid_ore", squidEggOre);
+			Advancement strayOre = getOreAdvancement(consumer, root, "stray_ore", strayEggOre);
+			Advancement turtleOre = getOreAdvancement(consumer, root, "turtle_ore", turtleEggOre);
+			Advancement villagerOre = getOreAdvancement(consumer, root, "villager_ore", villagerEggOre);
+			Advancement vindicatorOre = getOreAdvancement(consumer, root, "vindicator_ore", vindicatorEggOre);
+			Advancement witchOre = getOreAdvancement(consumer, root, "witch_ore", witchEggOre);
+			Advancement witherOre = getOreAdvancement(consumer, root, "wither_ore", witherEggOre);
+			Advancement witherSkeletonOre = getOreAdvancement(consumer, root, "witherSkeleton_ore", witherSkeletonEggOre);
+			Advancement wolfOre = getOreAdvancement(consumer, root, "wolf_ore", wolfEggOre);
+			Advancement zombieOre = getOreAdvancement(consumer, root, "zombie_ore", zombieEggOre);
+			Advancement zombiePigmanOre = getOreAdvancement(consumer, root, "zombiePigman_ore", zombiePigmanEggOre);
 
 
-			Advancement batOre = Advancement.Builder.builder().withParent(root).withDisplay(batEggOre,
-					getTitle("bat_ore"),
-					getDescription("bat_ore"),
+		}
+
+		private Advancement getOreAdvancement(Consumer<Advancement> advancementConsumer, Advancement parent, String name, IItemProvider item) {
+
+			return Advancement.Builder.builder().withParent(parent).withDisplay(item,
+					getTitle(name),
+					getDescription(name),
 					null,
 					FrameType.TASK,
 					true,
 					true,
 					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(batEggOre))
-					.register(advancementConsumer, getID("bat_ore"));
-
-			Advancement blazeOre = Advancement.Builder.builder().withParent(root).withDisplay(blazeEggOre,
-					getTitle("blaze_ore"),
-					getDescription("blaze_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(blazeEggOre))
-					.register(advancementConsumer, getID("blaze_ore"));
-
-			Advancement catOre = Advancement.Builder.builder().withParent(root).withDisplay(catEggOre,
-					getTitle("cat_ore"),
-					getDescription("cat_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(catEggOre))
-					.register(advancementConsumer, getID("cat_ore"));
-
-
-			Advancement cavespiderOre = Advancement.Builder.builder().withParent(root).withDisplay(cavespiderEggOre,
-					getTitle("cavespider_ore"),
-					getDescription("cavespider_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(cavespiderEggOre))
-					.register(advancementConsumer, getID("cavespider_ore"));
-
-
-			Advancement chickenOre = Advancement.Builder.builder().withParent(root).withDisplay(chickenEggOre,
-					getTitle("chicken_ore"),
-					getDescription("chicken_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(chickenEggOre))
-					.register(advancementConsumer, getID("chicken_ore"));
-
-
-			Advancement cowOre = Advancement.Builder.builder().withParent(root).withDisplay(cowEggOre,
-					getTitle("cow_ore"),
-					getDescription("cow_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(cowEggOre))
-					.register(advancementConsumer, getID("cow_ore"));
-
-			Advancement creeperOre = Advancement.Builder.builder().withParent(root).withDisplay(creeperEggOre,
-					getTitle("creeper_ore"),
-					getDescription("creeper_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(creeperEggOre))
-					.register(advancementConsumer, getID("creeper_ore"));
-
-			Advancement dolphinOre = Advancement.Builder.builder().withParent(root).withDisplay(dolphinEggOre,
-					getTitle("dolphin_ore"),
-					getDescription("dolphin_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(dolphinEggOre))
-					.register(advancementConsumer, getID("dolphin_ore"));
-
-			Advancement donkeyOre = Advancement.Builder.builder().withParent(root).withDisplay(donkeyEggOre,
-					getTitle("donkey_ore"),
-					getDescription("donkey_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(donkeyEggOre))
-					.register(advancementConsumer, getID("donkey_ore"));
-
-			Advancement drownedOre = Advancement.Builder.builder().withParent(root).withDisplay(drownedEggOre,
-					getTitle("drowned_ore"),
-					getDescription("drowned_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(drownedEggOre))
-					.register(advancementConsumer, getID("drowned_ore"));
-
-			Advancement elderGuardianOre = Advancement.Builder.builder().withParent(root).withDisplay(elderGuardianEggOre,
-					getTitle("elderGuardian_ore"),
-					getDescription("elderGuardian_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(elderGuardianEggOre))
-					.register(advancementConsumer, getID("elderGuardian_ore"));
-
-			Advancement enderdragonOre = Advancement.Builder.builder().withParent(root).withDisplay(enderdragonEggOre,
-					getTitle("enderdragon_ore"),
-					getDescription("enderdragon_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					true)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(enderdragonEggOre))
-					.register(advancementConsumer, getID("enderdragon_ore"));
-
-			Advancement endermanOre = Advancement.Builder.builder().withParent(root).withDisplay(endermanEggOre,
-					getTitle("enderman_ore"),
-					getDescription("enderman_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(endermanEggOre))
-					.register(advancementConsumer, getID("enderman_ore"));
-
-			Advancement endermiteOre = Advancement.Builder.builder().withParent(root).withDisplay(endermiteEggOre,
-					getTitle("endermite_ore"),
-					getDescription("endermite_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(endermiteEggOre))
-					.register(advancementConsumer, getID("endermite_ore"));
-
-			Advancement evokerOre = Advancement.Builder.builder().withParent(root).withDisplay(evokerEggOre,
-					getTitle("evoker_ore"),
-					getDescription("evoker_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(evokerEggOre))
-					.register(advancementConsumer, getID("evoker_ore"));
-
-			Advancement foxOre = Advancement.Builder.builder().withParent(root).withDisplay(foxEggOre,
-					getTitle("fox_ore"),
-					getDescription("fox_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(foxEggOre))
-					.register(advancementConsumer, getID("fox_ore"));
-
-			Advancement ghastOre = Advancement.Builder.builder().withParent(root).withDisplay(ghastEggOre,
-					getTitle("ghast_ore"),
-					getDescription("ghast_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(ghastEggOre))
-					.register(advancementConsumer, getID("ghast_ore"));
-
-			Advancement guardianOre = Advancement.Builder.builder().withParent(root).withDisplay(guardianEggOre,
-					getTitle("guardian_ore"),
-					getDescription("guardian_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(guardianEggOre))
-					.register(advancementConsumer, getID("guardian_ore"));
-
-			Advancement horseOre = Advancement.Builder.builder().withParent(root).withDisplay(horseEggOre,
-					getTitle("horse_ore"),
-					getDescription("horse_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(horseEggOre))
-					.register(advancementConsumer, getID("horse_ore"));
-
-			Advancement huskOre = Advancement.Builder.builder().withParent(root).withDisplay(huskEggOre,
-					getTitle("husk_ore"),
-					getDescription("husk_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(huskEggOre))
-					.register(advancementConsumer, getID("husk_ore"));
-
-			Advancement ironGolemOre = Advancement.Builder.builder().withParent(root).withDisplay(ironGolemEggOre,
-					getTitle("ironGolem_ore"),
-					getDescription("ironGolem_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(ironGolemEggOre))
-					.register(advancementConsumer, getID("ironGolem_ore"));
-
-			Advancement llamaOre = Advancement.Builder.builder().withParent(root).withDisplay(llamaEggOre,
-					getTitle("llama_ore"),
-					getDescription("llama_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(llamaEggOre))
-					.register(advancementConsumer, getID("llama_ore"));
-
-			Advancement magmacubeOre = Advancement.Builder.builder().withParent(root).withDisplay(magmacubeEggOre,
-					getTitle("magmacube_ore"),
-					getDescription("magmacube_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(magmacubeEggOre))
-					.register(advancementConsumer, getID("magmacube_ore"));
-
-			Advancement mooshroomOre = Advancement.Builder.builder().withParent(root).withDisplay(mooshroomEggOre,
-					getTitle("mooshroom_ore"),
-					getDescription("mooshroom_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(mooshroomEggOre))
-					.register(advancementConsumer, getID("mooshroom_ore"));
-
-			Advancement ocelotOre = Advancement.Builder.builder().withParent(root).withDisplay(ocelotEggOre,
-					getTitle("ocelot_ore"),
-					getDescription("ocelot_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(ocelotEggOre))
-					.register(advancementConsumer, getID("ocelot_ore"));
-
-			Advancement pandabearOre = Advancement.Builder.builder().withParent(root).withDisplay(pandabearEggOre,
-					getTitle("pandabear_ore"),
-					getDescription("pandabear_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(pandabearEggOre))
-					.register(advancementConsumer, getID("pandabear_ore"));
-
-			Advancement parrotOre = Advancement.Builder.builder().withParent(root).withDisplay(parrotEggOre,
-					getTitle("parrot_ore"),
-					getDescription("parrot_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(parrotEggOre))
-					.register(advancementConsumer, getID("parrot_ore"));
-
-			Advancement phantomOre = Advancement.Builder.builder().withParent(root).withDisplay(phantomEggOre,
-					getTitle("phantom_ore"),
-					getDescription("phantom_ore"),
-					null,
-					FrameType.TASK,
-					true,
-					true,
-					false)
-					.withCriterion("get_egg_ore", InventoryChangeTrigger.Instance.forItems(phantomEggOre))
-					.register(advancementConsumer, getID("phantom_ore"));
-
-
-			//					TODO finish the ore advancements,
-			//					pigEggOre,
-			//					pillagerEggOre,
-			//					polarbearEggOre,
-			//					rabbitEggOre,
-			//					ravagerEggOre,
-			//					sheepEggOre,
-			//					shulkerEggOre,
-			//					skeletonEggOre,
-			//					slimeEggOre,
-			//					snowGolemEggOre,
-			//					spiderEggOre,
-			//					squidEggOre,
-			//					strayEggOre,
-			//					turtleEggOre,
-			//					villagerEggOre,
-			//					vindicatorEggOre,
-			//					witchEggOre,
-			//					witherEggOre,
-			//					witherSkeletonEggOre,
-			//					wolfEggOre,
-			//					zombieEggOre,
-			//					zombiePigmanEggOre,
+					.withCriterion("get_egg_ore",
+							InventoryChangeTrigger.Instance.forItems(item))
+					.register(advancementConsumer, getID(name));
 
 		}
 

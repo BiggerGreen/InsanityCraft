@@ -2,13 +2,13 @@
   "parent": "insanityoverworld:egg_ore/root",
   "display": {
     "icon": {
-      "item": "insanityoverworld:enderdragon_ore"
+      "item": "insanityoverworld:stray_ore"
     },
     "title": {
-      "translate": "advancements.insanityoverworld.egg_ore.enderdragon_ore.title"
+      "translate": "advancements.insanityoverworld.egg_ore.stray_ore.title"
     },
     "description": {
-      "translate": "advancements.insanityoverworld.egg_ore.enderdragon_ore.description"
+      "translate": "advancements.insanityoverworld.egg_ore.stray_ore.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "insanityoverworld:enderdragon_ore"
+            "item": "insanityoverworld:stray_ore"
           }
         ]
       }
