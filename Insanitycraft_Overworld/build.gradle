@@ -21,6 +21,9 @@ repositories {
     maven {
         url "http://tehnut.info/maven"
     }
+    flatDir {
+        dirs 'run/mods'
+    }
 }
 
 version = minecraft_version + '-' + mod_version + '-' + build_type
@@ -78,6 +81,8 @@ minecraft {
     }
 }
 
+
+
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
@@ -111,6 +116,17 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
 
+}
+
+file("run/mods").eachFile { file ->
+    def splitPos = file.name.lastIndexOf("-")
+    def modartifact = file.name.substring(0, splitPos)
+    def modversion = file.name.substring(splitPos + 1, file.name.length() - 4)
+    def modreference = "foobar:$modartifact:$modversion"
+
+    dependencies {
+        runtimeOnly fg.deobf(project.dependencies.create(modreference))
+    }
 }
 
 jar {

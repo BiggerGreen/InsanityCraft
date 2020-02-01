@@ -6,9 +6,13 @@ import static java.util.Calendar.*;
 
 public class CalendarUtils {
 
-	private static boolean isNewYear; //1/1
+	private static boolean today;
 
-	public static int day;
+	private static boolean newYear; //1/1
+
+	private static boolean valentinesDay; //14/2
+
+	private static int day;
 
 
 	public static void dayCheck() {
@@ -21,15 +25,30 @@ public class CalendarUtils {
 		switch(calendar.get(MONTH)) {
 			case JANUARY: {
 				if(day == 1) {
-					isNewYear = true;
+					newYear = true;
+				}
+			}
+			case FEBRUARY: {
+				if(day == 14) {
+					valentinesDay = true;
 				}
 			}
 
 		}
 
+		today = true;
+
 	}
 
-	public static boolean isIsNewYear() {
-		return isNewYear;
+	public static boolean isToday() {
+		return today;
+	}
+
+	public static boolean isNewYear() {
+		return newYear;
+	}
+
+	public static boolean isValentinesDay() {
+		return valentinesDay;
 	}
 }

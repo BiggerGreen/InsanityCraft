@@ -1,6 +1,7 @@
 package com.insanitycraft.insanityoverworld;
 
 import com.insanitycraft.insanityoverworld.init.*;
+import com.insanitycraft.insanityoverworld.util.CalendarUtils;
 import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.ItemGroupInsanityOverworld;
 import com.insanitycraft.insanityoverworld.world.gen.WorldGenOres;
@@ -17,6 +18,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import java.util.Calendar;
 
 import static com.insanitycraft.insanityoverworld.util.Reference.*;
 
@@ -44,6 +47,7 @@ public class InsanityOverworld {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
+		CalendarUtils.dayCheck();
 		WorldGenOres.setupOreGen();
 	}
 

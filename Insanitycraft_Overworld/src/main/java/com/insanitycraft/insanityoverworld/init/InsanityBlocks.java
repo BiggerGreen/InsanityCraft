@@ -30,6 +30,7 @@ import static net.minecraftforge.common.ToolType.*;
 @ObjectHolder(Reference.MODID)
 public class InsanityBlocks {
 
+	//TODO rewrite registry
 	//region Dev
 	public static Block debugBlock;
 	public static BlockItem debugItem;
