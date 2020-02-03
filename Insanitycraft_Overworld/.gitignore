@@ -25,5 +25,5 @@ server
 # Files from Forge MDK
 forge*changelog.txt
 
-/lib/
-/src/generated/
+lib
+src/generated

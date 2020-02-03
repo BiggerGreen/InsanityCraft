@@ -3,7 +3,6 @@ package com.insanitycraft.insanityoverworld.init;
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import com.insanitycraft.insanityoverworld.client.renderer.entity.*;
 import com.insanitycraft.insanityoverworld.entity.*;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -40,14 +39,14 @@ public class InsanityEntities {
 
 
 	//Other
-	public static EntityType ENTIIY_GIRLFIREND = EntityType.Builder.create(GirlfriendEntity::new, EntityClassification.MISC).build(MODID + ":girlfriend").setRegistryName("girlfriend");
+	public static EntityType ENTITY_GIRLFRIEND = EntityType.Builder.create(GirlfriendEntity::new, EntityClassification.MISC).build(MODID + ":girlfriend").setRegistryName("girlfriend");
 
 
 	public static void registerEntityRenders() {
 //		RenderingRegistry.registerEntityRenderingHandler(NytemairsEntity.class, NytemairsRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GIANT_MOLE, GiantMoleRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(TriffidEntity.class, TriffidRenderer::new);
-//		RenderingRegistry.registerEntityRenderingHandler(ENTITY_MOTHRA, MothraRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(ENTITY_MOTHRA, MothraRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(KatterkillerEntity.class, KatterkillerRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(TrexEntity.class, TrexRenderer::new);
 //		RenderingRegistry.registerEntityRenderingHandler(KrakenEntity.class, KrakenRenderer::new);
@@ -58,7 +57,7 @@ public class InsanityEntities {
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_ENCHANTED_COW, GoldenAppleCowRenderer::new);
 
 
-		RenderingRegistry.registerEntityRenderingHandler(ENTIIY_GIRLFIREND, GirlfriendRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GIRLFRIEND, GirlfriendRenderer::new);
 	}
 
 
@@ -77,7 +76,7 @@ public class InsanityEntities {
 
 				ENTITY_WATER_DRAGON,
 
-				ENTIIY_GIRLFIREND
+				ENTITY_GIRLFRIEND
 
 		);
 
@@ -99,11 +98,13 @@ public class InsanityEntities {
 //				katterkillerSpawnEgg = registerSpawnEgg(ENTITY_KATTERKILLER, 0xa10606, 0x2e0101, "katterkiller_spawn_egg"),
 //				trexSpawnEgg = registerSpawnEgg(ENTITY_TREX, 0xa10606, 0x2e0101, "trex_spawn_egg"),
 //				krakenSpawnEgg = registerSpawnEgg(ENTITY_KRAKEN, 0xa10606, 0x2e0101, "kraken_spawn_egg"),
-				waterDragonSawnEgg = registerSpawnEgg(ENTITY_WATER_DRAGON, 0xa10606, 0x2e0101, "water_dragon_spawn_egg"),
+				waterDragonSpawnEgg = registerSpawnEgg(ENTITY_WATER_DRAGON, 0xa10606, 0x2e0101, "water_dragon_spawn_egg"),
 
-				appleCowEgg = registerSpawnEgg(ENTITY_APPLE_COW, 0xed1d0e, 0xed1c1c, "apple_cow_spawn_egg"),
-				goldenAppleCowEgg = registerSpawnEgg(ENTITY_GOLDEN_COW, 0xed1d0e, 0xCFB53B, "golden_apple_cow_spawn_egg"),
-				enchantedAppleCowEgg = registerSpawnEgg(ENTITY_ENCHANTED_COW, 0xCFB53B, 0xed1d0e, "enchanted_apple_cow_spawn_egg")
+				appleCowSpawnEgg = registerSpawnEgg(ENTITY_APPLE_COW, 0xed1d0e, 0xed1c1c, "apple_cow_spawn_egg"),
+				goldenAppleCowSpawnEgg = registerSpawnEgg(ENTITY_GOLDEN_COW, 0xed1d0e, 0xCFB53B, "golden_apple_cow_spawn_egg"),
+				enchantedAppleCowSpawnEgg = registerSpawnEgg(ENTITY_ENCHANTED_COW, 0xCFB53B, 0xed1d0e, "enchanted_apple_cow_spawn_egg"),
+
+				girlfriendSpawnEgg = registerSpawnEgg(ENTITY_GIRLFRIEND, 0, 1, "girlfriend_spawn_egg")
 
 		);
 	}

@@ -179,11 +179,13 @@ public class InsanityItems {
 	public static Item trexSpawnEgg;
 	public static Item krakenSpawnEgg;
 	public static Item nytemairsSpawnEgg;
-	public static Item waterDragonSawnEgg;
+	public static Item waterDragonSpawnEgg;
 
-	public static Item appleCowEgg;
-	public static Item goldenAppleCowEgg;
-	public static Item enchantedAppleCowEgg;
+	public static Item appleCowSpawnEgg;
+	public static Item goldenAppleCowSpawnEgg;
+	public static Item enchantedAppleCowSpawnEgg;
+
+	public static Item girlfriendSpawnEgg;
 
 	//endregion
 

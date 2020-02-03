@@ -1,16 +1,7 @@
 package com.insanitycraft.insanityoverworld.data;
 
 import com.google.gson.JsonObject;
-import com.insanitycraft.insanityoverworld.init.InsanityBlocks;
-import com.insanitycraft.insanityoverworld.init.InsanityItems;
-import com.insanitycraft.insanityoverworld.init.InsanityTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.*;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.crafting.ShapelessRecipe;
-import net.minecraft.tags.Tag;
 
 import java.nio.file.Path;
 import java.util.function.Consumer;
