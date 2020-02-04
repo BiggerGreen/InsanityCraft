@@ -7,7 +7,6 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 
@@ -19,11 +18,11 @@ public class InsanityMaterialStats {
 
 
 	public enum InsanityToolTier implements IItemTier {
-		AMETHYST_TIER(11f, 11f, 2000, 4, 19, amethyst),
-		RUBY_TIER(16f, 11f, 1500, 5, 21, ruby),
+		AMETHYST_TIER(11f, 11f, 2000, 4, 19, AMETHYST),
+		RUBY_TIER(16f, 11f, 1500, 5, 21, RUBY),
 		ULTIMATE_TIER(36f, 18f, 3000, 10, 30, null),
-		PINK_TOURMALINE_TIER(7f, 10f, 1100, 4, 17, pinkTourmaline),
-		TIGER_EYE_TIER(8f, 12f, 1600, 4, 22, tigerEye),
+		PINK_TOURMALINE_TIER(7f, 10f, 1100, 4, 17, PINK_TOURMALINE),
+		TIGER_EYE_TIER(8f, 12f, 1600, 4, 22, TIGER_EYE),
 		LAPIS_TIER(2f, 6f, 250, 2, 14, Items.LAPIS_LAZULI),
 
 		MANTIS_CLAW_TIER(6f, 0f, 2000, 3, 1, null),
@@ -80,13 +79,13 @@ public class InsanityMaterialStats {
 
 	public enum InsanityArmorMaterials implements IArmorMaterial {
 		//Chestplate durability = 16 * durability
-		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, amethyst),
-		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, ruby),
+		AMETHYST_ARMOR("amethyst", 44, new int[]{4, 7, 8, 4}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, AMETHYST),
+		RUBY_ARMOR("ruby", 57, new int[]{6, 8, 9, 6}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, RUBY),
 		LAPIS_ARMOR("lapis", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, Items.LAPIS_LAZULI),
-		LAVA_ARMOR("lava", 57, new int[]{6,8,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, lavaCrystal),
-		ULTIMATE_ARMOR("ultimate", 75, new int[]{7, 9, 10, 7}, 100, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0f, titanium_ingot),
-		PINK_TOURMALINE_ARMOR("pink_tourmaline", 33, new int[]{2,5,7,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, pinkTourmaline),
-		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, tigerEye);
+		LAVA_ARMOR("lava", 57, new int[]{6,8,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, LAVA_CRYSTAL),
+		ULTIMATE_ARMOR("ultimate", 75, new int[]{7, 9, 10, 7}, 100, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0f, TITANIUM_INGOT),
+		PINK_TOURMALINE_ARMOR("pink_tourmaline", 33, new int[]{2,5,7,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, PINK_TOURMALINE),
+		TIGER_EYE_ARMOR("tiger_eye", 44, new int[]{4,7,8,4}, 55, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, TIGER_EYE);
 
 
 		private static final int[] max_damage_array = new int[]{13, 15, 16, 11};

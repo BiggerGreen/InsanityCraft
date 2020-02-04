@@ -1,6 +1,5 @@
 package com.insanitycraft.insanityoverworld.data;
 
-import com.insanitycraft.insanityoverworld.init.InsanityItems;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
@@ -54,12 +53,12 @@ public class TagGenerator {
 		@Override
 		protected void registerTags() {
 			getBuilder(Tags.Items.INGOTS).add(Items.INGOTS_PINK_TOURMALINE, Items.INGOTS_TIGER_EYE);
-			getBuilder(Items.INGOTS_PINK_TOURMALINE).add(pinkTourmaline);
-			getBuilder(Items.INGOTS_TIGER_EYE).add(tigerEye);
+			getBuilder(Items.INGOTS_PINK_TOURMALINE).add(PINK_TOURMALINE);
+			getBuilder(Items.INGOTS_TIGER_EYE).add(TIGER_EYE);
 
 			getBuilder(Tags.Items.GEMS).add(Items.GEMS_AMETHYST, Items.GEMS_RUBY);
-			getBuilder(Items.GEMS_AMETHYST).add(amethyst);
-			getBuilder(Items.GEMS_RUBY).add(ruby);
+			getBuilder(Items.GEMS_AMETHYST).add(AMETHYST);
+			getBuilder(Items.GEMS_RUBY).add(RUBY);
 
 			copy(Blocks.SPAWN_EGG_ORES, Items.SPAWN_EGG_ORE);
 			copy(Blocks.SPAWN_EGG_ORES_VANILLA, Items.SPAWN_EGG_ORE_VANILLA);

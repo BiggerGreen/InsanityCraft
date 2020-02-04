@@ -1,9 +1,7 @@
 package com.insanitycraft.insanityoverworld.items;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
-import com.insanitycraft.insanityoverworld.init.InsanityConfig;
 import com.insanitycraft.insanityoverworld.init.InsanityItems;
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
@@ -34,7 +32,7 @@ public class StairItem extends Item {
 		}
 
 		if(!world.isRemote) {
-			if(stack.getItem() == InsanityItems.bridge) {
+			if(stack.getItem() == InsanityItems.BRIDGE) {
 				for(int x = 0; x <= InsanityOverworld.config.bridgeLength.get(); x++) {
 					BlockPos newPos = new BlockPos(pos);
 					if(direction == Direction.SOUTH) {
@@ -59,7 +57,7 @@ public class StairItem extends Item {
 					}
 
 				}
-			}else if(stack.getItem() == InsanityItems.stairsUp) {
+			}else if(stack.getItem() == InsanityItems.STAIRS_UP) {
 				for(int xy = 0; xy <= InsanityOverworld.config.stairHeight.get(); xy++) {
 					BlockPos newPos = new BlockPos(pos);
 					if(direction == Direction.SOUTH) {
@@ -83,7 +81,7 @@ public class StairItem extends Item {
 						world.setBlockState(torchPos, Blocks.TORCH.getDefaultState());
 					}
 				}
-			}else if(stack.getItem() == InsanityItems.stairsDown) {
+			}else if(stack.getItem() == InsanityItems.STAIRS_DOWN) {
 				for(int xy = 0; xy >= -(InsanityOverworld.config.stairHeight.get()); xy--) {
 					BlockPos newPos = new BlockPos(pos);
 					if(direction == Direction.SOUTH) {

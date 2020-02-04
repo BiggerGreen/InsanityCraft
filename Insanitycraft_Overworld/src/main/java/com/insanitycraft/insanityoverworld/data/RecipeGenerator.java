@@ -23,8 +23,8 @@ public class RecipeGenerator extends RecipeProvider {
 	}
 
 	private void shapelessRecipes(Consumer<IFinishedRecipe> consumer) {
-		ShapelessRecipeBuilder.shapelessRecipe(amethyst, 9).addIngredient(amethystBlock).addCriterion("has_amethyst_block", this.hasItem(amethystBlock)).build(consumer);
-		ShapelessRecipeBuilder.shapelessRecipe(amethystBlock, 1).addIngredient(amethyst).addCriterion("has_amethyst", this.hasItem(amethyst)).build(consumer);
+		ShapelessRecipeBuilder.shapelessRecipe(AMETHYST, 9).addIngredient(amethystBlock).addCriterion("has_amethyst_block", this.hasItem(amethystBlock)).build(consumer);
+		ShapelessRecipeBuilder.shapelessRecipe(amethystBlock, 1).addIngredient(AMETHYST).addCriterion("has_amethyst", this.hasItem(AMETHYST)).build(consumer);
 
 	}
 

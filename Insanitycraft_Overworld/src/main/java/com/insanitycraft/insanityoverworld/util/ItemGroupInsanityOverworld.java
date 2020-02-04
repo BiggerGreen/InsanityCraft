@@ -12,6 +12,6 @@ public class ItemGroupInsanityOverworld extends ItemGroup {
 
 	@Override
 	public ItemStack createIcon() {
-		return new ItemStack(InsanityItems.amethyst);
+		return new ItemStack(InsanityItems.AMETHYST);
 	}
 }

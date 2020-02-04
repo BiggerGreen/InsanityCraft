@@ -29,10 +29,10 @@ public class EnchantedAxeItem extends AxeItem {
 
 			if(stack.getEnchantmentTagList().isEmpty()) {
 				nbt.putBoolean("added", true);
-				if(stack.getItem() == InsanityItems.ultimateAxe) {
+				if(stack.getItem() == InsanityItems.ULTIMATE_AXE) {
 					stack.addEnchantment(Enchantments.EFFICIENCY, 5);
 				}
-				if(stack.getItem() == InsanityItems.lapisAxe) {
+				if(stack.getItem() == InsanityItems.LAPIS_AXE) {
 					stack.addEnchantment(Enchantments.EFFICIENCY, 1);
 				}
 			}

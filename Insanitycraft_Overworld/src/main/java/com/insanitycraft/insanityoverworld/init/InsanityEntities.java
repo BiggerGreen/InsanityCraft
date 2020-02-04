@@ -92,19 +92,19 @@ public class InsanityEntities {
 	public static void registerSpawnEggs(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(
 //				nytemairsSpawnEgg = registerSpawnEgg(ENTITY_NYTEMAIRS, 0x1c1001, 0x38250d, "nytemairs_spawn_egg"),
-				giantMoleSpawnEgg = registerSpawnEgg(ENTITY_GIANT_MOLE, 0, 1, "giant_mole_spawn_egg"),
+				GIANT_MOLE_SPAWN_EGG = registerSpawnEgg(ENTITY_GIANT_MOLE, 0, 1, "giant_mole_spawn_egg"),
 //				triffidSpawnEgg = registerSpawnEgg(ENTITY_TRIFFID, 0, 1, "triffid_spawn_egg"),
-				mothraSpawnEgg = registerSpawnEgg(ENTITY_MOTHRA, 0xe69215, 0x5c421c, "mothra_spawn_egg"),
+				MOTHRA_SPAWN_EGG = registerSpawnEgg(ENTITY_MOTHRA, 0xe69215, 0x5c421c, "mothra_spawn_egg"),
 //				katterkillerSpawnEgg = registerSpawnEgg(ENTITY_KATTERKILLER, 0xa10606, 0x2e0101, "katterkiller_spawn_egg"),
 //				trexSpawnEgg = registerSpawnEgg(ENTITY_TREX, 0xa10606, 0x2e0101, "trex_spawn_egg"),
 //				krakenSpawnEgg = registerSpawnEgg(ENTITY_KRAKEN, 0xa10606, 0x2e0101, "kraken_spawn_egg"),
-				waterDragonSpawnEgg = registerSpawnEgg(ENTITY_WATER_DRAGON, 0xa10606, 0x2e0101, "water_dragon_spawn_egg"),
+				WATER_DRAGON_SPAWN_EGG = registerSpawnEgg(ENTITY_WATER_DRAGON, 0xa10606, 0x2e0101, "water_dragon_spawn_egg"),
 
-				appleCowSpawnEgg = registerSpawnEgg(ENTITY_APPLE_COW, 0xed1d0e, 0xed1c1c, "apple_cow_spawn_egg"),
-				goldenAppleCowSpawnEgg = registerSpawnEgg(ENTITY_GOLDEN_COW, 0xed1d0e, 0xCFB53B, "golden_apple_cow_spawn_egg"),
-				enchantedAppleCowSpawnEgg = registerSpawnEgg(ENTITY_ENCHANTED_COW, 0xCFB53B, 0xed1d0e, "enchanted_apple_cow_spawn_egg"),
+				APPLE_COW_SPAWN_EGG = registerSpawnEgg(ENTITY_APPLE_COW, 0xed1d0e, 0xed1c1c, "apple_cow_spawn_egg"),
+				GOLDEN_APPLE_COW_SPAWN_EGG = registerSpawnEgg(ENTITY_GOLDEN_COW, 0xed1d0e, 0xCFB53B, "golden_apple_cow_spawn_egg"),
+				ENCHANTED_APPLE_COW_SPAWN_EGG = registerSpawnEgg(ENTITY_ENCHANTED_COW, 0xCFB53B, 0xed1d0e, "enchanted_apple_cow_spawn_egg"),
 
-				girlfriendSpawnEgg = registerSpawnEgg(ENTITY_GIRLFRIEND, 0, 1, "girlfriend_spawn_egg")
+				GIRLFRIEND_SPAWN_EGG = registerSpawnEgg(ENTITY_GIRLFRIEND, 0, 1, "girlfriend_spawn_egg")
 
 		);
 	}

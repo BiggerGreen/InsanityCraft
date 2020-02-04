@@ -29,10 +29,10 @@ public class EnchantedShovelItem extends ShovelItem {
 
 			if(stack.getEnchantmentTagList().isEmpty()) {
 				nbt.putBoolean("added", true);
-				if(stack.getItem() == InsanityItems.ultimateShovel) {
+				if(stack.getItem() == InsanityItems.ULTIMATE_SHOVEL) {
 					stack.addEnchantment(Enchantments.EFFICIENCY, 5);
 				}
-				if(stack.getItem() == InsanityItems.lapisShovel) {
+				if(stack.getItem() == InsanityItems.LAPIS_SHOVEL) {
 					stack.addEnchantment(Enchantments.EFFICIENCY, 1);
 				}
 			}

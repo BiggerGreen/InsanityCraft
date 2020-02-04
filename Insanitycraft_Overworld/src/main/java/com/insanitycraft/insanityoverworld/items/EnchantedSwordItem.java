@@ -29,11 +29,11 @@ public class EnchantedSwordItem extends SwordItem {
 
 			if(stack.getEnchantmentTagList().isEmpty()) {
 				nbt.putBoolean("added", true);
-				if(stack.getItem() == battleAxe) {
+				if(stack.getItem() == BATTLE_AXE) {
 					stack.addEnchantment(LOOTING, 3);
 					stack.addEnchantment(UNBREAKING, 3);
 				}
-				if(stack.getItem() == queenBattleAxe) {
+				if(stack.getItem() == QUEEN_BATTLE_AXE) {
 					stack.addEnchantment(SHARPNESS, 5);
 					stack.addEnchantment(SMITE, 5);
 					stack.addEnchantment(BANE_OF_ARTHROPODS, 5);
@@ -43,7 +43,7 @@ public class EnchantedSwordItem extends SwordItem {
 					stack.addEnchantment(FIRE_ASPECT, 2);
 					stack.addEnchantment(SWEEPING, 3);
 				}
-				if(stack.getItem() == ultimateSword) {
+				if(stack.getItem() == ULTIMATE_SWORD) {
 					stack.addEnchantment(SHARPNESS, 5);
 					stack.addEnchantment(SMITE, 5);
 					stack.addEnchantment(BANE_OF_ARTHROPODS, 5);
@@ -53,11 +53,11 @@ public class EnchantedSwordItem extends SwordItem {
 					stack.addEnchantment(FIRE_ASPECT, 2);
 					stack.addEnchantment(SWEEPING, 3);
 				}
-				if(stack.getItem() == zangetsu) {
+				if(stack.getItem() == ZANGETSU) {
 					stack.addEnchantment(KNOCKBACK, 2);
 					stack.addEnchantment(FIRE_ASPECT, 2);
 				}
-				if(stack.getItem() == lapisSword) {
+				if(stack.getItem() == LAPIS_SWORD) {
 					stack.addEnchantment(SHARPNESS, 1);
 				}
 			}

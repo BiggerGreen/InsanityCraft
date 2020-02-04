@@ -1,7 +1,5 @@
 package com.insanitycraft.insanityoverworld.items;
 
-import com.insanitycraft.insanityoverworld.init.InsanityItems;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
@@ -32,11 +30,11 @@ public class EnchantedPickaxe extends PickaxeItem {
 
 			if(stack.getEnchantmentTagList().isEmpty()) {
 				nbt.putBoolean("added", true);
-				if(stack.getItem() == ultimatePickAxe) {
+				if(stack.getItem() == ULTIMATE_PICKAXE) {
 					stack.addEnchantment(EFFICIENCY, 5);
 					stack.addEnchantment(FORTUNE, 5);
 				}
-				if(stack.getItem() == lapisPickAxe) {
+				if(stack.getItem() == LAPIS_PICKAXE) {
 					stack.addEnchantment(EFFICIENCY, 1);
 				}
 			}

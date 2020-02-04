@@ -19,11 +19,11 @@ public class SpecialSwordItem extends SwordItem {
 	public boolean hitEntity(ItemStack stack, LivingEntity entity, LivingEntity player) {
 		super.hitEntity(stack, entity, player);
 		if(!player.world.isRemote) {
-			if(stack.getItem() == mantisClaw) {
+			if(stack.getItem() == MANTIS_CLAW) {
 				entity.heal(-1.0F);
 				player.heal(1.0F);
 				return true;
-			}else if(stack.getItem() == scorpionTail) {
+			}else if(stack.getItem() == SCORPION_TAIL) {
 				int length = 10 + player.world.rand.nextInt(10);
 				entity.addPotionEffect(new EffectInstance(Effects.POISON, length * 20, 0));
 				return true;
