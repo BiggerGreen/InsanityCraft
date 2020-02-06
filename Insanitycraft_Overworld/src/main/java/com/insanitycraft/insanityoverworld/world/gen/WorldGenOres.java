@@ -1,11 +1,14 @@
 package com.insanitycraft.insanityoverworld.world.gen;
 
+import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.init.InsanityConfig;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static com.insanitycraft.insanityoverworld.init.InsanityBlocks.*;
@@ -13,6 +16,8 @@ import static net.minecraft.world.gen.GenerationStage.Decoration.*;
 import static net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType.*;
 
 public class WorldGenOres {
+
+	static InsanityConfig config;
 
 	private static final int eggVeinSize = 3;
 	private static final int maxEggVeins = 3;
@@ -35,6 +40,8 @@ public class WorldGenOres {
 
 
 	public static void setupOreGen() {
+		config = InsanityOverworld.config;
+
 		for(Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			if(biome.getCategory() == Biome.Category.THEEND) {
 				//END ores
@@ -53,66 +60,69 @@ public class WorldGenOres {
 			addOre(biome, NATURAL_STONE, uraniumOre, uraniumVeinSize, uraniumConfig);
 
 			//region Mob Ore spawn
-			addMobOres(biome, batEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, blazeEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, cavespiderEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, chickenEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, cowEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, creeperEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, dolphinEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, donkeyEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, drownedEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, elderGuardianEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, enderdragonEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, endermanEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, evokerEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, guardianEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, horseEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, huskEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, ironGolemEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, llamaEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, magmacubeEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, mooshroomEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, ocelotEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, pandabearEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, parrotEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, phantomEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, pigEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, polarbearEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, rabbitEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, sheepEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, skeletonEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, slimeEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, snowGolemEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, spiderEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, squidEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, strayEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, turtleEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, villagerEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, vindicatorEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, witchEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, witherEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, witherSkeletonEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, wolfEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, zombieEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, zombiePigmanEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
+			if(config.shouldEggOresGenerate.get()) {
+				addMobOres(biome, batEggOre, config.batOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, blazeEggOre, config.blazeOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, cavespiderEggOre, config.cavespiderOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, chickenEggOre, config.chickenOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, cowEggOre, config.cowOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, creeperEggOre, config.creeperOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, dolphinEggOre, config.dolphinOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, donkeyEggOre, config.donkeyOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, drownedEggOre, config.drownedOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, elderGuardianEggOre, config.elderGuardianOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, enderdragonEggOre, config.enderDragonOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, endermanEggOre, config.endermanOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, evokerEggOre, config.evokerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, guardianEggOre, config.guardianOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, horseEggOre, config.horseOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, huskEggOre, config.huskOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ironGolemEggOre, config.ironGolemOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, llamaEggOre, config.llamaOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, magmacubeEggOre, config.magmacubeOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, mooshroomEggOre, config.mooshroomOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ocelotEggOre, config.ocelotOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, pandabearEggOre, config.pandabearOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, parrotEggOre, config.parrotOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, phantomEggOre, config.phantomOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, pigEggOre, config.pigOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, polarbearEggOre, config.polarbearOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, rabbitEggOre, config.rabbitOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, sheepEggOre, config.sheepOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, skeletonEggOre, config.skeletonOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, slimeEggOre, config.slimeOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, snowGolemEggOre, config.snowGolemOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, spiderEggOre, config.spiderOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, squidEggOre, config.squidOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, strayEggOre, config.strayOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, turtleEggOre, config.turtleOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, villagerEggOre, config.villagerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, vindicatorEggOre, config.vindicatorOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, witchEggOre, config.witchOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, witherEggOre, config.witherOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, witherSkeletonEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, wolfEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, zombieEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, zombiePigmanEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, catEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, endermiteEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, foxEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ghastEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, pillagerEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ravagerEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, shulkerEggOre, true, eggVeinSize, maxEggVeins, maxEggHeight);
 
-			addMobOres(biome, catEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, endermiteEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, foxEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, ghastEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, pillagerEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, ravagerEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-			addMobOres(biome, shulkerEggOre, eggVeinSize, maxEggVeins, maxEggHeight);
-
-			//endregion
+				//endregion
+			}
 		}
 
 	}
 
 
-	private static void addMobOres(Biome biome, Block block, int size, int count, int maxHeight) {
-		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(count, 0, 0, maxHeight))));
+	private static void addMobOres(Biome biome, Block block, boolean enabled, int size, int count, int maxHeight) {
+		if(enabled) {
+			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(count, 0, 0, maxHeight))));
+		}
 	}
 
 	private static void addOre(Biome biome, OreFeatureConfig.FillerBlockType fillerBlockType, Block block, int size, CountRangeConfig config) {

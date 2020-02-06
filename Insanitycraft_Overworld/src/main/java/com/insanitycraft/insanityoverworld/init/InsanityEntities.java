@@ -37,7 +37,6 @@ public class InsanityEntities {
 	public static EntityType ENTITY_GOLDEN_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":golden_apple_cow").setRegistryName("golden_apple_cow");
 	public static EntityType ENTITY_ENCHANTED_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
 
-
 	//Other
 	public static EntityType ENTITY_GIRLFRIEND = EntityType.Builder.create(GirlfriendEntity::new, EntityClassification.MISC).build(MODID + ":girlfriend").setRegistryName("girlfriend");
 
