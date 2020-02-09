@@ -1,6 +1,7 @@
 package com.insanitycraft.insanityoverworld.data;
 
 import com.google.gson.JsonObject;
+import com.insanitycraft.insanityoverworld.init.InsanityBlocks;
 import net.minecraft.data.*;
 
 import java.nio.file.Path;
@@ -23,8 +24,8 @@ public class RecipeGenerator extends RecipeProvider {
 	}
 
 	private void shapelessRecipes(Consumer<IFinishedRecipe> consumer) {
-		ShapelessRecipeBuilder.shapelessRecipe(AMETHYST, 9).addIngredient(amethystBlock).addCriterion("has_amethyst_block", this.hasItem(amethystBlock)).build(consumer);
-		ShapelessRecipeBuilder.shapelessRecipe(amethystBlock, 1).addIngredient(AMETHYST).addCriterion("has_amethyst", this.hasItem(AMETHYST)).build(consumer);
+		ShapelessRecipeBuilder.shapelessRecipe(AMETHYST, 9).addIngredient(InsanityBlocks.AMETHYST_BLOCK).addCriterion("has_amethyst_block", this.hasItem(InsanityBlocks.AMETHYST_BLOCK)).build(consumer);
+		ShapelessRecipeBuilder.shapelessRecipe(InsanityBlocks.AMETHYST_BLOCK, 1).addIngredient(AMETHYST).addCriterion("has_amethyst", this.hasItem(AMETHYST)).build(consumer);
 
 	}
 

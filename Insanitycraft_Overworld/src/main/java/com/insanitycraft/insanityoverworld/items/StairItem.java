@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 public class StairItem extends Item {
 
 	public StairItem() {
-		super(new Item.Properties().group(InsanityOverworld.itemGroup).maxStackSize(16));
+		super(new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP).maxStackSize(16));
 	}
 
 	@Override

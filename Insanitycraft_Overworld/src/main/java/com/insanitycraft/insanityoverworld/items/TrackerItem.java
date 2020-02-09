@@ -15,7 +15,7 @@ import net.minecraftforge.fml.network.NetworkHooks;
 public class TrackerItem extends Item {
 
 	public TrackerItem() {
-		super(new Item.Properties().group(InsanityOverworld.itemGroup).maxStackSize(1));
+		super(new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP).maxStackSize(1));
 	}
 
 	@Override

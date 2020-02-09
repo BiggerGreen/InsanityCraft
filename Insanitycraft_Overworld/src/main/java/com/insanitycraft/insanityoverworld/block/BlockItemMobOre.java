@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 public class BlockItemMobOre extends BlockItem {
 
 	public BlockItemMobOre(Block blockIn) {
-		super(blockIn, new Item.Properties().group(InsanityOverworld.itemGroup));
+		super(blockIn, new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP));
 		setRegistryName(blockIn.getRegistryName());
 	}
 }

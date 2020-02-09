@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "insanityoverworld:pandabear_ore"
+          "name": "insanityoverworld:panda_ore"
         }
       ],
       "conditions": [

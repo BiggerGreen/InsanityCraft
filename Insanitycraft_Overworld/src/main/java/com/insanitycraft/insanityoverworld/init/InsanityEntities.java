@@ -109,7 +109,7 @@ public class InsanityEntities {
 	}
 
 	private static Item registerSpawnEgg(EntityType<?> type, int color1, int color2, String name) {
-		SpawnEggItem item = new SpawnEggItem(type, color1, color2, new Item.Properties().group(InsanityOverworld.itemGroup));
+		SpawnEggItem item = new SpawnEggItem(type, color1, color2, new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP));
 		item.setRegistryName(name);
 		return item;
 	}

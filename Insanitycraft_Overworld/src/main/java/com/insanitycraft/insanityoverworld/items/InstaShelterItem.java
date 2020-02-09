@@ -1,7 +1,6 @@
 package com.insanitycraft.insanityoverworld.items;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -17,7 +16,7 @@ import net.minecraft.world.server.ServerWorld;
 public class InstaShelterItem extends Item {
 
 	public InstaShelterItem() {
-		super(new Item.Properties().group(InsanityOverworld.itemGroup));
+		super(new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP));
 	}
 
 

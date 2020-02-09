@@ -1,8 +1,10 @@
 package com.insanitycraft.insanityoverworld.init;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
+import com.insanitycraft.insanityoverworld.block.BlockItemMobOre;
 import com.insanitycraft.insanityoverworld.items.*;
 import com.insanitycraft.insanityoverworld.util.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -165,11 +167,82 @@ public class InsanityItems {
 	//endregion
 
 
+	//region Blocks
+	public static Item AMETHYST_BLOCK;
+	public static Item AMETHYST_ORE;
+	public static Item RUBY_BLOCK;
+	public static Item RUBY_ORE;
+	public static Item TITANIUM_BLOCK;
+	public static Item TITANIUM_ORE;
+	public static Item URANIUM_BLOCK;
+	public static Item URANIUM_ORE;
+	public static Item PINK_TOURMALINE_BLOCK;
+	public static Item PINK_TOURMALINE_ORE;
+	public static Item TIGER_EYE_BLOCK;
+	public static Item TIGER_EYE_ORE;
+
+	public static Item BAT_EGG_ORE;
+	public static Item BLAZE_EGG_ORE;
+	public static Item CAVE_SPIDER_EGG_ORE;
+	public static Item CHICKEN_EGG_ORE;
+	public static Item COW_EGG_ORE;
+	public static Item CREEPER_EGG_ORE;
+	public static Item DOLPHIN_EGG_ORE;
+	public static Item DONKEY_EGG_ORE;
+	public static Item DROWNED_EGG_ORE;
+	public static Item ELDER_GUARDIAN_EGG_ORE;
+	public static Item ENDER_DRAGON_EGG_ORE;
+	public static Item ENDERMAN_EGG_ORE;
+	public static Item EVOKER_EGG_ORE;
+	public static Item GUARDIAN_EGG_ORE;
+	public static Item HORSE_EGG_ORE;
+	public static Item HUSK_EGG_ORE;
+	public static Item IRON_GOLEM_EGG_ORE;
+	public static Item LLAMA_EGG_ORE;
+	public static Item MAGMA_CUBE_EGG_ORE;
+	public static Item MOOSHROOM_EGG_ORE;
+	public static Item OCELOT_EGG_ORE;
+	public static Item PANDA_EGG_ORE;
+	public static Item PARROT_EGG_ORE;
+	public static Item PHANTOM_EGG_ORE;
+	public static Item PIG_EGG_ORE;
+	public static Item POLAR_BEAR_EGG_ORE;
+	public static Item RABBIT_EGG_ORE;
+	public static Item SHEEP_EGG_ORE;
+	public static Item SKELETON_EGG_ORE;
+	public static Item SLIME_EGG_ORE;
+	public static Item SNOW_GOLEM_EGG_ORE;
+	public static Item SPIDER_EGG_ORE;
+	public static Item SQUID_EGG_ORE;
+	public static Item STRAY_EGG_ORE;
+	public static Item TURTLE_EGG_ORE;
+	public static Item VILLAGER_EGG_ORE;
+	public static Item VINDICATOR_EGG_ORE;
+	public static Item WITCH_EGG_ORE;
+	public static Item WITHER_EGG_ORE;
+	public static Item WITHER_SKELETON_EGG_ORE;
+	public static Item WOLF_EGG_ORE;
+	public static Item ZOMBIE_EGG_ORE;
+	public static Item ZOMBIE_PIGMAN_EGG_ORE;
+	public static Item CAT_EGG_ORE;
+	public static Item ENDERMITE_EGG_ORE;
+	public static Item FOX_EGG_ORE;
+	public static Item GHAST_EGG_ORE;
+	public static Item PILLAGER_EGG_ORE;
+	public static Item RAVAGER_EGG_ORE;
+	public static Item SHULKER_EGG_ORE;
+
+	public static Item ENDER_EYE_BLOCK;
+	public static Item ENDER_PEARL_BLOCK;
+
+
+	//endregion
+
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		if(InsanityOverworld.debug) {
 			event.getRegistry().registerAll(
-					DEBUG = new ItemDebug(new Item.Properties().group(itemGroup)).setRegistryName("debug"),
+					DEBUG = new ItemDebug(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("debug"),
 					DEV_STICK = new ItemDevStick().setRegistryName("dev_stick")
 					);
 		}
@@ -177,96 +250,96 @@ public class InsanityItems {
 		event.getRegistry().registerAll(
 
 				//region materials
-				AMETHYST = new Item(new Item.Properties().group(itemGroup)).setRegistryName("amethyst"),
-				AMETHYST_PICKAXE = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_pickaxe"),
-				AMETHYST_AXE = new AxeItem(AMETHYST_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_axe"),
-				AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_shovel"),
-				AMETHYST_SWORD = new SwordItem(AMETHYST_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_sword"),
-				AMETHYST_HELMET = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_helmet"),
-				AMETHYST_CHESTPLATE = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_chestplate"),
-				AMETHYST_LEGGINGS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_leggings"),
-				AMETHYST_BOOTS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("amethyst_boots"),
+				AMETHYST = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst"),
+				AMETHYST_PICKAXE = new PickaxeItem(AMETHYST_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_pickaxe"),
+				AMETHYST_AXE = new AxeItem(AMETHYST_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_axe"),
+				AMETHYST_SHOVEL = new ShovelItem(AMETHYST_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_shovel"),
+				AMETHYST_SWORD = new SwordItem(AMETHYST_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_sword"),
+				AMETHYST_HELMET = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_helmet"),
+				AMETHYST_CHESTPLATE = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_chestplate"),
+				AMETHYST_LEGGINGS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_leggings"),
+				AMETHYST_BOOTS = new ArmorItem(AMETHYST_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("amethyst_boots"),
 
-				RUBY = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ruby"),
-				RUBY_PICKAXE = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_pickaxe"),
-				RUBY_AXE = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_axe"),
-				RUBY_SHOVEL = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_shovel"),
-				RUBY_SWORD = new SwordItem(RUBY_TIER, 3, -1.7F, new Item.Properties().group(itemGroup)).setRegistryName("ruby_sword"),
-				RUBY_HELMET = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("ruby_helmet"),
-				RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ruby_chestplate"),
-				RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("ruby_leggings"),
-				RUBY_BOOTS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ruby_boots"),
+				RUBY = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby"),
+				RUBY_PICKAXE = new PickaxeItem(RUBY_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_pickaxe"),
+				RUBY_AXE = new AxeItem(RUBY_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_axe"),
+				RUBY_SHOVEL = new ShovelItem(RUBY_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_shovel"),
+				RUBY_SWORD = new SwordItem(RUBY_TIER, 3, -1.7F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_sword"),
+				RUBY_HELMET = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_helmet"),
+				RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_chestplate"),
+				RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_leggings"),
+				RUBY_BOOTS = new ArmorItem(RUBY_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ruby_boots"),
 
-				PINK_TOURMALINE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline"),
-				PINK_TOURMALINE_PICKAXE = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_pickaxe"),
-				PINK_TOURMALINE_AXE = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_axe"),
-				PINK_TOURMALINE_SHOVEL = new ShovelItem(PINK_TOURMALINE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_shovel"),
-				PINK_TOURMALINE_SWORD = new SwordItem(PINK_TOURMALINE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_sword"),
-				PINK_TOURMALINE_HELMET = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_helmet"),
-				PINK_TOURMALINE_CHESTPLATE = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_chestplate"),
-				PINK_TOURMALINE_LEGGINGS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_leggings"),
-				PINK_TOURMALINE_BOOTS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("pink_tourmaline_boots"),
+				PINK_TOURMALINE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline"),
+				PINK_TOURMALINE_PICKAXE = new PickaxeItem(PINK_TOURMALINE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_pickaxe"),
+				PINK_TOURMALINE_AXE = new AxeItem(PINK_TOURMALINE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_axe"),
+				PINK_TOURMALINE_SHOVEL = new ShovelItem(PINK_TOURMALINE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_shovel"),
+				PINK_TOURMALINE_SWORD = new SwordItem(PINK_TOURMALINE_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_sword"),
+				PINK_TOURMALINE_HELMET = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_helmet"),
+				PINK_TOURMALINE_CHESTPLATE = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_chestplate"),
+				PINK_TOURMALINE_LEGGINGS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_leggings"),
+				PINK_TOURMALINE_BOOTS = new ArmorItem(PINK_TOURMALINE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("pink_tourmaline_boots"),
 
-				TIGER_EYE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye"),
-				TIGER_EYE_PICKAXE = new PickaxeItem(TIGER_EYE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_pickaxe"),
-				TIGER_EYE_AXE = new AxeItem(TIGER_EYE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_axe"),
-				TIGER_EYE_SHOVEL = new ShovelItem(TIGER_EYE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_shovel"),
-				TIGER_EYE_SWORD = new SwordItem(TIGER_EYE_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_sword"),
-				TIGER_EYE_HELMET = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_helmet"),
-				TIGER_EYE_CHESTPLATE = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_chestplate"),
-				TIGER_EYE_LEGGINGS = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_leggings"),
-				TIGER_EYE_BOOTS = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("tiger_eye_boots"),
+				TIGER_EYE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye"),
+				TIGER_EYE_PICKAXE = new PickaxeItem(TIGER_EYE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_pickaxe"),
+				TIGER_EYE_AXE = new AxeItem(TIGER_EYE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_axe"),
+				TIGER_EYE_SHOVEL = new ShovelItem(TIGER_EYE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_shovel"),
+				TIGER_EYE_SWORD = new SwordItem(TIGER_EYE_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_sword"),
+				TIGER_EYE_HELMET = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_helmet"),
+				TIGER_EYE_CHESTPLATE = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_chestplate"),
+				TIGER_EYE_LEGGINGS = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_leggings"),
+				TIGER_EYE_BOOTS = new ArmorItem(TIGER_EYE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("tiger_eye_boots"),
 
-				TITANIUM_INGOT = new Item(new Item.Properties().group(itemGroup)).setRegistryName("titanium_ingot"),
-				TITANIUM_NUGGET = new Item(new Item.Properties().group(itemGroup)).setRegistryName("titanium_nugget"),
-				URANIUM_INGOT = new Item(new Item.Properties().group(itemGroup)).setRegistryName("uranium_ingot"),
-				URANIUM_NUGGET = new Item(new Item.Properties().group(itemGroup)).setRegistryName("uranium_nugget"),
-				ULTIMATE_PICKAXE = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_pickaxe"),
-				ULTIMATE_AXE = new EnchantedAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_axe"),
-				ULTIMATE_SHOVEL = new EnchantedShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_shovel"),
-				ULTIMATE_SWORD = new EnchantedSwordItem(ULTIMATE_TIER, 3, -1.3F, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_sword"),
-				ULTIMATE_BOW = new UltimateBowItem(new Item.Properties().group(itemGroup).maxStackSize(1).defaultMaxDamage(1000)).setRegistryName("ultimate_bow"),
-				ULTIMATE_HELMET = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_helmet"),
-				ULTIMATE_CHESTPLATE = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_chestplate"),
-				ULTIMATE_LEGGINGS = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_leggings"),
-				ULTIMATE_BOOTS = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("ultimate_boots"),
+				TITANIUM_INGOT = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("titanium_ingot"),
+				TITANIUM_NUGGET = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("titanium_nugget"),
+				URANIUM_INGOT = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("uranium_ingot"),
+				URANIUM_NUGGET = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("uranium_nugget"),
+				ULTIMATE_PICKAXE = new EnchantedPickaxe(ULTIMATE_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_pickaxe"),
+				ULTIMATE_AXE = new EnchantedAxeItem(ULTIMATE_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_axe"),
+				ULTIMATE_SHOVEL = new EnchantedShovelItem(ULTIMATE_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_shovel"),
+				ULTIMATE_SWORD = new EnchantedSwordItem(ULTIMATE_TIER, 3, -1.3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_sword"),
+				ULTIMATE_BOW = new UltimateBowItem(new Item.Properties().group(DEFAULT_GROUP).maxStackSize(1).defaultMaxDamage(1000)).setRegistryName("ultimate_bow"),
+				ULTIMATE_HELMET = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_helmet"),
+				ULTIMATE_CHESTPLATE = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_chestplate"),
+				ULTIMATE_LEGGINGS = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_leggings"),
+				ULTIMATE_BOOTS = new EnchantedArmorItem(ULTIMATE_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ultimate_boots"),
 
-				LAPIS_PICKAXE = new EnchantedPickaxe(LAPIS_TIER, 1, -2.8F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_pickaxe"),
-				LAPIS_AXE = new EnchantedAxeItem(LAPIS_TIER, 6, -3F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_axe"),
-				LAPIS_SHOVEL = new EnchantedShovelItem(LAPIS_TIER, 0, -3F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_shovel"),
-				LAPIS_SWORD = new EnchantedSwordItem(LAPIS_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("lapis_sword"),
-				LAPIS_HELMET = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("lapis_helmet"),
-				LAPIS_CHESTPLATE = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("lapis_chestplate"),
-				LAPIS_LEGGINGS = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("lapis_leggings"),
-				LAPIS_BOOTS = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lapis_boots"),
+				LAPIS_PICKAXE = new EnchantedPickaxe(LAPIS_TIER, 1, -2.8F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_pickaxe"),
+				LAPIS_AXE = new EnchantedAxeItem(LAPIS_TIER, 6, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_axe"),
+				LAPIS_SHOVEL = new EnchantedShovelItem(LAPIS_TIER, 0, -3F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_shovel"),
+				LAPIS_SWORD = new EnchantedSwordItem(LAPIS_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_sword"),
+				LAPIS_HELMET = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_helmet"),
+				LAPIS_CHESTPLATE = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_chestplate"),
+				LAPIS_LEGGINGS = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_leggings"),
+				LAPIS_BOOTS = new EnchantedArmorItem(LAPIS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lapis_boots"),
 
-				LAVA_CRYSTAL = new Item(new Item.Properties().group(itemGroup)).setRegistryName("lava_crystal"),
-				LAVA_HELMET = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(itemGroup)).setRegistryName("lava_helmet"),
-				LAVA_CHESTPLATE = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(itemGroup)).setRegistryName("lava_chestplate"),
-				LAVA_LEGGINGS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(itemGroup)).setRegistryName("lava_leggings"),
-				LAVA_BOOTS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(itemGroup)).setRegistryName("lava_boots"),
+				LAVA_CRYSTAL = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_crystal"),
+				LAVA_HELMET = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_helmet"),
+				LAVA_CHESTPLATE = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_chestplate"),
+				LAVA_LEGGINGS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_leggings"),
+				LAVA_BOOTS = new EnchantedArmorItem(LAVA_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("lava_boots"),
 
 				//endregion
 
-				ZANGETSU = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2F, new Item.Properties().group(itemGroup)).setRegistryName("zangetsu"),
-				ZANGETSU_BLADE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_blade"),
-				ZANGETSU_HANDLE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_handle"),
-				ZANGETSU_GUARD = new Item(new Item.Properties().group(itemGroup)).setRegistryName("zangetsu_guard"),
+				ZANGETSU = new EnchantedSwordItem(ZANGETSU_TIER, 3, -2F, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("zangetsu"),
+				ZANGETSU_BLADE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("zangetsu_blade"),
+				ZANGETSU_HANDLE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("zangetsu_handle"),
+				ZANGETSU_GUARD = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("zangetsu_guard"),
 
 				//region Boss Drops
 
-				ENDER_DRAGON_TOOTH = new Item(new Item.Properties().group(itemGroup)).setRegistryName("ender_dragon_tooth"),
-				MOLE_NOSE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("giant_mole_nose"),
-				SERPENT_TONGUE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("sea_serpent_tongue"),
-				KATTERKILLER_JAW = new Item(new Item.Properties().group(itemGroup)).setRegistryName("katterkiller_jaw"),
-				BASILISC_SCALE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("basilisc_scale"),
-				NYTEMAIR_SCALE = new Item(new Item.Properties().group(itemGroup)).setRegistryName("nytemair_scale"),
-				TREX_TOOTH = new Item(new Item.Properties().group(itemGroup)).setRegistryName("trex_tooth"),
-				KRAKEN_TOOTH = new Item(new Item.Properties().group(itemGroup)).setRegistryName("kraken_tooth"),
-				TRIFFID_GOO = new Item(new Item.Properties().group(itemGroup)).setRegistryName("triffid_goo"),
+				ENDER_DRAGON_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("ender_dragon_tooth"),
+				MOLE_NOSE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("giant_mole_nose"),
+				SERPENT_TONGUE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("sea_serpent_tongue"),
+				KATTERKILLER_JAW = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("katterkiller_jaw"),
+				BASILISC_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("basilisc_scale"),
+				NYTEMAIR_SCALE = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("nytemair_scale"),
+				TREX_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("trex_tooth"),
+				KRAKEN_TOOTH = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("kraken_tooth"),
+				TRIFFID_GOO = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("triffid_goo"),
 
-				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(itemGroup)).setRegistryName("mantis_claw"),
-				SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(itemGroup)).setRegistryName("scorpion_tail"),
+				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("mantis_claw"),
+				SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("scorpion_tail"),
 
 
 
@@ -292,12 +365,98 @@ public class InsanityItems {
 				IRON_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.IRON_GOLEM, 13545366, 14144467, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("iron_golem_spawn_egg"),
 				SNOW_GOLEM_SPAWN_EGG = new SpawnEggItem(EntityType.SNOW_GOLEM, 15921906, 15690005, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("snow_golem_spawn_egg"),
 
-				BLANK_DISC = new Item(new Item.Properties().group(itemGroup)).setRegistryName("blank_disc")
+				BLANK_DISC = new Item(new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("blank_disc"),
 
 				//endregion
+
+				//region Blocks
+				AMETHYST_BLOCK = registerItemBlock(InsanityBlocks.AMETHYST_BLOCK),
+				AMETHYST_ORE = registerItemBlock(InsanityBlocks.AMETHYST_ORE),
+				RUBY_BLOCK = registerItemBlock(InsanityBlocks.RUBY_BLOCK),
+				RUBY_ORE = registerItemBlock(InsanityBlocks.RUBY_ORE),
+				TITANIUM_BLOCK = registerItemBlock(InsanityBlocks.TITANIUM_BLOCK),
+				TITANIUM_ORE = registerItemBlock(InsanityBlocks.TITANIUM_ORE),
+				URANIUM_BLOCK = registerItemBlock(InsanityBlocks.URANIUM_BLOCK),
+				URANIUM_ORE = registerItemBlock(InsanityBlocks.URANIUM_ORE),
+				PINK_TOURMALINE_BLOCK = registerItemBlock(InsanityBlocks.PINK_TOURMALINE_BLOCK),
+				PINK_TOURMALINE_ORE = registerItemBlock(InsanityBlocks.PINK_TOURMALINE_ORE),
+				TIGER_EYE_BLOCK = registerItemBlock(InsanityBlocks.TIGER_EYE_BLOCK),
+				TIGER_EYE_ORE = registerItemBlock(InsanityBlocks.TIGER_EYE_ORE),
+
+				//region Egg Ores
+				BAT_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.BAT_EGG_ORE),
+				BLAZE_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.BLAZE_EGG_ORE),
+				CAVE_SPIDER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.CAVE_SPIDER_EGG_ORE),
+				CHICKEN_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.CHICKEN_EGG_ORE),
+				COW_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.COW_EGG_ORE),
+				CREEPER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.CREEPER_EGG_ORE),
+				DOLPHIN_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.DOLPHIN_EGG_ORE),
+				DONKEY_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.DONKEY_EGG_ORE),
+				DROWNED_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.DROWNED_EGG_ORE),
+				ELDER_GUARDIAN_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.ELDER_GUARDIAN_EGG_ORE),
+				ENDER_DRAGON_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.ENDER_DRAGON_EGG_ORE),
+				ENDERMAN_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.ENDERMAN_EGG_ORE),
+				EVOKER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.EVOKER_EGG_ORE),
+				GUARDIAN_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.GUARDIAN_EGG_ORE),
+				HORSE_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.HORSE_EGG_ORE),
+				HUSK_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.HUSK_EGG_ORE),
+				IRON_GOLEM_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.IRON_GOLEM_EGG_ORE),
+				LLAMA_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.LLAMA_EGG_ORE),
+				MAGMA_CUBE_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.MAGMA_CUBE_EGG_ORE),
+				MOOSHROOM_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.MOOSHROOM_EGG_ORE),
+				OCELOT_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.OCELOT_EGG_ORE),
+				PANDA_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.PANDA_EGG_ORE),
+				PARROT_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.PARROT_EGG_ORE),
+				PHANTOM_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.PHANTOM_EGG_ORE),
+				PIG_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.PIG_EGG_ORE),
+				POLAR_BEAR_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.POLAR_BEAR_EGG_ORE),
+				RABBIT_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.RABBIT_EGG_ORE),
+				SHEEP_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SHEEP_EGG_ORE),
+				SKELETON_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SKELETON_EGG_ORE),
+				SLIME_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SLIME_EGG_ORE),
+				SNOW_GOLEM_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SNOW_GOLEM_EGG_ORE),
+				SPIDER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SPIDER_EGG_ORE),
+				SQUID_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SQUID_EGG_ORE),
+				STRAY_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.STRAY_EGG_ORE),
+				TURTLE_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.TURTLE_EGG_ORE),
+				VILLAGER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.VILLAGER_EGG_ORE),
+				VINDICATOR_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.VINDICATOR_EGG_ORE),
+				WITCH_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.WITCH_EGG_ORE),
+				WITHER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.WITHER_EGG_ORE),
+				WITHER_SKELETON_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.WITHER_SKELETON_EGG_ORE),
+				WOLF_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.WOLF_EGG_ORE),
+				ZOMBIE_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.ZOMBIE_EGG_ORE),
+				ZOMBIE_PIGMAN_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.ZOMBIE_PIGMAN_EGG_ORE),
+				CAT_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.CAT_EGG_ORE),
+				ENDERMITE_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.ENDERMITE_EGG_ORE),
+				FOX_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.FOX_EGG_ORE),
+				GHAST_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.GHAST_EGG_ORE),
+				PILLAGER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.PILLAGER_EGG_ORE),
+				RAVAGER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.RAVAGER_EGG_ORE),
+				SHULKER_EGG_ORE = registerItemBlockMobOre(InsanityBlocks.SHULKER_EGG_ORE),
+				//endregion
+
+				ENDER_EYE_BLOCK = registerItemBlock(InsanityBlocks.ENDER_EYE_BLOCK),
+				ENDER_PEARL_BLOCK = registerItemBlock(InsanityBlocks.ENDER_PEARL_BLOCK)
+
+				//endregion
+
 
 				);
 
 	}
+
+	private static Item registerItemBlock(Block block, ItemGroup itemGroup) {
+		return new BlockItem(block, new Item.Properties().group(itemGroup)).setRegistryName(block.getRegistryName());
+	}
+
+	private static Item registerItemBlock(Block block) {
+		return new BlockItem(block, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName(block.getRegistryName());
+	}
+
+	private static Item registerItemBlockMobOre(Block block) {
+		return new BlockItemMobOre(block);
+	}
+
 
 }

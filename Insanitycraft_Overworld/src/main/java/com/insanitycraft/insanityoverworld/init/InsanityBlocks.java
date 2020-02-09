@@ -1,9 +1,6 @@
 package com.insanitycraft.insanityoverworld.init;
 
-import com.insanitycraft.insanityoverworld.InsanityOverworld;
-import com.insanitycraft.insanityoverworld.block.BlockDebug;
 import com.insanitycraft.insanityoverworld.block.BlockMobOre;
-import com.insanitycraft.insanityoverworld.block.BlockItemMobOre;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.GlassBlock;
@@ -12,121 +9,84 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.insanitycraft.insanityoverworld.InsanityOverworld.itemGroup;
 import static net.minecraftforge.common.ToolType.*;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(Reference.MODID)
 public class InsanityBlocks {
 
-	//TODO rewrite registry
-	//region Dev
-	public static Block debugBlock;
-	public static BlockItem debugItem;
-
-	//endregion
-
 	//region Materials
-	public static Block amethystBlock;
-	public static Block amethystOre;
-
-	public static Block rubyBlock;
-	public static Block rubyOre;
-
-	public static Block titaniumBlock;
-	public static Block titaniumOre;
-
-	public static Block uraniumBlock;
-	public static Block uraniumOre;
-
-	public static Block pinkTourmalineBlock;
-	public static Block pinkTourmalineOre;
-
-	public static Block tigerEyeBlock;
-	public static Block tigerEyeOre;
-
-	public static BlockItem titaniumBlockItem;
-	public static BlockItem titaniumOreItem;
-
-	public static BlockItem uraniumBlockItem;
-	public static BlockItem uraniumOreItem;
-
-	public static BlockItem amethystBlockItem;
-	public static BlockItem amethystOreItem;
-
-	public static BlockItem rubyBlockItem;
-	public static BlockItem rubyOreItem;
-
-	public static BlockItem pinkTourmalineBlockItem;
-	public static BlockItem pinkTourmalineOreItem;
-
-	public static BlockItem tigerEyeBlockItem;
-	public static BlockItem tigerEyeOreItem;
+	public static Block AMETHYST_BLOCK;
+	public static Block AMETHYST_ORE;
+	public static Block RUBY_BLOCK;
+	public static Block RUBY_ORE;
+	public static Block TITANIUM_BLOCK;
+	public static Block TITANIUM_ORE;
+	public static Block URANIUM_BLOCK;
+	public static Block URANIUM_ORE;
+	public static Block PINK_TOURMALINE_BLOCK;
+	public static Block PINK_TOURMALINE_ORE;
+	public static Block TIGER_EYE_BLOCK;
+	public static Block TIGER_EYE_ORE;
 	//endregion
 
 	//region vanilla eggs
-	public static Block batEggOre;
-	public static Block blazeEggOre;
-	public static Block cavespiderEggOre;
-	public static Block chickenEggOre;
-	public static Block cowEggOre;
-	public static Block creeperEggOre;
-	public static Block dolphinEggOre;
-	public static Block donkeyEggOre;
-	public static Block drownedEggOre;
-	public static Block elderGuardianEggOre;
-	public static Block enderdragonEggOre;
-	public static Block endermanEggOre;
-	public static Block evokerEggOre;
-	public static Block guardianEggOre;
-	public static Block horseEggOre;
-	public static Block huskEggOre;
-	public static Block ironGolemEggOre;
-	public static Block llamaEggOre;
-	public static Block magmacubeEggOre;
-	public static Block mooshroomEggOre;
-	public static Block ocelotEggOre;
-	public static Block pandabearEggOre;
-	public static Block parrotEggOre;
-	public static Block phantomEggOre;
-	public static Block pigEggOre;
-	public static Block polarbearEggOre;
-	public static Block rabbitEggOre;
-	public static Block sheepEggOre;
-	public static Block skeletonEggOre;
-	public static Block slimeEggOre;
-	public static Block snowGolemEggOre;
-	public static Block spiderEggOre;
-	public static Block squidEggOre;
-	public static Block strayEggOre;
-	public static Block turtleEggOre;
-	public static Block villagerEggOre;
-	public static Block vindicatorEggOre;
-	public static Block witchEggOre;
-	public static Block witherEggOre;
-	public static Block witherSkeletonEggOre;
-	public static Block wolfEggOre;
-	public static Block zombieEggOre;
-	public static Block zombiePigmanEggOre;
-
-	public static Block catEggOre;
-	public static Block endermiteEggOre;
-	public static Block foxEggOre;
-	public static Block ghastEggOre;
-	public static Block pillagerEggOre;
-	public static Block ravagerEggOre;
-	public static Block shulkerEggOre;
+	public static Block BAT_EGG_ORE;
+	public static Block BLAZE_EGG_ORE;
+	public static Block CAVE_SPIDER_EGG_ORE;
+	public static Block CHICKEN_EGG_ORE;
+	public static Block COW_EGG_ORE;
+	public static Block CREEPER_EGG_ORE;
+	public static Block DOLPHIN_EGG_ORE;
+	public static Block DONKEY_EGG_ORE;
+	public static Block DROWNED_EGG_ORE;
+	public static Block ELDER_GUARDIAN_EGG_ORE;
+	public static Block ENDER_DRAGON_EGG_ORE;
+	public static Block ENDERMAN_EGG_ORE;
+	public static Block EVOKER_EGG_ORE;
+	public static Block GUARDIAN_EGG_ORE;
+	public static Block HORSE_EGG_ORE;
+	public static Block HUSK_EGG_ORE;
+	public static Block IRON_GOLEM_EGG_ORE;
+	public static Block LLAMA_EGG_ORE;
+	public static Block MAGMA_CUBE_EGG_ORE;
+	public static Block MOOSHROOM_EGG_ORE;
+	public static Block OCELOT_EGG_ORE;
+	public static Block PANDA_EGG_ORE;
+	public static Block PARROT_EGG_ORE;
+	public static Block PHANTOM_EGG_ORE;
+	public static Block PIG_EGG_ORE;
+	public static Block POLAR_BEAR_EGG_ORE;
+	public static Block RABBIT_EGG_ORE;
+	public static Block SHEEP_EGG_ORE;
+	public static Block SKELETON_EGG_ORE;
+	public static Block SLIME_EGG_ORE;
+	public static Block SNOW_GOLEM_EGG_ORE;
+	public static Block SPIDER_EGG_ORE;
+	public static Block SQUID_EGG_ORE;
+	public static Block STRAY_EGG_ORE;
+	public static Block TURTLE_EGG_ORE;
+	public static Block VILLAGER_EGG_ORE;
+	public static Block VINDICATOR_EGG_ORE;
+	public static Block WITCH_EGG_ORE;
+	public static Block WITHER_EGG_ORE;
+	public static Block WITHER_SKELETON_EGG_ORE;
+	public static Block WOLF_EGG_ORE;
+	public static Block ZOMBIE_EGG_ORE;
+	public static Block ZOMBIE_PIGMAN_EGG_ORE;
+	public static Block CAT_EGG_ORE;
+	public static Block ENDERMITE_EGG_ORE;
+	public static Block FOX_EGG_ORE;
+	public static Block GHAST_EGG_ORE;
+	public static Block PILLAGER_EGG_ORE;
+	public static Block RAVAGER_EGG_ORE;
+	public static Block SHULKER_EGG_ORE;
 
 
 	//maybe we will add them later
@@ -142,82 +102,11 @@ public class InsanityBlocks {
 	//public static Block wanderingTraderEggOre;
 	//public static Block zombieHorseEggOre;
 	//public static Block villagerZombieEggOre;
-
-
-	public static BlockItem batEggItem;
-	public static BlockItem blazeEggItem;
-	public static BlockItem cavespiderEggItem;
-	public static BlockItem chickenEggItem;
-	public static BlockItem cowEggItem;
-	public static BlockItem creeperEggItem;
-	public static BlockItem dolphinEggItem;
-	public static BlockItem donkeyEggItem;
-	public static BlockItem drownedEggItem;
-	public static BlockItem elderGuardianEggItem;
-	public static BlockItem enderdragonEggItem;
-	public static BlockItem endermanEggItem;
-	public static BlockItem evokerEggItem;
-	public static BlockItem guardianEggItem;
-	public static BlockItem horseEggItem;
-	public static BlockItem huskEggItem;
-	public static BlockItem ironGolemEggItem;
-	public static BlockItem llamaEggItem;
-	public static BlockItem magmacubeEggItem;
-	public static BlockItem mooshroomEggItem;
-	public static BlockItem ocelotEggItem;
-	public static BlockItem pandabearEggItem;
-	public static BlockItem parrotEggItem;
-	public static BlockItem phantomEggItem;
-	public static BlockItem pigEggItem;
-	public static BlockItem polarbearEggItem;
-	public static BlockItem rabbitEggItem;
-	public static BlockItem sheepEggItem;
-	public static BlockItem skeletonEggItem;
-	public static BlockItem slimeEggItem;
-	public static BlockItem snowGolemEggItem;
-	public static BlockItem spiderEggItem;
-	public static BlockItem squidEggItem;
-	public static BlockItem strayEggItem;
-	public static BlockItem turtleEggItem;
-	public static BlockItem villagerEggItem;
-	public static BlockItem vindicatorEggItem;
-	public static BlockItem witchEggItem;
-	public static BlockItem witherEggItem;
-	public static BlockItem witherSkeletonEggItem;
-	public static BlockItem wolfEggItem;
-	public static BlockItem zombieEggItem;
-	public static BlockItem zombiePigmanEggItem;
-
-	public static BlockItem catEggItem;
-	public static BlockItem endermiteEggItem;
-	public static BlockItem foxEggItem;
-	public static BlockItem ghastEggItem;
-	public static BlockItem pillagerEggItem;
-	public static BlockItem ravagerEggItem;
-	public static BlockItem shulkerEggItem;
-
-	//maybe we will add them later
-	//public static BlockItem codEggItem;
-	//public static BlockItem muleEggItem;
-	//public static BlockItem pufferfishEggItem;
-	//public static BlockItem salmonEggItem;
-	//public static BlockItem silverfishEggItem;
-	//public static BlockItem skeletonHorseEggItem;
-	//public static BlockItem traderLlamaEggItem;
-	//public static BlockItem tropicalFishEggItem;
-	//public static BlockItem vexEggItem;
-	//public static BlockItem wanderingTraderEggItem;
-	//public static BlockItem zombieHorseEggItem;
-	//public static BlockItem villagerZombieEggItem;
 	//endregion
 
 	//region misc
-	public static Block enderEyeBlock;
-	public static Block enderPearlBlock;
-
-	public static BlockItem enderEyeBlockItem;
-	public static BlockItem enderPearlBlockItem;
-
+	public static Block ENDER_EYE_BLOCK;
+	public static Block ENDER_PEARL_BLOCK;
 
 	//endregion
 
@@ -231,89 +120,83 @@ public class InsanityBlocks {
 
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-		if(InsanityOverworld.debug) {
-			event.getRegistry().registerAll(
-					debugBlock = new BlockDebug(Block.Properties.create(Material.ANVIL)).setRegistryName("debug_block")
-			);
-		}
-
 		event.getRegistry().registerAll(
 				//region Materials
-				amethystBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_block"),
-				amethystOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_ore"),
-				rubyBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
-				rubyOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
+				AMETHYST_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_block"),
+				AMETHYST_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("amethyst_ore"),
+				RUBY_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_block"),
+				RUBY_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("ruby_ore"),
 
-				titaniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_block"),
-				titaniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_ore"),
-				uraniumBlock = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_block"),
-				uraniumOre = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_ore"),
+				TITANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_block"),
+				TITANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("titanium_ore"),
+				URANIUM_BLOCK = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_block"),
+				URANIUM_ORE = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(8.0F, 4.0F).harvestTool(PICKAXE)).setRegistryName("uranium_ore"),
 
-				pinkTourmalineBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_block"),
-				pinkTourmalineOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_ore"),
+				PINK_TOURMALINE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_block"),
+				PINK_TOURMALINE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("pink_tourmaline_ore"),
 
-				tigerEyeBlock = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_block"),
-				tigerEyeOre = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_ore"),
+				TIGER_EYE_BLOCK = new GlassBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(4.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_block"),
+				TIGER_EYE_ORE = new GlassBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(5.0F, 4.0F).harvestTool(PICKAXE).notSolid()).setRegistryName("tiger_eye_ore"),
 				//endregion
 
 
 				//region vanilla eggs
-				batEggOre = new BlockMobOre(getLocation("bat_ore")),
-				blazeEggOre = new BlockMobOre(getLocation("blaze_ore")),
-				cavespiderEggOre = new BlockMobOre(getLocation("cavespider_ore")),
-				chickenEggOre = new BlockMobOre(getLocation("chicken_ore")),
-				cowEggOre = new BlockMobOre(getLocation("cow_ore")),
-				creeperEggOre = new BlockMobOre(getLocation("creeper_ore")),
-				dolphinEggOre = new BlockMobOre(getLocation("dolphin_ore")),
-				donkeyEggOre = new BlockMobOre(getLocation("donkey_ore")),
-				drownedEggOre = new BlockMobOre(getLocation("drowned_ore")),
-				elderGuardianEggOre = new BlockMobOre(getLocation("elder_guardian_ore")),
-				enderdragonEggOre = new BlockMobOre(getLocation("enderdragon_ore")),
-				endermanEggOre = new BlockMobOre(getLocation("enderman_ore")),
-				evokerEggOre = new BlockMobOre(getLocation("evoker_ore")),
-				guardianEggOre = new BlockMobOre(getLocation("guardian_ore")),
-				horseEggOre = new BlockMobOre(getLocation("horse_ore")),
-				huskEggOre = new BlockMobOre(getLocation("husk_ore")),
-				ironGolemEggOre = new BlockMobOre(getLocation("iron_golem_ore")),
-				llamaEggOre = new BlockMobOre(getLocation("llama_ore")),
-				magmacubeEggOre = new BlockMobOre(getLocation("magmacube_ore")),
-				mooshroomEggOre = new BlockMobOre(getLocation("mooshroom_ore")),
-				ocelotEggOre = new BlockMobOre(getLocation("ocelot_ore")),
-				pandabearEggOre = new BlockMobOre(getLocation("pandabear_ore")),
-				parrotEggOre = new BlockMobOre(getLocation("parrot_ore")),
-				phantomEggOre = new BlockMobOre(getLocation("phantom_ore")),
-				pigEggOre = new BlockMobOre(getLocation("pig_ore")),
-				polarbearEggOre = new BlockMobOre(getLocation("polarbear_ore")),
-				rabbitEggOre = new BlockMobOre(getLocation("rabbit_ore")),
-				sheepEggOre = new BlockMobOre(getLocation("sheep_ore")),
-				skeletonEggOre = new BlockMobOre(getLocation("skeleton_ore")),
-				slimeEggOre = new BlockMobOre(getLocation("slime_ore")),
-				snowGolemEggOre = new BlockMobOre(getLocation("snow_golem_ore")),
-				spiderEggOre = new BlockMobOre(getLocation("spider_ore")),
-				squidEggOre = new BlockMobOre(getLocation("squid_ore")),
-				strayEggOre = new BlockMobOre(getLocation("stray_ore")),
-				turtleEggOre = new BlockMobOre(getLocation("turtle_ore")),
-				villagerEggOre = new BlockMobOre(getLocation("villager_ore")),
-				vindicatorEggOre = new BlockMobOre(getLocation("vindicator_ore")),
-				witchEggOre = new BlockMobOre(getLocation("witch_ore")),
-				witherEggOre = new BlockMobOre(getLocation("wither_ore")),
-				witherSkeletonEggOre = new BlockMobOre(getLocation("wither_skeleton_ore")),
-				wolfEggOre = new BlockMobOre(getLocation("wolf_ore")),
-				zombieEggOre = new BlockMobOre(getLocation("zombie_ore")),
-				zombiePigmanEggOre = new BlockMobOre(getLocation("zombie_pigman_ore")),
+				BAT_EGG_ORE = new BlockMobOre(getLocation("bat_ore")),
+				BLAZE_EGG_ORE = new BlockMobOre(getLocation("blaze_ore")),
+				CAVE_SPIDER_EGG_ORE = new BlockMobOre(getLocation("cavespider_ore")),
+				CHICKEN_EGG_ORE = new BlockMobOre(getLocation("chicken_ore")),
+				COW_EGG_ORE = new BlockMobOre(getLocation("cow_ore")),
+				CREEPER_EGG_ORE = new BlockMobOre(getLocation("creeper_ore")),
+				DOLPHIN_EGG_ORE = new BlockMobOre(getLocation("dolphin_ore")),
+				DONKEY_EGG_ORE = new BlockMobOre(getLocation("donkey_ore")),
+				DROWNED_EGG_ORE = new BlockMobOre(getLocation("drowned_ore")),
+				ELDER_GUARDIAN_EGG_ORE = new BlockMobOre(getLocation("elder_guardian_ore")),
+				ENDER_DRAGON_EGG_ORE = new BlockMobOre(getLocation("enderdragon_ore")),
+				ENDERMAN_EGG_ORE = new BlockMobOre(getLocation("enderman_ore")),
+				EVOKER_EGG_ORE = new BlockMobOre(getLocation("evoker_ore")),
+				GUARDIAN_EGG_ORE = new BlockMobOre(getLocation("guardian_ore")),
+				HORSE_EGG_ORE = new BlockMobOre(getLocation("horse_ore")),
+				HUSK_EGG_ORE = new BlockMobOre(getLocation("husk_ore")),
+				IRON_GOLEM_EGG_ORE = new BlockMobOre(getLocation("iron_golem_ore")),
+				LLAMA_EGG_ORE = new BlockMobOre(getLocation("llama_ore")),
+				MAGMA_CUBE_EGG_ORE = new BlockMobOre(getLocation("magmacube_ore")),
+				MOOSHROOM_EGG_ORE = new BlockMobOre(getLocation("mooshroom_ore")),
+				OCELOT_EGG_ORE = new BlockMobOre(getLocation("ocelot_ore")),
+				PANDA_EGG_ORE = new BlockMobOre(getLocation("panda_ore")),
+				PARROT_EGG_ORE = new BlockMobOre(getLocation("parrot_ore")),
+				PHANTOM_EGG_ORE = new BlockMobOre(getLocation("phantom_ore")),
+				PIG_EGG_ORE = new BlockMobOre(getLocation("pig_ore")),
+				POLAR_BEAR_EGG_ORE = new BlockMobOre(getLocation("polarbear_ore")),
+				RABBIT_EGG_ORE = new BlockMobOre(getLocation("rabbit_ore")),
+				SHEEP_EGG_ORE = new BlockMobOre(getLocation("sheep_ore")),
+				SKELETON_EGG_ORE = new BlockMobOre(getLocation("skeleton_ore")),
+				SLIME_EGG_ORE = new BlockMobOre(getLocation("slime_ore")),
+				SNOW_GOLEM_EGG_ORE = new BlockMobOre(getLocation("snow_golem_ore")),
+				SPIDER_EGG_ORE = new BlockMobOre(getLocation("spider_ore")),
+				SQUID_EGG_ORE = new BlockMobOre(getLocation("squid_ore")),
+				STRAY_EGG_ORE = new BlockMobOre(getLocation("stray_ore")),
+				TURTLE_EGG_ORE = new BlockMobOre(getLocation("turtle_ore")),
+				VILLAGER_EGG_ORE = new BlockMobOre(getLocation("villager_ore")),
+				VINDICATOR_EGG_ORE = new BlockMobOre(getLocation("vindicator_ore")),
+				WITCH_EGG_ORE = new BlockMobOre(getLocation("witch_ore")),
+				WITHER_EGG_ORE = new BlockMobOre(getLocation("wither_ore")),
+				WITHER_SKELETON_EGG_ORE = new BlockMobOre(getLocation("wither_skeleton_ore")),
+				WOLF_EGG_ORE = new BlockMobOre(getLocation("wolf_ore")),
+				ZOMBIE_EGG_ORE = new BlockMobOre(getLocation("zombie_ore")),
+				ZOMBIE_PIGMAN_EGG_ORE = new BlockMobOre(getLocation("zombie_pigman_ore")),
 
-				catEggOre = new BlockMobOre(getLocation("cat_ore")),
-				endermiteEggOre = new BlockMobOre(getLocation("endermite_ore")),
-				foxEggOre = new BlockMobOre(getLocation("fox_ore")),
-				ghastEggOre = new BlockMobOre(getLocation("ghast_ore")),
-				pillagerEggOre = new BlockMobOre(getLocation("pillager_ore")),
-				ravagerEggOre = new BlockMobOre(getLocation("ravager_ore")),
-				shulkerEggOre = new BlockMobOre(getLocation("shulker_ore")),
+				CAT_EGG_ORE = new BlockMobOre(getLocation("cat_ore")),
+				ENDERMITE_EGG_ORE = new BlockMobOre(getLocation("endermite_ore")),
+				FOX_EGG_ORE = new BlockMobOre(getLocation("fox_ore")),
+				GHAST_EGG_ORE = new BlockMobOre(getLocation("ghast_ore")),
+				PILLAGER_EGG_ORE = new BlockMobOre(getLocation("pillager_ore")),
+				RAVAGER_EGG_ORE = new BlockMobOre(getLocation("ravager_ore")),
+				SHULKER_EGG_ORE = new BlockMobOre(getLocation("shulker_ore")),
 				//endregion
 
 				//region misc
-				enderEyeBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block"),
-				enderPearlBlock = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block"),
+				ENDER_EYE_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_eye_block"),
+				ENDER_PEARL_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block"),
 				//endregion
 
 
@@ -325,98 +208,11 @@ public class InsanityBlocks {
 
 	}
 
-	@SubscribeEvent
-	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
-		if(InsanityOverworld.debug) {
-			event.getRegistry().registerAll(
-					debugItem = (BlockItem)new BlockItem(debugBlock, new Item.Properties()).setRegistryName(debugBlock.getRegistryName()));
-		}
-
-		event.getRegistry().registerAll(
-				//region Material
-				amethystBlockItem = (BlockItem)new BlockItem(amethystBlock, new Item.Properties().group(itemGroup)).setRegistryName(amethystBlock.getRegistryName()),
-				amethystOreItem = (BlockItem)new BlockItem(amethystOre, new Item.Properties().group(itemGroup)).setRegistryName(amethystOre.getRegistryName()),
-				rubyBlockItem = (BlockItem)new BlockItem(rubyBlock, new Item.Properties().group(itemGroup)).setRegistryName(rubyBlock.getRegistryName()),
-				rubyOreItem = (BlockItem)new BlockItem(rubyOre, new Item.Properties().group(itemGroup)).setRegistryName(rubyOre.getRegistryName()),
-
-				titaniumBlockItem = (BlockItem)new BlockItem(titaniumBlock, new Item.Properties().group(itemGroup)).setRegistryName(titaniumBlock.getRegistryName()),
-				titaniumOreItem = (BlockItem)new BlockItem(titaniumOre, new Item.Properties().group(itemGroup)).setRegistryName(titaniumOre.getRegistryName()),
-				uraniumBlockItem = (BlockItem)new BlockItem(uraniumBlock, new Item.Properties().group(itemGroup)).setRegistryName(uraniumBlock.getRegistryName()),
-				uraniumOreItem = (BlockItem)new BlockItem(uraniumOre, new Item.Properties().group(itemGroup)).setRegistryName(uraniumOre.getRegistryName()),
-
-				pinkTourmalineBlockItem = (BlockItem)new BlockItem(pinkTourmalineBlock, new Item.Properties().group(itemGroup)).setRegistryName(pinkTourmalineBlock.getRegistryName()),
-				pinkTourmalineOreItem = (BlockItem)new BlockItem(pinkTourmalineOre, new Item.Properties().group(itemGroup)).setRegistryName(pinkTourmalineOre.getRegistryName()),
-				tigerEyeBlockItem = (BlockItem)new BlockItem(tigerEyeBlock, new Item.Properties().group(itemGroup)).setRegistryName(tigerEyeBlock.getRegistryName()),
-				tigerEyeOreItem = (BlockItem)new BlockItem(tigerEyeOre, new Item.Properties().group(itemGroup)).setRegistryName(tigerEyeOre.getRegistryName()),
-
-				//endregion
-
-				//region vanilla eggs
-				batEggItem = new BlockItemMobOre(batEggOre),
-				blazeEggItem = new BlockItemMobOre(blazeEggOre),
-				cavespiderEggItem = new BlockItemMobOre(cavespiderEggOre),
-				chickenEggItem = new BlockItemMobOre(chickenEggOre),
-				cowEggItem = new BlockItemMobOre(cowEggOre),
-				creeperEggItem = new BlockItemMobOre(creeperEggOre),
-				dolphinEggItem = new BlockItemMobOre(dolphinEggOre),
-				donkeyEggItem = new BlockItemMobOre(donkeyEggOre),
-				drownedEggItem = new BlockItemMobOre(drownedEggOre),
-				elderGuardianEggItem = new BlockItemMobOre(elderGuardianEggOre),
-				enderdragonEggItem = new BlockItemMobOre(enderdragonEggOre),
-				endermanEggItem = new BlockItemMobOre(endermanEggOre),
-				evokerEggItem = new BlockItemMobOre(evokerEggOre),
-				guardianEggItem = new BlockItemMobOre(guardianEggOre),
-				horseEggItem = new BlockItemMobOre(horseEggOre),
-				huskEggItem = new BlockItemMobOre(huskEggOre),
-				ironGolemEggItem = new BlockItemMobOre(ironGolemEggOre),
-				llamaEggItem = new BlockItemMobOre(llamaEggOre),
-				magmacubeEggItem = new BlockItemMobOre(magmacubeEggOre),
-				mooshroomEggItem = new BlockItemMobOre(mooshroomEggOre),
-				ocelotEggItem = new BlockItemMobOre(ocelotEggOre),
-				pandabearEggItem = new BlockItemMobOre(pandabearEggOre),
-				parrotEggItem = new BlockItemMobOre(parrotEggOre),
-				phantomEggItem = new BlockItemMobOre(phantomEggOre),
-				pigEggItem = new BlockItemMobOre(pigEggOre),
-				polarbearEggItem = new BlockItemMobOre(polarbearEggOre),
-				rabbitEggItem = new BlockItemMobOre(rabbitEggOre),
-				sheepEggItem = new BlockItemMobOre(sheepEggOre),
-				skeletonEggItem = new BlockItemMobOre(skeletonEggOre),
-				slimeEggItem = new BlockItemMobOre(slimeEggOre),
-				snowGolemEggItem = new BlockItemMobOre(snowGolemEggOre),
-				spiderEggItem = new BlockItemMobOre(spiderEggOre),
-				squidEggItem = new BlockItemMobOre(squidEggOre),
-				strayEggItem = new BlockItemMobOre(strayEggOre),
-				turtleEggItem = new BlockItemMobOre(turtleEggOre),
-				villagerEggItem = new BlockItemMobOre(villagerEggOre),
-				vindicatorEggItem = new BlockItemMobOre(vindicatorEggOre),
-				witchEggItem = new BlockItemMobOre(witchEggOre),
-				witherEggItem = new BlockItemMobOre(witherEggOre),
-				witherSkeletonEggItem = new BlockItemMobOre(witherSkeletonEggOre),
-				wolfEggItem = new BlockItemMobOre(wolfEggOre),
-				zombieEggItem = new BlockItemMobOre(zombieEggOre),
-				zombiePigmanEggItem = new BlockItemMobOre(zombiePigmanEggOre),
-
-				catEggItem = new BlockItemMobOre(catEggOre),
-				endermiteEggItem = new BlockItemMobOre(endermiteEggOre),
-				foxEggItem = new BlockItemMobOre(foxEggOre),
-				ghastEggItem = new BlockItemMobOre(ghastEggOre),
-				pillagerEggItem = new BlockItemMobOre(pillagerEggOre),
-				ravagerEggItem = new BlockItemMobOre(ravagerEggOre),
-				shulkerEggItem = new BlockItemMobOre(shulkerEggOre),
-				//endregion
-
-				//region misc
-				enderEyeBlockItem = (BlockItem)new BlockItem(enderEyeBlock, new Item.Properties().group(itemGroup)).setRegistryName(enderEyeBlock.getRegistryName()),
-				enderPearlBlockItem = (BlockItem)new BlockItem(enderPearlBlock, new Item.Properties().group(itemGroup)).setRegistryName(enderPearlBlock.getRegistryName())
-				//endregion
-		);
-	}
-
 	public static void setRenderLayers() {
-		RenderTypeLookup.setRenderLayer(pinkTourmalineBlock, RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(pinkTourmalineOre, RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(tigerEyeBlock, RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(tigerEyeOre, RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_BLOCK, RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_ORE, RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(TIGER_EYE_BLOCK, RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(TIGER_EYE_ORE, RenderType.translucent());
 	}
 
 	private static ResourceLocation getLocation(String name) {

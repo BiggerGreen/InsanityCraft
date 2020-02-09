@@ -17,7 +17,7 @@ import static net.minecraft.util.Direction.*;
 public class MinersDreamItem extends Item {
 
 	public MinersDreamItem() {
-		super(new Item.Properties().group(InsanityOverworld.itemGroup));
+		super(new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP));
 	}
 
 	@Override

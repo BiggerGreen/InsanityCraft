@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 public class InstaNetherPortalItem extends Item {
 
 	public InstaNetherPortalItem() {
-		super(new Item.Properties().group(InsanityOverworld.itemGroup));
+		super(new Item.Properties().group(InsanityOverworld.DEFAULT_GROUP));
 	}
 
 	@Override

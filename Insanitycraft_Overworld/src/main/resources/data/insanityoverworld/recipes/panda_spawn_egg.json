@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "insanityoverworld:pandabear_ore"
+      "item": "insanityoverworld:panda_ore"
     },
     {
       "item": "minecraft:water_bucket"

@@ -1,5 +1,5 @@
 {
-   "parent": "insanityoverworld:block/pandabear_ore",
+   "parent": "insanityoverworld:block/panda_ore",
    "display": {
       "thirdperson": {
          "rotation": [10,-45,170],

@@ -1,7 +1,6 @@
 package com.insanitycraft.insanityoverworld.items;
 
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import com.insanitycraft.insanityoverworld.util.Reference;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -17,7 +16,7 @@ import net.minecraft.world.server.ServerWorld;
 public class InstaGardenItem extends Item {
 
 	public InstaGardenItem() {
-		super(new Properties().group(InsanityOverworld.itemGroup));
+		super(new Properties().group(InsanityOverworld.DEFAULT_GROUP));
 	}
 
 	@Override
