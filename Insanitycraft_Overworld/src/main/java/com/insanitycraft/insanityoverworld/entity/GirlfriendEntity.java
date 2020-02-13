@@ -15,13 +15,12 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import net.minecraftforge.common.Tags;
 
 import javax.annotation.Nullable;
 
 public class GirlfriendEntity extends TameableEntity {
 	private static final DataParameter<Integer> VARIANT = EntityDataManager.createKey(GirlfriendEntity.class, DataSerializers.VARINT);
-	private boolean calm;
+	private static final DataParameter<Boolean> CALM = EntityDataManager.createKey(GirlfriendEntity.class, DataSerializers.BOOLEAN);
 	private int baseHealth = 80;
 
 	public GirlfriendEntity(EntityType<? extends TameableEntity> type, World world) {
@@ -31,7 +30,7 @@ public class GirlfriendEntity extends TameableEntity {
 	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
-		getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(CalendarUtils.isToday()/*isValentinesDay()*/ && !calm ? 800 : baseHealth);
+		getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(CalendarUtils.isToday()/*isValentinesDay()*/ && !isCalm() ? 800 : baseHealth);
 
 	}
 
@@ -43,33 +42,26 @@ public class GirlfriendEntity extends TameableEntity {
 	@Override
 	public boolean processInteract(PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		if(stack.getItem() == Items.DIAMOND) {
-			calm = true;
-			if(!player.abilities.isCreativeMode) {
-				stack.shrink(1);
+		if(!isCalm() && CalendarUtils.isToday()) {
+			if(stack.getItem() == Items.DIAMOND) {
+				setCalm(true);
+
+				if(!player.abilities.isCreativeMode) {
+					stack.shrink(1);
+				}
+				return true;
 			}
-			return true;
 		}
 		return super.processInteract(player, hand);
 	}
 
 	@Override
 	public boolean attackEntityFrom(DamageSource damageSource, float p_70097_2_) {
-		if(!damageSource.getDamageType().equals("cactus")) {
-			if(CalendarUtils.isToday()/*isValentinesDay()*/ && !calm) {
-			}
-		}
-		return super.attackEntityFrom(damageSource, p_70097_2_);
-	}
 
- 	boolean hasBeenCalmed = false;
-	@Override
-	public void livingTick() {
-		super.livingTick();
-		if(calm && !hasBeenCalmed) {
-			getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(baseHealth);
-			hasBeenCalmed = true;
-		}
+
+
+
+		return super.attackEntityFrom(damageSource, p_70097_2_);
 	}
 
 	@Nullable
@@ -85,31 +77,40 @@ public class GirlfriendEntity extends TameableEntity {
 		return null;
 	}
 
-	public int getVariant() {
-		return dataManager.get(VARIANT);
-	}
-
-	public void setVariant(int variant) {
-		dataManager.set(VARIANT, variant);
-	}
-
 	@Override
 	protected void registerData() {
 		super.registerData();
 		dataManager.register(VARIANT, 0);
+		dataManager.register(CALM, false);
 	}
 
 	@Override
 	public void writeAdditional(CompoundNBT compound) {
 		super.writeAdditional(compound);
 		compound.putInt("Variant", getVariant());
-		compound.putBoolean("Calm", calm);
+		compound.putBoolean("Calm", isCalm());
 	}
 
 	@Override
 	public void readAdditional(CompoundNBT compound) {
 		super.readAdditional(compound);
 		setVariant(compound.getInt("Variant"));
-		calm = compound.getBoolean("Calm");
+		setCalm(compound.getBoolean("Calm"));
+	}
+
+	public boolean isCalm() {
+		return dataManager.get(CALM);
+	}
+
+	public void setCalm(boolean calm) {
+		dataManager.set(CALM, calm);
+	}
+
+	public int getVariant() {
+		return dataManager.get(VARIANT);
+	}
+
+	public void setVariant(int variant) {
+		dataManager.set(VARIANT, variant);
 	}
 }

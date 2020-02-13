@@ -14,10 +14,10 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 repositories {
-    maven {
-        name 'prog'
-        url 'http://dvs1.progwml6.com/files/maven'
-    }
+//    maven { //is currently offline uncomment when online again
+//        name 'prog'
+//        url 'http://dvs1.progwml6.com/files/maven'
+//    }
     maven {
         url "http://tehnut.info/maven"
     }
@@ -36,7 +36,7 @@ minecraft {
     mappings channel: 'snapshot', version: forge_mapping
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -90,8 +90,8 @@ dependencies {
     minecraft 'net.minecraftforge:forge:' + forge_version
 
 
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
+//    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}:api")
+//    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
 
     //TODO find you why this doesn't work
     //runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:Hwyla-${hwyla_version}")
