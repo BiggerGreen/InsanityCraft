@@ -50,7 +50,7 @@ public class AppleCowAppleLayer<T extends GoldenAppleCowEntity> extends LayerRen
 			rendererDispatcher.renderBlock(blockState, matrixStack, iRenderTypeBuffer, i, lvt_13_1_);
 			matrixStack.pop();
 			matrixStack.push();
-			this.getEntityModel().getHead().setAnglesAndRotation(matrixStack);
+			this.getEntityModel().getHead().translateRotate(matrixStack);
 			matrixStack.translate(0.5F, -0.5F, 0.5F);
 			matrixStack.rotate(Vector3f.YP.rotationDegrees(-78.0F));
 			matrixStack.scale(-1.0F, -1.0F, 1.0F);

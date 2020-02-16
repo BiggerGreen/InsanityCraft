@@ -9,13 +9,15 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 
 public class KatterkillerModel<T extends KatterkillerEntity> extends EntityModel<T> {
 
+
+
 	@Override
-	public void render(T t, float v, float v1, float v2, float v3, float v4) {
+	public void render(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
 
 	}
 
 	@Override
-	public void render(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
+	public void setRotationAngles(T t, float v, float v1, float v2, float v3, float v4) {
 
 	}
 	//	private final ModelRenderer bb_main;

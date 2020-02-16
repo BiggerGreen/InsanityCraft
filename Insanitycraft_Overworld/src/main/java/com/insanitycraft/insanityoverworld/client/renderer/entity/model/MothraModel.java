@@ -2,13 +2,15 @@ package com.insanitycraft.insanityoverworld.client.renderer.entity.model;
 
 import com.google.common.collect.ImmutableList;
 import com.insanitycraft.insanityoverworld.entity.MothraEntity;
+import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class MothraModel<T extends MothraEntity> extends SegmentedModel<T> {
-    public double[] modelScale = new double[] { 0.3D, 0.3D, 0.3D };
+    public float[] modelScale = new float[] { 0.3F, 0.3F, 0.3F };
     public ModelRenderer torsoTop;
     public ModelRenderer torsoP2;
     public ModelRenderer Head;
@@ -241,10 +243,16 @@ public class MothraModel<T extends MothraEntity> extends SegmentedModel<T> {
     }
 
     @Override
-    public void render(T t, float v, float v1, float v2, float v3, float v4) {
+    public void setRotationAngles(T t, float v, float v1, float v2, float v3, float v4) {
         RenderSystem.pushMatrix();
         RenderSystem.scaled(1D / modelScale[0], 1D / modelScale[1], 1D / modelScale[2]);
         RenderSystem.popMatrix();
+    }
+
+    @Override
+    public void render(MatrixStack matrixStack, IVertexBuilder p_225598_2_, int p_225598_3_, int p_225598_4_, float p_225598_5_, float p_225598_6_, float p_225598_7_, float p_225598_8_) {
+        matrixStack.push();
+        matrixStack.scale(1F / modelScale[0], 1F / modelScale[1], 1F / modelScale[2]);
     }
 
     @Override

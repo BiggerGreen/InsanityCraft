@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 public class TrexModel<T extends TrexEntity> extends EntityModel<T> {
 
 	@Override
-	public void render(T t, float v, float v1, float v2, float v3, float v4) {
+	public void setRotationAngles(T t, float v, float v1, float v2, float v3, float v4) {
 
 	}
 

@@ -153,8 +153,13 @@ public class GiantMoleModel<T extends GiantMoleEntity> extends SegmentedModel<T>
 	}
 
 	@Override
-	public void render(T t, float v, float v1, float v2, float v3, float v4) {
+	public void setRotationAngles(T t, float v, float v1, float v2, float v3, float v4) {
 
+	}
+
+	@Override
+	public void render(MatrixStack p_225598_1_, IVertexBuilder p_225598_2_, int p_225598_3_, int p_225598_4_, float p_225598_5_, float p_225598_6_, float p_225598_7_, float p_225598_8_) {
+		super.render(p_225598_1_, p_225598_2_, p_225598_3_, p_225598_4_, p_225598_5_, p_225598_6_, p_225598_7_, p_225598_8_);
 	}
 
 	@Override

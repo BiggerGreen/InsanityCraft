@@ -10,8 +10,19 @@ import static com.insanitycraft.insanityoverworld.util.Reference.*;
 
 public class GirlfriendRenderer extends MobRenderer<GirlfriendEntity, PlayerModel<GirlfriendEntity>> {
 
-	public static final ResourceLocation[] GIRLFRIEND_TEXTURES = new ResourceLocation[]{new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png")};
-	public static final ResourceLocation[] GIRLFRIEND_BIKINI_TEXTURES = new ResourceLocation[]{new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png")};
+	//TODO change ones the textures are done
+	public static final ResourceLocation[] GIRLFRIEND_TEXTURES = new ResourceLocation[]{
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png")
+	};
+	public static final ResourceLocation[] GIRLFRIEND_BIKINI_TEXTURES = new ResourceLocation[]{
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png")
+	};
 
 
 	public GirlfriendRenderer(EntityRendererManager renderManagerIn) {

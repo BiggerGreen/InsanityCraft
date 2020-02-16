@@ -8,12 +8,12 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 public class KrakenModel<T extends KrakenEntity> extends EntityModel<T> {
 
 	@Override
-	public void render(T t, float v, float v1, float v2, float v3, float v4) {
+	public void render(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
 
 	}
 
 	@Override
-	public void render(MatrixStack matrixStack, IVertexBuilder iVertexBuilder, int i, int i1, float v, float v1, float v2, float v3) {
+	public void setRotationAngles(T t, float v, float v1, float v2, float v3, float v4) {
 
 	}
 	//	private final ModelRenderer headBody;

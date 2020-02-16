@@ -209,10 +209,10 @@ public class InsanityBlocks {
 	}
 
 	public static void setRenderLayers() {
-		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_BLOCK, RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_ORE, RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(TIGER_EYE_BLOCK, RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(TIGER_EYE_ORE, RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_BLOCK, RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(PINK_TOURMALINE_ORE, RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(TIGER_EYE_BLOCK, RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(TIGER_EYE_ORE, RenderType.getTranslucent());
 	}
 
 	private static ResourceLocation getLocation(String name) {

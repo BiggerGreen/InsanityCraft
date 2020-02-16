@@ -1,6 +1,8 @@
 package com.insanitycraft.insanityoverworld.entity;
 
+import com.insanitycraft.insanityoverworld.client.renderer.entity.GirlfriendRenderer;
 import com.insanitycraft.insanityoverworld.util.CalendarUtils;
+import com.insanitycraft.insanityoverworld.util.InsanityLog;
 import net.minecraft.entity.*;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,17 +23,20 @@ import javax.annotation.Nullable;
 public class GirlfriendEntity extends TameableEntity {
 	private static final DataParameter<Integer> VARIANT = EntityDataManager.createKey(GirlfriendEntity.class, DataSerializers.VARINT);
 	private static final DataParameter<Boolean> CALM = EntityDataManager.createKey(GirlfriendEntity.class, DataSerializers.BOOLEAN);
-	private int baseHealth = 80;
 
 	public GirlfriendEntity(EntityType<? extends TameableEntity> type, World world) {
 		super(type, world);
+		setTamed(false);
 	}
 
 	@Override
 	protected void registerAttributes() {
 		super.registerAttributes();
-		getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(CalendarUtils.isToday()/*isValentinesDay()*/ && !isCalm() ? 800 : baseHealth);
-
+		if(CalendarUtils.isToday() && !isCalm()) {
+			getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(80.0D);
+		}else {
+			getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0D);
+		}
 	}
 
 	@Override
@@ -52,7 +57,23 @@ public class GirlfriendEntity extends TameableEntity {
 				return true;
 			}
 		}
+		if(stack.getItem() == Items.GOLD_NUGGET) {
+			changeVariant();
+
+			if(!player.abilities.isCreativeMode) {
+				stack.shrink(1);
+			}
+		}
 		return super.processInteract(player, hand);
+	}
+
+	private void changeVariant() {
+		if(dataManager.get(VARIANT) < (GirlfriendRenderer.GIRLFRIEND_TEXTURES.length - 1)) {//TODO change number ones the textures are done
+			dataManager.set(VARIANT, dataManager.get(VARIANT) + 1);
+		}else {
+			dataManager.set(VARIANT, 0);
+		}
+		InsanityLog.info(dataManager.get(VARIANT));
 	}
 
 	@Override

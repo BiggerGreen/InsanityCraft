@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class WaterDragonModel<T extends WaterDragonEntity> extends SegmentedModel<T> {
-    public double[] modelScale = new double[] { 0.9D, 0.9D, 0.9D };
+    public float[] modelScale = new float[] { 0.9F, 0.9F, 0.9F };
     public ModelRenderer TorsoP1;
     public ModelRenderer NeckP2;
     public ModelRenderer TorsoBottom;
@@ -134,10 +134,14 @@ public class WaterDragonModel<T extends WaterDragonEntity> extends SegmentedMode
     }
 
     @Override
-    public void render(T t, float v, float v1, float v2, float v3, float v4) {
-        RenderSystem.pushMatrix();
-        RenderSystem.scaled(1D / modelScale[0], 1D / modelScale[1], 1D / modelScale[2]);
-        RenderSystem.popMatrix();
+    public void setRotationAngles(T t, float v, float v1, float v2, float v3, float v4) {
+
+    }
+
+    @Override
+    public void render(MatrixStack matrixStack, IVertexBuilder p_225598_2_, int p_225598_3_, int p_225598_4_, float p_225598_5_, float p_225598_6_, float p_225598_7_, float p_225598_8_) {
+        matrixStack.push();
+        matrixStack.scale(1F / modelScale[0], 1F / modelScale[1], 1F / modelScale[2]);
     }
 
     @Override

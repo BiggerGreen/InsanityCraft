@@ -42,7 +42,6 @@ public class InsanityEvents {
 		EntityType type = entity.getType();
 		MatrixStack matrixStack = event.getMatrixStack();
 		if(entity instanceof GirlfriendEntity) {
-			InsanityLog.info("IsCalm: " + ((GirlfriendEntity)entity).isCalm());
 			if(!((GirlfriendEntity)entity).isCalm() && CalendarUtils.isToday()) {
 				matrixStack.scale(6.0F, 6.0F, 6.0F);
 				type.size = EntitySize.flexible(3.6F, 12.0F);
