@@ -23,6 +23,7 @@ public class InsanityOverworld {
 	public static boolean debug;
 
 	public static ItemGroup DEFAULT_GROUP;
+	public static ItemGroup EGG_ORE_GROUP;
 
 	public static InsanityConfig config;
 
@@ -36,8 +37,8 @@ public class InsanityOverworld {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::finishLoading);
 		MinecraftForge.EVENT_BUS.register(this);
 
-		DEFAULT_GROUP = new ItemGroupInsanityOverworld();
-
+		DEFAULT_GROUP = new ItemGroupInsanityOverworld.InsanityGroup();
+		EGG_ORE_GROUP = new ItemGroupInsanityOverworld.EggOreGroup();
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
