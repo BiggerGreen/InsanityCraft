@@ -99,17 +99,17 @@ public class WorldGenOres {
 				addMobOres(biome, VINDICATOR_EGG_ORE, config.vindicatorOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, WITCH_EGG_ORE, config.witchOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 				addMobOres(biome, WITHER_EGG_ORE, config.witherOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, WITHER_SKELETON_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, WOLF_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, ZOMBIE_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, ZOMBIE_PIGMAN_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, CAT_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, ENDERMITE_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, FOX_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, GHAST_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, PILLAGER_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, RAVAGER_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
-				addMobOres(biome, SHULKER_EGG_ORE, true, eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, WITHER_SKELETON_EGG_ORE, config.witherSkeletonOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, WOLF_EGG_ORE, config.wolfOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ZOMBIE_EGG_ORE, config.zombieOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ZOMBIE_PIGMAN_EGG_ORE, config.zombiePigmanOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, CAT_EGG_ORE, config.catOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, ENDERMITE_EGG_ORE, config.endermiteOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, FOX_EGG_ORE, config.foxOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, GHAST_EGG_ORE, config.ghastOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, PILLAGER_EGG_ORE, config.pillagerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, RAVAGER_EGG_ORE, config.ravagerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
+				addMobOres(biome, SHULKER_EGG_ORE, config.shulkerOre.get(), eggVeinSize, maxEggVeins, maxEggHeight);
 
 				//endregion
 			}
@@ -120,12 +120,12 @@ public class WorldGenOres {
 
 	private static void addMobOres(Biome biome, Block block, boolean enabled, int size, int count, int maxHeight) {
 		if(enabled) {
-			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(count, 0, 0, maxHeight))));
+			biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(NATURAL_STONE, block.getDefaultState(), size)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(count, 0, 0, maxHeight))));
 		}
 	}
 
 	private static void addOre(Biome biome, OreFeatureConfig.FillerBlockType fillerBlockType, Block block, int size, CountRangeConfig config) {
-		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(fillerBlockType, block.getDefaultState(), size)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(config)));
+		biome.addFeature(UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(fillerBlockType, block.getDefaultState(), size)).withPlacement(Placement.COUNT_RANGE.configure(config)));
 	}
 
 
