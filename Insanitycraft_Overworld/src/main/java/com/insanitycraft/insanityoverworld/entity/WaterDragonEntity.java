@@ -1,33 +1,21 @@
 package com.insanitycraft.insanityoverworld.entity;
 
-import com.ibm.icu.impl.IterableComparator;
 import com.insanitycraft.insanityoverworld.util.GenericTargetSorter;
-import com.insanitycraft.insanityoverworld.util.ITarget;
-import com.insanitycraft.insanityoverworld.util.InsanityLog;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.GuardianEntity;
 import net.minecraft.entity.monster.IMob;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.WaterMobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.BossInfo;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerBossInfo;
 
 import javax.annotation.Nullable;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
 import java.util.function.Predicate;
 
 public class WaterDragonEntity extends WaterMobEntity implements IMob {

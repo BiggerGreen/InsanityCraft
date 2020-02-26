@@ -199,7 +199,6 @@ public class InsanityBlocks {
 				ENDER_PEARL_BLOCK = new Block(Block.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(2f)).setRegistryName("ender_pearl_block"),
 				//endregion
 
-
 				//region not usable blocks
 				appleBlock = new MushroomBlock(Block.Properties.create(Material.AIR)).setRegistryName("apple_block"),
 				goldenAppleBlock = new MushroomBlock(Block.Properties.create(Material.AIR)).setRegistryName("golden_apple_block")

@@ -3,6 +3,8 @@ package com.insanitycraft.insanityoverworld.init;
 import com.insanitycraft.insanityoverworld.InsanityOverworld;
 import com.insanitycraft.insanityoverworld.client.renderer.entity.*;
 import com.insanitycraft.insanityoverworld.entity.*;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -38,7 +40,9 @@ public class InsanityEntities {
 	public static EntityType ENTITY_ENCHANTED_COW = EntityType.Builder.create(GoldenAppleCowEntity::new, EntityClassification.CREATURE).size(0.9F, 1.4F).build(MODID + ":enchanted_apple_cow").setRegistryName("enchanted_apple_cow");
 
 	//Other
-	public static EntityType ENTITY_GIRLFRIEND = EntityType.Builder.create(GirlfriendEntity::new, EntityClassification.MISC).build(MODID + ":girlfriend").setRegistryName("girlfriend");
+	public static EntityType ENTITY_GIRLFRIEND = EntityType.Builder.create(GirlfriendEntity::new, EntityClassification.AMBIENT).build(MODID + ":girlfriend").setRegistryName("girlfriend");
+
+	public static EntityType ENTITY_SHOE = EntityType.Builder.<ShoeEntity>create(ShoeEntity::new, EntityClassification.MISC).size(0.25F, 0.25F).build(MODID + ":shoe").setRegistryName("shoe");
 
 
 	public static void registerEntityRenders() {
@@ -57,6 +61,9 @@ public class InsanityEntities {
 
 
 		RenderingRegistry.registerEntityRenderingHandler(ENTITY_GIRLFRIEND, GirlfriendRenderer::new);
+
+		RenderingRegistry.registerEntityRenderingHandler(ENTITY_SHOE, manager -> new SpriteRenderer<ShoeEntity>(manager, Minecraft.getInstance().getItemRenderer()));
+
 	}
 
 
@@ -75,11 +82,10 @@ public class InsanityEntities {
 
 				ENTITY_WATER_DRAGON,
 
-				ENTITY_GIRLFRIEND
+				ENTITY_GIRLFRIEND,
 
-		);
+				ENTITY_SHOE,
 
-		event.getRegistry().registerAll(
 				ENTITY_APPLE_COW,
 				ENTITY_GOLDEN_COW,
 				ENTITY_ENCHANTED_COW

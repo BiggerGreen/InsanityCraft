@@ -128,6 +128,8 @@ public class InsanityItems {
 
 	public static Item STRUCTURE_TRACKER;
 
+	public static Item RED_SHOE;
+
 	//discs
 	public static Item BLANK_DISC;
 
@@ -341,8 +343,6 @@ public class InsanityItems {
 				MANTIS_CLAW = new SpecialSwordItem(MANTIS_CLAW_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("mantis_claw"),
 				SCORPION_TAIL = new SpecialSwordItem(SCORPION_TAIL_TIER, 3, -2.4f, new Item.Properties().group(DEFAULT_GROUP)).setRegistryName("scorpion_tail"),
 
-
-
 				//endregion
 
 
@@ -359,6 +359,8 @@ public class InsanityItems {
 				STAIRS_DOWN = new StairItem().setRegistryName("stairs_down"),
 
 				STRUCTURE_TRACKER = new TrackerItem().setRegistryName("structure_tracker"),
+
+				RED_SHOE = new ShoeItem().setRegistryName("red_shoe"),
 
 				ENDER_DRAGON_SPAWN_EGG = new SpawnEggItem(EntityType.ENDER_DRAGON, 0, 1447446, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("enderdragon_spawn_egg"),
 				WITHER_SPAWN_EGG = new SpawnEggItem(EntityType.WITHER, 4672845, 1315860, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("wither_spawn_egg"),

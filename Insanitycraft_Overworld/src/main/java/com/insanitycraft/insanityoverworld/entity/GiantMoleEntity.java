@@ -1,6 +1,5 @@
 package com.insanitycraft.insanityoverworld.entity;
 
-import com.insanitycraft.insanityoverworld.util.ITarget;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.IMob;
@@ -14,7 +13,7 @@ import net.minecraft.world.server.ServerBossInfo;
 
 import javax.annotation.Nullable;
 
-public class GiantMoleEntity extends MonsterEntity implements IMob, ITarget {
+public class GiantMoleEntity extends MonsterEntity implements IMob {
 
 	private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.WHITE, BossInfo.Overlay.PROGRESS);
 

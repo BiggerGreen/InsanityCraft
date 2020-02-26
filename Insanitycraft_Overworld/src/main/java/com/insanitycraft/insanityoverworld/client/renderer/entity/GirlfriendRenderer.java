@@ -15,12 +15,14 @@ public class GirlfriendRenderer extends MobRenderer<GirlfriendEntity, PlayerMode
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png")
 	};
 	public static final ResourceLocation[] GIRLFRIEND_BIKINI_TEXTURES = new ResourceLocation[]{
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test2.png"),
+			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png"),
 			new ResourceLocation(MODID, "textures/entity/girlfriend/test1.png")
 	};
 
